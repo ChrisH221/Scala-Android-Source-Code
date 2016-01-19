@@ -1,0 +1,6 @@
+# view AndroidManifest.xml #generated:15
+-keep class android.test.InstrumentationTestRunner { <init>(...); }
+
+# view AndroidManifest.xml #generated:6
+-keep class my.android.project.helloWorld { <init>(...); }
+

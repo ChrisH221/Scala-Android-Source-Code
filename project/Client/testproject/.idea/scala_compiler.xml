@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ScalaCompilerConfiguration">
+    <profile name="SBT 1" modules="testproject">
+      <option name="featureWarnings" value="true" />
+      <parameters>
+        <parameter value="-encoding" />
+        <parameter value="utf8" />
+        <parameter value="-target:jvm-1.6" />
+        <parameter value="-bootclasspath" />
+        <parameter value="$USER_HOME$/Android/Sdk/platforms/android-23/android.jar" />
+        <parameter value="-javabootclasspath" />
+        <parameter value="$USER_HOME$/Android/Sdk/platforms/android-23/android.jar" />
+      </parameters>
+    </profile>
+  </component>
+</project>
