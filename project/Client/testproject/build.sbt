@@ -11,16 +11,14 @@ scalacOptions in Compile += "-feature"
 platformTarget in Android := "android-16"
 
 proguardCache in Android ++= Seq(
-  ProguardCache("org.scaloid") % "org.scaloid"
 )
 
 proguardOptions in Android ++= Seq("-dontobfuscate", "-dontoptimize", "-dontwarn scala.collection.mutable.**", "-dontwarn sun.misc.Unsafe",  "-keep class sun.misc.Unsafe{*;}"
 )
 
 libraryDependencies ++= Seq(
-                              //"org.scaloid" %% "scaloid" % "3.3-8",
-                            "org.scalatest" %% "scalatest" % "2.2.6" % "test",
-							"com.typesafe.akka" %% "akka-actor" % "2.3.14")
+                            "org.scalatest" %% "scalatest" % "2.2.6" % "test"
+							)
 							
 
 scalacOptions in Compile += "-feature"
