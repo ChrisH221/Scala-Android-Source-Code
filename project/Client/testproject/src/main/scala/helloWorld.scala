@@ -14,21 +14,22 @@ class helloWorld extends Activity with TypedActivity {
   override def onCreate(bundle: Bundle) {
     super.onCreate(bundle)
     setContentView(R.layout.main)
-	val x = new send("hello did you get my message")
-//	setupActor()
-	//Button = (Button) findViewById(R.id.button1);
-	//val y = new received("hello did you get my message")
-//	findView(TR.textview).setText(add1(x))
-	//findView(TR.textview2).setText(add1(y))
+	val button = findView(TR.button1)
+	button.setOnClickListener((v : View) => {
+	
+	//val r = new read_write("data/newFile.txt") 
+	//r.test("hey")
+	findView(TR.textview).setText("")
+	val h = new handler
+	val r = new read_write("hey")
+	r.test("hi")
+	val editText = findView(TR.editTextResult)
+	findView(TR.textview).setText(h.encode(editText.getText().toString())._1 mkString)
+
+    })
   }
 
-def add1(m:Message):String = m match{
 
-case send(t) => "Hello!!!"
-case received(t) => "Hello again"
-
-
-}
 
 
 
@@ -40,13 +41,6 @@ implicit def onClickListener(f: (View => Unit)): View.OnClickListener = {
   }
 }
 
-def setupActor():Unit={
-
-val system = ActorSystem("client-akka")
-
-//val sv1 = system.actorOf(Props(new actorMain), "sv1")
-
-}
 
 
 }

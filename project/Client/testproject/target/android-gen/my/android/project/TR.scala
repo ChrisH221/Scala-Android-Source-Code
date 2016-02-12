@@ -11,6 +11,7 @@ object TR {
   val textview = TypedResource[android.widget.TextView](R.id.textview)
   val textview2 = TypedResource[android.widget.TextView](R.id.textview2)
   val button1 = TypedResource[android.widget.Button](R.id.button1)
+  val editTextResult = TypedResource[android.widget.EditText](R.id.editTextResult)
 
   object layout {
     val main = TypedLayout[android.widget.LinearLayout](R.layout.main)

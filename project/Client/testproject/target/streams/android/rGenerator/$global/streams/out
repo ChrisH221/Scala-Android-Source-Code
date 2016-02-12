@@ -2,8 +2,8 @@
 [0m[[0mdebug[0m] [0mAll libs: List()[0m
 [0m[[0mdebug[0m] [0mAll packages: List()[0m
 [0m[[0mdebug[0m] [0mpackageForR: my.android.project[0m
-[0m[[0mdebug[0m] [0mproguard.txt: C:\Users\Chris\testproject\target\android-bin\proguard.txt[0m
-[0m[[0mdebug[0m] [0mIn modified: Set(C:\Users\Chris\testproject\target\android-bin\AndroidManifest.xml)[0m
+[0m[[0mdebug[0m] [0mproguard.txt: C:\Users\Chris\Documents\testproject\target\android-bin\proguard.txt[0m
+[0m[[0mdebug[0m] [0mIn modified: Set(C:\Users\Chris\Documents\testproject\target\android-bin\AndroidManifest.xml)[0m
 [0m[[0mdebug[0m] [0mInRemoved: Set()[0m
-[0m[[0mdebug[0m] [0mOut checked: Set(C:\Users\Chris\testproject\target\android-gen\my\android\project\R.java)[0m
+[0m[[0mdebug[0m] [0mOut checked: Set(C:\Users\Chris\Documents\testproject\target\android-gen\my\android\project\R.java)[0m
 [0m[[0mdebug[0m] [0mOut modified: Set()[0m
