@@ -13,7 +13,9 @@ platformTarget in Android := "android-16"
 proguardCache in Android ++= Seq(
 )
 
-proguardOptions in Android ++= Seq("-dontobfuscate", "-dontoptimize", "-dontwarn scala.collection.mutable.**", "-dontwarn sun.misc.Unsafe",  "-keep class sun.misc.Unsafe{*;}"
+proguardOptions in Android ++= Seq("-dontobfuscate", "-dontoptimize", "-dontwarn scala.collection.mutable.**", "-dontwarn sun.misc.Unsafe",  "-keep class sun.misc.Unsafe{*;}",
+"-keep class java.io.ObjectInputStream"
+
 )
 
 libraryDependencies ++= Seq(

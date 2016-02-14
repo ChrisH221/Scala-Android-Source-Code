@@ -2,6 +2,8 @@ package my.android.project
 
 import scala.io.Source
 import java.io._
+import java.io.File
+import java.io.FileOutputStream
 
 /**INCOMPLETE
  * @author Chris Howell
@@ -20,11 +22,10 @@ class read_write(filePath:String) extends handler {
   }
 
   def test(s:String):String = { 
-  
-  
-		val file = new File(filePath)
+	
+		val file = new File("/users/mkyong/filename.txt")
 		val bw = new BufferedWriter(new FileWriter(file))
-		bw.write(s)
+		bw.write("Praise")
 		"Print Successful"
   
   }

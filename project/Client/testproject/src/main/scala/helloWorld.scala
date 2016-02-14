@@ -21,8 +21,8 @@ class helloWorld extends Activity with TypedActivity with helpers {
 	//r.test("hey")
 	findView(TR.textview).setText("")
 	val h = new handler
-	val r = new read_write("hey")
-	r.test("hi")
+	//val r = new read_write("hey")
+	//val result = r.test("hi")
 	val editText = findView(TR.editTextResult)
 	findView(TR.textview).setText(h.encode(editText.getText().toString())._1 mkString)
 
