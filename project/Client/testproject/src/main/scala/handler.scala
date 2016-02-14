@@ -7,21 +7,8 @@ import my.android.project.builder
  */
 class handler extends builder{
 
-  /* 
-   * Define a single bit as a sealed trait that can be either One, Zero or EmptyBit
-   * 
-   */
 
-   
-  sealed trait Bit
-  case class EmptyBit() extends Bit
-  case class Zero() extends Bit
-  case class One() extends Bit
-
-
-  sealed trait HMap
-  case class HCodeMap(list:List[(Char,List[Bit])]) extends HMap //TODO implement HCodeMap as input/output
-
+ 
 
   /*
    * Matches a list of bits to each char occurance in the HTree by following the left and right

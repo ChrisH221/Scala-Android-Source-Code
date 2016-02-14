@@ -4,13 +4,13 @@ import _root_.android.app.Activity
 import _root_.android.os.Bundle
 import scala.language.implicitConversions
 import android.view.View
-import akka.actor.{ActorSystem, ActorLogging, Actor, Props}
+
 
 abstract class Message 
 case class send(text:String) extends Message
 case class received(text:String) extends Message
 
-class helloWorld extends Activity with TypedActivity {
+class helloWorld extends Activity with TypedActivity with helpers {
   override def onCreate(bundle: Bundle) {
     super.onCreate(bundle)
     setContentView(R.layout.main)
@@ -28,18 +28,6 @@ class helloWorld extends Activity with TypedActivity {
 
     })
   }
-
-
-
-
-
-implicit def onClickListener(f: (View => Unit)): View.OnClickListener = {
-  new View.OnClickListener() {
-    override def onClick(v: View) {
-      f(v)
-    }
-  }
-}
 
 
 

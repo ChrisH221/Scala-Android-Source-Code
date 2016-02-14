@@ -1,4 +1,4 @@
-[0m[[0minfo[0m] [0mUpdating {file:/C:/Users/Chris/Documents/testproject/project/}testproject-build...[0m
+[0m[[0minfo[0m] [0mUpdating {file:/C:/Users/Chris/Documents/GitHub/Scala-Android-Source-Code/project/Client/testproject/project/}testproject-build...[0m
 [0m[[0mdebug[0m] [0m:: resolving dependencies :: default#testproject-build;0.1-SNAPSHOT[0m
 [0m[[0mdebug[0m] [0m	confs: [compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool][0m
 [0m[[0mdebug[0m] [0m	validate = true[0m
@@ -716,7 +716,7 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies for default#testproject-build;0.1-SNAPSHOT [provided][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies default#testproject-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.5 [provided->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang#scala-library;2.10.5 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@70bcc317[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@6684eebe[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#scala-library;2.10.5[0m
 [0m[[0mdebug[0m] [0m	found org.scala-lang#scala-library;2.10.5 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m	[2.10.5] org.scala-lang#scala-library;2.10.5[0m
@@ -3592,19 +3592,19 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#apply-macro;0.13.9!apply-macro.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#jline;2.10.5!jline.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.fusesource.jansi#jansi;1.4!jansi.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 1315ms :: artifacts dl 63ms[0m
-[0m[[0mdebug[0m] [0m	report for default#testproject-build;0.1-SNAPSHOT compile produced in C:\Users\Chris\Documents\testproject\project\target\resolution-cache\reports\default-testproject-build-compile.xml[0m
-[0m[[0mdebug[0m] [0m	report for default#testproject-build;0.1-SNAPSHOT runtime produced in C:\Users\Chris\Documents\testproject\project\target\resolution-cache\reports\default-testproject-build-runtime.xml[0m
-[0m[[0mdebug[0m] [0m	report for default#testproject-build;0.1-SNAPSHOT test produced in C:\Users\Chris\Documents\testproject\project\target\resolution-cache\reports\default-testproject-build-test.xml[0m
-[0m[[0mdebug[0m] [0m	report for default#testproject-build;0.1-SNAPSHOT provided produced in C:\Users\Chris\Documents\testproject\project\target\resolution-cache\reports\default-testproject-build-provided.xml[0m
-[0m[[0mdebug[0m] [0m	report for default#testproject-build;0.1-SNAPSHOT optional produced in C:\Users\Chris\Documents\testproject\project\target\resolution-cache\reports\default-testproject-build-optional.xml[0m
-[0m[[0mdebug[0m] [0m	report for default#testproject-build;0.1-SNAPSHOT compile-internal produced in C:\Users\Chris\Documents\testproject\project\target\resolution-cache\reports\default-testproject-build-compile-internal.xml[0m
-[0m[[0mdebug[0m] [0m	report for default#testproject-build;0.1-SNAPSHOT runtime-internal produced in C:\Users\Chris\Documents\testproject\project\target\resolution-cache\reports\default-testproject-build-runtime-internal.xml[0m
-[0m[[0mdebug[0m] [0m	report for default#testproject-build;0.1-SNAPSHOT test-internal produced in C:\Users\Chris\Documents\testproject\project\target\resolution-cache\reports\default-testproject-build-test-internal.xml[0m
-[0m[[0mdebug[0m] [0m	report for default#testproject-build;0.1-SNAPSHOT plugin produced in C:\Users\Chris\Documents\testproject\project\target\resolution-cache\reports\default-testproject-build-plugin.xml[0m
-[0m[[0mdebug[0m] [0m	report for default#testproject-build;0.1-SNAPSHOT sources produced in C:\Users\Chris\Documents\testproject\project\target\resolution-cache\reports\default-testproject-build-sources.xml[0m
-[0m[[0mdebug[0m] [0m	report for default#testproject-build;0.1-SNAPSHOT docs produced in C:\Users\Chris\Documents\testproject\project\target\resolution-cache\reports\default-testproject-build-docs.xml[0m
-[0m[[0mdebug[0m] [0m	report for default#testproject-build;0.1-SNAPSHOT pom produced in C:\Users\Chris\Documents\testproject\project\target\resolution-cache\reports\default-testproject-build-pom.xml[0m
-[0m[[0mdebug[0m] [0m	report for default#testproject-build;0.1-SNAPSHOT scala-tool produced in C:\Users\Chris\Documents\testproject\project\target\resolution-cache\reports\default-testproject-build-scala-tool.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (1315ms resolve - 63ms download)[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 1366ms :: artifacts dl 72ms[0m
+[0m[[0mdebug[0m] [0m	report for default#testproject-build;0.1-SNAPSHOT compile produced in C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\project\target\resolution-cache\reports\default-testproject-build-compile.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#testproject-build;0.1-SNAPSHOT runtime produced in C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\project\target\resolution-cache\reports\default-testproject-build-runtime.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#testproject-build;0.1-SNAPSHOT test produced in C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\project\target\resolution-cache\reports\default-testproject-build-test.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#testproject-build;0.1-SNAPSHOT provided produced in C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\project\target\resolution-cache\reports\default-testproject-build-provided.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#testproject-build;0.1-SNAPSHOT optional produced in C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\project\target\resolution-cache\reports\default-testproject-build-optional.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#testproject-build;0.1-SNAPSHOT compile-internal produced in C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\project\target\resolution-cache\reports\default-testproject-build-compile-internal.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#testproject-build;0.1-SNAPSHOT runtime-internal produced in C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\project\target\resolution-cache\reports\default-testproject-build-runtime-internal.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#testproject-build;0.1-SNAPSHOT test-internal produced in C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\project\target\resolution-cache\reports\default-testproject-build-test-internal.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#testproject-build;0.1-SNAPSHOT plugin produced in C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\project\target\resolution-cache\reports\default-testproject-build-plugin.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#testproject-build;0.1-SNAPSHOT sources produced in C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\project\target\resolution-cache\reports\default-testproject-build-sources.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#testproject-build;0.1-SNAPSHOT docs produced in C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\project\target\resolution-cache\reports\default-testproject-build-docs.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#testproject-build;0.1-SNAPSHOT pom produced in C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\project\target\resolution-cache\reports\default-testproject-build-pom.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#testproject-build;0.1-SNAPSHOT scala-tool produced in C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\project\target\resolution-cache\reports\default-testproject-build-scala-tool.xml[0m
+[0m[[0mdebug[0m] [0m	resolve done (1366ms resolve - 72ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m

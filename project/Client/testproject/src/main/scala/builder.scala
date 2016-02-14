@@ -1,4 +1,5 @@
 package my.android.project
+import my.android.project.helpers
 
 /**
  * @author Chris Howell
@@ -6,19 +7,9 @@ package my.android.project
  *
  * The builder class contains all the functions required to turn a string into a single HTree
  */
-class builder  {
+  class builder extends helpers{
 
-  val x = List()//Saved me creating multiple empty lists
-  /*
-   * Defines the HTree trait that can be either a branch node or a leaf node
-   */
-  sealed trait HTree
-  case class Empty() extends HTree
-  case class Branch(value: Int, left: HTree, right: HTree) extends HTree
-  case class Leaf(freq: Int, char: Char) extends HTree
-
-
-
+  
   /*
   *  A function to count the number of times a character appears in a string
   *  @returns Int
@@ -110,7 +101,7 @@ class builder  {
    */
   def shrinkList(t1:HTree, t2:List[HTree]): List[HTree]={
 
-    insert(t1,t2,List())
+    insert(t1,t2,x)
 
   }
 

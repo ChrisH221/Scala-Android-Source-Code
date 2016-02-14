@@ -23,9 +23,9 @@ libraryDependencies ++= Seq(
 
 scalacOptions in Compile += "-feature"
 
-scalacOptions := Seq("-encoding", "utf8", "-target:jvm-1.6")
+scalacOptions := Seq("-encoding", "utf8", "-target:jvm-1.7")
 
-javacOptions ++= Seq("-encoding", "utf8", "-source", "1.6", "-target", "1.6")
+javacOptions ++= Seq("-encoding", "utf8", "-source", "1.7", "-target", "1.7")
 
 // call install and run without having to prefix with android:
 run <<= run in Android

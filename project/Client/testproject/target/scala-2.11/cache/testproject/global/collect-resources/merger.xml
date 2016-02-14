@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <merger>
 
-    <dataSet config="C:\Users\Chris\Documents\testproject\src\main\res" >
-        <source path="C:\Users\Chris\Documents\testproject\src\main\res" >
+    <dataSet config="C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\src\main\res" >
+        <source path="C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\src\main\res" >
             <file
                 name="main"
-                path="C:\Users\Chris\Documents\testproject\src\main\res\layout\main.xml"
+                path="C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\src\main\res\layout\main.xml"
                 qualifiers=""
                 type="layout" />
             <file
-                path="C:\Users\Chris\Documents\testproject\src\main\res\values\strings.xml"
+                path="C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\src\main\res\values\strings.xml"
                 qualifiers="" >
                 <string name="app_name" >testProject
                 </string>
