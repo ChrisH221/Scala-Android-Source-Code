@@ -1,37 +1,67 @@
 import android.Keys._
 
-android.Plugin.androidBuild
+      android.Plugin.androidBuild
 
-name := "testProject"
+      name := "testProject"
 
-scalaVersion := "2.11.7"
+      scalaVersion := "2.11.4"
 
-scalacOptions in Compile += "-feature"
+      scalacOptions in Compile += "-feature"
 
-platformTarget in Android := "android-16"
+      platformTarget in Android := "android-16"
 
-proguardCache in Android ++= Seq(
-)
+      proguardCache in Android ++= Seq(
 
-proguardOptions in Android ++= Seq("-dontobfuscate", "-dontoptimize", "-dontwarn scala.collection.mutable.**", "-dontwarn sun.misc.Unsafe",  "-keep class sun.misc.Unsafe{*;}",
-"-keep class java.io.ObjectInputStream"
+      )
 
-)
+    proguardOptions in Android ++= Seq(
+    "-dontobfuscate", 
+    "-dontoptimize", 
+    "-dontwarn scala.collection.mutable.**"
+    )
+	resolvers += "Typesafe Repository" at "http://repo.typesafe.com/typesafe/releases/"
+    libraryDependencies ++= Seq(
+                        "org.scalatest" %% "scalatest" % "2.2.6" % "test",
+                        "com.typesafe.akka" %% "akka-actor" % "2.3.6")
 
-libraryDependencies ++= Seq(
-                            "org.scalatest" %% "scalatest" % "2.2.6" % "test"
-							)
-							
 
-scalacOptions in Compile += "-feature"
+     proguardScala in Android := true
 
-scalacOptions := Seq("-encoding", "utf8", "-target:jvm-1.7")
+    // Generic ProGuard rules
+     proguardOptions in Android ++= Seq(
+     "-ignorewarnings",
+     "-keep class scala.Dynamic"
+      )
 
-javacOptions ++= Seq("-encoding", "utf8", "-source", "1.7", "-target", "1.7")
+   // ProGuard rules for Akka
+   proguardOptions in Android ++= Seq(
+   "-keep class akka.actor.Actor$class { *; }",
+   "-keep class akka.actor.LightArrayRevolverScheduler { *; }",
+   "-keep class akka.actor.LocalActorRefProvider { *; }",
+   "-keep class akka.actor.CreatorFunctionConsumer { *; }",
+   "-keep class akka.actor.TypedCreatorFunctionConsumer { *; }",
+   "-keep class      akka.dispatch.BoundedDequeBasedMessageQueueSemantics      {      *; }",
+   "-keep class akka.dispatch.UnboundedMessageQueueSemantics { *; }",
+    "-keep class akka.dispatch.UnboundedDequeBasedMessageQueueSemantics     { *; }",
+    "-keep class akka.dispatch.DequeBasedMessageQueueSemantics { *; }",
+    "-keep class akka.dispatch.MultipleConsumerSemantics { *; }",
+    "-keep class akka.actor.LocalActorRefProvider$Guardian { *; }",
+    "-keep class akka.actor.LocalActorRefProvider$SystemGuardian { *; }",
+    "-keep class akka.dispatch.UnboundedMailbox { *; }",
+    "-keep class akka.actor.DefaultSupervisorStrategy { *; }",
+    "-keep class macroid.akka.AkkaAndroidLogger { *; }",
+   "-keep class akka.event.Logging$LogExt { *; }"
+   )        
 
-// call install and run without having to prefix with android:
-run <<= run in Android
+   scalacOptions in Compile += "-feature"
 
-install <<= install in Android
+   scalacOptions := Seq("-encoding", "utf8", "-target:jvm-1.6")
 
-retrieveManaged := true
+   javacOptions ++= Seq("-encoding", "utf8", "-source", "1.6", "-target", "1.6")
+
+   // call install and run without having to prefix with android:
+  run <<= run in Android
+
+  install <<= install in Android
+
+   retrieveManaged := true

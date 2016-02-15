@@ -6,10 +6,6 @@ import my.android.project.builder
  * The class for encoding and decoding strings into binary
  */
 class handler extends builder{
-
-
- 
-
   /*
    * Matches a list of bits to each char occurance in the HTree by following the left and right
    * hand children and adding either a One or Zero bit depending on the route taken
@@ -24,26 +20,28 @@ class handler extends builder{
 
 
   }
-
+  
   /*
    * A function for taking a string and generates a list of bits   
    * @returns List[Bit}
    */
-
   def bitList(s:String, acc:List[Bit],list:List[(Char,List[Bit])],list2:List[(Char,List[Bit])]):List[Bit]={
+    
+	
+	if (s.isEmpty || list.isEmpty) acc
+	
 
+    else if(list.head._1.equals(s.toCharArray.head)) bitList(s.drop(1), acc:::list.head._2, list:::list2,x)
+	
 
-    if (s.isEmpty || list.isEmpty) acc
-
-    else if(list.head._1.equals(s.toCharArray.head)) bitList(s.drop(1),acc:::list.head._2,list:::list2,x)
-
-    else  bitList(s,acc,list.drop(1),list.head::list2)
+    else  bitList(s, acc,list.drop(1), list.head::list2)
   }
-
+  
+  
   /*
    * Encode function takes a string then calls bitList() and extractCode() to generate a pair containing the list of
    * bits and another pair containing char/bit combinations 
-   * @returns Pair (List[Bit} , HCodeMap)
+   * @returns Pair(List[Bit} , HCodeMap)
    * 
    */
 

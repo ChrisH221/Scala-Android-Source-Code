@@ -20,6 +20,8 @@
 [0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\TypedResource$.class[0m
 [0m[[0mdebug[0m] [0m	my\android\project\TypedLayout.class[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\TypedLayout.class[0m
+[0m[[0mdebug[0m] [0m	my\android\project\actorMain.class[0m
+[0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\actorMain.class[0m
 [0m[[0mdebug[0m] [0m	my\android\project\builder.class[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\builder.class[0m
 [0m[[0mdebug[0m] [0m	my\android\project[0m
@@ -120,4 +122,6 @@
 [0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\received.class[0m
 [0m[[0mdebug[0m] [0m	my\android\project\handler$$anonfun$1.class[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\handler$$anonfun$1.class[0m
+[0m[[0mdebug[0m] [0m	my\android\project\actorMain$$anonfun$receive$1.class[0m
+[0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\actorMain$$anonfun$receive$1.class[0m
 [0m[[0minfo[0m] [0mDone packaging.[0m

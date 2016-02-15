@@ -1,2 +1,2 @@
 [0m[[0minfo[0m] [0mGenerating classes.dex[0m
-[0m[[0mdebug[0m] [0mDex inputs: List(C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\scala-2.11\cache\testproject\global\proguard_cache\proguard-cache-b28773b67867afa8c5dc9e62938003e1001e705e.jar, C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes.jar)[0m
+[0m[[0mdebug[0m] [0mDex inputs: List(C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes.proguard.jar)[0m
