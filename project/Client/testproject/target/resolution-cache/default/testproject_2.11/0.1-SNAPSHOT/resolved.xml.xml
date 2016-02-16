@@ -4,7 +4,7 @@
 		module="testproject_2.11"
 		revision="0.1-SNAPSHOT"
 		status="integration"
-		publication="20160216130819"
+		publication="20160216132040"
 	>
 		<description>
 		testProject
@@ -34,5 +34,6 @@
 		<dependency org="org.scala-lang" name="scala-library" rev="2.11.4" conf="scala-tool->default,optional(default);compile->default(compile)"/>
 		<dependency org="org.scalatest" name="scalatest_2.11" rev="2.2.6" conf="test->default(compile)"/>
 		<dependency org="com.typesafe.akka" name="akka-actor_2.11" rev="2.3.6" conf="compile->default(compile)"/>
+		<dependency org="com.typesafe.akka" name="akka-remote_2.11" rev="2.3.6" conf="compile->default(compile)"/>
 	</dependencies>
 </ivy-module>

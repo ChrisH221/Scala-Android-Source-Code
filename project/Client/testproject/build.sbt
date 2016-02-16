@@ -22,7 +22,8 @@ import android.Keys._
 	resolvers += "Typesafe Repository" at "http://repo.typesafe.com/typesafe/releases/"
     libraryDependencies ++= Seq(
                         "org.scalatest" %% "scalatest" % "2.2.6" % "test",
-                        "com.typesafe.akka" %% "akka-actor" % "2.3.6")
+                        "com.typesafe.akka" %% "akka-actor" % "2.3.6",
+						"com.typesafe.akka" %% "akka-remote" % "2.3.6")
 
 
      proguardScala in Android := true

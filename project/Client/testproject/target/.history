@@ -428,3 +428,10 @@ run
 update
 compile
 run
+reload
+update
+compile
+reload
+update
+compile
+run

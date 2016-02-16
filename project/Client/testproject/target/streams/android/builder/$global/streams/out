@@ -1,9 +1,10 @@
 [0m[[0mdebug[0m] [0mCustom package for R class: 'my.android.project'[0m
 [0m[[0mdebug[0m] [0mcommand: C:\Users\Chris\AppData\Local\Android\sdk\build-tools\23.0.1\aapt.exe package -f --no-crunch -I C:\Users\Chris\AppData\Local\Android\sdk\platforms\android-16\android.jar -M C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\AndroidManifest.xml -S C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\resources\res -A C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\assets -m -J C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-gen -G C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\proguard.txt --debug-mode --custom-package my.android.project[0m
 [0m[[33mwarn[0m] [0mWarning: AndroidManifest.xml already defines debuggable (in http://schemas.android.com/apk/res/android); using existing value in manifest.[0m
-[0m[[0mdebug[0m] [0mDex inputs: [C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\scala-2.11\cache\testproject\global\proguard_cache\proguard-cache-2f5b955c408b3109a2b77b344179bf0a1b9b7df5.jar, C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\lib_managed\jars\com.typesafe.akka\akka-actor_2.11\akka-actor_2.11-2.3.6.jar, C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\lib_managed\bundles\com.typesafe\config\config-1.2.1.jar, C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes.jar][0m
-[0m[[0mdebug[0m] [0mcommand: C:\Users\Chris\AppData\Local\Android\sdk\build-tools\23.0.1\dx.bat -JXmx1024m --dex --incremental --no-strict --output C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes.dex C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\scala-2.11\cache\testproject\global\proguard_cache\proguard-cache-2f5b955c408b3109a2b77b344179bf0a1b9b7df5.jar C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\lib_managed\jars\com.typesafe.akka\akka-actor_2.11\akka-actor_2.11-2.3.6.jar C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\lib_managed\bundles\com.typesafe\config\config-1.2.1.jar C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes.jar[0m
-[0m[[0mdebug[0m] [0mMerged dex A (12 defs/18.7KiB) with dex B (2709 defs/2875.6KiB). Result is 2709 defs/3521.1KiB. Took 0.3s[0m
+[0m[[0mdebug[0m] [0mDex inputs: [C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes.proguard.jar][0m
+[0m[[0mdebug[0m] [0mcommand: C:\Users\Chris\AppData\Local\Android\sdk\build-tools\23.0.1\dx.bat -JXmx1024m --dex --incremental --no-strict --output C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes.dex C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes.proguard.jar[0m
+[0m[[0mdebug[0m] [0mResult compacted from 6242.7KiB to 2867.6KiB to save 3375.0KiB[0m
+[0m[[0mdebug[0m] [0mMerged dex A (1667 defs/1339.5KiB) with dex B (2709 defs/3521.1KiB). Result is 2709 defs/2867.6KiB. Took 0.5s[0m
 [0m[[0mdebug[0m] [0mPackaging testProject-debug-unaligned.apk[0m
 [0m[[0mdebug[0m] [0mC:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\resources-debug.ap_:[0m
 [0m[[0mdebug[0m] [0m=> AndroidManifest.xml[0m
@@ -12,5 +13,23 @@
 [0m[[0mdebug[0m] [0mC:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes.dex => classes.dex[0m
 [0m[[0mdebug[0m] [0mC:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\src\main\resources\reference.conf => reference.conf[0m
 [0m[[0mdebug[0m] [0mC:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\lib_managed\jars\com.typesafe.akka\akka-actor_2.11\akka-actor_2.11-2.3.6.jar:[0m
+[0m[[0mdebug[0m] [0mC:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\lib_managed\bundles\com.google.protobuf\protobuf-java\protobuf-java-2.5.0.jar:[0m
 [0m[[0mdebug[0m] [0mC:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\lib_managed\bundles\com.typesafe\config\config-1.2.1.jar:[0m
+[0m[[0mdebug[0m] [0mC:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\lib_managed\bundles\io.netty\netty\netty-3.8.0.Final.jar:[0m
+[0m[[0mdebug[0m] [0m=> META-INF/LICENSE.txt[0m
+[0m[[0mdebug[0m] [0m=> META-INF/NOTICE.txt[0m
+[0m[[0mdebug[0m] [0m=> META-INF/jboss-beans.xml[0m
+[0m[[0mdebug[0m] [0m=> META-INF/license/LICENSE.base64.txt[0m
+[0m[[0mdebug[0m] [0m=> META-INF/license/LICENSE.commons-logging.txt[0m
+[0m[[0mdebug[0m] [0m=> META-INF/license/LICENSE.felix.txt[0m
+[0m[[0mdebug[0m] [0m=> META-INF/license/LICENSE.jboss-logging.txt[0m
+[0m[[0mdebug[0m] [0m=> META-INF/license/LICENSE.jsr166y.txt[0m
+[0m[[0mdebug[0m] [0m=> META-INF/license/LICENSE.jzlib.txt[0m
+[0m[[0mdebug[0m] [0m=> META-INF/license/LICENSE.log4j.txt[0m
+[0m[[0mdebug[0m] [0m=> META-INF/license/LICENSE.protobuf.txt[0m
+[0m[[0mdebug[0m] [0m=> META-INF/license/LICENSE.slf4j.txt[0m
+[0m[[0mdebug[0m] [0m=> META-INF/license/LICENSE.webbit.txt[0m
+[0m[[0mdebug[0m] [0m=> org/jboss/netty/container/spring/beans.xml[0m
+[0m[[0mdebug[0m] [0mC:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\lib_managed\jars\com.typesafe.akka\akka-remote_2.11\akka-remote_2.11-2.3.6.jar:[0m
+[0m[[0mdebug[0m] [0mC:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\lib_managed\jars\org.uncommons.maths\uncommons-maths\uncommons-maths-1.2.2a.jar:[0m
 [0m[[0mdebug[0m] [0mNative folder: C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\jni[0m

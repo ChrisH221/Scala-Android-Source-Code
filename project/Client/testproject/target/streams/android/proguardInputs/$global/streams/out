@@ -1,3 +1,5 @@
 [0m[[0mdebug[0m] [0mProguard cache rules: List(ProguardCache(ArrayBuffer(scala/),Some(org.scala-lang),None,None,None))[0m
-[0m[[0minfo[0m] [0mFinding dependency references for: com.typesafe.akka:akka-actor_2.11:2.3.6[0m
-[0m[[0minfo[0m] [0mFinding dependency references for: classes.jar[0m
+[0m[[0minfo[0m] [0mFinding dependency references for: com.typesafe.akka:akka-remote_2.11:2.3.6[0m
+[0m[[0minfo[0m] [0mFinding dependency references for: io.netty:netty:3.8.0.Final[0m
+[0m[[0minfo[0m] [0mFinding dependency references for: com.google.protobuf:protobuf-java:2.5.0[0m
+[0m[[0minfo[0m] [0mFinding dependency references for: org.uncommons.maths:uncommons-maths:1.2.2a[0m
