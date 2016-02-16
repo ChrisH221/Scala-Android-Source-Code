@@ -13,7 +13,7 @@ import android.Keys._
       proguardCache in Android ++= Seq(
 
       )
-
+	apkbuildExcludes in Android += "reference.conf"
     proguardOptions in Android ++= Seq(
     "-dontobfuscate", 
     "-dontoptimize", 
