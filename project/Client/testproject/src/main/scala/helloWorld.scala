@@ -5,6 +5,11 @@ import _root_.android.os.Bundle
 import scala.language.implicitConversions
 import android.view.View
 import akka.actor.{ActorSystem, ActorLogging, Actor, Props}
+import com.typesafe.config.ConfigFactory
+import java.io.File
+import android.util.Log
+
+
 
 abstract class Message 
 case class send(text:String) extends Message
@@ -15,16 +20,21 @@ class helloWorld extends Activity with TypedActivity with helpers{
   
     super.onCreate(bundle)
     setContentView(R.layout.main)
-	val x = new send("hello did you get my message")
-	val system = ActorSystem("client-akka")
-	val helloActor = system.actorOf(Props(new actorM()), name = "helloactor")
+
+	val configFile = getClass.getClassLoader.getResource("application.conf").getFile
+	
+    val config = ConfigFactory.parseFile(new File(configFile))
+    val system = ActorSystem("ClientSystem",config)
+	
+    val localActor = system.actorOf(Props[LocalActor])
+	//val uiActor = system.actorOf(Props[actorM],"ui")
 	val button = findView(TR.button1)
 	button.setOnClickListener((v : View) => {
-	
+		
 		findView(TR.textview).setText("")
-		helloActor ! "change"
-
-
+		localActor ! "START"
+		//uiActor ! "change"
+	
     })
   }
 
@@ -34,9 +44,7 @@ class actorM extends Actor {
 	
 	case "change" => changeUI()
 	
-   
-   
-   
+      
    }
    
    }

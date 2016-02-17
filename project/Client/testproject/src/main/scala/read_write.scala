@@ -4,6 +4,7 @@ import scala.io.Source
 import java.io._
 import java.io.File
 import java.io.FileOutputStream
+import android.util.Log
 
 /**INCOMPLETE
  * @author Chris Howell
@@ -23,9 +24,11 @@ class read_write(filePath:String) extends handler {
 
   def test(s:String):String = { 
 	
-		val file = new File("/users/mkyong/filename.txt")
+		val file = new File("/data/filename.txt")
+		Log.d("MyTAG", "1")
 		val bw = new BufferedWriter(new FileWriter(file))
-		bw.write("Praise")
+		Log.d("MyTAG", "still working")
+		bw.write("hey")
 		"Print Successful"
   
   }

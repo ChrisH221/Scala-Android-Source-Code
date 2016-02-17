@@ -1,13 +1,17 @@
 import akka.actor.{ActorSystem, ActorLogging, Actor, Props}
 
-class ServerActor1 extends Actor with ActorLogging {
-  def receive = {
-    case value:String => println("Hello Android")
-    case onFailure => println("Not sure what you mean")
+class ServerActor1 extends Actor {
+  override def receive: Receive = {
+    case msg: String => {
+      println("remote received " + msg + " from " + sender)
+    
+    }
+    case _ => println("Received unknown msg ")
   }
 }
 
 object main extends App {
+
   val system = ActorSystem("server-akka")
 
   val sv1 = system.actorOf(Props(new ServerActor1), "sv1")
@@ -15,5 +19,5 @@ object main extends App {
   sv1 ! "Can you hear me?"
   
 
-  system.shutdown()
+  
 }

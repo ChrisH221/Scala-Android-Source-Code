@@ -10,6 +10,7 @@
             </intent-filter>
         </activity>
     <uses-library android:name="android.test.runner"/></application>
-
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+	<uses-permission android:name="android.permission.INTERNET"/>
     <uses-sdk android:targetSdkVersion="16" android:minSdkVersion="16"/>
 <instrumentation android:name="android.test.InstrumentationTestRunner" android:label="Test Runner" android:targetPackage="my.android.project"/></manifest>

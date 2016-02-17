@@ -4,7 +4,7 @@
 		module="server_actor_2.11"
 		revision="1.0"
 		status="integration"
-		publication="20151130121045"
+		publication="20160217165430"
 	>
 		<description>
 		server_actor
@@ -32,8 +32,9 @@
 		<artifact name="server_actor_2.11" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
 	</publications>
 	<dependencies>
-		<dependency org="org.scala-lang" name="scala-compiler" rev="2.11.6" conf="scala-tool->default,optional(default)"/>
-		<dependency org="org.scala-lang" name="scala-library" rev="2.11.6" conf="scala-tool->default,optional(default);compile->default(compile)"/>
-		<dependency org="com.typesafe.akka" name="akka-actor_2.11" rev="2.4.1" conf="compile->default(compile)"/>
+		<dependency org="org.scala-lang" name="scala-compiler" rev="2.11.4" conf="scala-tool->default,optional(default)"/>
+		<dependency org="org.scala-lang" name="scala-library" rev="2.11.4" conf="scala-tool->default,optional(default);compile->default(compile)"/>
+		<dependency org="com.typesafe.akka" name="akka-actor_2.11" rev="2.3.6" conf="compile->default(compile)"/>
+		<dependency org="com.typesafe.akka" name="akka-remote_2.11" rev="2.3.6" conf="compile->default(compile)"/>
 	</dependencies>
 </ivy-module>

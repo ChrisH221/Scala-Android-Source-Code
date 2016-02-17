@@ -7,7 +7,7 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies for default#testproject_2.11;0.1-SNAPSHOT [compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->org.scala-lang#scala-library;2.11.4 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang#scala-library;2.11.4 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@5fbde26e[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@1f482175[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#scala-library;2.11.4[0m
 [0m[[0mdebug[0m] [0m	found org.scala-lang#scala-library;2.11.4 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m	[2.11.4] org.scala-lang#scala-library;2.11.4[0m
@@ -94,6 +94,11 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.3.6->org.uncommons.maths#uncommons-maths;1.2.2a [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.3.6->org.uncommons.maths#uncommons-maths;1.2.2a [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->com.typesafe.akka#akka-remote_2.11;2.3.6 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->com.typesafe#config;1.2.0 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->com.typesafe#config;1.2.1 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->com.typesafe#config;1.2.1 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->com.typesafe#config;1.2.1 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->com.typesafe#config;1.2.1 [compile->master][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'runtime'[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for default#testproject_2.11;0.1-SNAPSHOT [runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for default#testproject_2.11;0.1-SNAPSHOT [compile][0m
@@ -147,6 +152,11 @@
 [0m[[0mdebug[0m] [0mexcluding dependency: jfree#jcommon;1.0.12 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} in runtime[0m
 [0m[[0mdebug[0m] [0mexcluding dependency: jfree#jfreechart;1.0.8a {compile=[compile(*), master(compile)], runtime=[runtime(*)]} in runtime[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->com.typesafe.akka#akka-remote_2.11;2.3.6 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->com.typesafe#config;1.2.0 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->com.typesafe#config;1.2.1 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->com.typesafe#config;1.2.1 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->com.typesafe#config;1.2.1 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->com.typesafe#config;1.2.1 [compile->master][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'test'[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for default#testproject_2.11;0.1-SNAPSHOT [test][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for default#testproject_2.11;0.1-SNAPSHOT [runtime][0m
@@ -201,6 +211,11 @@
 [0m[[0mdebug[0m] [0mexcluding dependency: jfree#jcommon;1.0.12 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} in runtime[0m
 [0m[[0mdebug[0m] [0mexcluding dependency: jfree#jfreechart;1.0.8a {compile=[compile(*), master(compile)], runtime=[runtime(*)]} in runtime[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->com.typesafe.akka#akka-remote_2.11;2.3.6 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->com.typesafe#config;1.2.0 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->com.typesafe#config;1.2.1 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->com.typesafe#config;1.2.1 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->com.typesafe#config;1.2.1 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->com.typesafe#config;1.2.1 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->org.scalatest#scalatest_2.11;2.2.6 [test->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scalatest#scalatest_2.11;2.2.6 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scalatest#scalatest_2.11;2.2.6 {test=[default(compile)]}[0m
@@ -315,6 +330,11 @@
 [0m[[0mdebug[0m] [0mexcluding dependency: jfree#jcommon;1.0.12 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} in runtime[0m
 [0m[[0mdebug[0m] [0mexcluding dependency: jfree#jfreechart;1.0.8a {compile=[compile(*), master(compile)], runtime=[runtime(*)]} in runtime[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->com.typesafe.akka#akka-remote_2.11;2.3.6 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->com.typesafe#config;1.2.0 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->com.typesafe#config;1.2.1 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->com.typesafe#config;1.2.1 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->com.typesafe#config;1.2.1 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->com.typesafe#config;1.2.1 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for default#testproject_2.11;0.1-SNAPSHOT [optional][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for default#testproject_2.11;0.1-SNAPSHOT [provided][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'runtime-internal'[0m
@@ -371,6 +391,11 @@
 [0m[[0mdebug[0m] [0mexcluding dependency: jfree#jcommon;1.0.12 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} in runtime[0m
 [0m[[0mdebug[0m] [0mexcluding dependency: jfree#jfreechart;1.0.8a {compile=[compile(*), master(compile)], runtime=[runtime(*)]} in runtime[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->com.typesafe.akka#akka-remote_2.11;2.3.6 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->com.typesafe#config;1.2.0 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->com.typesafe#config;1.2.1 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->com.typesafe#config;1.2.1 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->com.typesafe#config;1.2.1 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->com.typesafe#config;1.2.1 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for default#testproject_2.11;0.1-SNAPSHOT [optional][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'test-internal'[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for default#testproject_2.11;0.1-SNAPSHOT [test-internal][0m
@@ -427,6 +452,11 @@
 [0m[[0mdebug[0m] [0mexcluding dependency: jfree#jcommon;1.0.12 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} in runtime[0m
 [0m[[0mdebug[0m] [0mexcluding dependency: jfree#jfreechart;1.0.8a {compile=[compile(*), master(compile)], runtime=[runtime(*)]} in runtime[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->com.typesafe.akka#akka-remote_2.11;2.3.6 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->com.typesafe#config;1.2.0 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->com.typesafe#config;1.2.1 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->com.typesafe#config;1.2.1 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->com.typesafe#config;1.2.1 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->com.typesafe#config;1.2.1 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->org.scalatest#scalatest_2.11;2.2.6 [test->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->org.scalatest#scalatest_2.11;2.2.6 [test->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->org.scalatest#scalatest_2.11;2.2.6 [test->compile][0m
@@ -555,7 +585,7 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-reflect;2.11.4!scala-reflect.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang.modules#scala-parser-combinators_2.11;1.0.2!scala-parser-combinators_2.11.jar(bundle)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] jline#jline;2.12!jline.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 172ms :: artifacts dl 12ms[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 141ms :: artifacts dl 9ms[0m
 [0m[[0mdebug[0m] [0m	report for default#testproject_2.11;0.1-SNAPSHOT compile produced in C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\resolution-cache\reports\default-testproject_2.11-compile.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#testproject_2.11;0.1-SNAPSHOT runtime produced in C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\resolution-cache\reports\default-testproject_2.11-runtime.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#testproject_2.11;0.1-SNAPSHOT test produced in C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\resolution-cache\reports\default-testproject_2.11-test.xml[0m
@@ -569,5 +599,5 @@
 [0m[[0mdebug[0m] [0m	report for default#testproject_2.11;0.1-SNAPSHOT docs produced in C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\resolution-cache\reports\default-testproject_2.11-docs.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#testproject_2.11;0.1-SNAPSHOT pom produced in C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\resolution-cache\reports\default-testproject_2.11-pom.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#testproject_2.11;0.1-SNAPSHOT scala-tool produced in C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\resolution-cache\reports\default-testproject_2.11-scala-tool.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (172ms resolve - 12ms download)[0m
+[0m[[0mdebug[0m] [0m	resolve done (141ms resolve - 9ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m
