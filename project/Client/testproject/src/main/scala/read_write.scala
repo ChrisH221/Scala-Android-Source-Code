@@ -8,7 +8,7 @@ import android.util.Log
 
 /**INCOMPLETE
  * @author Chris Howell
- *
+ *@author Chris Howell
  * The reader class handles all IO related to txt files, this includes reading and writing files.
  */
 class read_write(filePath:String) extends handler {
@@ -22,32 +22,41 @@ class read_write(filePath:String) extends handler {
     lines
   }
 
-  def test(s:String):String = { 
+  def test(s:String):Unit = { 
 	
-		val file = new File("/data/filename.txt")
-		Log.d("MyTAG", "1")
-		val bw = new BufferedWriter(new FileWriter(file))
-		Log.d("MyTAG", "still working")
-		bw.write("hey")
-		"Print Successful"
+		val folder = new File("/sdcard/download/encoded")
+		if (!folder.exists()){
+		
+		folder.mkdir()
+		
+		}
+		
+		val Card = new File("/sdcard/download/encoded/hello_file.txt")
+		Card.createNewFile()
+		val fos = new FileOutputStream(Card)
+		fos.write(s.getBytes())
+		fos.close()
+		
+		
+		Log.d("MyTAG","2" + s.getBytes())
   
   }
   
   def writeBytes(key:(List[Bit],List[(Char,List[Bit])])) ={
 
-    val file = new File(filePath)
-    val bw = new BufferedWriter(new FileWriter(file))
-    bw.write(key._1.toString())
-    bw.close()
+		val file = new File(filePath)
+		val bw = new BufferedWriter(new FileWriter(file))
+		bw.write(key._1.toString())
+		bw.close()
 
   }
 
   def createKeyFile(key:(List[Bit],List[(Char,List[Bit])])){
 
-    val file = new File(filePath ++ "HCodeMap.txt")
-    val bw = new BufferedWriter(new FileWriter(file))
-    bw.write(key._2.toString())
-    bw.close()
+		val file = new File(filePath ++ "HCodeMap.txt")
+		val bw = new BufferedWriter(new FileWriter(file))
+		bw.write(key._2.toString())
+		bw.close()
 
 
   }

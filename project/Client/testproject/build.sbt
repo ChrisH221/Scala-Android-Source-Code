@@ -24,15 +24,22 @@ import android.Keys._
                         "org.scalatest" %% "scalatest" % "2.2.6" % "test",
                         "com.typesafe.akka" %% "akka-actor" % "2.3.6",
 						"com.typesafe.akka" %% "akka-remote" % "2.3.6",
-						"com.typesafe" % "config" % "1.2.0")
+						"com.typesafe" % "config" % "1.2.0",
+						"net.databinder.dispatch" %% "dispatch-core" % "0.11.2")
 
 
      proguardScala in Android := true
 
-    // Generic ProGuard rules
+      // Generic ProGuard rules
      proguardOptions in Android ++= Seq(
      "-ignorewarnings",
-     "-keep class scala.Dynamic"
+     "-keep class scala.Dynamic",
+	 "-dontobfuscate",
+	 "-dontpreverify",
+	 "-dontskipnonpubliclibraryclassmembers",
+	 "-dontskipnonpubliclibraryclasses",
+	 "-dontnote **",
+	 "-verbose"
       )
 
    // ProGuard rules for Akka
@@ -78,6 +85,9 @@ import android.Keys._
 "-keep class org.jboss.netty.util.internal.QueueFactory{static <fields>;}",
 "-keepclassmembernames class org.jboss.netty.util.internal.**{*;}"
    )        
+   
+   
+   
 
    scalacOptions in Compile += "-feature"
 

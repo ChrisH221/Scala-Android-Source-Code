@@ -7,7 +7,7 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies for default#testproject_2.11;0.1-SNAPSHOT [compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->org.scala-lang#scala-library;2.11.4 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang#scala-library;2.11.4 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@1f482175[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@2b044960[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#scala-library;2.11.4[0m
 [0m[[0mdebug[0m] [0m	found org.scala-lang#scala-library;2.11.4 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m	[2.11.4] org.scala-lang#scala-library;2.11.4[0m
@@ -99,6 +99,65 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->com.typesafe#config;1.2.1 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->com.typesafe#config;1.2.1 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->com.typesafe#config;1.2.1 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->net.databinder.dispatch#dispatch-core_2.11;0.11.2 [compile->default(compile)][0m
+[0m[[0minfo[0m] [0mResolving net.databinder.dispatch#dispatch-core_2.11;0.11.2 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: net.databinder.dispatch#dispatch-core_2.11;0.11.2 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: net.databinder.dispatch#dispatch-core_2.11;0.11.2[0m
+[0m[[0mdebug[0m] [0m	found net.databinder.dispatch#dispatch-core_2.11;0.11.2 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->net.databinder.dispatch#dispatch-core_2.11;0.11.2 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->net.databinder.dispatch#dispatch-core_2.11;0.11.2 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->org.scala-lang#scala-library;2.11.2 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->org.scala-lang#scala-library;2.11.4 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->org.scala-lang#scala-library;2.11.2 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->org.scala-lang#scala-library;2.11.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->org.scala-lang.modules#scala-xml_2.11;1.0.1 [compile->master(compile)][0m
+[0m[[0minfo[0m] [0mResolving org.scala-lang.modules#scala-xml_2.11;1.0.1 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-lang.modules#scala-xml_2.11;1.0.1 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang.modules#scala-xml_2.11;1.0.1[0m
+[0m[[0mdebug[0m] [0m	found org.scala-lang.modules#scala-xml_2.11;1.0.1 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->org.scala-lang.modules#scala-xml_2.11;1.0.1 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.1->org.scala-lang#scala-library;2.11.0 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.1->org.scala-lang#scala-library;2.11.0 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.1->org.scala-lang#scala-library;2.11.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->org.scala-lang.modules#scala-xml_2.11;1.0.1 [compile->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->org.scala-lang.modules#scala-xml_2.11;1.0.1 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.1->org.scala-lang#scala-library;2.11.0 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.1->org.scala-lang#scala-library;2.11.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.1->org.scala-lang#scala-library;2.11.4 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->com.ning#async-http-client;1.8.10 [compile->master(compile)][0m
+[0m[[0minfo[0m] [0mResolving com.ning#async-http-client;1.8.10 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.ning#async-http-client;1.8.10 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.ning#async-http-client;1.8.10[0m
+[0m[[0mdebug[0m] [0m	found com.ning#async-http-client;1.8.10 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->com.ning#async-http-client;1.8.10 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.ning#async-http-client;1.8.10->io.netty#netty;3.9.2.Final [compile->master(compile)][0m
+[0m[[0minfo[0m] [0mResolving io.netty#netty;3.9.2.Final ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: io.netty#netty;3.9.2.Final {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: io.netty#netty;3.9.2.Final[0m
+[0m[[0mdebug[0m] [0m	found io.netty#netty;3.9.2.Final in sbt-chain[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.ning#async-http-client;1.8.10->io.netty#netty;3.9.2.Final [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.ning#async-http-client;1.8.10->io.netty#netty;3.9.2.Final [compile->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.ning#async-http-client;1.8.10->io.netty#netty;3.9.2.Final [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.ning#async-http-client;1.8.10->org.slf4j#slf4j-api;1.7.5 [compile->master(compile)][0m
+[0m[[0minfo[0m] [0mResolving org.slf4j#slf4j-api;1.7.5 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.slf4j#slf4j-api;1.7.5 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.slf4j#slf4j-api;1.7.5[0m
+[0m[[0mdebug[0m] [0m	found org.slf4j#slf4j-api;1.7.5 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.ning#async-http-client;1.8.10->org.slf4j#slf4j-api;1.7.5 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->com.ning#async-http-client;1.8.10 [compile->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->com.ning#async-http-client;1.8.10 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.ning#async-http-client;1.8.10->io.netty#netty;3.9.2.Final [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.ning#async-http-client;1.8.10->io.netty#netty;3.9.2.Final [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.ning#async-http-client;1.8.10->org.slf4j#slf4j-api;1.7.5 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.ning#async-http-client;1.8.10->org.slf4j#slf4j-api;1.7.5 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->org.scala-lang#scala-library;2.11.2 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->org.scala-lang#scala-library;2.11.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->org.scala-lang#scala-library;2.11.4 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->org.scala-lang.modules#scala-xml_2.11;1.0.1 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->org.scala-lang.modules#scala-xml_2.11;1.0.1 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->com.ning#async-http-client;1.8.10 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->com.ning#async-http-client;1.8.10 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->net.databinder.dispatch#dispatch-core_2.11;0.11.2 [compile->master][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'runtime'[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for default#testproject_2.11;0.1-SNAPSHOT [runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for default#testproject_2.11;0.1-SNAPSHOT [compile][0m
@@ -157,6 +216,39 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->com.typesafe#config;1.2.1 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->com.typesafe#config;1.2.1 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->com.typesafe#config;1.2.1 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->net.databinder.dispatch#dispatch-core_2.11;0.11.2 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->net.databinder.dispatch#dispatch-core_2.11;0.11.2 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->net.databinder.dispatch#dispatch-core_2.11;0.11.2 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->org.scala-lang#scala-library;2.11.2 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->org.scala-lang#scala-library;2.11.4 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->org.scala-lang#scala-library;2.11.2 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->org.scala-lang#scala-library;2.11.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->org.scala-lang.modules#scala-xml_2.11;1.0.1 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->org.scala-lang.modules#scala-xml_2.11;1.0.1 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.1->org.scala-lang#scala-library;2.11.0 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.1->org.scala-lang#scala-library;2.11.0 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.1->org.scala-lang#scala-library;2.11.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->com.ning#async-http-client;1.8.10 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->com.ning#async-http-client;1.8.10 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.ning#async-http-client;1.8.10->io.netty#netty;3.9.2.Final [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.ning#async-http-client;1.8.10->io.netty#netty;3.9.2.Final [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.ning#async-http-client;1.8.10->org.slf4j#slf4j-api;1.7.5 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.ning#async-http-client;1.8.10->org.slf4j#slf4j-api;1.7.5 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->org.scala-lang#scala-library;2.11.2 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->org.scala-lang#scala-library;2.11.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->org.scala-lang#scala-library;2.11.4 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->org.scala-lang.modules#scala-xml_2.11;1.0.1 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->org.scala-lang.modules#scala-xml_2.11;1.0.1 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.1->org.scala-lang#scala-library;2.11.0 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.1->org.scala-lang#scala-library;2.11.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.1->org.scala-lang#scala-library;2.11.4 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->com.ning#async-http-client;1.8.10 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->com.ning#async-http-client;1.8.10 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.ning#async-http-client;1.8.10->io.netty#netty;3.9.2.Final [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.ning#async-http-client;1.8.10->io.netty#netty;3.9.2.Final [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.ning#async-http-client;1.8.10->org.slf4j#slf4j-api;1.7.5 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.ning#async-http-client;1.8.10->org.slf4j#slf4j-api;1.7.5 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->net.databinder.dispatch#dispatch-core_2.11;0.11.2 [compile->master][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'test'[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for default#testproject_2.11;0.1-SNAPSHOT [test][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for default#testproject_2.11;0.1-SNAPSHOT [runtime][0m
@@ -216,6 +308,39 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->com.typesafe#config;1.2.1 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->com.typesafe#config;1.2.1 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->com.typesafe#config;1.2.1 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->net.databinder.dispatch#dispatch-core_2.11;0.11.2 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->net.databinder.dispatch#dispatch-core_2.11;0.11.2 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->net.databinder.dispatch#dispatch-core_2.11;0.11.2 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->org.scala-lang#scala-library;2.11.2 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->org.scala-lang#scala-library;2.11.4 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->org.scala-lang#scala-library;2.11.2 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->org.scala-lang#scala-library;2.11.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->org.scala-lang.modules#scala-xml_2.11;1.0.1 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->org.scala-lang.modules#scala-xml_2.11;1.0.1 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.1->org.scala-lang#scala-library;2.11.0 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.1->org.scala-lang#scala-library;2.11.0 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.1->org.scala-lang#scala-library;2.11.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->com.ning#async-http-client;1.8.10 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->com.ning#async-http-client;1.8.10 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.ning#async-http-client;1.8.10->io.netty#netty;3.9.2.Final [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.ning#async-http-client;1.8.10->io.netty#netty;3.9.2.Final [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.ning#async-http-client;1.8.10->org.slf4j#slf4j-api;1.7.5 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.ning#async-http-client;1.8.10->org.slf4j#slf4j-api;1.7.5 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->org.scala-lang#scala-library;2.11.2 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->org.scala-lang#scala-library;2.11.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->org.scala-lang#scala-library;2.11.4 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->org.scala-lang.modules#scala-xml_2.11;1.0.1 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->org.scala-lang.modules#scala-xml_2.11;1.0.1 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.1->org.scala-lang#scala-library;2.11.0 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.1->org.scala-lang#scala-library;2.11.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.1->org.scala-lang#scala-library;2.11.4 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->com.ning#async-http-client;1.8.10 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->com.ning#async-http-client;1.8.10 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.ning#async-http-client;1.8.10->io.netty#netty;3.9.2.Final [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.ning#async-http-client;1.8.10->io.netty#netty;3.9.2.Final [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.ning#async-http-client;1.8.10->org.slf4j#slf4j-api;1.7.5 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.ning#async-http-client;1.8.10->org.slf4j#slf4j-api;1.7.5 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->net.databinder.dispatch#dispatch-core_2.11;0.11.2 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->org.scalatest#scalatest_2.11;2.2.6 [test->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scalatest#scalatest_2.11;2.2.6 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scalatest#scalatest_2.11;2.2.6 {test=[default(compile)]}[0m
@@ -335,6 +460,39 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->com.typesafe#config;1.2.1 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->com.typesafe#config;1.2.1 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->com.typesafe#config;1.2.1 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->net.databinder.dispatch#dispatch-core_2.11;0.11.2 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->net.databinder.dispatch#dispatch-core_2.11;0.11.2 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->net.databinder.dispatch#dispatch-core_2.11;0.11.2 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->org.scala-lang#scala-library;2.11.2 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->org.scala-lang#scala-library;2.11.4 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->org.scala-lang#scala-library;2.11.2 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->org.scala-lang#scala-library;2.11.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->org.scala-lang.modules#scala-xml_2.11;1.0.1 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->org.scala-lang.modules#scala-xml_2.11;1.0.1 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.1->org.scala-lang#scala-library;2.11.0 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.1->org.scala-lang#scala-library;2.11.0 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.1->org.scala-lang#scala-library;2.11.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->com.ning#async-http-client;1.8.10 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->com.ning#async-http-client;1.8.10 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.ning#async-http-client;1.8.10->io.netty#netty;3.9.2.Final [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.ning#async-http-client;1.8.10->io.netty#netty;3.9.2.Final [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.ning#async-http-client;1.8.10->org.slf4j#slf4j-api;1.7.5 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.ning#async-http-client;1.8.10->org.slf4j#slf4j-api;1.7.5 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->org.scala-lang#scala-library;2.11.2 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->org.scala-lang#scala-library;2.11.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->org.scala-lang#scala-library;2.11.4 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->org.scala-lang.modules#scala-xml_2.11;1.0.1 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->org.scala-lang.modules#scala-xml_2.11;1.0.1 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.1->org.scala-lang#scala-library;2.11.0 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.1->org.scala-lang#scala-library;2.11.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.1->org.scala-lang#scala-library;2.11.4 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->com.ning#async-http-client;1.8.10 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->com.ning#async-http-client;1.8.10 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.ning#async-http-client;1.8.10->io.netty#netty;3.9.2.Final [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.ning#async-http-client;1.8.10->io.netty#netty;3.9.2.Final [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.ning#async-http-client;1.8.10->org.slf4j#slf4j-api;1.7.5 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.ning#async-http-client;1.8.10->org.slf4j#slf4j-api;1.7.5 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->net.databinder.dispatch#dispatch-core_2.11;0.11.2 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for default#testproject_2.11;0.1-SNAPSHOT [optional][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for default#testproject_2.11;0.1-SNAPSHOT [provided][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'runtime-internal'[0m
@@ -396,6 +554,39 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->com.typesafe#config;1.2.1 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->com.typesafe#config;1.2.1 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->com.typesafe#config;1.2.1 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->net.databinder.dispatch#dispatch-core_2.11;0.11.2 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->net.databinder.dispatch#dispatch-core_2.11;0.11.2 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->net.databinder.dispatch#dispatch-core_2.11;0.11.2 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->org.scala-lang#scala-library;2.11.2 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->org.scala-lang#scala-library;2.11.4 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->org.scala-lang#scala-library;2.11.2 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->org.scala-lang#scala-library;2.11.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->org.scala-lang.modules#scala-xml_2.11;1.0.1 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->org.scala-lang.modules#scala-xml_2.11;1.0.1 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.1->org.scala-lang#scala-library;2.11.0 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.1->org.scala-lang#scala-library;2.11.0 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.1->org.scala-lang#scala-library;2.11.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->com.ning#async-http-client;1.8.10 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->com.ning#async-http-client;1.8.10 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.ning#async-http-client;1.8.10->io.netty#netty;3.9.2.Final [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.ning#async-http-client;1.8.10->io.netty#netty;3.9.2.Final [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.ning#async-http-client;1.8.10->org.slf4j#slf4j-api;1.7.5 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.ning#async-http-client;1.8.10->org.slf4j#slf4j-api;1.7.5 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->org.scala-lang#scala-library;2.11.2 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->org.scala-lang#scala-library;2.11.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->org.scala-lang#scala-library;2.11.4 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->org.scala-lang.modules#scala-xml_2.11;1.0.1 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->org.scala-lang.modules#scala-xml_2.11;1.0.1 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.1->org.scala-lang#scala-library;2.11.0 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.1->org.scala-lang#scala-library;2.11.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.1->org.scala-lang#scala-library;2.11.4 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->com.ning#async-http-client;1.8.10 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->com.ning#async-http-client;1.8.10 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.ning#async-http-client;1.8.10->io.netty#netty;3.9.2.Final [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.ning#async-http-client;1.8.10->io.netty#netty;3.9.2.Final [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.ning#async-http-client;1.8.10->org.slf4j#slf4j-api;1.7.5 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.ning#async-http-client;1.8.10->org.slf4j#slf4j-api;1.7.5 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->net.databinder.dispatch#dispatch-core_2.11;0.11.2 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for default#testproject_2.11;0.1-SNAPSHOT [optional][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'test-internal'[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for default#testproject_2.11;0.1-SNAPSHOT [test-internal][0m
@@ -457,6 +648,39 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->com.typesafe#config;1.2.1 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->com.typesafe#config;1.2.1 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->com.typesafe#config;1.2.1 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->net.databinder.dispatch#dispatch-core_2.11;0.11.2 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->net.databinder.dispatch#dispatch-core_2.11;0.11.2 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->net.databinder.dispatch#dispatch-core_2.11;0.11.2 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->org.scala-lang#scala-library;2.11.2 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->org.scala-lang#scala-library;2.11.4 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->org.scala-lang#scala-library;2.11.2 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->org.scala-lang#scala-library;2.11.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->org.scala-lang.modules#scala-xml_2.11;1.0.1 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->org.scala-lang.modules#scala-xml_2.11;1.0.1 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.1->org.scala-lang#scala-library;2.11.0 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.1->org.scala-lang#scala-library;2.11.0 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.1->org.scala-lang#scala-library;2.11.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->com.ning#async-http-client;1.8.10 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->com.ning#async-http-client;1.8.10 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.ning#async-http-client;1.8.10->io.netty#netty;3.9.2.Final [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.ning#async-http-client;1.8.10->io.netty#netty;3.9.2.Final [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.ning#async-http-client;1.8.10->org.slf4j#slf4j-api;1.7.5 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.ning#async-http-client;1.8.10->org.slf4j#slf4j-api;1.7.5 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->org.scala-lang#scala-library;2.11.2 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->org.scala-lang#scala-library;2.11.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->org.scala-lang#scala-library;2.11.4 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->org.scala-lang.modules#scala-xml_2.11;1.0.1 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->org.scala-lang.modules#scala-xml_2.11;1.0.1 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.1->org.scala-lang#scala-library;2.11.0 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.1->org.scala-lang#scala-library;2.11.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.1->org.scala-lang#scala-library;2.11.4 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->com.ning#async-http-client;1.8.10 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies net.databinder.dispatch#dispatch-core_2.11;0.11.2->com.ning#async-http-client;1.8.10 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.ning#async-http-client;1.8.10->io.netty#netty;3.9.2.Final [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.ning#async-http-client;1.8.10->io.netty#netty;3.9.2.Final [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.ning#async-http-client;1.8.10->org.slf4j#slf4j-api;1.7.5 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.ning#async-http-client;1.8.10->org.slf4j#slf4j-api;1.7.5 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->net.databinder.dispatch#dispatch-core_2.11;0.11.2 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->org.scalatest#scalatest_2.11;2.2.6 [test->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->org.scalatest#scalatest_2.11;2.2.6 [test->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->org.scalatest#scalatest_2.11;2.2.6 [test->compile][0m
@@ -573,10 +797,14 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-library;2.11.4!scala-library.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.akka#akka-actor_2.11;2.3.6!akka-actor_2.11.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.akka#akka-remote_2.11;2.3.6!akka-remote_2.11.jar[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] net.databinder.dispatch#dispatch-core_2.11;0.11.2!dispatch-core_2.11.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe#config;1.2.1!config.jar(bundle)[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] io.netty#netty;3.8.0.Final!netty.jar(bundle)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.google.protobuf#protobuf-java;2.5.0!protobuf-java.jar(bundle)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.uncommons.maths#uncommons-maths;1.2.2a!uncommons-maths.jar[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.11;1.0.1!scala-xml_2.11.jar(bundle)[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.ning#async-http-client;1.8.10!async-http-client.jar[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] io.netty#netty;3.9.2.Final!netty.jar(bundle)[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.slf4j#slf4j-api;1.7.5!slf4j-api.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scalatest#scalatest_2.11;2.2.6!scalatest_2.11.jar(bundle)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-library;2.11.7!scala-library.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-reflect;2.11.7!scala-reflect.jar[0m
@@ -585,7 +813,7 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-reflect;2.11.4!scala-reflect.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang.modules#scala-parser-combinators_2.11;1.0.2!scala-parser-combinators_2.11.jar(bundle)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] jline#jline;2.12!jline.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 141ms :: artifacts dl 9ms[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 154ms :: artifacts dl 11ms[0m
 [0m[[0mdebug[0m] [0m	report for default#testproject_2.11;0.1-SNAPSHOT compile produced in C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\resolution-cache\reports\default-testproject_2.11-compile.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#testproject_2.11;0.1-SNAPSHOT runtime produced in C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\resolution-cache\reports\default-testproject_2.11-runtime.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#testproject_2.11;0.1-SNAPSHOT test produced in C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\resolution-cache\reports\default-testproject_2.11-test.xml[0m
@@ -599,5 +827,5 @@
 [0m[[0mdebug[0m] [0m	report for default#testproject_2.11;0.1-SNAPSHOT docs produced in C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\resolution-cache\reports\default-testproject_2.11-docs.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#testproject_2.11;0.1-SNAPSHOT pom produced in C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\resolution-cache\reports\default-testproject_2.11-pom.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#testproject_2.11;0.1-SNAPSHOT scala-tool produced in C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\resolution-cache\reports\default-testproject_2.11-scala-tool.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (141ms resolve - 9ms download)[0m
+[0m[[0mdebug[0m] [0m	resolve done (154ms resolve - 11ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m

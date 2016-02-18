@@ -31,10 +31,14 @@ class handler extends builder{
 	if (s.isEmpty || list.isEmpty) acc
 	
 
-    else if(list.head._1.equals(s.toCharArray.head)) bitList(s.drop(1), acc:::list.head._2, list:::list2,x)
-	
+    else if(list.head._1.equals(s.toCharArray.head)){
 
+	bitList(s.drop(1), acc:::list.head._2, list:::list2,x)
+	
+	}
+	
     else  bitList(s, acc,list.drop(1), list.head::list2)
+	
   }
   
   
@@ -51,8 +55,11 @@ class handler extends builder{
 
     if(s.isEmpty) return (x,x)
 
-    if (s.length > 1 ) (bitList(s,x,extractCode(makeTree(s),x,x),x).reverse,extractCode(makeTree(s),x,x))
-
+    if (s.length > 1 ) {
+	
+	(bitList(s,x,extractCode(makeTree(s),x,x),x).reverse,extractCode(makeTree(s),x,x))
+	
+	}
     else (List(new Zero),List((s.charAt(0),List( new Zero))))
 
   }
@@ -66,8 +73,13 @@ class handler extends builder{
 
     if(list2.isEmpty)  None
 
-    else if(list.reverse == list2.head._2) Some(list2.head._1.toString)
-
+    else if(list.reverse == list2.head._2)
+	{
+	
+	Some(list2.head._1.toString)
+	
+	}
+	
     else lookup(list,list2.drop(1))
 
   }
@@ -88,6 +100,7 @@ class handler extends builder{
       val x = s ++ lookup(list._1.take(acc),list._2).getOrElse("a")
 
       if(list._2.length == 1)  x
+	  
       else decode(1,x, (list._1.drop(acc),list._2))
 
     }

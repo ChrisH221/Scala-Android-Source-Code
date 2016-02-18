@@ -1,4 +1,6 @@
 import akka.actor.{ActorSystem, ActorLogging, Actor, Props}
+import com.typesafe.config.ConfigFactory
+import java.io.File
 
 class ServerActor1 extends Actor {
   override def receive: Receive = {
@@ -12,7 +14,11 @@ class ServerActor1 extends Actor {
 
 object main extends App {
 
-  val system = ActorSystem("server-akka")
+  val configFile = getClass.getClassLoader.getResource("application.conf").getFile
+	
+  val config = ConfigFactory.parseFile(new File(configFile))
+
+  val system = ActorSystem("server-akka", config)
 
   val sv1 = system.actorOf(Props(new ServerActor1), "sv1")
 

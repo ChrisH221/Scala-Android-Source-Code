@@ -18,13 +18,13 @@ trait helpers {
    * 
    */ 
   
-implicit def onClickListener(f: (View => Unit)): View.OnClickListener = {
-  new View.OnClickListener() {
-    override def onClick(v: View) {
-      f(v)
-    }
-  }
-}
+	implicit def onClickListener(f: (View => Unit)): View.OnClickListener = {
+		new View.OnClickListener() {
+				override def onClick(v: View) {
+			f(v)
+			}
+		}
+		}
 
   /* 
    * Define a single bit as a sealed trait that can be either One, Zero or EmptyBit

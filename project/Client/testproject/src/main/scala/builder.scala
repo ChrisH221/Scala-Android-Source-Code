@@ -72,8 +72,11 @@ import my.android.project.helpers
 
     else{
 
-      if(freqNode(Tree) >= freqNode (HTree.head))  insert(Tree, HTree.drop(1), newList:::HTree.take(1))
+      if(freqNode(Tree) >= freqNode (HTree.head)){
 
+	  insert(Tree, HTree.drop(1), newList:::HTree.take(1))
+
+	  }
       else  newList:::Tree::HTree
 
 
@@ -88,7 +91,11 @@ import my.android.project.helpers
 
   def makeLink(t1: HTree, t2:HTree): HTree = {
 
-    if(freqNode(t1) < freqNode(t2))  Branch(freqNode (t1) + freqNode (t2),t1,t2)
+    if(freqNode(t1) < freqNode(t2)) {
+
+	Branch(freqNode (t1) + freqNode (t2),t1,t2)
+	
+	}
 
     else  Branch(freqNode (t1) + freqNode (t2),t2,t1)
 
@@ -113,7 +120,6 @@ import my.android.project.helpers
 
 
     if(t.length == 1 ) t.head
-
     else merge(shrinkList(makeLink(t.take(1).head, t.slice(1,2).head),t.drop(2)))
 
 
@@ -125,8 +131,9 @@ import my.android.project.helpers
 
   def makeNode(list:List[(Char,Int)],nodeList:List[HTree]):List[HTree] ={
 
-    if(list.isEmpty) nodeList
-
+    if(list.isEmpty){
+	nodeList
+	}
     else makeNode(list.drop(1),Leaf (list.head._2,list.head._1)::nodeList)
 
   }

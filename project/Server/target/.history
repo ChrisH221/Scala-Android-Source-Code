@@ -23,3 +23,14 @@ run
 update
 compile
 run
+update
+run
+update
+compile
+reload
+update
+compile
+run
+update
+compile
+run
