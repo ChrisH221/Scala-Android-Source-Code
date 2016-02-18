@@ -50,6 +50,8 @@
 [0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\TR$.class[0m
 [0m[[0mdebug[0m] [0m	my\android\project\helpers$Leaf$.class[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\helpers$Leaf$.class[0m
+[0m[[0mdebug[0m] [0m	my\android\project\helloWorld$actorUI$$anonfun$receive$1.class[0m
+[0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\helloWorld$actorUI$$anonfun$receive$1.class[0m
 [0m[[0mdebug[0m] [0m	my\android\project\helpers$One.class[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\helpers$One.class[0m
 [0m[[0mdebug[0m] [0m	my\android\project\TR$layout$.class[0m
@@ -70,6 +72,8 @@
 [0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\TR.class[0m
 [0m[[0mdebug[0m] [0m	my\android\project\helpers$Empty$.class[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\helpers$Empty$.class[0m
+[0m[[0mdebug[0m] [0m	my\android\project\helloWorld$actorUI.class[0m
+[0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\helloWorld$actorUI.class[0m
 [0m[[0mdebug[0m] [0m	my\android\project\helpers$HTree.class[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\helpers$HTree.class[0m
 [0m[[0mdebug[0m] [0m	my\android\project\Message.class[0m
@@ -98,8 +102,6 @@
 [0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\handler.class[0m
 [0m[[0mdebug[0m] [0m	my\android\project\helloWorld.class[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\helloWorld.class[0m
-[0m[[0mdebug[0m] [0m	my\android\project\helloWorld$actorM.class[0m
-[0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\helloWorld$actorM.class[0m
 [0m[[0mdebug[0m] [0m	my\android\project\send.class[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\send.class[0m
 [0m[[0mdebug[0m] [0m	my\android\project\read_write.class[0m
@@ -112,8 +114,6 @@
 [0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\builder$$anonfun$count$1.class[0m
 [0m[[0mdebug[0m] [0m	my\android\project\TypedLayoutInflater.class[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\TypedLayoutInflater.class[0m
-[0m[[0mdebug[0m] [0m	my\android\project\helloWorld$actorM$$anonfun$receive$1.class[0m
-[0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\helloWorld$actorM$$anonfun$receive$1.class[0m
 [0m[[0mdebug[0m] [0m	my\android[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android[0m
 [0m[[0mdebug[0m] [0m	my\android\project\TypedActivity.class[0m

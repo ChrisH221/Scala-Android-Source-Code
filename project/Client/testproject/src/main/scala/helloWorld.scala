@@ -31,22 +31,21 @@ class helloWorld extends Activity with TypedActivity with helpers{
 	val t = new read_write("hey")
     val localActor = system.actorOf(Props[LocalActor])
 	val h = new handler
-	//val uiActor = system.actorOf(Props[actorM],"ui")
+	//val uiAct = system.actorOf(Props[actorUI],"ui")
 	val editText = findView(TR.editTextResult)
 	val button = findView(TR.button1)
 	button.setOnClickListener((v : View) => {
-	changeUI()
-	val s = h.encode("hiya")
-		//val s = h.encode(editText.getText().toString())._1 mkString
-		t.tests(s._1 mkString)
+	
+		val s = (h.encode(editText.getText().toString())._1 mkString)
+		t.test(s)
 		//localActor ! "START"
-		//uiActor ! "change"
+		//uiAct ! "change"
 	
     })
   }
 
 
-class actorM extends Actor {
+class actorUI extends Actor {
    def receive = {
 	
 	case "change" => changeUI()

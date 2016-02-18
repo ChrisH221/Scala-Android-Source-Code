@@ -61,7 +61,7 @@ import my.android.project.helpers
     *@returns List[HTree]
    */
 
-  def insert(Tree:HTree,HTree:List[HTree], newList:List[HTree]): List[HTree] ={
+  def insert(Tree:HTree, HTree:List[HTree], newList:List[HTree]): List[HTree] ={
 
     //TODO Idiomatic approach
     //val list = Tree::HTree
@@ -120,7 +120,7 @@ import my.android.project.helpers
 
 
     if(t.length == 1 ) t.head
-    else merge(shrinkList(makeLink(t.take(1).head, t.slice(1,2).head),t.drop(2)))
+    else merge(shrinkList(makeLink(t.take(1).head, t.slice(1,2).head), t.drop(2)))
 
 
   }
