@@ -1,6 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <manifest package="my.android.project" xmlns:android="http://schemas.android.com/apk/res/android">
-
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+	<uses-permission android:name="android.permission.INTERNET"/>
     <application android:label="@string/app_name" android:icon="@drawable/android:star_big_on" android:debuggable="true">
 
         <activity android:name="my.android.project.helloWorld" android:label="@string/app_name">
@@ -10,7 +11,6 @@
             </intent-filter>
         </activity>
     <uses-library android:name="android.test.runner"/></application>
-	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-	<uses-permission android:name="android.permission.INTERNET"/>
+	
     <uses-sdk android:targetSdkVersion="16" android:minSdkVersion="16"/>
 <instrumentation android:name="android.test.InstrumentationTestRunner" android:label="Test Runner" android:targetPackage="my.android.project"/></manifest>

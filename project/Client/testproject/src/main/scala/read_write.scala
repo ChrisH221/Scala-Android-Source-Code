@@ -10,6 +10,7 @@ import android.util.Log
  * @author Chris Howell
  *
  * The reader class handles all IO related to txt files, this includes reading and writing files.
+ * Need to refactor to remove filepath input
  */
 class read_write(filePath:String) extends handler {
 
@@ -70,16 +71,19 @@ def test(s:String):Unit = {
 	  
   }
   
+  def removeWord(s:String, word:String)= s filterNot (word contains _)
+  
    /*INCOMPLETE
    *Writes the key to a text file
    *@returns Unit
    */
   def createKeyFile(key:(List[Bit],List[(Char,List[Bit])])){
 
-		val file = new File(filePath ++ "HCodeMap.txt")
-		val bw = new BufferedWriter(new FileWriter(file))
-		bw.write(key._2.toString())
-		bw.close()
+		val Card  = new File(removeWord(filePath, ".txt") ++ "_HCodeMap.txt")
+		Card.createNewFile()
+		val fos = new FileOutputStream(Card)
+		fos.write(key._2.toString().getBytes())
+		fos.close()
 
 
   }

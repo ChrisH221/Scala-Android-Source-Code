@@ -28,17 +28,21 @@ class helloWorld extends Activity with TypedActivity with helpers{
 	
 	
     val system = ActorSystem("ClientSystem",config)
+  
+	// val system = ActorSystem("ClientSystem")
+   // val uiAct = system.actorOf(Props(new actorUI))
 	val t = new read_write("hey")
     val localActor = system.actorOf(Props[LocalActor])
 	val h = new handler
-	//val uiAct = system.actorOf(Props[actorUI],"ui")
+//	val uiAct = system.actorOf(Props[actorUI])
 	val editText = findView(TR.editTextResult)
 	val button = findView(TR.button1)
 	button.setOnClickListener((v : View) => {
 	
-		val s = (h.encode(editText.getText().toString())._1 mkString)
-		t.test(s)
-		//localActor ! "START"
+		val s = (h.encode(editText.getText().toString())._1)
+		t.test(s mkString)
+		//t.createKeyFile(h.encode("heyy"))
+		localActor ! "hey"
 		//uiAct ! "change"
 	
     })

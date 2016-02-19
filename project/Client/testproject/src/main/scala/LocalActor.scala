@@ -6,7 +6,7 @@ import android.util.Log
 class LocalActor extends Actor {
 
  
-  val remote = context.actorFor("akka.tcp://server-akka@127.0.0.1:5150/user/sv1")
+  val remote = context.actorSelection("akka.tcp://server-akka@192.168.1.67:5150/user/sv1")
   Log.d("MyTAG","1:" + remote)
 
   def receive = {
