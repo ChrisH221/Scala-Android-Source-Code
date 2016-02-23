@@ -38,7 +38,8 @@ class helloWorld extends Activity with TypedActivity with helpers{
 	val editText = findView(TR.editTextResult)
 	val button = findView(TR.button1)
 	button.setOnClickListener((v : View) => {
-	
+	   val d = new db
+	   d.query()
 		val s = (h.encode(editText.getText().toString())._1)
 		t.test(s mkString)
 		//t.createKeyFile(h.encode("heyy"))

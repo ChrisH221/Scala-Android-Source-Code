@@ -1,2 +1,12 @@
 [0m[[0mdebug[0m] [0mProguard cache rules: List(ProguardCache(ArrayBuffer(scala/),Some(org.scala-lang),None,None,None))[0m
+[0m[[0minfo[0m] [0mFinding dependency references for: com.typesafe.akka:akka-actor_2.11:2.3.6[0m
+[0m[[0minfo[0m] [0mFinding dependency references for: com.typesafe:config:1.2.1[0m
+[0m[[0minfo[0m] [0mFinding dependency references for: com.typesafe.akka:akka-remote_2.11:2.3.6[0m
+[0m[[0minfo[0m] [0mFinding dependency references for: com.google.protobuf:protobuf-java:2.5.0[0m
+[0m[[0minfo[0m] [0mFinding dependency references for: org.uncommons.maths:uncommons-maths:1.2.2a[0m
+[0m[[0minfo[0m] [0mFinding dependency references for: net.databinder.dispatch:dispatch-core_2.11:0.11.2[0m
+[0m[[0minfo[0m] [0mFinding dependency references for: org.scala-lang.modules:scala-xml_2.11:1.0.1[0m
+[0m[[0minfo[0m] [0mFinding dependency references for: com.ning:async-http-client:1.8.10[0m
+[0m[[0minfo[0m] [0mFinding dependency references for: io.netty:netty:3.9.2.Final[0m
+[0m[[0minfo[0m] [0mFinding dependency references for: org.slf4j:slf4j-api:1.7.5[0m
 [0m[[0minfo[0m] [0mFinding dependency references for: classes.jar[0m
