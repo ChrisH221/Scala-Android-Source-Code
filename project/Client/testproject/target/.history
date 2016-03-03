@@ -1,9 +1,3 @@
-update
-compile
-reload
-update
-compile
-reload
 compile
 reload
 update
@@ -498,3 +492,9 @@ compile
 reload
 compile
 run
+reload
+compile
+reload
+compile
+reload
+compile
