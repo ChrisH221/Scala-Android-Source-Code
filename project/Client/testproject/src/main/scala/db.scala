@@ -1,3 +1,5 @@
+package my.android.project
+
 import java.io.BufferedInputStream
 import java.io.InputStream
 import java.net.MalformedURLException

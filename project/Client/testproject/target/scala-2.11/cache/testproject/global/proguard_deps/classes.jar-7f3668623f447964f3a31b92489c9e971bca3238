@@ -55,7 +55,6 @@ visitMethodInsn(182,scala/collection/immutable/List,take,(I)Lscala/collection/im
 visitMethodInsn(182,scala/collection/immutable/List,sortBy,(Lscala/Function1;Lscala/math/Ordering;)Ljava/lang/Object;)
 visitMethodInsn(182,scala/collection/immutable/List,slice,(II)Lscala/collection/immutable/List;)
 visitMethodInsn(182,scala/collection/immutable/List,reverse,()Lscala/collection/immutable/List;)
-visitMethodInsn(182,scala/collection/immutable/List,mkString,()Ljava/lang/String;)
 visitMethodInsn(182,scala/collection/immutable/List,length,()I)
 visitMethodInsn(182,scala/collection/immutable/List,isEmpty,()Z)
 visitMethodInsn(182,scala/collection/immutable/List,head,()Ljava/lang/Object;)

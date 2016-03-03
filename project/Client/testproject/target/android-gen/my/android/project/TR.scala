@@ -8,8 +8,10 @@ case class TypedResource[A](id: Int)
 case class TypedLayout[A](id: Int)
 
 object TR {
+  val encode = TypedResource[android.widget.Button](R.id.encode)
   val username = TypedResource[android.widget.EditText](R.id.username)
   val submit = TypedResource[android.widget.Button](R.id.submit)
+  val decode = TypedResource[android.widget.Button](R.id.decode)
   val inform = TypedResource[android.widget.TextView](R.id.inform)
   val textview2 = TypedResource[android.widget.TextView](R.id.textview2)
   val textview = TypedResource[android.widget.TextView](R.id.textview)
@@ -20,6 +22,7 @@ object TR {
   object layout {
     val check = TypedLayout[android.widget.LinearLayout](R.layout.check)
     val main = TypedLayout[android.widget.LinearLayout](R.layout.main)
+    val user = TypedLayout[android.widget.LinearLayout](R.layout.user)
   }
 }
 

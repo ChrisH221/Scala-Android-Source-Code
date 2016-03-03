@@ -30,9 +30,24 @@ class helloWorld extends Activity with TypedActivity with helpers{
 def login(){
 
  setContentView(R.layout.check)
+ 
+	val button = findView(TR.submit)
+	button.setOnClickListener((v : View) => {
+	   
+	  choose()
+	
+    })
+
+}
+
+def choose(){
+
+ setContentView(R.layout.user)
 
 
 }
+
+
 def setupMain(){
 
 	// val system = ActorSystem("ClientSystem")

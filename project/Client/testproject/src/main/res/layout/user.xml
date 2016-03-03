@@ -1,0 +1,32 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+
+	  <Button
+        android:id="@+id/encode"
+        android:layout_width="match_parent"
+		android:layout_weight="1"
+		android:layout_height="100dp"
+		android:layout_marginLeft="2dp"
+		android:layout_marginRight="2dp"
+        android:text="encode" 
+		android:textSize="50dp"
+        />
+		
+		  <Button
+        android:id="@+id/decode"
+        android:layout_width="match_parent"
+		android:layout_weight="1"
+		android:layout_height="100dp"
+		android:layout_marginLeft="2dp"
+		android:layout_marginRight="2dp"
+        android:text="decode" 
+		android:textSize="50dp"
+        />
+    
+
+
+
+</LinearLayout>
