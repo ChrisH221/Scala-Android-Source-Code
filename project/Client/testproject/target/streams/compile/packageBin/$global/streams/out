@@ -26,8 +26,6 @@
 [0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\builder.class[0m
 [0m[[0mdebug[0m] [0m	my\android\project[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project[0m
-[0m[[0mdebug[0m] [0m	my\android\project\helloWorld$$anonfun$onCreate$1.class[0m
-[0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\helloWorld$$anonfun$onCreate$1.class[0m
 [0m[[0mdebug[0m] [0m	my\android\project\helpers$Bit.class[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\helpers$Bit.class[0m
 [0m[[0mdebug[0m] [0m	my\android\project\helpers$Leaf.class[0m
@@ -54,8 +52,6 @@
 [0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\helpers$Leaf$.class[0m
 [0m[[0mdebug[0m] [0m	my\android\project\db$2.class[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\db$2.class[0m
-[0m[[0mdebug[0m] [0m	my\android\project\helloWorld$actorUI$$anonfun$receive$1.class[0m
-[0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\helloWorld$actorUI$$anonfun$receive$1.class[0m
 [0m[[0mdebug[0m] [0m	my\android\project\helpers$One.class[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\helpers$One.class[0m
 [0m[[0mdebug[0m] [0m	my\android\project\TR$layout$.class[0m
@@ -78,8 +74,6 @@
 [0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\helpers$Empty$.class[0m
 [0m[[0mdebug[0m] [0m	my\android\project\read_write$$anonfun$removeWord$1.class[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\read_write$$anonfun$removeWord$1.class[0m
-[0m[[0mdebug[0m] [0m	my\android\project\helloWorld$actorUI.class[0m
-[0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\helloWorld$actorUI.class[0m
 [0m[[0mdebug[0m] [0m	my\android\project\helpers$HTree.class[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\helpers$HTree.class[0m
 [0m[[0mdebug[0m] [0m	my\android\project\Message.class[0m
@@ -108,6 +102,8 @@
 [0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\handler.class[0m
 [0m[[0mdebug[0m] [0m	my\android\project\helloWorld.class[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\helloWorld.class[0m
+[0m[[0mdebug[0m] [0m	my\android\project\helloWorld$$anonfun$setupMain$1.class[0m
+[0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\helloWorld$$anonfun$setupMain$1.class[0m
 [0m[[0mdebug[0m] [0m	my\android\project\send.class[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\send.class[0m
 [0m[[0mdebug[0m] [0m	my\android\project\read_write.class[0m

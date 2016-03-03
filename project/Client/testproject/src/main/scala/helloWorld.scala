@@ -21,18 +21,24 @@ class helloWorld extends Activity with TypedActivity with helpers{
   
     super.onCreate(bundle)
     setContentView(R.layout.main)
-
-	val configFile = getClass.getClassLoader.getResource("application.conf").getFile
-	
-    val config = ConfigFactory.parseFile(new File(configFile))
+	val l = login()
 	
 	
-    val system = ActorSystem("ClientSystem",config)
+  }
   
+  
+def login(){
+
+ setContentView(R.layout.check)
+
+
+}
+def setupMain(){
+
 	// val system = ActorSystem("ClientSystem")
    // val uiAct = system.actorOf(Props(new actorUI))
 	val t = new read_write("hey")
-    val localActor = system.actorOf(Props[LocalActor])
+    //val localActor = system.actorOf(Props[LocalActor])
 	val h = new handler
 //	val uiAct = system.actorOf(Props[actorUI])
 	val editText = findView(TR.editTextResult)
@@ -43,28 +49,10 @@ class helloWorld extends Activity with TypedActivity with helpers{
 		val s = (h.encode(editText.getText().toString())._1)
 		t.test(s mkString)
 		//t.createKeyFile(h.encode("heyy"))
-		localActor ! "hey"
+	//	localActor ! "hey"
 		//uiAct ! "change"
 	
     })
-  }
-
-
-class actorUI extends Actor {
-   def receive = {
-	
-	case "change" => changeUI()
-	
-      
-   }
-   
-   }
-
-def changeUI(){
-
-	val h = new handler
-	val editText = findView(TR.editTextResult)
-	findView(TR.textview).setText(h.encode(editText.getText().toString())._1 mkString)
 
 }
 

@@ -14,6 +14,11 @@
                 <string name="app_name" >testProject
                 </string>
             </file>
+            <file
+                name="check"
+                path="C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\src\main\res\layout\check.xml"
+                qualifiers=""
+                type="layout" />
         </source>
     </dataSet>
 

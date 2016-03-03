@@ -1,0 +1,62 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+
+    <LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+
+
+    <EditText
+    android:id="@+id/username"
+    android:layout_width="match_parent"
+    android:layout_weight="1"
+    android:layout_height="100dp"
+    android:layout_marginLeft="2dp"
+    android:layout_marginRight="2dp"
+    android:hint="USERNAME" >
+    </EditText>
+
+   
+
+     <EditText
+    android:id="@+id/password"
+    android:layout_width="match_parent"
+    android:layout_weight="1"
+    android:layout_height="100dp"
+    android:layout_marginLeft="2dp"
+    android:layout_marginRight="2dp"
+    android:hint="PASSWORD" >
+    </EditText>
+
+     </LinearLayout>
+
+	 <TextView
+        android:id="@+id/inform"
+        android:layout_width="wrap_content"
+		android:layout_weight="1"
+		android:layout_height="100dp"
+		android:layout_marginLeft="2dp"
+		android:layout_marginRight="2dp"
+        android:text="Could not find your user account! Enter a username and password to find your account or create a new one!" 
+        android:textSize="15dp" />
+	 
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="wrap_content"
+		android:layout_weight="1"
+		android:layout_height="100dp"
+		android:layout_marginLeft="2dp"
+		android:layout_marginRight="2dp"
+        android:text="Submit" 
+        />
+
+    
+
+
+
+</LinearLayout><!-- From: file:/C:/Users/Chris/Documents/GitHub/Scala-Android-Source-Code/project/Client/testproject/src/main/res/layout/check.xml -->
