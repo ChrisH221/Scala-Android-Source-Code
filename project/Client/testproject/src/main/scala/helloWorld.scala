@@ -8,7 +8,11 @@ import akka.actor.{ActorSystem, ActorLogging, Actor, Props}
 import com.typesafe.config.ConfigFactory
 import java.io.File
 import android.util.Log
-import dispatch._, Defaults._
+import android.content.Intent
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListAdapter;
+import android.widget.ListView;
 
 
 
@@ -20,12 +24,16 @@ class helloWorld extends Activity with TypedActivity with helpers{
   override def onCreate(bundle: Bundle) {
   
     super.onCreate(bundle)
-    setContentView(R.layout.main)
-	val l = login()
+	//var f = new FileChooser(this)
+	
+
+    val l = login()
 	
 	
   }
   
+  
+ 
   
 def login(){
 
@@ -44,6 +52,24 @@ def choose(){
 
  setContentView(R.layout.user)
 
+ val button1 = findView(TR.encode)
+	button1.setOnClickListener((v : View) => {
+	   
+	  	 var intent= new Intent (this,classOf[ListViewer])
+	 startActivity(intent)
+	
+    })
+
+	
+	val button2 = findView(TR.decode)
+	button2.setOnClickListener((v : View) => {
+	  	 var intent= new Intent (this,classOf[ListViewer])
+	 startActivity(intent)
+
+	
+    })
+
+ 
 
 }
 

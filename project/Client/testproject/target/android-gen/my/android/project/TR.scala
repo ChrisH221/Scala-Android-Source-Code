@@ -16,10 +16,12 @@ object TR {
   val textview2 = TypedResource[android.widget.TextView](R.id.textview2)
   val textview = TypedResource[android.widget.TextView](R.id.textview)
   val editTextResult = TypedResource[android.widget.EditText](R.id.editTextResult)
+  val theListView = TypedResource[android.widget.ListView](R.id.theListView)
   val button1 = TypedResource[android.widget.Button](R.id.button1)
   val password = TypedResource[android.widget.EditText](R.id.password)
 
   object layout {
+    val a_main = TypedLayout[android.widget.LinearLayout](R.layout.a_main)
     val check = TypedLayout[android.widget.LinearLayout](R.layout.check)
     val main = TypedLayout[android.widget.LinearLayout](R.layout.main)
     val user = TypedLayout[android.widget.LinearLayout](R.layout.user)
