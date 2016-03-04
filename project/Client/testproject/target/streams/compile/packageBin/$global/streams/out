@@ -56,6 +56,8 @@
 [0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\TR$.class[0m
 [0m[[0mdebug[0m] [0m	my\android\project\helpers$Leaf$.class[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\helpers$Leaf$.class[0m
+[0m[[0mdebug[0m] [0m	my\android\project\ListViewer$$anonfun$2.class[0m
+[0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\ListViewer$$anonfun$2.class[0m
 [0m[[0mdebug[0m] [0m	my\android\project\helpers$One.class[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\helpers$One.class[0m
 [0m[[0mdebug[0m] [0m	my\android\project\TR$layout$.class[0m
@@ -88,6 +90,8 @@
 [0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\TypedViewHolder.class[0m
 [0m[[0mdebug[0m] [0m	my\android\project\LocalActor.class[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\LocalActor.class[0m
+[0m[[0mdebug[0m] [0m	my\android\project\ListViewer$$anon$1.class[0m
+[0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\ListViewer$$anon$1.class[0m
 [0m[[0mdebug[0m] [0m	my\android\project\helpers.class[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\helpers.class[0m
 [0m[[0mdebug[0m] [0m	my\android\project\helpers$Empty.class[0m
@@ -114,6 +118,8 @@
 [0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\send.class[0m
 [0m[[0mdebug[0m] [0m	my\android\project\read_write.class[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\read_write.class[0m
+[0m[[0mdebug[0m] [0m	my\android\project\ListViewer$$anonfun$getListOfSubDirectories$1.class[0m
+[0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\ListViewer$$anonfun$getListOfSubDirectories$1.class[0m
 [0m[[0mdebug[0m] [0m	my\android\project\helpers$HCodeMap$.class[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\helpers$HCodeMap$.class[0m
 [0m[[0mdebug[0m] [0m	my\android\project\helpers$Branch.class[0m
@@ -140,6 +146,8 @@
 [0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\received.class[0m
 [0m[[0mdebug[0m] [0m	my\android\project\LocalActor$$anonfun$receive$1.class[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\LocalActor$$anonfun$receive$1.class[0m
+[0m[[0mdebug[0m] [0m	my\android\project\ListViewer$$anonfun$getListOfSubDirectories$2.class[0m
+[0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\ListViewer$$anonfun$getListOfSubDirectories$2.class[0m
 [0m[[0mdebug[0m] [0m	my\android\project\handler$$anonfun$1.class[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\handler$$anonfun$1.class[0m
 [0m[[0minfo[0m] [0mDone packaging.[0m

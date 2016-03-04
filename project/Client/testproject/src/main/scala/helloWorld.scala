@@ -41,7 +41,7 @@ def login(){
  
 	val button = findView(TR.submit)
 	button.setOnClickListener((v : View) => {
-	   
+	
 	  choose()
 	
     })
