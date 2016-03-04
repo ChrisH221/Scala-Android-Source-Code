@@ -11,19 +11,19 @@ import android.util.Log
  * The reader class handles all IO related to txt files, this includes reading and writing files.
  * Need to refactor to remove filepath input
  */
-class read_write(filePath:String) extends handler {
+class read_write(filePath:String) extends handler with helpers {
 
 
 def test(s:String):Unit = { 
 	
-		val folder = new File("/sdcard/download/encoded")
+		val folder = new File("/sdcard/download/.encoded")
 		if (!folder.exists()){
 		
 		folder.mkdir()
 		
 		}
 		
-		val Card = new File("/sdcard/download/encoded/hello_file.txt")
+		val Card = new File(s)
 		Card.createNewFile()
 		val fos = new FileOutputStream(Card)
 		fos.write(s.getBytes())
@@ -40,7 +40,7 @@ def test(s:String):Unit = {
    *Reads a file from the filePath
    *@returns Iterator[String]
    */
-  def readFile():Iterator[String] ={
+  def readFile(filePath:String):Iterator[String] ={
 
     val lines = Source.fromFile(filePath).getLines()
     lines
@@ -52,16 +52,16 @@ def test(s:String):Unit = {
    *@returns Unit
    */
    
-  def writeBytes(key:(List[Bit],List[(Char,List[Bit])])) ={
+  def writeBytes(fn:String,key:(List[Bit],List[(Char,List[Bit])])) ={
 		 
-		val folder = new File(filePath)
+		val folder = new File("/sdcard/download/.encoded")
 		if (!folder.exists()){
 		
 		folder.mkdir()
 		
 		}
 		
-		val Card = new File("/sdcard/download/encoded/hello_file.txt")
+		val Card = new File("/sdcard/download/encoded/"+ fn +"_encode.txt")
 		Card.createNewFile()
 		val fos = new FileOutputStream(Card)
 		fos.write(key._1.toString().getBytes())

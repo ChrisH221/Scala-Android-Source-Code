@@ -2,14 +2,40 @@
 [0m[[0mdebug[0m] [0mInitial source changes: [0m
 [0m[[0mdebug[0m] [0m	removed:Set()[0m
 [0m[[0mdebug[0m] [0m	added: Set()[0m
-[0m[[0mdebug[0m] [0m	modified: Set()[0m
+[0m[[0mdebug[0m] [0m	modified: Set(C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\src\main\scala\read_write.scala, C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\src\main\scala\ListViewer.scala)[0m
 [0m[[0mdebug[0m] [0mInvalidated products: Set()[0m
 [0m[[0mdebug[0m] [0mExternal API changes: API Changes: Set()[0m
 [0m[[0mdebug[0m] [0mModified binary dependencies: Set()[0m
-[0m[[0mdebug[0m] [0mInitial directly invalidated sources: Set()[0m
+[0m[[0mdebug[0m] [0mInitial directly invalidated sources: Set(C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\src\main\scala\read_write.scala, C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\src\main\scala\ListViewer.scala)[0m
 [0m[[0mdebug[0m] [0m[0m
 [0m[[0mdebug[0m] [0mSources indirectly invalidated by:[0m
 [0m[[0mdebug[0m] [0m	product: Set()[0m
 [0m[[0mdebug[0m] [0m	binary dep: Set()[0m
 [0m[[0mdebug[0m] [0m	external source: Set()[0m
-[0m[[0mdebug[0m] [0mAll initially invalidated sources: Set()[0m
+[0m[[0mdebug[0m] [0mAll initially invalidated sources: Set(C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\src\main\scala\read_write.scala, C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\src\main\scala\ListViewer.scala)[0m
+[0m[[0minfo[0m] [0mCompiling 2 Scala sources to C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes...[0m
+[0m[[0mdebug[0m] [0mGetting compiler-interface from component compiler for Scala 2.11.4[0m
+[0m[[0mdebug[0m] [0mGetting compiler-interface from component compiler for Scala 2.11.4[0m
+[0m[[0mdebug[0m] [0mRunning cached compiler 7f4a835, interfacing (CompilerInterface) with Scala compiler version 2.11.4[0m
+[0m[[0mdebug[0m] [0mCalling Scala compiler with arguments  (CompilerInterface):[0m
+[0m[[0mdebug[0m] [0m	-encoding[0m
+[0m[[0mdebug[0m] [0m	utf8[0m
+[0m[[0mdebug[0m] [0m	-target:jvm-1.6[0m
+[0m[[0mdebug[0m] [0m	-bootclasspath[0m
+[0m[[0mdebug[0m] [0m	C:\Users\Chris\AppData\Local\Android\sdk\platforms\android-16\android.jar[0m
+[0m[[0mdebug[0m] [0m	-javabootclasspath[0m
+[0m[[0mdebug[0m] [0m	C:\Users\Chris\AppData\Local\Android\sdk\platforms\android-16\android.jar[0m
+[0m[[0mdebug[0m] [0m	-feature[0m
+[0m[[0mdebug[0m] [0m	-feature[0m
+[0m[[0mdebug[0m] [0m	-bootclasspath[0m
+[0m[[0mdebug[0m] [0m	C:\Program Files\Java\jdk1.8.0_60\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_60\jre\classes;C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\lib_managed\jars\org.scala-lang\scala-library\scala-library-2.11.4.jar[0m
+[0m[[0mdebug[0m] [0m	-classpath[0m
+[0m[[0mdebug[0m] [0m	C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes;C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\lib_managed\jars\com.typesafe.akka\akka-actor_2.11\akka-actor_2.11-2.3.6.jar;C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\lib_managed\bundles\com.typesafe\config\config-1.2.1.jar;C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\lib_managed\jars\com.typesafe.akka\akka-remote_2.11\akka-remote_2.11-2.3.6.jar;C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\lib_managed\bundles\com.google.protobuf\protobuf-java\protobuf-java-2.5.0.jar;C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\lib_managed\jars\org.uncommons.maths\uncommons-maths\uncommons-maths-1.2.2a.jar;C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\lib_managed\jars\net.databinder.dispatch\dispatch-core_2.11\dispatch-core_2.11-0.11.2.jar;C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\lib_managed\bundles\org.scala-lang.modules\scala-xml_2.11\scala-xml_2.11-1.0.1.jar;C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\lib_managed\jars\com.ning\async-http-client\async-http-client-1.8.10.jar;C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\lib_managed\bundles\io.netty\netty\netty-3.9.2.Final.jar;C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\lib_managed\jars\org.slf4j\slf4j-api\slf4j-api-1.7.5.jar[0m
+[0m[[31merror[0m] [0mC:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\src\main\scala\ListViewer.scala:91: type mismatch;[0m
+[0m[[31merror[0m] [0m found   : (List[h.Bit], List[(Char, List[h.Bit])])[0m
+[0m[[31merror[0m] [0m required: (List[rw.Bit], List[(Char, List[rw.Bit])])[0m
+[0m[[31merror[0m] [0m		rw.writeBytes(x ,text)[0m
+[0m[[31merror[0m] [0m		                 ^[0m
+[0m[[31merror[0m] [0mone error found[0m
+[0m[[0mdebug[0m] [0mCompilation failed (CompilerInterface)[0m
+[0m[[31merror[0m] [0m(compile:[31mcompileIncremental[0m) Compilation failed[0m

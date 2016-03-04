@@ -19,11 +19,18 @@ class ListViewer extends Activity {
 
   protected override def onCreate(savedInstanceState: Bundle) {
     super.onCreate(savedInstanceState)
-    setContentView(R.layout.a_main)
-	val x = getListOfFiles("/sdcard/download/encoded")
+	encode()
+	}
+  
+  def encode(){
+  
+  
+   setContentView(R.layout.a_main)
+	val path = "/sdcard"
+	val x = getListOfFiles(path)
 	val arr = x.map (_.toString).toArray
-	val dirarr = getListOfSubDirectories("/sdcard/download")
-	val currentDirectory = Array(".", "..") ++ dirarr ++ arr
+	val dirarr = getListOfSubDirectories(path)
+	val currentDirectory =  dirarr ++ arr
 	
     val theAdapter = new ArrayAdapter[String](this, android.R.layout.simple_list_item_1, currentDirectory)
     val theListView = findViewById(R.id.theListView).asInstanceOf[ListView]
@@ -32,17 +39,14 @@ class ListViewer extends Activity {
 	
 	theListView.setOnItemClickListener(new OnItemClickListener() {
 
-      override def onItemClick(parent: AdapterView[_], 
-          view: View, 
-          position: Int, 
-          id: Long) {
-       updateList("/sdcard/download")
+      override def onItemClick(parent: AdapterView[_], view: View, position: Int, id: Long) {
+		 
+		val x = currentDirectory(position)		 
+		updateList(path, x)
       }
     })
-	
-	
-	
-	
+  
+  
   }
   
   def getListOfSubDirectories(directoryName: String): Array[String] = {
@@ -61,17 +65,37 @@ class ListViewer extends Activity {
 }
 
 
- def updateList(dir:String){
+ def updateList(dir:String, curDir:String){
  
   setContentView(R.layout.a_main)
-	val x = getListOfFiles(dir)
+    val path = dir +"/" + curDir
+	val x = getListOfFiles(path)
 	val arr = x.map (_.toString).toArray
-	val currentDirectory = Array(".", "..") ++ arr
+	val dirarr = getListOfSubDirectories(path)
+	val currentDirectory = Array(".", "..") ++ dirarr ++ arr
 	
     val theAdapter = new ArrayAdapter[String](this, android.R.layout.simple_list_item_1, currentDirectory)
     val theListView = findViewById(R.id.theListView).asInstanceOf[ListView]
     theListView.setAdapter(theAdapter)
- 
+	theListView.setOnItemClickListener(new OnItemClickListener() {
+
+      override def onItemClick(parent: AdapterView[_], view: View, position: Int, id: Long) {
+		 
+		val x = currentDirectory(position)
+		val z = new File(x)
+		if(z.isFile){
+		
+		val rw = new read_write(x)
+		val h = new handler()
+		val text = h.encode(rw.readFile(x).mkString.toString)
+		rw.writeBytes(x ,text)
+		}
+		Log.d("MyTAG",x)
+		if (x.equals(".")) updateList("/sdcard", "")
+		else if(x.equals("..")) updateList(dir, "")
+		else updateList(path, x)
+      }
+    })
  
  
  }
