@@ -9,6 +9,9 @@
 
 		   <activity android:label="@string/app_name" android:name=".ListViewer">
            </activity>
+		   
+		   <activity android:label="@string/app_name" android:name=".ListViewerDecode">
+           </activity>
 		
         <activity android:label="@string/app_name" android:name=".helloWorld">
             <intent-filter>

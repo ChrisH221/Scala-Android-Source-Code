@@ -88,7 +88,7 @@ class ListViewer extends Activity {
 		val rw = new read_write(x)
 		val h = new handler()
 		val text = h.encode(rw.readFile(x).mkString.toString)
-		rw.writeBytes(x ,text)
+	//	rw.writeBytes(x ,text)
 		}
 		Log.d("MyTAG",x)
 		if (x.equals(".")) updateList("/sdcard", "")

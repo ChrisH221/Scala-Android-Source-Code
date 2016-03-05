@@ -21,9 +21,10 @@ object TR {
   val password = TypedResource[android.widget.EditText](R.id.password)
 
   object layout {
-    val a_main = TypedLayout[android.widget.LinearLayout](R.layout.a_main)
-    val check = TypedLayout[android.widget.LinearLayout](R.layout.check)
     val main = TypedLayout[android.widget.LinearLayout](R.layout.main)
+    val a_main2 = TypedLayout[android.widget.LinearLayout](R.layout.a_main2)
+    val check = TypedLayout[android.widget.LinearLayout](R.layout.check)
+    val a_main = TypedLayout[android.widget.LinearLayout](R.layout.a_main)
     val user = TypedLayout[android.widget.LinearLayout](R.layout.user)
   }
 }

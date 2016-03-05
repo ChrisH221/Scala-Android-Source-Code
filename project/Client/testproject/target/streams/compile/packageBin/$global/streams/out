@@ -84,6 +84,8 @@
 [0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\read_write$$anonfun$removeWord$1.class[0m
 [0m[[0mdebug[0m] [0m	my\android\project\ListViewer$$anonfun$getListOfFiles$1.class[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\ListViewer$$anonfun$getListOfFiles$1.class[0m
+[0m[[0mdebug[0m] [0m	my\android\project\ListViewerDecode.class[0m
+[0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\ListViewerDecode.class[0m
 [0m[[0mdebug[0m] [0m	my\android\project\helpers$HTree.class[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\helpers$HTree.class[0m
 [0m[[0mdebug[0m] [0m	my\android\project\Message.class[0m
@@ -102,10 +104,14 @@
 [0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\helpers$One$.class[0m
 [0m[[0mdebug[0m] [0m	my\android\project\BuildConfig.class[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\BuildConfig.class[0m
+[0m[[0mdebug[0m] [0m	my\android\project\ListViewerDecode$$anon$1.class[0m
+[0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\ListViewerDecode$$anon$1.class[0m
 [0m[[0mdebug[0m] [0m	my\android\project\helpers$$anon$1.class[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\helpers$$anon$1.class[0m
 [0m[[0mdebug[0m] [0m	my\android\project\builder$$anonfun$freq$2.class[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\builder$$anonfun$freq$2.class[0m
+[0m[[0mdebug[0m] [0m	my\android\project\ListViewerDecode$$anonfun$onCreate$1.class[0m
+[0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\ListViewerDecode$$anonfun$onCreate$1.class[0m
 [0m[[0mdebug[0m] [0m	my\android\project\helpers$Zero.class[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\helpers$Zero.class[0m
 [0m[[0mdebug[0m] [0m	my\android\project\helpers$HMap.class[0m
@@ -118,6 +124,8 @@
 [0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\helloWorld$$anonfun$setupMain$1.class[0m
 [0m[[0mdebug[0m] [0m	my\android\project\send.class[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\send.class[0m
+[0m[[0mdebug[0m] [0m	my\android\project\ListViewerDecode$$anonfun$onCreate$2$$anonfun$1.class[0m
+[0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\ListViewerDecode$$anonfun$onCreate$2$$anonfun$1.class[0m
 [0m[[0mdebug[0m] [0m	my\android\project\read_write.class[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\read_write.class[0m
 [0m[[0mdebug[0m] [0m	my\android\project\ListViewer$$anonfun$getListOfSubDirectories$1.class[0m
@@ -146,10 +154,14 @@
 [0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\db.class[0m
 [0m[[0mdebug[0m] [0m	my\android\project\received.class[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\received.class[0m
+[0m[[0mdebug[0m] [0m	my\android\project\ListViewerDecode$$anonfun$onCreate$2$$anonfun$2.class[0m
+[0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\ListViewerDecode$$anonfun$onCreate$2$$anonfun$2.class[0m
 [0m[[0mdebug[0m] [0m	my\android\project\LocalActor$$anonfun$receive$1.class[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\LocalActor$$anonfun$receive$1.class[0m
 [0m[[0mdebug[0m] [0m	my\android\project\ListViewer$$anonfun$getListOfSubDirectories$2.class[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\ListViewer$$anonfun$getListOfSubDirectories$2.class[0m
 [0m[[0mdebug[0m] [0m	my\android\project\handler$$anonfun$1.class[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\handler$$anonfun$1.class[0m
+[0m[[0mdebug[0m] [0m	my\android\project\ListViewerDecode$$anonfun$onCreate$2.class[0m
+[0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\ListViewerDecode$$anonfun$onCreate$2.class[0m
 [0m[[0minfo[0m] [0mDone packaging.[0m

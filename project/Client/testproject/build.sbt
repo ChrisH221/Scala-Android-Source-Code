@@ -39,7 +39,8 @@ import android.Keys._
 	 "-dontskipnonpubliclibraryclassmembers",
 	 "-dontskipnonpubliclibraryclasses",
 	 "-dontnote **",
-	 "-verbose"
+	 "-verbose",
+	 "-keep class * extends android.os.AsyncTask {*;}"
       )
 
    // ProGuard rules for Akka

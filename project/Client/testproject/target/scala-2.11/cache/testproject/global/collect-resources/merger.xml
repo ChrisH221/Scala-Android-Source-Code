@@ -29,6 +29,11 @@
                 path="C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\src\main\res\layout\a_main.xml"
                 qualifiers=""
                 type="layout" />
+            <file
+                name="a_main2"
+                path="C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\src\main\res\layout\a_main2.xml"
+                qualifiers=""
+                type="layout" />
         </source>
     </dataSet>
 

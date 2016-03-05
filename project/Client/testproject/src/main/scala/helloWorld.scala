@@ -63,7 +63,7 @@ def choose(){
 	
 	val button2 = findView(TR.decode)
 	button2.setOnClickListener((v : View) => {
-	  	 var intent= new Intent (this,classOf[ListViewer])
+	  	 var intent= new Intent (this,classOf[ListViewerDecode])
 	 startActivity(intent)
 
 	
