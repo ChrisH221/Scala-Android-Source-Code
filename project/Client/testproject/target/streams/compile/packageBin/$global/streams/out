@@ -58,6 +58,8 @@
 [0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\TR$.class[0m
 [0m[[0mdebug[0m] [0m	my\android\project\helpers$Leaf$.class[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\helpers$Leaf$.class[0m
+[0m[[0mdebug[0m] [0m	my\android\project\ListViewerDecode$$anonfun$onCreate$1$$anonfun$applyOrElse$1.class[0m
+[0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\ListViewerDecode$$anonfun$onCreate$1$$anonfun$applyOrElse$1.class[0m
 [0m[[0mdebug[0m] [0m	my\android\project\ListViewer$$anonfun$2.class[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\ListViewer$$anonfun$2.class[0m
 [0m[[0mdebug[0m] [0m	my\android\project\helpers$One.class[0m
@@ -164,4 +166,6 @@
 [0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\handler$$anonfun$1.class[0m
 [0m[[0mdebug[0m] [0m	my\android\project\ListViewerDecode$$anonfun$onCreate$2.class[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\ListViewerDecode$$anonfun$onCreate$2.class[0m
+[0m[[0mdebug[0m] [0m	my\android\project\helpers$$anon$2.class[0m
+[0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\helpers$$anon$2.class[0m
 [0m[[0minfo[0m] [0mDone packaging.[0m

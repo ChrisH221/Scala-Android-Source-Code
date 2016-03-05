@@ -39,7 +39,7 @@ trait helpers {
   sealed trait HMap
   case class HCodeMap(list:List[(Char,List[Bit])]) extends HMap //TODO implement HCodeMap as input/output
  
- 
+  implicit def toRunnable[A](f: => A): Runnable =  new Runnable() { def run() = f } 
 
 
 

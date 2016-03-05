@@ -26,24 +26,35 @@ import java.net.URL
 import java.net.URLConnection
 import scala.util.Success
 import scala.concurrent.{ future, promise }
+import scala.concurrent.Future
 import scala.concurrent.ExecutionContext._
 import scala.concurrent.ExecutionContext.Implicits.global
 import android.content.Context
+import scala.concurrent.Await
+import scala.concurrent.duration._
+import scala.language.implicitConversions
 
 import android.util.Log
 
-class ListViewerDecode extends Activity {
+class ListViewerDecode extends Activity with helpers {
+
+	var arr: Future[JSONArray] = null 
 
   protected override def onCreate(savedInstanceState: Bundle) {
     super.onCreate(savedInstanceState)
 	
 	setContentView(R.layout.a_main2)
-	 val p = promise[String] 
+	
+	
+	
+	 
+	 val p = promise[JSONArray] 
 	 val f = p. future 
 	 
-	 future { 
 	 
-	 val site = "http://52.18.108.189/getquestion.php"
+	 	 future { 
+	 
+	 val site = "http://192.168.1.67/getquestion.php"
     try {
       val url = new URL(site)
       val urlConn = url.openConnection()
@@ -56,8 +67,8 @@ class ListViewerDecode extends Activity {
       val result = new StringBuilder()
       var line: String = null
 	  val str = Stream.continually(reader.readLine()).takeWhile(_ != null).mkString("\n")
-	 	 
-	 p success str 
+	  val j = new JSONArray(str)	 
+	 p success j 
     } catch {
 	    case e: Exception => {
         println("Error: " + e)
@@ -66,36 +77,28 @@ class ListViewerDecode extends Activity {
       }
     }	 
 	 } 
-	f onSuccess {  case str => decode(str)}
-
+	f onSuccess {  case result =>  runOnUiThread{decode(result)}}
 	
 
   }
 
   
 
-
+ def parseJSON(arr: Future[JSONArray]) {
+      this.arr = arr
+  }
 	
 	
   
-  def decode(str:String){
+  def decode(j:JSONArray){
     
-    
-	
-	Log.d("MyTAG","0")
-    val j = new JSONArray(str)
-	Log.d("MyTAG","1")
-	
 	
 	val json_obj = j.getJSONObject(0)
-	Log.d("MyTAG","4")
-    val question = json_obj.getString("question")
-	Log.d("MyTAG","2")
-	val ar =  Array(question, " hey")
-	 
+    val question = json_obj.getString("keycode")
+		
 	
+	val ar =  Array(question)
 	setContentView(R.layout.a_main2)
-	Log.d("MyTAG","hey,hey")
     val theAdapter = new ArrayAdapter[String](this, android.R.layout.simple_list_item_1, ar)
     val theListView = findViewById(R.id.theListView).asInstanceOf[ListView]
     
