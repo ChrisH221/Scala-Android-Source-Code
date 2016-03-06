@@ -44,18 +44,18 @@ class login extends Activity with TypedActivity with helpers{
     super.onCreate(bundle)
 	setContentView(R.layout.login)
 	
-	
+	 Log.d("MyTAG","heyyy")
 	 val button1 = findView(TR.login)
 	button1.setOnClickListener((v : View) => {
-	   
-	  	login()
+	   	Log.d("MyTAG","heyyy2")
+	  	loginUI()
 		
 	
     })
 	
 	 val button2 = findView(TR.create)
-	button1.setOnClickListener((v : View) => {
-	   
+	button2.setOnClickListener((v : View) => {
+	   Log.d("MyTAG","heyyy3")
 	 createAccount()
 	
     })
@@ -67,7 +67,7 @@ class login extends Activity with TypedActivity with helpers{
 
     setContentView(R.layout.check)
 		
-		
+	Log.d("MyTAG","heyyy2")	
 	val username = findView(TR.username)
 		
 		
@@ -125,14 +125,19 @@ def existingUser(user:String){
 	 } 
 	f onSuccess {  case result =>  
 	
-	if (result == false){
+	if (result == true){
 		var intent= new Intent (this,classOf[main])
-	    startActivity(intent)
+		startActivity(intent)
 	}
 	else{
 	
-	val inform = findView(TR.inform)
-	inform.setText("Incorrect details")
+	
+	runOnUiThread{
+	
+	existingUser(u.getText().toString())
+	val inform = findView(TR.inform)	
+	inform.setText("Incorrect details                                                  ")}
+	
 	}
 	
 	}
@@ -141,22 +146,21 @@ def existingUser(user:String){
 	val button = findView(TR.submit)
 	button.setOnClickListener((v : View) => {
 	
-	 var intent= new Intent (this,classOf[main])
-	 startActivity(intent)
+	existingUser(user)
 	
     })
 
 
 }
   
-def login(){
+def loginUI(){
 
  setContentView(R.layout.check)
  
 	val u = findView(TR.username)
 	val p = findView(TR.password)
 	
-	 Log.d("MyTAG","2" + u.getText().toString())
+	 Log.d("MyTAG","2")
 	
 	val password = p.getText()
 	
