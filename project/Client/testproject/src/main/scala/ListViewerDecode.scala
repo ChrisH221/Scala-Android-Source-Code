@@ -29,47 +29,47 @@ import scala.concurrent.{ future, promise }
 import scala.concurrent.Future
 import scala.concurrent.ExecutionContext._
 import scala.concurrent.ExecutionContext.Implicits.global
-import android.content.Context
-import scala.concurrent.Await
-import scala.concurrent.duration._
 import scala.language.implicitConversions
 
 import android.util.Log
 
 class ListViewerDecode extends Activity with helpers {
 
-	var arr: Future[JSONArray] = null 
-
+	
   protected override def onCreate(savedInstanceState: Bundle) {
     super.onCreate(savedInstanceState)
 	
 	setContentView(R.layout.a_main2)
-	
-	
-	
 	 
 	 val p = promise[JSONArray] 
 	 val f = p. future 
-	 
 	 
 	 	 future { 
 	 
 	 val site = "http://192.168.1.67/getquestion.php"
     try {
-      val url = new URL(site)
-      val urlConn = url.openConnection()
-      val httpConn = urlConn.asInstanceOf[HttpURLConnection]
-      httpConn.setRequestMethod("GET")
-      httpConn.connect()
-      httpConn.getResponseCode
+	
+     val url = new URL(site)
+    val urlConn = url.openConnection()
+    val httpConn = urlConn.asInstanceOf[HttpURLConnection]
+    httpConn.setDoOutput(true)
+    val os = httpConn.getOutputStream
+    val POST_PARAMS = "username=chris"
+    os.write(POST_PARAMS.getBytes)
+    val responseCode = httpConn.getResponseCode
+    httpConn.connect()
+	
       val input = httpConn.getInputStream
       val reader = new BufferedReader(new InputStreamReader(input))
       val result = new StringBuilder()
       var line: String = null
 	  val str = Stream.continually(reader.readLine()).takeWhile(_ != null).mkString("\n")
 	  val j = new JSONArray(str)	 
+	  
+	  
 	 p success j 
-    } catch {
+    	
+	} catch {
 	    case e: Exception => {
         println("Error: " + e)
         e.printStackTrace()
@@ -78,18 +78,10 @@ class ListViewerDecode extends Activity with helpers {
     }	 
 	 } 
 	f onSuccess {  case result =>  runOnUiThread{decode(result)}}
-	
-
   }
 
   
 
- def parseJSON(arr: Future[JSONArray]) {
-      this.arr = arr
-  }
-	
-	
-  
   def decode(j:JSONArray){
     
 	
@@ -112,16 +104,7 @@ class ListViewerDecode extends Activity with helpers {
       }
     })
   
-  
   }
-
-
-
- def updateList(dir:String, curDir:String){
- 
-  
- }  
-
  
 }
   

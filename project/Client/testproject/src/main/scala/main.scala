@@ -20,14 +20,14 @@ abstract class Message
 case class send(text:String) extends Message
 case class received(text:String) extends Message
 
-class helloWorld extends Activity with TypedActivity with helpers{
+class main extends Activity with TypedActivity with helpers{
   override def onCreate(bundle: Bundle) {
   
     super.onCreate(bundle)
 	//var f = new FileChooser(this)
 	
 
-    val l = login()
+    choose()
 	
 	
   }

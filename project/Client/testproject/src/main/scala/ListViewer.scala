@@ -15,6 +15,14 @@ import java.io.File
 import scala.collection.JavaConversions._
 import android.widget.AdapterView.OnItemClickListener
 
+/**
+ * @author Chris Howell
+ *
+ *The ListViewer class 
+ *
+ * 
+ */
+ 
 class ListViewer extends Activity {
 
   protected override def onCreate(savedInstanceState: Bundle) {
@@ -27,8 +35,8 @@ class ListViewer extends Activity {
   
    setContentView(R.layout.a_main)
 	val path = "/sdcard"
-	val x = getListOfFiles(path)
-	val arr = x.map (_.toString).toArray
+	val arr = getListOfFiles(path)
+	//val arr = x.map (_.toString).toArray
 	val dirarr = getListOfSubDirectories(path)
 	val currentDirectory =  dirarr ++ arr
 	
@@ -50,21 +58,21 @@ class ListViewer extends Activity {
   }
   
   def getListOfSubDirectories(directoryName: String): Array[String] = {
-  return (new File(directoryName)).listFiles.filter(_.isDirectory).map(_.getName)
+	return (new File(directoryName)).listFiles.filter(_.isDirectory).map(_.getName)
 }
 
+ def getListOfFiles(directoryName: String): Array[String] = {
+	return (new File(directoryName)).listFiles.filter(_.isFile).map(_.getName)
+} 
   
-  
-  def getListOfFiles(dir: String):List[File] = {
-  val d = new File(dir)
-  if (d.exists && d.isDirectory) {
-    d.listFiles.filter(_.isFile).toList
-  } else {
-    List[File]()
-  }
-}
-
-
+//  def getListOfFiles(dir: String):List[File] = {
+ // val d = new File(dir)
+  //if (d.exists && d.isDirectory) {
+   // d.listFiles.filter(_.isFile).toList
+  //} else {
+  //  List[File]()
+  //}
+//}
  def updateList(dir:String, curDir:String){
  
   setContentView(R.layout.a_main)
@@ -82,8 +90,7 @@ class ListViewer extends Activity {
       override def onItemClick(parent: AdapterView[_], view: View, position: Int, id: Long) {
 		 
 		val x = currentDirectory(position)
-		val z = new File(x)
-		if(z.isFile){
+		if(new File(x).isFile){
 		
 		val rw = new read_write(x)
 		val h = new handler()

@@ -37,17 +37,17 @@
 
 	 <TextView
         android:id="@+id/inform"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
 		android:layout_weight="1"
 		android:layout_height="100dp"
 		android:layout_marginLeft="2dp"
 		android:layout_marginRight="2dp"
-        android:text="Could not find your user account! Enter a username and password to find your account or create a new one!" 
+        android:text="                                                                                       " 
         android:textSize="15dp" />
 	 
     <Button
         android:id="@+id/submit"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
 		android:layout_weight="1"
 		android:layout_height="100dp"
 		android:layout_marginLeft="2dp"

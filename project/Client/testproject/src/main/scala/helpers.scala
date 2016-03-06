@@ -3,6 +3,7 @@ package my.android.project
 import scala.language.implicitConversions
 import android.view.View
 
+
 trait helpers {
 
 

@@ -7,8 +7,7 @@ class LocalActor extends Actor {
 
  
   val remote = context.actorSelection("akka.tcp://server-akka@192.168.1.67:5150/user/sv1")
-  Log.d("MyTAG","1:" + remote)
-
+  
   def receive = {
     
     case msg: String => 

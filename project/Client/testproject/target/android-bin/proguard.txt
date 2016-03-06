@@ -1,12 +1,15 @@
-# view AndroidManifest.xml #generated:22
+# view AndroidManifest.xml #generated:26
 -keep class android.test.InstrumentationTestRunner { <init>(...); }
 
-# view AndroidManifest.xml #generated:7
+# view AndroidManifest.xml #generated:14
 -keep class my.android.project.ListViewer { <init>(...); }
 
-# view AndroidManifest.xml #generated:10
+# view AndroidManifest.xml #generated:17
 -keep class my.android.project.ListViewerDecode { <init>(...); }
 
-# view AndroidManifest.xml #generated:13
--keep class my.android.project.helloWorld { <init>(...); }
+# view AndroidManifest.xml #generated:7
+-keep class my.android.project.login { <init>(...); }
+
+# view AndroidManifest.xml #generated:20
+-keep class my.android.project.main { <init>(...); }
 
