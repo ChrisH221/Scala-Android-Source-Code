@@ -63,7 +63,12 @@ def choose(){
 	
 	val button2 = findView(TR.decode)
 	button2.setOnClickListener((v : View) => {
+		val inte = getIntent
+		val username = inte.getExtras.getString("user")
+		Log.d("MyTAG","2" + username)
+			
 	  	 var intent= new Intent (this,classOf[ListViewerDecode])
+		 intent.putExtra("user", username)
 	 startActivity(intent)
 
 	

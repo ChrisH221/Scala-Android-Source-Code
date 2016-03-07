@@ -44,10 +44,10 @@ class login extends Activity with TypedActivity with helpers{
     super.onCreate(bundle)
 	setContentView(R.layout.login)
 	
-	 Log.d("MyTAG","heyyy")
+	
 	 val button1 = findView(TR.login)
 	button1.setOnClickListener((v : View) => {
-	   	Log.d("MyTAG","heyyy2")
+	   	
 	  	loginUI()
 		
 	
@@ -55,182 +55,66 @@ class login extends Activity with TypedActivity with helpers{
 	
 	 val button2 = findView(TR.create)
 	button2.setOnClickListener((v : View) => {
-	   Log.d("MyTAG","heyyy3")
-	 createAccount()
+	  
+	createAccount()
 	
     })
 	
   }
   
-  
- def createAccount(){
-
-   setContentView(R.layout.check)
- 
-
-	
-	val button = findView(TR.submit)
-	button.setOnClickListener((v : View) => {
-		
-	 val p = promise[String] 
-	 val f = p. future 
-	 
-	 future { 
-	 
-	 val site = "http://192.168.1.67/addUser.php"
-     try {
-	val u = findView(TR.username)
-	val ps = findView(TR.password)
-     val url = new URL(site)
-    val urlConn = url.openConnection()
-    val httpConn = urlConn.asInstanceOf[HttpURLConnection]
-    httpConn.setDoOutput(true)
-    val os = httpConn.getOutputStream
-    val POST_PARAMS = "username=" + u.getText().toString() + "&password=" + ps.getText().toString()
-	 Log.d("MyTAG",POST_PARAMS)
-    os.write(POST_PARAMS.getBytes)
-    val responseCode = httpConn.getResponseCode
-    httpConn.connect()
-	
-      val input = httpConn.getInputStream
-      val reader = new BufferedReader(new InputStreamReader(input))
-      val result = new StringBuilder()
-      var line: String = null
-	  val str = Stream.continually(reader.readLine()).takeWhile(_ != null).mkString("\n")
-	  
-	
-	  
-	 p success str 
-    	
-	} catch {
-	    case e: Exception => {
-        println("Error: " + e)
-        e.printStackTrace()
-        null
-      }
-    }	 
-	 } 
-	f onSuccess {  case result =>  
-	
-		
-		var intent= new Intent (this,classOf[main])
-		startActivity(intent)
-	
-	
-	}
-	 
-	
-    })
-	
-
-}
-
-def existingUser(user:String){
-
-	 Log.d("MyTAG","3" + user)
-	 val p = promise[String] 
-	 val f = p. future 
-	 
-	 future { 
-	 
-	 val site = "http://monad/loginScala.php"
-     try {
-	
-     val url = new URL(site)
-    val urlConn = url.openConnection()
-    val httpConn = urlConn.asInstanceOf[HttpURLConnection]
-    httpConn.setDoOutput(true)
-    val os = httpConn.getOutputStream
-    val POST_PARAMS = "username=" + user
-    os.write(POST_PARAMS.getBytes)
-    val responseCode = httpConn.getResponseCode
-    httpConn.connect()
-	
-      val input = httpConn.getInputStream
-      val reader = new BufferedReader(new InputStreamReader(input))
-      val result = new StringBuilder()
-      var line: String = null
-	  val str = Stream.continually(reader.readLine()).takeWhile(_ != null).mkString("\n")
-	  
-	 
-	  
-	 p success str 
-    	
-	} catch {
-	    case e: Exception => {
-        println("Error: " + e)
-        e.printStackTrace()
-        null
-      }
-    }	 
-	 } 
-	f onSuccess {  case result =>  
-		val res = "\"" + """result""" + "\""
-	if (res == "true"){
-		var intent= new Intent (this,classOf[main])
-		startActivity(intent)
-	}
-	else{
-	
-	val inform = findView(TR.inform)
-	inform.setText("Incorrect details")
-	}
-	
-	}
-	
-		
-	val button = findView(TR.submit)
-	button.setOnClickListener((v : View) => {
-	
-	// var intent= new Intent (this,classOf[main])
-	// startActivity(intent)
-	
-    })
-
-
-}
-  
-  def parseResult(result:JSONArray)={
-  
-    if (result.length > 0)  {
+  	def changeScreen(){
 	
 	var intent= new Intent (this,classOf[main])
 	startActivity(intent)
 	
 	}
+ 
+
+  
+  def parseResult(result:JSONArray,username:String)={
+	 
+    if (result.length > 0)  {
+	
+	var intent= new Intent (this,classOf[main])
+	intent.putExtra("user", username)
+		
+	startActivity(intent)
+	
+	}
 	else {
 	
+	println("error")
 	
 	} 
   
   }
-  
+ 
   
 def loginUI(){
 
  setContentView(R.layout.check)
- 
 
-	
-	val button = findView(TR.submit)
-	button.setOnClickListener((v : View) => {
-	val u = findView(TR.username)
-	val ps = findView(TR.password)
-	
-	 val p = promise[JSONArray] 
+ val button1 = findView(TR.submit)
+	button1.setOnClickListener((v : View) => {
+	   	
+	  	 val p = promise[JSONArray] 
 	 val f = p. future 
 	 
-	 future { 
+	  future { 
 	 
-	 val site = "http://192.168.1.67/login.php"
-     try {
+	 val site = "http://monad.uk/login_scala.php"
+    try {
 	
      val url = new URL(site)
     val urlConn = url.openConnection()
     val httpConn = urlConn.asInstanceOf[HttpURLConnection]
     httpConn.setDoOutput(true)
     val os = httpConn.getOutputStream
-    val POST_PARAMS = "username=" + u.getText().toString() + "&password=" + ps.getText().toString() 
+	
+	val username = findView(TR.username)
+	val pass = findView(TR.password)
+	
+    val POST_PARAMS = "username=" + username.getText.toString + "&password="+ pass.getText.toString +""
     os.write(POST_PARAMS.getBytes)
     val responseCode = httpConn.getResponseCode
     httpConn.connect()
@@ -240,11 +124,10 @@ def loginUI(){
       val result = new StringBuilder()
       var line: String = null
 	  val str = Stream.continually(reader.readLine()).takeWhile(_ != null).mkString("\n")
-	 val j = new JSONArray(str)	 
+	  val j = new JSONArray(str)	 
 	  
-	// Log.d("MyTAG",str)
 	  
-	 p success j
+	 p success j 
     	
 	} catch {
 	    case e: Exception => {
@@ -254,27 +137,82 @@ def loginUI(){
       }
     }	 
 	 } 
-	f onSuccess {  case result =>  runOnUiThread{parseResult(result)}}
+	f onSuccess {  case result =>  runOnUiThread{
+	val username = findView(TR.username)
+	parseResult(result,username.getText.toString)}}
+		
 	
-	
-	
-	}
-	
-//	if (result == "true"){
-//		var intent= new Intent (this,classOf[main])
-	//	startActivity(intent)
-//	}
-	//else{
-	
-	//val inform = findView(TR.inform)
-	//inform.setText("Incorrect details")
-//	}
-	
-	
+    })
+
+  
 	 
+	 	}
+		
+		
+		def createAccount(){
+
+ setContentView(R.layout.check)
+
+ val button1 = findView(TR.submit)
+	button1.setOnClickListener((v : View) => {
+	   	
+	  	 val p = promise[JSONArray] 
+	 val f = p. future 
+	 
+	  future { 
+	 
+	 val site = "http://monad.uk/addUser_scala.php"
+    try {
 	
-    )}
+     val url = new URL(site)
+    val urlConn = url.openConnection()
+    val httpConn = urlConn.asInstanceOf[HttpURLConnection]
+    httpConn.setDoOutput(true)
+    val os = httpConn.getOutputStream
 	
+	val username = findView(TR.username)
+	val pass = findView(TR.password)
 	
+    val POST_PARAMS = "username=" + username.getText.toString + "&password="+ pass.getText.toString +""
+    os.write(POST_PARAMS.getBytes)
+    val responseCode = httpConn.getResponseCode
+    httpConn.connect()
+	
+      val input = httpConn.getInputStream
+      val reader = new BufferedReader(new InputStreamReader(input))
+      val result = new StringBuilder()
+      var line: String = null
+	  val str = Stream.continually(reader.readLine()).takeWhile(_ != null).mkString("\n")
+	  val j = new JSONArray(str)	 
+	  
+	  
+	 p success j 
+    	
+	} catch {
+	    case e: Exception => {
+        println("Error: " + e)
+        e.printStackTrace()
+        null
+      }
+    }	 
+	 } 
+	f onSuccess {  case result =>  runOnUiThread{
+	
+	changeScreen()
+	
+	}}
+		
+	
+    })
+
+  
+	 
+	 	}
+	
+
 }
+	
+
+
+
 

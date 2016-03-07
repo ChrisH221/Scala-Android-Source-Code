@@ -11,7 +11,7 @@ $connection = new mysqli($servername, $username, $password, $dbname);
 // Check connection
 $username = $_POST["username"];
 $password = $_POST["password"];
-$sql = "select * from users WHERE username = '$username' AND password =  '$password'";
+$sql = "select * from users WHERE username = 'chris' AND password =  'mischief'";
 
 //$sql = "select * from key_code WHERE username = ".$username." AND ".$username."";/
 $result = mysqli_query($connection, $sql) or die("Error in Selecting " . mysqli_error($connection));

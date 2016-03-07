@@ -30,6 +30,7 @@ import scala.concurrent.Future
 import scala.concurrent.ExecutionContext._
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.language.implicitConversions
+import scala.collection.mutable.ArrayBuffer
 
 import android.util.Log
 
@@ -46,15 +47,16 @@ class ListViewerDecode extends Activity with helpers {
 	 
 	 	 future { 
 	 
-	 val site = "http://192.168.1.67/getquestion.php"
+	 val site = "http://monad.uk/getfiles_scala.php"
     try {
-	
+		val inte = getIntent
+		val username = inte.getExtras.getString("user")
      val url = new URL(site)
     val urlConn = url.openConnection()
     val httpConn = urlConn.asInstanceOf[HttpURLConnection]
     httpConn.setDoOutput(true)
     val os = httpConn.getOutputStream
-    val POST_PARAMS = "username=chris"
+    val POST_PARAMS = "username="+username+""
     os.write(POST_PARAMS.getBytes)
     val responseCode = httpConn.getResponseCode
     httpConn.connect()
@@ -85,12 +87,23 @@ class ListViewerDecode extends Activity with helpers {
   def decode(j:JSONArray){
     
 	
-	val json_obj = j.getJSONObject(0)
-    val question = json_obj.getString("keycode")
+	
+	setContentView(R.layout.a_main2)
+		var ar = ArrayBuffer[String]()
+	
+	
 		
 	
-	val ar =  Array(question)
-	setContentView(R.layout.a_main2)
+   
+    for (i <- 0 until j.length) {
+      val row = j.getJSONObject(i)
+      var key = row.getString("keycode")
+	
+	 ar += key
+	 
+    }	
+	
+
     val theAdapter = new ArrayAdapter[String](this, android.R.layout.simple_list_item_1, ar)
     val theListView = findViewById(R.id.theListView).asInstanceOf[ListView]
     
@@ -107,8 +120,3 @@ class ListViewerDecode extends Activity with helpers {
   }
  
 }
-  
-
-
-
-
