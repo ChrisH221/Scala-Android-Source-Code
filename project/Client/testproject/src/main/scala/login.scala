@@ -65,22 +65,63 @@ class login extends Activity with TypedActivity with helpers{
   
  def createAccount(){
 
-    setContentView(R.layout.check)
-		
-	Log.d("MyTAG","heyyy2")	
-	val username = findView(TR.username)
-		
-		
-		
+   setContentView(R.layout.check)
+ 
+
+	
 	val button = findView(TR.submit)
 	button.setOnClickListener((v : View) => {
+		
+	 val p = promise[String] 
+	 val f = p. future 
+	 
+	 future { 
+	 
+	 val site = "http://192.168.1.67/addUser.php"
+     try {
+	val u = findView(TR.username)
+	val ps = findView(TR.password)
+     val url = new URL(site)
+    val urlConn = url.openConnection()
+    val httpConn = urlConn.asInstanceOf[HttpURLConnection]
+    httpConn.setDoOutput(true)
+    val os = httpConn.getOutputStream
+    val POST_PARAMS = "username=" + u.getText().toString() + "&password=" + ps.getText().toString()
+	 Log.d("MyTAG",POST_PARAMS)
+    os.write(POST_PARAMS.getBytes)
+    val responseCode = httpConn.getResponseCode
+    httpConn.connect()
+	
+      val input = httpConn.getInputStream
+      val reader = new BufferedReader(new InputStreamReader(input))
+      val result = new StringBuilder()
+      var line: String = null
+	  val str = Stream.continually(reader.readLine()).takeWhile(_ != null).mkString("\n")
+	  
+	
+	  
+	 p success str 
+    	
+	} catch {
+	    case e: Exception => {
+        println("Error: " + e)
+        e.printStackTrace()
+        null
+      }
+    }	 
+	 } 
+	f onSuccess {  case result =>  
+	
+		
+		var intent= new Intent (this,classOf[main])
+		startActivity(intent)
 	
 	
-	
-	 var intent= new Intent (this,classOf[main])
-	 startActivity(intent)
+	}
+	 
 	
     })
+	
 
 }
 
@@ -92,7 +133,7 @@ def existingUser(user:String){
 	 
 	 future { 
 	 
-	 val site = "http://192.168.1.67/login.php"
+	 val site = "http://monad/loginScala.php"
      try {
 	
      val url = new URL(site)
@@ -124,20 +165,15 @@ def existingUser(user:String){
     }	 
 	 } 
 	f onSuccess {  case result =>  
-	
-	if (result == true){
+		val res = "\"" + """result""" + "\""
+	if (res == "true"){
 		var intent= new Intent (this,classOf[main])
 		startActivity(intent)
 	}
 	else{
 	
-	
-	runOnUiThread{
-	
-	existingUser(u.getText().toString())
-	val inform = findView(TR.inform)	
-	inform.setText("Incorrect details                                                  ")}
-	
+	val inform = findView(TR.inform)
+	inform.setText("Incorrect details")
 	}
 	
 	}
@@ -146,33 +182,99 @@ def existingUser(user:String){
 	val button = findView(TR.submit)
 	button.setOnClickListener((v : View) => {
 	
-	existingUser(user)
+	// var intent= new Intent (this,classOf[main])
+	// startActivity(intent)
 	
     })
 
 
 }
   
+  def parseResult(result:JSONArray)={
+  
+    if (result.length > 0)  {
+	
+	var intent= new Intent (this,classOf[main])
+	startActivity(intent)
+	
+	}
+	else {
+	
+	
+	} 
+  
+  }
+  
+  
 def loginUI(){
 
  setContentView(R.layout.check)
  
-	val u = findView(TR.username)
-	val p = findView(TR.password)
-	
-	 Log.d("MyTAG","2")
-	
-	val password = p.getText()
+
 	
 	val button = findView(TR.submit)
 	button.setOnClickListener((v : View) => {
+	val u = findView(TR.username)
+	val ps = findView(TR.password)
 	
-
-	 existingUser(u.getText().toString())
+	 val p = promise[JSONArray] 
+	 val f = p. future 
+	 
+	 future { 
+	 
+	 val site = "http://192.168.1.67/login.php"
+     try {
+	
+     val url = new URL(site)
+    val urlConn = url.openConnection()
+    val httpConn = urlConn.asInstanceOf[HttpURLConnection]
+    httpConn.setDoOutput(true)
+    val os = httpConn.getOutputStream
+    val POST_PARAMS = "username=" + u.getText().toString() + "&password=" + ps.getText().toString() 
+    os.write(POST_PARAMS.getBytes)
+    val responseCode = httpConn.getResponseCode
+    httpConn.connect()
+	
+      val input = httpConn.getInputStream
+      val reader = new BufferedReader(new InputStreamReader(input))
+      val result = new StringBuilder()
+      var line: String = null
+	  val str = Stream.continually(reader.readLine()).takeWhile(_ != null).mkString("\n")
+	 val j = new JSONArray(str)	 
+	  
+	// Log.d("MyTAG",str)
+	  
+	 p success j
+    	
+	} catch {
+	    case e: Exception => {
+        println("Error: " + e)
+        e.printStackTrace()
+        null
+      }
+    }	 
+	 } 
+	f onSuccess {  case result =>  runOnUiThread{parseResult(result)}}
+	
+	
+	
+	}
+	
+//	if (result == "true"){
+//		var intent= new Intent (this,classOf[main])
+	//	startActivity(intent)
+//	}
+	//else{
+	
+	//val inform = findView(TR.inform)
+	//inform.setText("Incorrect details")
+//	}
+	
+	
 	 
 	
-    })
+    )}
 	
 	
-}}
+}
 

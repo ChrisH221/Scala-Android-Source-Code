@@ -22,10 +22,8 @@ import android.Keys._
 	resolvers += "Typesafe Repository" at "http://repo.typesafe.com/typesafe/releases/"
     libraryDependencies ++= Seq(
                         "org.scalatest" %% "scalatest" % "2.2.6" % "test",
-                        "com.typesafe.akka" %% "akka-actor" % "2.3.6",
-						"com.typesafe.akka" %% "akka-remote" % "2.3.6",
-						"com.typesafe" % "config" % "1.2.0",
-						"net.databinder.dispatch" %% "dispatch-core" % "0.11.2")
+                        "com.typesafe.akka" %% "akka-actor" % "2.3.6"
+						)
 
 
      proguardScala in Android := true
@@ -62,29 +60,9 @@ import android.Keys._
     "-keep class akka.dispatch.UnboundedMailbox { *; }",
     "-keep class akka.actor.DefaultSupervisorStrategy { *; }",
     "-keep class macroid.akka.AkkaAndroidLogger { *; }",
-   "-keep class akka.event.Logging$LogExt { *; }",
-   "-dontwarn org.jboss.netty.logging.**",
-"-dontwarn org.osgi.**",
-"-dontwarn javax.servlet.**",
-"-dontwarn org.jboss.netty.channel.socket.http.**",
-"-dontwarn sun.misc.Unsafe",
-"-keep class sun.misc.Unsafe{*;}",
-"-keep public class akka.actor.LocalActorRefProvider {public <init>(...);}",
-"-keep public class akka.remote.RemoteActorRefProvider {public <init>(...);}",
-"-keep class akka.actor.SerializedActorRef {*;}",
-"-keep class akka.remote.netty.NettyRemoteTransport {*;}",
-"-keep class akka.serialization.JavaSerializer {*;}",
-"-keep class akka.serialization.ProtobufSerializer {*;}",
-"-keep class com.google.protobuf.GeneratedMessage {*;}",
-"-keep class akka.event.Logging*",
-"-keep class akka.event.Logging$LogExt{*;}",
-"-dontwarn org.jboss.netty.**",
-"-keep class org.apache.commons.logging.* {*;}",
-"-keep class java.util.concurrent.atomic.AtomicReferenceFieldUpdater {*;}",
-"-keep class java.util.concurrent.atomic.AtomicReferenceFieldUpdaterImpl{*;}",
-"-keep class org.jboss.netty.channel.DefaultChannelPipeline{volatile <fields>;}",
-"-keep class org.jboss.netty.util.internal.QueueFactory{static <fields>;}",
-"-keepclassmembernames class org.jboss.netty.util.internal.**{*;}"
+   "-keep class akka.event.Logging$LogExt { *; }"
+   
+
    )        
    
    
