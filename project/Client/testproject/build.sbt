@@ -4,7 +4,7 @@ import android.Keys._
 
       name := "testProject"
 
-      scalaVersion := "2.11.4"
+      scalaVersion := "2.11.7"
 
       scalacOptions in Compile += "-feature"
 
@@ -19,12 +19,17 @@ import android.Keys._
     "-dontoptimize", 
     "-dontwarn scala.collection.mutable.**"
     )
+	
+	sourceDirectory in Test := baseDirectory.value / "src" / "test"
+	
 	resolvers += "Typesafe Repository" at "http://repo.typesafe.com/typesafe/releases/"
     libraryDependencies ++= Seq(
-                        "org.scalatest" %% "scalatest" % "2.2.6" % "test",
+                        "org.scalatest" %% "scalatest" % "2.2.6" ,
                         "com.typesafe.akka" %% "akka-actor" % "2.3.6"
 						)
 
+						
+						
 
      proguardScala in Android := true
 

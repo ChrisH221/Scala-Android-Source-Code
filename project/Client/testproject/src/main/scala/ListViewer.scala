@@ -14,6 +14,23 @@ import scala.io.Source
 import java.io.File
 import scala.collection.JavaConversions._
 import android.widget.AdapterView.OnItemClickListener
+import android.os.AsyncTask
+import org.json.JSONArray
+import org.json.JSONException
+import org.json.JSONObject
+import java.io.BufferedReader
+import java.io.InputStream
+import java.io.InputStreamReader
+import java.net.HttpURLConnection
+import java.net.URL
+import java.net.URLConnection
+import scala.util.Success
+import scala.concurrent.{ future, promise }
+import scala.concurrent.Future
+import scala.concurrent.ExecutionContext._
+import scala.concurrent.ExecutionContext.Implicits.global
+import scala.language.implicitConversions
+import scala.collection.mutable.ArrayBuffer
 
 /**
  * @author Chris Howell
@@ -89,19 +106,69 @@ class ListViewer extends Activity {
 
       override def onItemClick(parent: AdapterView[_], view: View, position: Int, id: Long) {
 		 
-		val x = currentDirectory(position)
-		if(new File(x).isFile){
+	//	val x = currentDirectory(position)
+	//	if (new File(x).isFile){
+		//Log.d("MyTAG","hey")
+	//	val rw = new read_write(x)
+	//	val h = new handler()
 		
-		val rw = new read_write(x)
-		val h = new handler()
-		val text = h.encode(rw.readFile(x).mkString.toString)
-	//	rw.writeBytes(x ,text)
-		}
-		Log.d("MyTAG",x)
-		if (x.equals(".")) updateList("/sdcard", "")
-		else if(x.equals("..")) updateList(dir, "")
-		else updateList(path, x)
+		//val lines = handler.
+		
+		
+		//val text = h.encode(rw.readFile(x).mkString.toString)
+		//rw.writeBytes(x ,text._1.toString)
+	//	}
+	//	Log.d("MyTAG",currentDirectory(position))
+	
+	
+		
+		val y =currentDirectory(position)
+		
+		
+		
+		 val p = promise[JSONArray] 
+	 val f = p. future 
+	 
+	 	 future { 
+	 
+	 val site = "192.168.1.67/addKey_scala.php"
+    try {
+		val inte = getIntent
+		val username = inte.getExtras.getString("user")
+     val url = new URL(site)
+    val urlConn = url.openConnection()
+    val httpConn = urlConn.asInstanceOf[HttpURLConnection]
+    httpConn.setDoOutput(true)
+    val os = httpConn.getOutputStream
+    val POST_PARAMS = "username="+username+"&keycode = hiya.txt"
+    os.write(POST_PARAMS.getBytes)
+    val responseCode = httpConn.getResponseCode
+    httpConn.connect()
+	
+      val input = httpConn.getInputStream
+      val reader = new BufferedReader(new InputStreamReader(input))
+      val result = new StringBuilder()
+      var line: String = null
+	  val str = Stream.continually(reader.readLine()).takeWhile(_ != null).mkString("\n")
+	  val j = new JSONArray(str)	 
+	  
+	  
+	 p success j 
+    	
+	} catch {
+	    case e: Exception => {
+        println("Error: " + e)
+        e.printStackTrace()
+        null
       }
+    }	 
+	 } 
+	f onSuccess {  case result =>  println("hey")}
+		
+		}
+		
+		
+      
     })
  
  

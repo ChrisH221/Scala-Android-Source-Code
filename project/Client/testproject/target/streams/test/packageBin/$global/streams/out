@@ -1,0 +1,15 @@
+[0m[[0minfo[0m] [0mPackaging C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\scala-2.11\testproject_2.11-0.1-SNAPSHOT-tests.jar ...[0m
+[0m[[0mdebug[0m] [0mInput file mappings:[0m
+[0m[[0mdebug[0m] [0m	my\android[0m
+[0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\scala-2.11\test-classes\my\android[0m
+[0m[[0mdebug[0m] [0m	my\android\project\test1$$anonfun$1$$anonfun$apply$mcV$sp$1.class[0m
+[0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\scala-2.11\test-classes\my\android\project\test1$$anonfun$1$$anonfun$apply$mcV$sp$1.class[0m
+[0m[[0mdebug[0m] [0m	my[0m
+[0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\scala-2.11\test-classes\my[0m
+[0m[[0mdebug[0m] [0m	my\android\project\test1.class[0m
+[0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\scala-2.11\test-classes\my\android\project\test1.class[0m
+[0m[[0mdebug[0m] [0m	my\android\project\test1$$anonfun$1.class[0m
+[0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\scala-2.11\test-classes\my\android\project\test1$$anonfun$1.class[0m
+[0m[[0mdebug[0m] [0m	my\android\project[0m
+[0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\scala-2.11\test-classes\my\android\project[0m
+[0m[[0minfo[0m] [0mDone packaging.[0m

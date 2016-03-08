@@ -102,7 +102,7 @@ def loginUI(){
 	 
 	  future { 
 	 
-	 val site = "http://monad.uk/login_scala.php"
+	 val site = "http://www.monad.uk/login_scala.php"
     try {
 	
      val url = new URL(site)
@@ -161,7 +161,7 @@ def loginUI(){
 	 
 	  future { 
 	 
-	 val site = "http://monad.uk/addUser_scala.php"
+	 val site = "http://www.monad.uk/addUser_scala.php"
     try {
 	
      val url = new URL(site)

@@ -4,27 +4,6 @@
     <dataSet config="C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\src\main\res" >
         <source path="C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\src\main\res" >
             <file
-                name="main"
-                path="C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\src\main\res\layout\main.xml"
-                qualifiers=""
-                type="layout" />
-            <file
-                path="C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\src\main\res\values\strings.xml"
-                qualifiers="" >
-                <string name="app_name" >testProject
-                </string>
-            </file>
-            <file
-                name="check"
-                path="C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\src\main\res\layout\check.xml"
-                qualifiers=""
-                type="layout" />
-            <file
-                name="user"
-                path="C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\src\main\res\layout\user.xml"
-                qualifiers=""
-                type="layout" />
-            <file
                 name="a_main"
                 path="C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\src\main\res\layout\a_main.xml"
                 qualifiers=""
@@ -35,10 +14,31 @@
                 qualifiers=""
                 type="layout" />
             <file
+                name="check"
+                path="C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\src\main\res\layout\check.xml"
+                qualifiers=""
+                type="layout" />
+            <file
                 name="login"
                 path="C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\src\main\res\layout\login.xml"
                 qualifiers=""
                 type="layout" />
+            <file
+                name="main"
+                path="C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\src\main\res\layout\main.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="user"
+                path="C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\src\main\res\layout\user.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                path="C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\src\main\res\values\strings.xml"
+                qualifiers="" >
+                <string name="app_name" >testProject
+                </string>
+            </file>
         </source>
     </dataSet>
 

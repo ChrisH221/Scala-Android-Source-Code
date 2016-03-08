@@ -112,7 +112,8 @@ class ListViewerDecode extends Activity with helpers {
 	theListView.setOnItemClickListener(new OnItemClickListener() {
 
       override def onItemClick(parent: AdapterView[_], view: View, position: Int, id: Long) {
-		 
+	  
+		  val row = j.getJSONObject(position)
 	
       }
     })

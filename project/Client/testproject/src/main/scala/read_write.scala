@@ -52,19 +52,19 @@ def test(s:String):Unit = {
    *@returns Unit
    */
    
-  def writeBytes(fn:String,key:(List[Bit],List[(Char,List[Bit])])) ={
+  def writeBytes(fn:String,key:String)={
 		 
-		val folder = new File("/sdcard/download/.encoded")
+		val folder = new File("/sdcard/encoded")
 		if (!folder.exists()){
 		
 		folder.mkdir()
 		
 		}
 		
-		val Card = new File("/sdcard/download/encoded/"+ fn +"_encode.txt")
+		val Card = new File("/sdcard/encoded/encodeeee"+ fn)
 		Card.createNewFile()
 		val fos = new FileOutputStream(Card)
-		fos.write(key._1.toString().getBytes())
+		fos.write(key.getBytes())
 		fos.close()
 		
 	  

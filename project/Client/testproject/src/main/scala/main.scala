@@ -56,6 +56,10 @@ def choose(){
 	button1.setOnClickListener((v : View) => {
 	   
 	  	 var intent= new Intent (this,classOf[ListViewer])
+		 val inte = getIntent
+		 val username = inte.getExtras.getString("user")
+		 intent.putExtra("user", username)
+	
 	 startActivity(intent)
 	
     })
