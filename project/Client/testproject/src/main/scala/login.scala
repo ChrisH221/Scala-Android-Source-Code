@@ -168,7 +168,7 @@ def loginUI(){
  val button1 = findView(TR.submit)
 	button1.setOnClickListener((v : View) => {
 	   	
-	  	 val p = promise[JSONArray] 
+	  	 val p = promise[String] 
 	 val f = p. future 
 	 
 	  future { 
@@ -195,10 +195,10 @@ def loginUI(){
       val result = new StringBuilder()
       var line: String = null
 	  val str = Stream.continually(reader.readLine()).takeWhile(_ != null).mkString("\n")
-	  val j = new JSONArray(str)	 
+	 
 	  
 	  
-	 p success j 
+	 p success str
     	
 	} catch {
 	    case e: Exception => {

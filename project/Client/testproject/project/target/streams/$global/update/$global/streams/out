@@ -5,48 +5,6 @@
 [0m[[0mdebug[0m] [0m	refresh = false[0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'compile'[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for default#testproject-build;0.1-SNAPSHOT [compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject-build;0.1-SNAPSHOT->com.artima.supersafe#sbtplugin;1.1.0-RC6 [compile->default(compile)][0m
-[0m[[0minfo[0m] [0mResolving com.artima.supersafe#sbtplugin;1.1.0-RC6 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.artima.supersafe#sbtplugin;1.1.0-RC6 {compile=[default(compile)]}[0m
-[0m[[0minfo[0m] [0mResolving com.artima.supersafe#sbtplugin;1.1.0-RC6 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: com.artima.supersafe#sbtplugin;1.1.0-RC6 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/com.artima.supersafe/sbtplugin/scala_2.10/sbt_0.13/1.1.0-RC6/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/com.artima.supersafe/sbtplugin/scala_2.10/sbt_0.13/1.1.0-RC6/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: no ivy file found for com.artima.supersafe#sbtplugin;1.1.0-RC6[0m
-[0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.artima.supersafe/sbtplugin/scala_2.10/sbt_0.13/1.1.0-RC6/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.artima.supersafe/sbtplugin/scala_2.10/sbt_0.13/1.1.0-RC6/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m	sbt-plugin-releases: no ivy file found for com.artima.supersafe#sbtplugin;1.1.0-RC6[0m
-[0m[[0mdebug[0m] [0m		tried C:\Users\Chris\.ivy2\local\com.artima.supersafe\sbtplugin\scala_2.10\sbt_0.13\1.1.0-RC6\ivys\ivy.xml[0m
-[0m[[0mdebug[0m] [0m	local: no ivy file found for com.artima.supersafe#sbtplugin;1.1.0-RC6[0m
-[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/com/artima/supersafe/sbtplugin_2.10_0.13/1.1.0-RC6/sbtplugin-1.1.0-RC6.pom[0m
-[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo1.maven.org/maven2/com/artima/supersafe/sbtplugin_2.10_0.13/1.1.0-RC6/sbtplugin-1.1.0-RC6.pom[0m
-[0m[[0mdebug[0m] [0m	public: no ivy file found for com.artima.supersafe#sbtplugin;1.1.0-RC6[0m
-[0m[[0mdebug[0m] [0m		tried http://scalasbt.artifactoryonline.com/scalasbt/sbt-plugin-releases/com.artima.supersafe/sbtplugin/scala_2.10/sbt_0.13/1.1.0-RC6/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=http://scalasbt.artifactoryonline.com/scalasbt/sbt-plugin-releases/com.artima.supersafe/sbtplugin/scala_2.10/sbt_0.13/1.1.0-RC6/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m	scalasbt releases: no ivy file found for com.artima.supersafe#sbtplugin;1.1.0-RC6[0m
-[0m[[0mdebug[0m] [0m		tried http://repo.artima.com/releases/com/artima/supersafe/sbtplugin_2.10_0.13/1.1.0-RC6/sbtplugin-1.1.0-RC6.pom[0m
-[0m[[0mdebug[0m] [0m	Artima Maven Repository: found md file for com.artima.supersafe#sbtplugin;1.1.0-RC6[0m
-[0m[[0mdebug[0m] [0m		=> http://repo.artima.com/releases/com/artima/supersafe/sbtplugin_2.10_0.13/1.1.0-RC6/sbtplugin-1.1.0-RC6.pom (1.1.0-RC6)[0m
-[0m[[0mdebug[0m] [0mdownloading http://repo.artima.com/releases/com/artima/supersafe/sbtplugin_2.10_0.13/1.1.0-RC6/sbtplugin-1.1.0-RC6.pom ...[0m
-[0m[[0mdebug[0m] [0m	Artima Maven Repository: downloading http://repo.artima.com/releases/com/artima/supersafe/sbtplugin_2.10_0.13/1.1.0-RC6/sbtplugin-1.1.0-RC6.pom[0m
-[0m[[0mdebug[0m] [0m	Artima Maven Repository: downloading http://repo.artima.com/releases/com/artima/supersafe/sbtplugin_2.10_0.13/1.1.0-RC6/sbtplugin-1.1.0-RC6.pom.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for http://repo.artima.com/releases/com/artima/supersafe/sbtplugin_2.10_0.13/1.1.0-RC6/sbtplugin-1.1.0-RC6.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.artima.supersafe#sbtplugin;1.1.0-RC6!sbtplugin.pom(pom.original) (904ms)[0m
-[0m[[0mdebug[0m] [0m		tried https://repo.typesafe.com/typesafe/ivy-releases/com.artima.supersafe/sbtplugin/1.1.0-RC6/jars/sbtplugin.jar[0m
-[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/com.artima.supersafe/sbtplugin/1.1.0-RC6/jars/sbtplugin.jar[0m
-[0m[[0mdebug[0m] [0m		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.artima.supersafe/sbtplugin/1.1.0-RC6/jars/sbtplugin.jar[0m
-[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.artima.supersafe/sbtplugin/1.1.0-RC6/jars/sbtplugin.jar[0m
-[0m[[0mdebug[0m] [0m		tried C:\Users\Chris\.ivy2\local\com.artima.supersafe\sbtplugin\1.1.0-RC6\jars\sbtplugin.jar[0m
-[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/com/artima/supersafe/sbtplugin/1.1.0-RC6/sbtplugin-1.1.0-RC6.jar[0m
-[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo1.maven.org/maven2/com/artima/supersafe/sbtplugin/1.1.0-RC6/sbtplugin-1.1.0-RC6.jar[0m
-[0m[[0mdebug[0m] [0m		tried http://scalasbt.artifactoryonline.com/scalasbt/sbt-plugin-releases/com.artima.supersafe/sbtplugin/1.1.0-RC6/jars/sbtplugin.jar[0m
-[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=http://scalasbt.artifactoryonline.com/scalasbt/sbt-plugin-releases/com.artima.supersafe/sbtplugin/1.1.0-RC6/jars/sbtplugin.jar[0m
-[0m[[0mdebug[0m] [0m		tried http://repo.artima.com/releases/com/artima/supersafe/sbtplugin/1.1.0-RC6/sbtplugin-1.1.0-RC6.jar[0m
-[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=http://repo.artima.com/releases/com/artima/supersafe/sbtplugin/1.1.0-RC6/sbtplugin-1.1.0-RC6.jar[0m
-[0m[[0mdebug[0m] [0m	found com.artima.supersafe#sbtplugin;1.1.0-RC6 in Artima Maven Repository[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject-build;0.1-SNAPSHOT->com.artima.supersafe#sbtplugin;1.1.0-RC6 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject-build;0.1-SNAPSHOT->com.artima.supersafe#sbtplugin;1.1.0-RC6 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject-build;0.1-SNAPSHOT->com.artima.supersafe#sbtplugin;1.1.0-RC6 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies default#testproject-build;0.1-SNAPSHOT->com.hanhuy.sbt#android-sdk-plugin;1.2.14 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving com.hanhuy.sbt#android-sdk-plugin;1.2.14 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.hanhuy.sbt#android-sdk-plugin;1.2.14 {compile=[default(compile)]}[0m
@@ -362,10 +320,6 @@
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'runtime'[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for default#testproject-build;0.1-SNAPSHOT [runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for default#testproject-build;0.1-SNAPSHOT [compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject-build;0.1-SNAPSHOT->com.artima.supersafe#sbtplugin;1.1.0-RC6 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject-build;0.1-SNAPSHOT->com.artima.supersafe#sbtplugin;1.1.0-RC6 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject-build;0.1-SNAPSHOT->com.artima.supersafe#sbtplugin;1.1.0-RC6 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject-build;0.1-SNAPSHOT->com.artima.supersafe#sbtplugin;1.1.0-RC6 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies default#testproject-build;0.1-SNAPSHOT->com.hanhuy.sbt#android-sdk-plugin;1.2.14 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.2 {provided=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.5 {provided=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.hanhuy.sbt#android-sdk-plugin;1.2.14->asm#asm-all;3.3.1 [compile->default(compile)][0m
@@ -564,10 +518,6 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies for default#testproject-build;0.1-SNAPSHOT [test][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for default#testproject-build;0.1-SNAPSHOT [runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for default#testproject-build;0.1-SNAPSHOT [compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject-build;0.1-SNAPSHOT->com.artima.supersafe#sbtplugin;1.1.0-RC6 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject-build;0.1-SNAPSHOT->com.artima.supersafe#sbtplugin;1.1.0-RC6 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject-build;0.1-SNAPSHOT->com.artima.supersafe#sbtplugin;1.1.0-RC6 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject-build;0.1-SNAPSHOT->com.artima.supersafe#sbtplugin;1.1.0-RC6 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies default#testproject-build;0.1-SNAPSHOT->com.hanhuy.sbt#android-sdk-plugin;1.2.14 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.2 {provided=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.5 {provided=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.hanhuy.sbt#android-sdk-plugin;1.2.14->asm#asm-all;3.3.1 [compile->default(compile)][0m
@@ -766,7 +716,7 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies for default#testproject-build;0.1-SNAPSHOT [provided][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies default#testproject-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.5 [provided->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang#scala-library;2.10.5 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@7f68ee97[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@7eb4e077[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#scala-library;2.10.5[0m
 [0m[[0mdebug[0m] [0m	found org.scala-lang#scala-library;2.10.5 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m	[2.10.5] org.scala-lang#scala-library;2.10.5[0m
@@ -1639,10 +1589,6 @@
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'compile-internal'[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for default#testproject-build;0.1-SNAPSHOT [compile-internal][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for default#testproject-build;0.1-SNAPSHOT [compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject-build;0.1-SNAPSHOT->com.artima.supersafe#sbtplugin;1.1.0-RC6 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject-build;0.1-SNAPSHOT->com.artima.supersafe#sbtplugin;1.1.0-RC6 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject-build;0.1-SNAPSHOT->com.artima.supersafe#sbtplugin;1.1.0-RC6 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject-build;0.1-SNAPSHOT->com.artima.supersafe#sbtplugin;1.1.0-RC6 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies default#testproject-build;0.1-SNAPSHOT->com.hanhuy.sbt#android-sdk-plugin;1.2.14 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.2 {provided=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.5 {provided=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.hanhuy.sbt#android-sdk-plugin;1.2.14->asm#asm-all;3.3.1 [compile->default(compile)][0m
@@ -2481,10 +2427,6 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies for default#testproject-build;0.1-SNAPSHOT [runtime-internal][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for default#testproject-build;0.1-SNAPSHOT [runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for default#testproject-build;0.1-SNAPSHOT [compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject-build;0.1-SNAPSHOT->com.artima.supersafe#sbtplugin;1.1.0-RC6 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject-build;0.1-SNAPSHOT->com.artima.supersafe#sbtplugin;1.1.0-RC6 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject-build;0.1-SNAPSHOT->com.artima.supersafe#sbtplugin;1.1.0-RC6 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject-build;0.1-SNAPSHOT->com.artima.supersafe#sbtplugin;1.1.0-RC6 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies default#testproject-build;0.1-SNAPSHOT->com.hanhuy.sbt#android-sdk-plugin;1.2.14 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.2 {provided=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.5 {provided=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.hanhuy.sbt#android-sdk-plugin;1.2.14->asm#asm-all;3.3.1 [compile->default(compile)][0m
@@ -2685,10 +2627,6 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies for default#testproject-build;0.1-SNAPSHOT [test][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for default#testproject-build;0.1-SNAPSHOT [runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for default#testproject-build;0.1-SNAPSHOT [compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject-build;0.1-SNAPSHOT->com.artima.supersafe#sbtplugin;1.1.0-RC6 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject-build;0.1-SNAPSHOT->com.artima.supersafe#sbtplugin;1.1.0-RC6 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject-build;0.1-SNAPSHOT->com.artima.supersafe#sbtplugin;1.1.0-RC6 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject-build;0.1-SNAPSHOT->com.artima.supersafe#sbtplugin;1.1.0-RC6 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies default#testproject-build;0.1-SNAPSHOT->com.hanhuy.sbt#android-sdk-plugin;1.2.14 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.2 {provided=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.5 {provided=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.hanhuy.sbt#android-sdk-plugin;1.2.14->asm#asm-all;3.3.1 [compile->default(compile)][0m
@@ -3574,12 +3512,6 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies default#testproject-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.5 [scala-tool->optional(default)][0m
 [0m[[0mdebug[0m] [0m	resolved ivy file produced in cache[0m
 [0m[[0mdebug[0m] [0m:: downloading artifacts ::[0m
-[0m[[0mdebug[0m] [0m		tried http://repo.artima.com/releases/com/artima/supersafe/sbtplugin_2.10_0.13/1.1.0-RC6/sbtplugin-1.1.0-RC6.jar[0m
-[0m[[0minfo[0m] [0mdownloading http://repo.artima.com/releases/com/artima/supersafe/sbtplugin_2.10_0.13/1.1.0-RC6/sbtplugin-1.1.0-RC6.jar ...[0m
-[0m[[0mdebug[0m] [0m	Artima Maven Repository: downloading http://repo.artima.com/releases/com/artima/supersafe/sbtplugin_2.10_0.13/1.1.0-RC6/sbtplugin-1.1.0-RC6.jar[0m
-[0m[[0mdebug[0m] [0m	Artima Maven Repository: downloading http://repo.artima.com/releases/com/artima/supersafe/sbtplugin_2.10_0.13/1.1.0-RC6/sbtplugin-1.1.0-RC6.jar.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for http://repo.artima.com/releases/com/artima/supersafe/sbtplugin_2.10_0.13/1.1.0-RC6/sbtplugin-1.1.0-RC6.jar[0m
-[0m[[0minfo[0m] [0m	[SUCCESSFUL ] com.artima.supersafe#sbtplugin;1.1.0-RC6!sbtplugin.jar (1131ms)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.hanhuy.sbt#android-sdk-plugin;1.2.14!android-sdk-plugin.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] asm#asm-all;3.3.1!asm-all.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] net.sf.proguard#proguard-base;4.10!proguard-base.jar[0m
@@ -3660,7 +3592,7 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#apply-macro;0.13.9!apply-macro.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#jline;2.10.5!jline.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.fusesource.jansi#jansi;1.4!jansi.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 3967ms :: artifacts dl 1186ms[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 3938ms :: artifacts dl 78ms[0m
 [0m[[0mdebug[0m] [0m	report for default#testproject-build;0.1-SNAPSHOT compile produced in C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\project\target\resolution-cache\reports\default-testproject-build-compile.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#testproject-build;0.1-SNAPSHOT runtime produced in C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\project\target\resolution-cache\reports\default-testproject-build-runtime.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#testproject-build;0.1-SNAPSHOT test produced in C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\project\target\resolution-cache\reports\default-testproject-build-test.xml[0m
@@ -3674,5 +3606,5 @@
 [0m[[0mdebug[0m] [0m	report for default#testproject-build;0.1-SNAPSHOT docs produced in C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\project\target\resolution-cache\reports\default-testproject-build-docs.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#testproject-build;0.1-SNAPSHOT pom produced in C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\project\target\resolution-cache\reports\default-testproject-build-pom.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#testproject-build;0.1-SNAPSHOT scala-tool produced in C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\project\target\resolution-cache\reports\default-testproject-build-scala-tool.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (3967ms resolve - 1186ms download)[0m
+[0m[[0mdebug[0m] [0m	resolve done (3938ms resolve - 78ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m

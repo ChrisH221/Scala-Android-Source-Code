@@ -11,7 +11,7 @@ import android.util.Log
  * The reader class handles all IO related to txt files, this includes reading and writing files.
  * Need to refactor to remove filepath input
  */
-class read_write(filePath:String) extends handler with helpers {
+class read_write() extends handler with helpers {
 
 
 def test(s:String):Unit = { 
@@ -30,7 +30,6 @@ def test(s:String):Unit = {
 		fos.close()
 		
 		
-		Log.d("MyTAG","2" + s.getBytes())
   
   }
 
@@ -61,11 +60,12 @@ def test(s:String):Unit = {
 		
 		}
 		
-		val Card = new File("/sdcard/encoded/encodeeee"+ fn)
+		val Card = new File("/sdcard/encoded/" + fn)
 		Card.createNewFile()
 		val fos = new FileOutputStream(Card)
 		fos.write(key.getBytes())
 		fos.close()
+		
 		
 	  
   }
@@ -76,16 +76,16 @@ def test(s:String):Unit = {
    *Writes the key to a text file
    *@returns Unit
    */
-  def createKeyFile(key:(List[Bit],List[(Char,List[Bit])])){
+ // def createKeyFile(key:(List[Bit],List[(Char,List[Bit])])){
 
-		val Card  = new File(removeWord(filePath, ".txt") ++ "_HCodeMap.txt")
-		Card.createNewFile()
-		val fos = new FileOutputStream(Card)
-		fos.write(key._2.toString().getBytes())
-		fos.close()
+	//	val Card  = new File(removeWord(filePath, ".txt") ++ "_HCodeMap.txt")
+	//	Card.createNewFile()
+	//	val fos = new FileOutputStream(Card)
+	//	fos.write(key._2.toString().getBytes())
+		//fos.close()
 
 
-  }
+ // }
 
    /* INCOMPLETE
    *Read the key from the file and parse it into HCodeMap

@@ -4,11 +4,11 @@ import android.Keys._
 
       name := "testProject"
 
-      scalaVersion := "2.11.7"
+      scalaVersion := "2.11.4"
 
       scalacOptions in Compile += "-feature"
 
-      platformTarget in Android := "android-23"
+      platformTarget in Android := "android-16"
 
       proguardCache in Android ++= Seq(
 
@@ -19,17 +19,14 @@ import android.Keys._
     "-dontoptimize", 
     "-dontwarn scala.collection.mutable.**"
     )
-	
-	sourceDirectory in Test := baseDirectory.value / "src" / "test"
-	
 	resolvers += "Typesafe Repository" at "http://repo.typesafe.com/typesafe/releases/"
     libraryDependencies ++= Seq(
-                        "org.scalatest" %% "scalatest" % "2.2.6" ,
+                        "org.scalatest" %% "scalatest" % "2.2.4" % "test",
+						"org.scala-lang" % "scala-reflect" % "2.11.7",
+						"org.scala-lang.modules" %% "scala-xml" % "1.0.4",
                         "com.typesafe.akka" %% "akka-actor" % "2.3.6"
 						)
 
-						
-						
 
      proguardScala in Android := true
 
@@ -42,6 +39,7 @@ import android.Keys._
 	 "-dontskipnonpubliclibraryclassmembers",
 	 "-dontskipnonpubliclibraryclasses",
 	 "-dontnote **",
+	 "-dontwarn **",
 	 "-verbose",
 	 "-keep class * extends android.os.AsyncTask {*;}"
       )
@@ -85,3 +83,5 @@ import android.Keys._
   install <<= install in Android
 
    retrieveManaged := true
+   
+   	sourceDirectory in Test := baseDirectory.value / "src" / "test"

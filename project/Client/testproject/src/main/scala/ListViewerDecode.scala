@@ -97,7 +97,7 @@ class ListViewerDecode extends Activity with helpers {
    
     for (i <- 0 until j.length) {
       val row = j.getJSONObject(i)
-      var key = row.getString("keycode")
+      var key = row.getString("fileName")
 	
 	 ar += key
 	 
@@ -114,6 +114,11 @@ class ListViewerDecode extends Activity with helpers {
       override def onItemClick(parent: AdapterView[_], view: View, position: Int, id: Long) {
 	  
 		  val row = j.getJSONObject(position)
+		  var key = row.getString("keycode")
+		  Log.d("MyTAG", key.toString)
+		  
+		  
+		  
 	
       }
     })

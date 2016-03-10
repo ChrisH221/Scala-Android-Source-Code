@@ -31,6 +31,16 @@ import scala.concurrent.ExecutionContext._
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.language.implicitConversions
 import scala.collection.mutable.ArrayBuffer
+import java.awt.image.BufferedImage
+import java.io.ByteArrayOutputStream
+import java.io.File
+import javax.imageio.ImageIO
+import com.sun.org.apache.xerces.internal.impl.dv.util.Base64
+
+
+
+
+
 
 /**
  * @author Chris Howell
@@ -40,12 +50,13 @@ import scala.collection.mutable.ArrayBuffer
  * 
  */
  
-class ListViewer extends Activity {
+class ListViewer extends Activity with helpers {
 
   protected override def onCreate(savedInstanceState: Bundle) {
     super.onCreate(savedInstanceState)
 	encode()
 	}
+  
   
   def encode(){
   
@@ -79,7 +90,7 @@ class ListViewer extends Activity {
 }
 
  def getListOfFiles(directoryName: String): Array[String] = {
-	return (new File(directoryName)).listFiles.filter(_.isFile).map(_.getName)
+	return (new File(directoryName)).listFiles.filter(_.isFile).map(_.getAbsolutePath)
 } 
  
  def updateList(dir:String, curDir:String){
@@ -94,58 +105,78 @@ class ListViewer extends Activity {
     val theAdapter = new ArrayAdapter[String](this, android.R.layout.simple_list_item_1, currentDirectory)
     val theListView = findViewById(R.id.theListView).asInstanceOf[ListView]
     theListView.setAdapter(theAdapter)
-	theListView.setOnItemClickListener(new OnItemClickListener() {
+	
+
+  theListView.setOnItemClickListener(new OnItemClickListener() {
 
       override def onItemClick(parent: AdapterView[_], view: View, position: Int, id: Long) {
 		 
-			
-		val y =currentDirectory(position)
+		val x = currentDirectory(position)
+		
+		val z = new File(x)
+
+		
+		if (z.isFile){
 		
 		
-		
-		 val p = promise[JSONArray] 
-	 val f = p. future 
+		val p = promise[String] 
+	    val f = p. future 
 	 
 	 	 future { 
-	 
-	 val site = "192.168.1.67/addKey_scala.php"
-    try {
+		Log.d("MyTAG", "f started")
+		val site = "http://monad.uk/addKey_scala.php"
+		try {
+		
+		
+		
 		val inte = getIntent
 		val username = inte.getExtras.getString("user")
-     val url = new URL(site)
-    val urlConn = url.openConnection()
-    val httpConn = urlConn.asInstanceOf[HttpURLConnection]
-    httpConn.setDoOutput(true)
-    val os = httpConn.getOutputStream
-    val POST_PARAMS = "username="+username+"&keycode = hiya.txt"
-    os.write(POST_PARAMS.getBytes)
-    val responseCode = httpConn.getResponseCode
-    httpConn.connect()
+		val url = new URL(site)
+		val urlConn = url.openConnection()
+		val httpConn = urlConn.asInstanceOf[HttpURLConnection]
+		httpConn.setDoOutput(true)
+		val os = httpConn.getOutputStream
+		val rw = new read_write()
+		val lines = rw.readFile(z.getAbsolutePath).toString
+		val key = rw.encode(lines)
+		rw.writeBytes(z.getName,key._1.toString)
+		
+		val POST_PARAMS = "username="+username.toString +"&key="+ key._2.toString +"&fileName=" +z.getName.toString 
+		
+		os.write(POST_PARAMS.getBytes)
+		val responseCode = httpConn.getResponseCode
+		httpConn.connect()
 	
       val input = httpConn.getInputStream
       val reader = new BufferedReader(new InputStreamReader(input))
       val result = new StringBuilder()
       var line: String = null
 	  val str = Stream.continually(reader.readLine()).takeWhile(_ != null).mkString("\n")
-	  val j = new JSONArray(str)	 
+	  	 
 	  
 	  
-	 p success j 
+	 p success str 
     	
 	} catch {
 	    case e: Exception => {
+		Log.d("MyTAG", e.toString)
         println("Error: " + e)
         e.printStackTrace()
         null
       }
     }	 
 	 } 
-	f onSuccess {  case result =>  println("hey")}
+	f onSuccess {  case result => runOnUiThread{updateList("/sdcard", "")}}
 		
+	//	val rw = new read_write(x)
+		//val h = new handler()
+		//val text = h.encode(rw.readFile(x).mkString.toString)
+		//rw.writeBytes(x ,text)
 		}
-		
-		
-      
+		else if (x.equals(".")) updateList("/sdcard", "")
+		else if(x.equals("..")) updateList(dir, "")
+		else updateList(path, x)
+      }
     })
  
  
@@ -153,5 +184,7 @@ class ListViewer extends Activity {
   
   
 }
+
+
 
 

@@ -63,6 +63,14 @@ class handler extends builder{
     else (List(new Zero),List((s.charAt(0),List( new Zero))))
 
   }
+  
+ // def prettyPrint(l:List[Bit]):String ={
+  
+ // l.foreach{ x => x.}
+  
+  
+ // } 
+  
 
   /*
    *A lookup function that searches the HCodeMap for matching bit patterns

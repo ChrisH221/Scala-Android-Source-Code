@@ -69,6 +69,7 @@ def choose(){
 	  	 var intent= new Intent (this,classOf[ListViewer])
 		 val inte = getIntent
 		 val username = inte.getExtras.getString("user")
+		 Log.d("MyTAG","2" + username)
 		 intent.putExtra("user", username)
 	
 	 startActivity(intent)
@@ -98,7 +99,7 @@ def setupMain(){
 
 	// val system = ActorSystem("ClientSystem")
    // val uiAct = system.actorOf(Props(new actorUI))
-	val t = new read_write("hey")
+	//val t = new read_write("hey")
     //val localActor = system.actorOf(Props[LocalActor])
 	val h = new handler
 //	val uiAct = system.actorOf(Props[actorUI])
