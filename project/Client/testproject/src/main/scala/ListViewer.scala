@@ -118,55 +118,16 @@ class ListViewer extends Activity with helpers {
 		
 		if (z.isFile){
 		
-		
-		val p = promise[String] 
-	    val f = p. future 
-	 
-	 	 future { 
-		Log.d("MyTAG", "f started")
-		val site = "http://monad.uk/addKey_scala.php"
-		try {
-		
-		
-		
-		val inte = getIntent
-		val username = inte.getExtras.getString("user")
-		val url = new URL(site)
-		val urlConn = url.openConnection()
-		val httpConn = urlConn.asInstanceOf[HttpURLConnection]
-		httpConn.setDoOutput(true)
-		val os = httpConn.getOutputStream
-		val rw = new read_write()
-		val lines = rw.readFile(z.getAbsolutePath).toString
-		val key = rw.encode(lines)
-		rw.writeBytes(z.getName,key._1.toString)
-		
-		val POST_PARAMS = "username="+username.toString +"&key="+ key._2.toString +"&fileName=" +z.getName.toString 
-		
-		os.write(POST_PARAMS.getBytes)
-		val responseCode = httpConn.getResponseCode
-		httpConn.connect()
-	
-      val input = httpConn.getInputStream
-      val reader = new BufferedReader(new InputStreamReader(input))
-      val result = new StringBuilder()
-      var line: String = null
-	  val str = Stream.continually(reader.readLine()).takeWhile(_ != null).mkString("\n")
-	  	 
-	  
-	  
-	 p success str 
-    	
-	} catch {
-	    case e: Exception => {
-		Log.d("MyTAG", e.toString)
-        println("Error: " + e)
-        e.printStackTrace()
-        null
-      }
-    }	 
-	 } 
-	f onSuccess {  case result => runOnUiThread{updateList("/sdcard", "")}}
+	try {
+      val image = ImageIO.read(new File(z.getAbsolutePath))
+      val baos = new ByteArrayOutputStream()
+      ImageIO.write(image, "png", baos)
+      val res = baos.toByteArray()
+      val encodedImage = Base64.encode(baos.toByteArray())
+	  Log.d("MyTAG","2" + encodedImage.toString)
+    } catch {
+      case e: Exception => e.printStackTrace()
+    }
 		
 	//	val rw = new read_write(x)
 		//val h = new handler()
