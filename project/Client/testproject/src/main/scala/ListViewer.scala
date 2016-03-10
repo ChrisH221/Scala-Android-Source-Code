@@ -35,8 +35,8 @@ import scala.collection.mutable.ArrayBuffer
 /**
  * @author Chris Howell
  *
- *The ListViewer class 
- *
+ *The ListViewer class implements a filesystem navigation for the user to
+ *browse the filesystem and select a file for encoding.
  * 
  */
  
@@ -81,15 +81,7 @@ class ListViewer extends Activity {
  def getListOfFiles(directoryName: String): Array[String] = {
 	return (new File(directoryName)).listFiles.filter(_.isFile).map(_.getName)
 } 
-  
-//  def getListOfFiles(dir: String):List[File] = {
- // val d = new File(dir)
-  //if (d.exists && d.isDirectory) {
-   // d.listFiles.filter(_.isFile).toList
-  //} else {
-  //  List[File]()
-  //}
-//}
+ 
  def updateList(dir:String, curDir:String){
  
   setContentView(R.layout.a_main)
@@ -106,22 +98,7 @@ class ListViewer extends Activity {
 
       override def onItemClick(parent: AdapterView[_], view: View, position: Int, id: Long) {
 		 
-	//	val x = currentDirectory(position)
-	//	if (new File(x).isFile){
-		//Log.d("MyTAG","hey")
-	//	val rw = new read_write(x)
-	//	val h = new handler()
-		
-		//val lines = handler.
-		
-		
-		//val text = h.encode(rw.readFile(x).mkString.toString)
-		//rw.writeBytes(x ,text._1.toString)
-	//	}
-	//	Log.d("MyTAG",currentDirectory(position))
-	
-	
-		
+			
 		val y =currentDirectory(position)
 		
 		

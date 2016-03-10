@@ -4,7 +4,7 @@
 		module="testproject_2.11"
 		revision="0.1-SNAPSHOT"
 		status="integration"
-		publication="20160308001130"
+		publication="20160310011022"
 	>
 		<description>
 		testProject
@@ -32,6 +32,7 @@
 	<dependencies>
 		<dependency org="org.scala-lang" name="scala-compiler" rev="2.11.7" conf="scala-tool->default,optional(default)"/>
 		<dependency org="org.scala-lang" name="scala-library" rev="2.11.7" conf="scala-tool->default,optional(default);compile->default(compile)"/>
+		<dependency org="com.artima.supersafe" name="supersafe_2.11.7" rev="1.1.0-RC6" conf="plugin->default(compile)"/>
 		<dependency org="org.scalatest" name="scalatest_2.11" rev="2.2.6" conf="compile->default(compile)"/>
 		<dependency org="com.typesafe.akka" name="akka-actor_2.11" rev="2.3.6" conf="compile->default(compile)"/>
 	</dependencies>

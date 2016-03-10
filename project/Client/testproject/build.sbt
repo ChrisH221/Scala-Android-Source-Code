@@ -8,7 +8,7 @@ import android.Keys._
 
       scalacOptions in Compile += "-feature"
 
-      platformTarget in Android := "android-16"
+      platformTarget in Android := "android-23"
 
       proguardCache in Android ++= Seq(
 

@@ -1,56 +1,45 @@
 [0m[[0mdebug[0m] [0m[0m
 [0m[[0mdebug[0m] [0mInitial source changes: [0m
-[0m[[0mdebug[0m] [0m	removed:Set(C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\src\instrumentTest\scala\newtest.scala)[0m
-[0m[[0mdebug[0m] [0m	added: Set(C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\src\instrumentTest\scala\test1.scala)[0m
-[0m[[0mdebug[0m] [0m	modified: Set()[0m
-[0m[[0mdebug[0m] [0mInvalidated products: Set(C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\scala-2.11\test-classes\my\android\project\newtest$$anonfun$1$$anonfun$apply$mcV$sp$1.class, C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\scala-2.11\test-classes\my\android\project\newtest$$anonfun$1.class, C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\scala-2.11\test-classes\my\android\project\newtest.class)[0m
+[0m[[0mdebug[0m] [0m	removed:Set()[0m
+[0m[[0mdebug[0m] [0m	added: Set()[0m
+[0m[[0mdebug[0m] [0m	modified: Set(C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\src\instrumentTest\scala\testHandler.scala)[0m
+[0m[[0mdebug[0m] [0mInvalidated products: Set()[0m
 [0m[[0mdebug[0m] [0mExternal API changes: API Changes: Set()[0m
 [0m[[0mdebug[0m] [0mModified binary dependencies: Set()[0m
-[0m[[0mdebug[0m] [0mInitial directly invalidated sources: Set(C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\src\instrumentTest\scala\newtest.scala, C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\src\instrumentTest\scala\test1.scala)[0m
+[0m[[0mdebug[0m] [0mInitial directly invalidated sources: Set(C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\src\instrumentTest\scala\testHandler.scala)[0m
 [0m[[0mdebug[0m] [0m[0m
 [0m[[0mdebug[0m] [0mSources indirectly invalidated by:[0m
-[0m[[0mdebug[0m] [0m	product: Set(C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\src\instrumentTest\scala\newtest.scala)[0m
+[0m[[0mdebug[0m] [0m	product: Set()[0m
 [0m[[0mdebug[0m] [0m	binary dep: Set()[0m
 [0m[[0mdebug[0m] [0m	external source: Set()[0m
-[0m[[0mdebug[0m] [0mAll initially invalidated sources: Set(C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\src\instrumentTest\scala\newtest.scala, C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\src\instrumentTest\scala\test1.scala)[0m
-[0m[[0mdebug[0m] [0mRecompiling all 1 sources: invalidated sources (2) exceeded 50.0% of all sources[0m
+[0m[[0mdebug[0m] [0mAll initially invalidated sources: Set(C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\src\instrumentTest\scala\testHandler.scala)[0m
 [0m[[0minfo[0m] [0mCompiling 1 Scala source to C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\scala-2.11\test-classes...[0m
 [0m[[0mdebug[0m] [0mGetting compiler-interface from component compiler for Scala 2.11.7[0m
 [0m[[0mdebug[0m] [0mGetting compiler-interface from component compiler for Scala 2.11.7[0m
-[0m[[0mdebug[0m] [0mRunning cached compiler 4555d442, interfacing (CompilerInterface) with Scala compiler version 2.11.7[0m
+[0m[[0mdebug[0m] [0mRunning cached compiler 4d91f60e, interfacing (CompilerInterface) with Scala compiler version 2.11.7[0m
 [0m[[0mdebug[0m] [0mCalling Scala compiler with arguments  (CompilerInterface):[0m
 [0m[[0mdebug[0m] [0m	-encoding[0m
 [0m[[0mdebug[0m] [0m	utf8[0m
 [0m[[0mdebug[0m] [0m	-target:jvm-1.6[0m
+[0m[[0mdebug[0m] [0m	-Xplugin:C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\lib_managed\jars\com.artima.supersafe\supersafe_2.11.7\supersafe_2.11.7-1.1.0-RC6.jar[0m
 [0m[[0mdebug[0m] [0m	-bootclasspath[0m
-[0m[[0mdebug[0m] [0m	C:\Users\Chris\AppData\Local\Android\sdk\platforms\android-16\android.jar[0m
+[0m[[0mdebug[0m] [0m	C:\Users\Chris\AppData\Local\Android\sdk\platforms\android-23\android.jar[0m
 [0m[[0mdebug[0m] [0m	-javabootclasspath[0m
-[0m[[0mdebug[0m] [0m	C:\Users\Chris\AppData\Local\Android\sdk\platforms\android-16\android.jar[0m
+[0m[[0mdebug[0m] [0m	C:\Users\Chris\AppData\Local\Android\sdk\platforms\android-23\android.jar[0m
 [0m[[0mdebug[0m] [0m	-feature[0m
 [0m[[0mdebug[0m] [0m	-feature[0m
 [0m[[0mdebug[0m] [0m	-bootclasspath[0m
 [0m[[0mdebug[0m] [0m	C:\Program Files\Java\jdk1.8.0_60\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_60\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_60\jre\classes;C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\lib_managed\jars\org.scala-lang\scala-library\scala-library-2.11.7.jar[0m
 [0m[[0mdebug[0m] [0m	-classpath[0m
 [0m[[0mdebug[0m] [0m	C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\scala-2.11\test-classes;C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes.jar;C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\lib_managed\bundles\org.scalatest\scalatest_2.11\scalatest_2.11-2.2.6.jar;C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\lib_managed\jars\org.scala-lang\scala-reflect\scala-reflect-2.11.7.jar;C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\lib_managed\bundles\org.scala-lang.modules\scala-xml_2.11\scala-xml_2.11-1.0.2.jar;C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\lib_managed\jars\com.typesafe.akka\akka-actor_2.11\akka-actor_2.11-2.3.6.jar;C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\lib_managed\bundles\com.typesafe\config\config-1.2.1.jar[0m
-[0m[[33mwarn[0m] [0mC:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\src\instrumentTest\scala\test1.scala:3: imported `builder' is permanently hidden by definition of class builder in package project[0m
+[0m[[33mwarn[0m] [0mC:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\src\instrumentTest\scala\testHandler.scala:5: imported `builder' is permanently hidden by definition of class builder in package project[0m
 [0m[[33mwarn[0m] [0mimport my.android.project.builder[0m
 [0m[[33mwarn[0m] [0m                          ^[0m
-[0m[[33mwarn[0m] [0mone warning found[0m
-[0m[[0mdebug[0m] [0mScala compilation took 0.570427736 s[0m
-[0m[[0mdebug[0m] [0mInvalidating C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\src\instrumentTest\scala\test1.scala...[0m
-[0m[[0mdebug[0m] [0mInvalidating (transitively) by inheritance from C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\src\instrumentTest\scala\test1.scala...[0m
-[0m[[0mdebug[0m] [0mInitial set of included nodes: Set(C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\src\instrumentTest\scala\test1.scala)[0m
-[0m[[0mdebug[0m] [0mInvalidated by transitive inheritance dependency: Set(C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\src\instrumentTest\scala\test1.scala)[0m
-[0m[[0mdebug[0m] [0mThe C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\src\instrumentTest\scala\test1.scala source file has the following implicit definitions changed:[0m
-[0m[[0mdebug[0m] [0m	unconstrainedEquality, convertToEqualizer.[0m
-[0m[[0mdebug[0m] [0mAll member reference dependencies will be considered within this context.[0m
-[0m[[0mdebug[0m] [0mInvalidating C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\src\instrumentTest\scala\newtest.scala...[0m
-[0m[[0mdebug[0m] [0mInvalidating (transitively) by inheritance from C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\src\instrumentTest\scala\newtest.scala...[0m
-[0m[[0mdebug[0m] [0mInitial set of included nodes: Set(C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\src\instrumentTest\scala\newtest.scala)[0m
-[0m[[0mdebug[0m] [0mInvalidated by transitive inheritance dependency: Set(C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\src\instrumentTest\scala\newtest.scala)[0m
-[0m[[0mdebug[0m] [0mThe C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\src\instrumentTest\scala\newtest.scala source file has the following implicit definitions changed:[0m
-[0m[[0mdebug[0m] [0m	unconstrainedEquality, convertToEqualizer.[0m
-[0m[[0mdebug[0m] [0mAll member reference dependencies will be considered within this context.[0m
+[0m[[33mwarn[0m] [0mC:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\src\instrumentTest\scala\testHandler.scala:6: imported `helpers' is permanently hidden by definition of trait helpers in package project[0m
+[0m[[33mwarn[0m] [0mimport my.android.project.helpers[0m
+[0m[[33mwarn[0m] [0m                          ^[0m
+[0m[[33mwarn[0m] [0mtwo warnings found[0m
+[0m[[0mdebug[0m] [0mScala compilation took 0.633752638 s[0m
 [0m[[0mdebug[0m] [0mNew invalidations:[0m
 [0m[[0mdebug[0m] [0m	Set()[0m
 [0m[[0mdebug[0m] [0mInitial set of included nodes: Set()[0m

@@ -39,6 +39,18 @@ import scala.language.implicitConversions
 
 
 class login extends Activity with TypedActivity with helpers{
+
+
+
+	implicit def onClickListener(f: (View => Unit)): View.OnClickListener = {
+		new View.OnClickListener() {
+				override def onClick(v: View) {
+			f(v)
+			}
+		}
+		}
+
+
   override def onCreate(bundle: Bundle) {
   
     super.onCreate(bundle)
