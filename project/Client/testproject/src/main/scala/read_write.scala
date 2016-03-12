@@ -4,6 +4,14 @@ import scala.io.Source
 import java.io._
 import java.io.FileOutputStream
 import android.util.Log
+import java.awt._
+import java.io._
+import java.util.logging._
+import javax.imageio.ImageIO
+import javax.swing._
+//remove if not needed
+import scala.collection.JavaConversions._
+import java.awt.image.BufferedImage
 
 /**INCOMPLETE
  * @author Chris Howell
@@ -68,6 +76,16 @@ def test(s:String):Unit = {
 		
 		
 	  
+  }
+  
+  def writeImage(img:BufferedImage){
+  
+    
+   val f = new File("C:\\Users\\Chris\\Desktop\\testImageTEST.png");
+   ImageIO.write(img, "PNG", f);
+  
+  
+  
   }
   
   def removeWord(s:String, word:String)= s filterNot (word contains _)

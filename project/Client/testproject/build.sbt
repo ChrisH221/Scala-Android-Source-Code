@@ -19,12 +19,16 @@ import android.Keys._
     "-dontoptimize", 
     "-dontwarn scala.collection.mutable.**"
     )
+	
+	sourceDirectory in Test := baseDirectory.value / "src" / "test"
+	
+	
 	resolvers += "Typesafe Repository" at "http://repo.typesafe.com/typesafe/releases/"
     libraryDependencies ++= Seq(
-                        "org.scalatest" %% "scalatest" % "2.2.4" % "test",
+                        "org.scalatest" %% "scalatest" % "2.2.6" ,
 						"org.scala-lang" % "scala-reflect" % "2.11.7",
 						"org.scala-lang.modules" %% "scala-xml" % "1.0.4",
-                        "com.typesafe.akka" %% "akka-actor" % "2.3.6"
+                        "com.typesafe.akka" %% "akka-actor" % "2.3.6"						
 						)
 
 

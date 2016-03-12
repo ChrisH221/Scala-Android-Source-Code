@@ -49,13 +49,14 @@ class login extends Activity with TypedActivity with helpers{
 			}
 		}
 		}
+		
 
 
   override def onCreate(bundle: Bundle) {
   
     super.onCreate(bundle)
 	setContentView(R.layout.login)
-	
+
 	
 	 val button1 = findView(TR.login)
 	button1.setOnClickListener((v : View) => {
