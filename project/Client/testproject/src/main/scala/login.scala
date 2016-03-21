@@ -110,12 +110,12 @@ def loginUI(){
  val button1 = findView(TR.submit)
 	button1.setOnClickListener((v : View) => {
 	   	
-	  	 val p = promise[JSONArray] 
-	 val f = p. future 
+	val p = promise[JSONArray] 
+	val f = p. future 
 	 
-	  future { 
+	future { 
 	 
-	 val site = "http://www.monad.uk/login_scala.php"
+	val site = "http://www.monad.uk/login_scala.php"
     try {
 	
      val url = new URL(site)
@@ -132,18 +132,16 @@ def loginUI(){
     val responseCode = httpConn.getResponseCode
     httpConn.connect()
 	
-      val input = httpConn.getInputStream
-      val reader = new BufferedReader(new InputStreamReader(input))
-      val result = new StringBuilder()
-      var line: String = null
-	  val str = Stream.continually(reader.readLine()).takeWhile(_ != null).mkString("\n")
-	  val j = new JSONArray(str)	 
-	  
-	  
-	 p success j 
-    	
+    val input = httpConn.getInputStream
+    val reader = new BufferedReader(new InputStreamReader(input))
+    val result = new StringBuilder()
+    var line: String = null
+	val str = Stream.continually(reader.readLine()).takeWhile(_ != null).mkString("\n")
+	val j = new JSONArray(str)	 
+	p success j 
+    
 	} catch {
-	    case e: Exception => {
+        case e: Exception => {
         println("Error: " + e)
         e.printStackTrace()
         null
@@ -151,30 +149,26 @@ def loginUI(){
     }	 
 	 } 
 	f onSuccess {  case result =>  runOnUiThread{
-	val username = findView(TR.username)
+	val username = findView(TR.username) 
 	parseResult(result,username.getText.toString)}}
-		
-	
-    })
+	})
 
-  
-	 
-	 	}
+  	 	}
 		
 		
-		def createAccount(){
+def createAccount(){
 
- setContentView(R.layout.check)
+	setContentView(R.layout.check)
 
- val button1 = findView(TR.submit)
+    val button1 = findView(TR.submit)
 	button1.setOnClickListener((v : View) => {
 	   	
-	  	 val p = promise[String] 
+     val p = promise[String] 
 	 val f = p. future 
 	 
-	  future { 
+	 future { 
 	 
-	 val site = "http://www.monad.uk/addUser_scala.php"
+    val site = "http://www.monad.uk/addUser_scala.php"
     try {
 	
      val url = new URL(site)
@@ -209,11 +203,7 @@ def loginUI(){
       }
     }	 
 	 } 
-	f onSuccess {  case result =>  runOnUiThread{
-	
-	changeScreen()
-	
-	}}
+	f onSuccess {  case result =>  runOnUiThread{changeScreen()}}
 		
 	
     })

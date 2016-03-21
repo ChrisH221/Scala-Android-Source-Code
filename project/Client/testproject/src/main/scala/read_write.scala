@@ -80,9 +80,9 @@ def test(s:String):Unit = {
   
   def writeImage(img:BufferedImage){
   
-    
-   val f = new File("C:\\Users\\Chris\\Desktop\\testImageTEST.png");
-   ImageIO.write(img, "PNG", f);
+     
+     val f = new File("C:\\Users\\Chris\\Desktop\\testImageTEST.png");
+     ImageIO.write(img, "PNG", f);
   
   
   

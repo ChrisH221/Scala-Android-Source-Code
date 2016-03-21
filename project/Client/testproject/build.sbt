@@ -22,6 +22,7 @@ import android.Keys._
 	
 	sourceDirectory in Test := baseDirectory.value / "src" / "test"
 	
+	javaOptions += "-Xmx6144M -d64"
 	
 	resolvers += "Typesafe Repository" at "http://repo.typesafe.com/typesafe/releases/"
     libraryDependencies ++= Seq(

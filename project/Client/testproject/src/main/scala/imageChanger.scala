@@ -9,40 +9,38 @@ import javax.swing._
 import scala.collection.JavaConversions._
 import java.awt.image.BufferedImage
 //import android.util.Log
-import java.io.ByteArrayInputStream
+import java.io._
+import sun.misc.BASE64Decoder
+import sun.misc.BASE64Encoder
 
 class imageChanger {
 
 
 	
 
-   def imageToString(path: String): String = {
-  // Log.d("MyTAG", path)
-   val bImage: BufferedImage  = ImageIO.read(new File(path))
-    var imageString: String = null
-   
-    val baos = new ByteArrayOutputStream()
+  def imageToString(bImage: BufferedImage, format:String): String = {
+  var imageString: String = null
+    val bos = new ByteArrayOutputStream()
     try {
-      ImageIO.write(bImage, "png", baos)
-      baos.flush()
-	  println("1" )
-      val imageAsRawBytes = baos.toByteArray()
-      baos.close()
-	   println("2" )
-      imageString = imageAsRawBytes.toString
-	  println("hey" + imageString)
+      ImageIO.write(bImage, format, bos)
+      val imageBytes = bos.toByteArray()
+      val encoder = new BASE64Encoder()
+      imageString = encoder.encode(imageBytes)
+      bos.close()
     } catch {
-      case ex: IOException =>println(ex.toString)
+      case e: IOException => e.printStackTrace()
     }
     imageString
   }
 
   def stringToImage(imageString: String): BufferedImage = {
     var bImage: BufferedImage = null
-    val bais = new ByteArrayInputStream(imageString.getBytes)
+	val b64dec = new BASE64Decoder()
     try {
-	println("this far")
-      bImage = ImageIO.read(bais)
+	
+            val output = b64dec.decodeBuffer(imageString)
+            val bais = new ByteArrayInputStream(output)
+            bImage = ImageIO.read(bais)
     } catch {
       case ex: IOException => println("no")
     }
@@ -51,3 +49,5 @@ class imageChanger {
   
   
 }
+
+            
