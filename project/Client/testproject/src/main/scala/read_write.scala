@@ -4,7 +4,7 @@ import scala.io.Source
 import java.io._
 import java.io.FileOutputStream
 import android.util.Log
-import java.awt._
+
 import java.io._
 import java.util.logging._
 import javax.imageio.ImageIO
@@ -20,26 +20,6 @@ import java.awt.image.BufferedImage
  * Need to refactor to remove filepath input
  */
 class read_write() extends handler with helpers {
-
-
-def test(s:String):Unit = { 
-	
-		val folder = new File("/sdcard/download/.encoded")
-		if (!folder.exists()){
-		
-		folder.mkdir()
-		
-		}
-		
-		val Card = new File(s)
-		Card.createNewFile()
-		val fos = new FileOutputStream(Card)
-		fos.write(s.getBytes())
-		fos.close()
-		
-		
-  
-  }
 
 
 
@@ -59,37 +39,81 @@ def test(s:String):Unit = {
    *@returns Unit
    */
    
-  def writeBytes(fn:String,key:String)={
+  def writeBytes(fn:String,bitList:List[Bit])={
 		 
 		val folder = new File("/sdcard/encoded")
-		if (!folder.exists()){
 		
-		folder.mkdir()
-		
-		}
+		if (!folder.exists()){folder.mkdir()}
 		
 		val Card = new File("/sdcard/encoded/" + fn)
 		Card.createNewFile()
+		
 		val fos = new FileOutputStream(Card)
-		fos.write(key.getBytes())
+		fos.write(prettyPrint(bitList).getBytes())
 		fos.close()
 		
 		
 	  
   }
   
-  def writeImage(img:BufferedImage){
+  def writeImage(fn:String,path:String, writePath:String)={
+   
   
-     
-     val f = new File("C:\\Users\\Chris\\Desktop\\testImageTEST.png");
-     ImageIO.write(img, "PNG", f);
-  
-  
+	Log.d("MyTAG", "writeimage start")
+	 val i = new imageChanger
+	 Log.d("MyTAG", path)
+	 val encode = i.processEncode(path)
+	 	 Log.d("MyTAG", "22")
+	 val l = List()
+	 encode.foreach { x => l:+ x._1 }
+	 Log.d("MyTAG", "2")
+	 val folder = new File(writePath)
+		
+		if (!folder.exists()){folder.mkdir()}
+		
+		val Card = new File(writePath + fn)
+		Card.createNewFile()
+		
+		val fos = new FileOutputStream(Card)
+		fos.write(prettyPrint(l.flatten).getBytes())
+		fos.close()
+		
   
   }
   
-  def removeWord(s:String, word:String)= s filterNot (word contains _)
   
+  def pMatch(b:Bit):String = b match{
+  
+  case b:One => "1"
+  case b:Zero =>  "0"
+  case b:EmptyBit =>  "-1"
+   
+  
+  }
+
+  def prettyPrint(bitList:List[Bit]):String={
+  
+	 var string = ""
+  	 
+     var a = 0
+	 var nlCount = 0
+	 for (a <- 0 to bitList.size-1){
+	 nlCount = nlCount + 1
+	 
+	 if(nlCount >= 10){  
+
+	 string = string ++ " /n "
+	 nlCount = 0
+	 }
+	  var bitStr = pMatch(bitList(a))
+	  
+      string = string ++ bitStr
+	       
+      }
+    string
+  
+  
+  }
    /*INCOMPLETE
    *Writes the key to a text file
    *@returns Unit

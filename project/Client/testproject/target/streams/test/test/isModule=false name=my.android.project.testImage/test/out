@@ -1,3 +1,0 @@
-[0m[[0minfo[0m] [0m[32mtestImage:[0m[0m
-[0m[[0minfo[0m] [0m[32m- should read the image, turning into bytestring, encode using huffman and then decode to same string[0m[0m
-[0m[[0minfo[0m] [0m[32m- should read the image, turning into bytestring, encode/decode and then write the image[0m[0m

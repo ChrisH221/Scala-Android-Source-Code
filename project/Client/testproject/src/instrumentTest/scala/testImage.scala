@@ -19,61 +19,28 @@ class testImage extends FlatSpec with helpers {
     val testPath = "C:\\Users\\Chris\\Desktop\\testImage.png"
   
  it should "read the image, turning into bytestring, encode using huffman and then decode to same string" in {
-      // = ImageIO.read(classOf[MyClass].getResourceAsStream("/images/grass.png"))
-
-	//  val image = ImageIO.read(new File(testPath))
-	 // println(image.getBytes)
-	//  val s = i.imageToString(image)
-	
-	//  val result = h.encode(s)
-	//  val d = h.decode(0,"",result)
-	//  assert( d === s)
+     // val image= ImageIO.read(classOf[testImage].getResourceAsStream("testImage.png"))
+	  val image = ImageIO.read(new File(testPath))
+	  val x = i.processEncode(testPath)
+    	val stringDecode = i.processDecode(x)
+	 // assert( i.imageToString(image) === stringDecode)
     }
 	
 	
 	
 	 it should "read the image, turning into bytestring, encode/decode and then write the image " in {
        
-	 val formatName = testPath.substring(testPath.lastIndexOf('.') + 1, testPath.length)
-	  val image = ImageIO.read(new File(testPath))
-	 
-	 var s = i.imageToString(image,formatName)
-	 val chunks = s.size / 60
-	 var x = List(h.encode(s.take(chunks)))
-	  s = s.drop(chunks)
-	 
-	 var a = 0
-	 var list = List()
-	 for (a <- 1 to 59){
-	 var t = h.encode(s.take(chunks)) 
-	 x = x :+ t
-	 s = s.drop(chunks)
+	 val image = ImageIO.read(new File(testPath))
+	 val x = i.processEncode(testPath)
+     val stringDecode = i.processDecode(x)
+	 val rw = new read_write()
+	 val in = new ByteArrayInputStream(stringDecode.getBytes);
+     //val bImageFromConvert = ImageIO.read(in);
+	 //val im = i.stringToImage(stringDecode)
+ 	// rw.writeImage(testPath.reverse.take(17),im,"C:\\Users\\Chris\\Desktop\\testImageTest.png","C:\\Users\\Chris\\Desktop\\")
 	
-     }
-	 var stringDecode = ""
-	 for (a <- 0 to 59){
-	 var codeChunk = x(a)
-	 var d = h.decode(0,"",codeChunk)
-	
-	stringDecode = stringDecode ++ d
-	
-     }
-	 
-	
-	
-		val rw = new read_write()
-		val in = new ByteArrayInputStream(stringDecode.getBytes);
-        val bImageFromConvert = ImageIO.read(in);
-		val im = i.stringToImage(stringDecode)
-		rw.writeImage(im)
-	 // assert( d === s)
     }
 	
 	
 	}
  
- 
-	
-	
-	
-	

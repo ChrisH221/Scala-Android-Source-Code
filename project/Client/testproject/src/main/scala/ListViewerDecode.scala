@@ -45,37 +45,37 @@ class ListViewerDecode extends Activity with helpers {
 	 val p = promise[JSONArray] 
 	 val f = p. future 
 	 
-	 	 future { 
+    future { 
 	 
-	 val site = "http://monad.uk/getfiles_scala.php"
-    try {
-		val inte = getIntent
-		val username = inte.getExtras.getString("user")
-     val url = new URL(site)
-    val urlConn = url.openConnection()
-    val httpConn = urlConn.asInstanceOf[HttpURLConnection]
-    httpConn.setDoOutput(true)
-    val os = httpConn.getOutputStream
-    val POST_PARAMS = "username="+username+""
-    os.write(POST_PARAMS.getBytes)
-    val responseCode = httpConn.getResponseCode
-    httpConn.connect()
+	        val site = "http://monad.uk/getfiles_scala.php"
+		try {
+			val inte = getIntent
+			val username = inte.getExtras.getString("user")
+			val url = new URL(site)
+			val urlConn = url.openConnection()
+			val httpConn = urlConn.asInstanceOf[HttpURLConnection]
+			httpConn.setDoOutput(true)
+			val os = httpConn.getOutputStream
+			val POST_PARAMS = "username="+username+""
+			os.write(POST_PARAMS.getBytes)
+			val responseCode = httpConn.getResponseCode
+			httpConn.connect()
 	
-      val input = httpConn.getInputStream
-      val reader = new BufferedReader(new InputStreamReader(input))
-      val result = new StringBuilder()
-      var line: String = null
-	  val str = Stream.continually(reader.readLine()).takeWhile(_ != null).mkString("\n")
-	  val j = new JSONArray(str)	 
+			val input = httpConn.getInputStream
+			val reader = new BufferedReader(new InputStreamReader(input))
+			val result = new StringBuilder()
+			var line: String = null
+			val str = Stream.continually(reader.readLine()).takeWhile(_ != null).mkString("\n")
+			val j = new JSONArray(str)	 
 	  
 	  
 	 p success j 
     	
 	} catch {
-	    case e: Exception => {
-        println("Error: " + e)
-        e.printStackTrace()
-        null
+			case e: Exception => {
+			println("Error: " + e)
+			e.printStackTrace()
+			null
       }
     }	 
 	 } 
@@ -90,11 +90,7 @@ class ListViewerDecode extends Activity with helpers {
 	
 	setContentView(R.layout.a_main2)
 		var ar = ArrayBuffer[String]()
-	
-	
-		
-	
-   
+	   
     for (i <- 0 until j.length) {
       val row = j.getJSONObject(i)
       var key = row.getString("fileName")
