@@ -59,23 +59,24 @@ class read_write() extends handler with helpers {
   def writeImage(fn:String,path:String, writePath:String)={
    
   
-	Log.d("MyTAG", "writeimage start")
+	
 	 val i = new imageChanger
-	 Log.d("MyTAG", path)
+	 
 	 val encode = i.processEncode(path)
-	 	 Log.d("MyTAG", "22")
-	 val l = List()
-	 encode.foreach { x => l:+ x._1 }
-	 Log.d("MyTAG", "2")
-	 val folder = new File(writePath)
+	 	
+	// val l = List()
+	// encode.foreach { x => l:+ x._1 }
+	 
+	 val folder = new File("/sdcard/encoded")
 		
 		if (!folder.exists()){folder.mkdir()}
+		val noExtension = fn.substring(0, fn.lastIndexOf("."))
+		val Card = new File("/sdcard/encoded/" + noExtension + ".txt")
 		
-		val Card = new File(writePath + fn)
 		Card.createNewFile()
 		
 		val fos = new FileOutputStream(Card)
-		fos.write(prettyPrint(l.flatten).getBytes())
+	   fos.write(prettyPrint(encode(0)._1.asInstanceOf[List[this.Bit]]).getBytes())
 		fos.close()
 		
   
@@ -102,7 +103,7 @@ class read_write() extends handler with helpers {
 	 
 	 if(nlCount >= 10){  
 
-	 string = string ++ " /n "
+	// string = string ++ " /n "
 	 nlCount = 0
 	 }
 	  var bitStr = pMatch(bitList(a))
@@ -114,21 +115,7 @@ class read_write() extends handler with helpers {
   
   
   }
-   /*INCOMPLETE
-   *Writes the key to a text file
-   *@returns Unit
-   */
- // def createKeyFile(key:(List[Bit],List[(Char,List[Bit])])){
-
-	//	val Card  = new File(removeWord(filePath, ".txt") ++ "_HCodeMap.txt")
-	//	Card.createNewFile()
-	//	val fos = new FileOutputStream(Card)
-	//	fos.write(key._2.toString().getBytes())
-		//fos.close()
-
-
- // }
-
+  
    /* INCOMPLETE
    *Read the key from the file and parse it into HCodeMap
    *@returns Unit

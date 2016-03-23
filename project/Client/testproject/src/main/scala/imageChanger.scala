@@ -2,47 +2,63 @@ package my.android.project
 
 
 import java.io._
-import java.util.logging._
 import javax.imageio.ImageIO
 import javax.swing._
 import java.awt.image.BufferedImage
 import java.io._
-import sun.misc.BASE64Decoder
-import sun.misc.BASE64Encoder
-
 import android.util.Log
+import android.util.Base64
+import java.util.logging._
+import android.graphics.BitmapFactory
+import android.graphics.Bitmap
+import android.graphics.Bitmap.CompressFormat
 
 class imageChanger {
 
 val h = new handler
 var div = 0
-	
+	 
+  def getByteArray(bitmap: Bitmap): Array[Byte] = {
+    val bos = new ByteArrayOutputStream()
+    bitmap.compress(CompressFormat.PNG, 0, bos)
+    bos.toByteArray()
+  }
+  
+  def getBitmap(bitmap: Array[Byte]): Bitmap = {
+    BitmapFactory.decodeByteArray(bitmap, 0, bitmap.length)
+  }
 
-  def imageToString(bImage: BufferedImage): String = {
+  def imageToString(bImage: Bitmap): String = {
   var imageString: String = null
     val bos = new ByteArrayOutputStream()
     try {
-      ImageIO.write(bImage, "png", bos)
-      val imageBytes = bos.toByteArray()
-      val encoder = new BASE64Encoder()
-      imageString = encoder.encode(imageBytes)
+	
+     val options = new BitmapFactory.Options();
+   //  val   bitmap = BitmapFactory.decodeByteArray(bImage, 0, bImage.length, options);
+  //    val bitmap = bImage.ToArray
+	  val bytes =  getByteArray(bImage)
+	  
+	 
+	  val encodeValue = Base64.encode(bytes, Base64.DEFAULT)
+      
+      imageString = encodeValue.toString
+	
       bos.close()
     } catch {
-      case e: IOException => Log.d("MyTAG", e.toString)
+      case e: IOException => 
     }
     imageString
   }
 
   def stringToImage(imageString: String): BufferedImage = {
     var bImage: BufferedImage = null
-	val b64dec = new BASE64Decoder()
-    try {
 	
-            val output = b64dec.decodeBuffer(imageString)
-            val bais = new ByteArrayInputStream(output)
+    try {
+			 val decodeValue = Base64.decode(imageString, Base64.DEFAULT)
+             val bais = new ByteArrayInputStream(decodeValue)
             bImage = ImageIO.read(bais)
     } catch {
-      case ex: IOException => Log.d("MyTAG", ex.toString)
+      case ex: IOException =>
     }
     bImage
   }
@@ -66,27 +82,30 @@ var div = 0
   def processEncode(path:String):List[(List[h.Bit],List[(Char,List[h.Bit])])]={
     
 	
-   val image = ImageIO.read(new File(path))
-	 
-	  var s = imageToString(image)
-	val copy = s
-	  val divide = findSmallestBreakPoint(s, s.size / 100)
+    val file = new File(path)
+    val bitmap = BitmapFactory.decodeFile(file.getAbsolutePath)
+	 	
+	 var s = imageToString(bitmap)
+//	Log.d("MyTAG","this size" + s.size.toString)
+ // 	val copy = s
+//	  val divide = findSmallestBreakPoint(s, s.size / 100)
 	
-	 val chunks = s.size / divide
-	 var x =  List(h.encode(s.take(chunks)))
+//	 val chunks = s.size / divide
+//	 var x =  List(h.encode(s.take(chunks)))
+		
+	//  s = s.drop(chunks)
+	 	
+	// var a = 0
+//	 var list = List()
+//	 for (a <- 1 to divide-1){
+//	 var t = h.encode(s.take(chunks)) 
+	// x = x :+ t
+	// s = s.drop(chunks)
 	
-	  s = s.drop(chunks)
-	 
-	 var a = 0
-	 var list = List()
-	 for (a <- 1 to divide-1){
-	 var t = h.encode(s.take(chunks)) 
-	 x = x :+ t
-	 s = s.drop(chunks)
-	
-     }
-	 
-	 x
+  //   }
+	 var x = h.encode(s)
+	 var l = List(x)
+	 l
 	 
 	
   }

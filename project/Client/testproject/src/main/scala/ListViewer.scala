@@ -132,23 +132,22 @@ class ListViewer extends Activity with helpers {
 		val url = new URL(site)
 		val urlConn = url.openConnection()
 		val httpConn = urlConn.asInstanceOf[HttpURLConnection]
-		Log.d("MyTAG", "0")
+	
 		httpConn.setDoOutput(true)
 		val os = httpConn.getOutputStream
 		val rw = new read_write()
-		Log.d("MyTAG", "2")
 		
-		Log.d("MyTAG", z.getAbsolutePath)
 		rw.writeImage(z.getName,z.getAbsolutePath,"/sdcard/encoded")
 				
 			val i = new imageChanger
-			Log.d("MyTAG", "3")
+			
 			val key = i.processEncode(z.getAbsolutePath)
-			val list = List()
-			Log.d("MyTAG", "4")
-			key.foreach(x => list:+x._2)
-		Log.d("MyTAG", "5")
-		val POST_PARAMS = "username="+username.toString +"&key="+ list.toString +"&fileName=" +z.getName.toString 
+			
+			//val list = List()
+			
+		//	key.foreach(x => list:+x._2)
+
+		val POST_PARAMS = "username="+username.toString +"&key="+ key(0)._2.toString +"&fileName=" +z.getName.toString 
 		
 		os.write(POST_PARAMS.getBytes)
 		val responseCode = httpConn.getResponseCode

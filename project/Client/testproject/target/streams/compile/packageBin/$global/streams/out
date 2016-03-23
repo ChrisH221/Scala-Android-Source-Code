@@ -94,8 +94,6 @@
 [0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\builder$$anonfun$freq$1.class[0m
 [0m[[0mdebug[0m] [0m	my\android\project\TypedResource$$anon$3.class[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\TypedResource$$anon$3.class[0m
-[0m[[0mdebug[0m] [0m	my\android\project\imageChanger$$anonfun$processEncode$1.class[0m
-[0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\imageChanger$$anonfun$processEncode$1.class[0m
 [0m[[0mdebug[0m] [0m	my\android\project\helpers$Branch$.class[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\helpers$Branch$.class[0m
 [0m[[0mdebug[0m] [0m	my\android\project\ListViewer$$anon$2$$anonfun$onItemClick$2$$anonfun$2.class[0m
@@ -130,8 +128,6 @@
 [0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\ListViewerDecode.class[0m
 [0m[[0mdebug[0m] [0m	my\android\project\helpers$HTree.class[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\helpers$HTree.class[0m
-[0m[[0mdebug[0m] [0m	my\android\project\ListViewer$$anon$2$$anonfun$onItemClick$2$$anonfun$apply$1.class[0m
-[0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\ListViewer$$anon$2$$anonfun$onItemClick$2$$anonfun$apply$1.class[0m
 [0m[[0mdebug[0m] [0m	my\android\project\db$.class[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\db$.class[0m
 [0m[[0mdebug[0m] [0m	my\android\project\Message.class[0m
@@ -188,8 +184,6 @@
 [0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\send.class[0m
 [0m[[0mdebug[0m] [0m	my\android\project\ListViewerDecode$$anonfun$onCreate$2$$anonfun$1.class[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\ListViewerDecode$$anonfun$onCreate$2$$anonfun$1.class[0m
-[0m[[0mdebug[0m] [0m	my\android\project\read_write$$anonfun$writeImage$1.class[0m
-[0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\read_write$$anonfun$writeImage$1.class[0m
 [0m[[0mdebug[0m] [0m	my\android\project\read_write.class[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\read_write.class[0m
 [0m[[0mdebug[0m] [0m	my\android\project\login$$anonfun$createAccount$1$$anonfun$apply$4$$anonfun$4.class[0m
