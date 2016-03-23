@@ -91,6 +91,12 @@ class read_write() extends handler with helpers {
    
   
   }
+  
+  def stringToMap(key:String):  ={
+  
+  
+  
+  }
 
   def prettyPrint(bitList:List[Bit]):String={
   
@@ -116,18 +122,13 @@ class read_write() extends handler with helpers {
   
   }
   
-   /* INCOMPLETE
-   *Read the key from the file and parse it into HCodeMap
-   *@returns Unit
-   */  
- // def readKey(filePath:String):List[(Char,List[Bit])]={
-
-//    val lines = Source.fromFile(filePath).getLines()
-  //  lines.toList
-
-  //}
-
-
+  def fromPretty(p:String):List[Bit]={
+  
+  
+  val bitList = List(new One())
+  bitList
+  }
+  
 
 
 }

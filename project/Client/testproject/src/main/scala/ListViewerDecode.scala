@@ -111,7 +111,9 @@ class ListViewerDecode extends Activity with helpers {
 	  
 		  val row = j.getJSONObject(position)
 		  var key = row.getString("keycode")
-		  Log.d("MyTAG", key.toString)
+		  val rw = new read_write()
+	//	  val map = rw.stringToMap(key)
+		 // Log.d("MyTAG", key.toString)
 		  
 		  
 		  
