@@ -142,12 +142,16 @@ class ListViewer extends Activity with helpers {
 			val i = new imageChanger
 			
 			val key = i.processEncode(z.getAbsolutePath)
+				
 			
+			
+		 
+
 			//val list = List()
 			
 		//	key.foreach(x => list:+x._2)
 
-		val POST_PARAMS = "username="+username.toString +"&key="+ key(0)._2.toString +"&fileName=" +z.getName.toString 
+		val POST_PARAMS = "username="+username.toString +"&key="+ rw.MaptoString(key(0)._2.asInstanceOf[List[(Char, List[rw.Bit])]]) +"&fileName=" +z.getName.toString 
 		
 		os.write(POST_PARAMS.getBytes)
 		val responseCode = httpConn.getResponseCode

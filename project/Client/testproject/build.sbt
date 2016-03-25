@@ -29,7 +29,7 @@ import android.Keys._
                         "org.scalatest" %% "scalatest" % "2.2.6" ,
 						"org.scala-lang" % "scala-reflect" % "2.11.7",
 						"org.scala-lang.modules" %% "scala-xml" % "1.0.4",
-                        "com.typesafe.akka" %% "akka-actor" % "2.3.6"						
+                        "com.typesafe.akka" %% "akka-actor" % "2.3.6"												
 						)
 
 

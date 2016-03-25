@@ -31,12 +31,13 @@ import scala.concurrent.ExecutionContext._
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.language.implicitConversions
 import scala.collection.mutable.ArrayBuffer
-
 import android.util.Log
 
 class ListViewerDecode extends Activity with helpers {
 
 	
+	case class keyCode(list: List[(Char,List[Bit])])
+		
   protected override def onCreate(savedInstanceState: Bundle) {
     super.onCreate(savedInstanceState)
 	
@@ -111,9 +112,13 @@ class ListViewerDecode extends Activity with helpers {
 	  
 		  val row = j.getJSONObject(position)
 		  var key = row.getString("keycode")
+		 
+					
+	//	val code = new keyCode(key)
+		//  val keyMap = upickle.default.read[keyCode](key)
 		  val rw = new read_write()
-	//	  val map = rw.stringToMap(key)
-		 // Log.d("MyTAG", key.toString)
+		  val map = rw.StringToMap(key, x)
+		  Log.d("MyTAG", "the lst map" + map.toString)
 		  
 		  
 		  

@@ -35,10 +35,7 @@ class main extends Activity with TypedActivity with helpers{
   override def onCreate(bundle: Bundle) {
   
     super.onCreate(bundle)
-	//var f = new FileChooser(this)
-	
-
-    choose()
+	 choose()
 	
 	
   }

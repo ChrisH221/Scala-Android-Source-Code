@@ -7,6 +7,7 @@ import android.view.View
 trait helpers {
 
 
+
  val x = List()//Saved me creating multiple empty lists
  
   abstract class HTree

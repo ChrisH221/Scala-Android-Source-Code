@@ -92,11 +92,89 @@ class read_write() extends handler with helpers {
   
   }
   
-  def stringToMap(key:String):  ={
+   
+  
+  def bMatch(s:String): Bit = s match{    
+  
+  case "1" => new One()
+  case "0" => new Zero()
+  case "-1" =>  new EmptyBit()
+     
+  }
   
   
+  def MaptoString(key:List[(Char,List[Bit])]):String={
+ 
+ var result = ""
+ var a = 0
+ for (a <- 0 to key.size-1){
+ 
+ result = result + key(a)._1.toString + "/=/" + prettyPrint(key(a)._2) + "/n/"
   
   }
+  result + "EOF"
+  }
+  
+
+  
+   def StringToMap(str:String,list:List[(Char,String)]):List[(Char,String)]={
+   
+   var lString = str
+   var secString = ""
+   var section = ""
+  
+  
+   
+    section = lString.take(3)
+ 	
+  if(section != "EOF"){
+   Log.d("MyTAG","1" + section)
+ 
+	val key = lString.take(1)
+	lString = lString.drop(1)
+	
+	section = lString.take(3)
+		Log.d("MyTAG","1" + lString)
+		
+   if (section == "/=/"){
+    lString = lString.drop(3)   
+   while (section != "/n/"){
+   
+  
+  
+    section = lString.take(1)
+   
+    secString  =  secString ++ section
+    Log.d("MyTAG","sec string"+secString)
+   
+   lString = lString.drop(1)
+   
+    section = lString.take(3)
+   
+    Log.d("MyTAG",section)
+   
+   }
+   
+    Log.d("MyTAG","break" + (key.toCharArray.head,secString))
+  
+   StringToMap(lString.drop(3), list:+(key.toCharArray.head,secString))
+   }
+   
+   list
+   
+   }else{
+	list
+   }
+ 
+
+
+ }
+ 
+
+  
+   
+   
+  
 
   def prettyPrint(bitList:List[Bit]):String={
   
