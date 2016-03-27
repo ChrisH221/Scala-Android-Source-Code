@@ -10,7 +10,7 @@ import java.util.logging._
 import javax.imageio.ImageIO
 import javax.swing._
 //remove if not needed
-import scala.collection.JavaConversions._
+import scala.collection._
 import java.awt.image.BufferedImage
 
 /**INCOMPLETE
@@ -83,6 +83,35 @@ class read_write() extends handler with helpers {
   }
   
   
+   def writeDecodedImage(decode:String)={
+   
+  
+	
+	 val i = new imageChanger
+	 
+	// val de = i.processDecode(decode)
+	 	
+	// val l = List()
+	// encode.foreach { x => l:+ x._1 }
+	 
+	 val folder = new File("/sdcard/decoded")
+		
+		if (!folder.exists()){folder.mkdir()}
+		
+		val Card = new File("/sdcard/decoded/")
+		
+		Card.createNewFile()
+		
+		val fos = new FileOutputStream(Card)
+	  //  fos.write(prettyPrint(encode(0)._1.asInstanceOf[List[this.Bit]]).getBytes())
+		fos.close()
+		
+  
+  }
+  
+  
+  
+  
   def pMatch(b:Bit):String = b match{
   
   case b:One => "1"
@@ -117,24 +146,26 @@ class read_write() extends handler with helpers {
   
 
   
-   def StringToMap(str:String,list:List[(Char,String)]):List[(Char,String)]={
+   def StringToMap(str:String):List[(Char,List[read_write.this.Bit])]={
    
+   val list = mutable.MutableList[(Char,List[read_write.this.Bit])]()
+  
    var lString = str
    var secString = ""
    var section = ""
   
-  
+   	
+  while (section != "EOF"){
+  var listBit = mutable.MutableList[Bit]()
+  var secString = ""
    
-    section = lString.take(3)
- 	
-  if(section != "EOF"){
-   Log.d("MyTAG","1" + section)
+  println("1" + section)
  
 	val key = lString.take(1)
 	lString = lString.drop(1)
 	
 	section = lString.take(3)
-		Log.d("MyTAG","1" + lString)
+	
 		
    if (section == "/=/"){
     lString = lString.drop(3)   
@@ -144,31 +175,36 @@ class read_write() extends handler with helpers {
   
     section = lString.take(1)
    
-    secString  =  secString ++ section
-    Log.d("MyTAG","sec string"+secString)
+    var bit = bMatch(section)
+	listBit += bit
+    
    
    lString = lString.drop(1)
    
     section = lString.take(3)
    
-    Log.d("MyTAG",section)
-   
-   }
-   
-    Log.d("MyTAG","break" + (key.toCharArray.head,secString))
-  
-   StringToMap(lString.drop(3), list:+(key.toCharArray.head,secString))
-   }
-   
-   list
-   
-   }else{
-	list
-   }
  
+   
+   }
+   
 
+   lString.drop(3)
+  var tup =(key.toCharArray.head,listBit.toList)
 
- }
+   list += tup
+
+   section = lString.take(3)  
+   
+   }
+   
+  
+   
+   }
+    
+    list.toList
+    
+	
+	}
  
 
   

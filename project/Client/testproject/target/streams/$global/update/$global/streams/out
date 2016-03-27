@@ -7,7 +7,7 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies for default#testproject_2.11;0.1-SNAPSHOT [compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->org.scala-lang#scala-library;2.11.4 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang#scala-library;2.11.4 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@52b7f6e7[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@1a7039ca[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#scala-library;2.11.4[0m
 [0m[[0mdebug[0m] [0m	found org.scala-lang#scala-library;2.11.4 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m	[2.11.4] org.scala-lang#scala-library;2.11.4[0m
@@ -49,41 +49,28 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.6->org.scala-lang#scala-reflect;2.11.7 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-reflect;2.11.7->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-reflect;2.11.7->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.6->org.scala-lang#scala-reflect;2.11.7 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.6->org.scala-lang#scala-reflect;2.11.7 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.6->org.scala-lang#scala-reflect;2.11.7 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.6->org.scala-lang#scala-reflect;2.11.7 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.6->org.scala-lang.modules#scala-xml_2.11;1.0.2 [compile->master(compile)][0m
+[0m[[0minfo[0m] [0mResolving org.scala-lang.modules#scala-xml_2.11;1.0.2 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-lang.modules#scala-xml_2.11;1.0.2 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang.modules#scala-xml_2.11;1.0.2[0m
+[0m[[0mdebug[0m] [0m	found org.scala-lang.modules#scala-xml_2.11;1.0.2 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.6->org.scala-lang.modules#scala-xml_2.11;1.0.2 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.2->org.scala-lang#scala-library;2.11.1 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.2->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.2->org.scala-lang#scala-library;2.11.1 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.2->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.6->org.scala-lang.modules#scala-xml_2.11;1.0.2 [compile->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.6->org.scala-lang.modules#scala-xml_2.11;1.0.2 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.2->org.scala-lang#scala-library;2.11.1 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.2->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.2->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.6->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.6->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.6->org.scala-lang#scala-reflect;2.11.7 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.6->org.scala-lang#scala-reflect;2.11.7 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.6->org.scala-lang.modules#scala-xml_2.11;1.0.2 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.6->org.scala-lang.modules#scala-xml_2.11;1.0.2 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->org.scalatest#scalatest_2.11;2.2.6 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->org.scala-lang#scala-reflect;2.11.7 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->org.scala-lang#scala-reflect;2.11.7 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->org.scala-lang#scala-reflect;2.11.7 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->org.scala-lang#scala-reflect;2.11.7 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->org.scala-lang.modules#scala-xml_2.11;1.0.4 [compile->default(compile)][0m
-[0m[[0minfo[0m] [0mResolving org.scala-lang.modules#scala-xml_2.11;1.0.4 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-lang.modules#scala-xml_2.11;1.0.4 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang.modules#scala-xml_2.11;1.0.4[0m
-[0m[[0mdebug[0m] [0m	found org.scala-lang.modules#scala-xml_2.11;1.0.4 in sbt-chain[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->org.scala-lang.modules#scala-xml_2.11;1.0.4 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->org.scala-lang.modules#scala-xml_2.11;1.0.4 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.4->org.scala-lang#scala-library;2.11.4 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.4->org.scala-lang#scala-library;2.11.7 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.4->org.scala-lang#scala-library;2.11.4 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.4->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.4->org.scala-lang#scala-library;2.11.4 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.4->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.4->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->org.scala-lang.modules#scala-xml_2.11;1.0.4 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->org.scala-lang.modules#scala-xml_2.11;1.0.4 [compile->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->org.scala-lang.modules#scala-xml_2.11;1.0.4 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->org.scala-lang.modules#scala-xml_2.11;1.0.4 [compile->master(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->org.scala-lang.modules#scala-xml_2.11;1.0.4 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->com.typesafe.akka#akka-actor_2.11;2.3.6 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving com.typesafe.akka#akka-actor_2.11;2.3.6 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.typesafe.akka#akka-actor_2.11;2.3.6 {compile=[default(compile)]}[0m
@@ -126,13 +113,11 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-reflect;2.11.7->org.scala-lang#scala-library;2.11.7 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-reflect;2.11.7->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.6->org.scala-lang.modules#scala-xml_2.11;1.0.2 [compile->master(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.6->org.scala-lang.modules#scala-xml_2.11;1.0.4 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.6->org.scala-lang.modules#scala-xml_2.11;1.0.2 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.6->org.scala-lang.modules#scala-xml_2.11;1.0.4 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.4->org.scala-lang#scala-library;2.11.4 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.4->org.scala-lang#scala-library;2.11.7 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.4->org.scala-lang#scala-library;2.11.4 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.4->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.2->org.scala-lang#scala-library;2.11.1 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.2->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.2->org.scala-lang#scala-library;2.11.1 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.2->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.6->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.6->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.6->org.scala-lang#scala-reflect;2.11.7 [runtime->runtime(*)][0m
@@ -140,20 +125,11 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-reflect;2.11.7->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-reflect;2.11.7->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.6->org.scala-lang.modules#scala-xml_2.11;1.0.2 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.6->org.scala-lang.modules#scala-xml_2.11;1.0.4 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.6->org.scala-lang.modules#scala-xml_2.11;1.0.4 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.4->org.scala-lang#scala-library;2.11.4 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.4->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.4->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.6->org.scala-lang.modules#scala-xml_2.11;1.0.2 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.2->org.scala-lang#scala-library;2.11.1 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.2->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.2->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->org.scalatest#scalatest_2.11;2.2.6 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->org.scala-lang#scala-reflect;2.11.7 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->org.scala-lang#scala-reflect;2.11.7 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->org.scala-lang#scala-reflect;2.11.7 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->org.scala-lang#scala-reflect;2.11.7 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->org.scala-lang.modules#scala-xml_2.11;1.0.4 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->org.scala-lang.modules#scala-xml_2.11;1.0.4 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->org.scala-lang.modules#scala-xml_2.11;1.0.4 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->org.scala-lang.modules#scala-xml_2.11;1.0.4 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->com.typesafe.akka#akka-actor_2.11;2.3.6 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->com.typesafe.akka#akka-actor_2.11;2.3.6 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->com.typesafe.akka#akka-actor_2.11;2.3.6 [compile->compile][0m
@@ -187,13 +163,11 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-reflect;2.11.7->org.scala-lang#scala-library;2.11.7 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-reflect;2.11.7->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.6->org.scala-lang.modules#scala-xml_2.11;1.0.2 [compile->master(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.6->org.scala-lang.modules#scala-xml_2.11;1.0.4 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.6->org.scala-lang.modules#scala-xml_2.11;1.0.2 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.6->org.scala-lang.modules#scala-xml_2.11;1.0.4 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.4->org.scala-lang#scala-library;2.11.4 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.4->org.scala-lang#scala-library;2.11.7 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.4->org.scala-lang#scala-library;2.11.4 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.4->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.2->org.scala-lang#scala-library;2.11.1 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.2->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.2->org.scala-lang#scala-library;2.11.1 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.2->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.6->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.6->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.6->org.scala-lang#scala-reflect;2.11.7 [runtime->runtime(*)][0m
@@ -201,20 +175,11 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-reflect;2.11.7->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-reflect;2.11.7->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.6->org.scala-lang.modules#scala-xml_2.11;1.0.2 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.6->org.scala-lang.modules#scala-xml_2.11;1.0.4 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.6->org.scala-lang.modules#scala-xml_2.11;1.0.4 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.4->org.scala-lang#scala-library;2.11.4 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.4->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.4->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.6->org.scala-lang.modules#scala-xml_2.11;1.0.2 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.2->org.scala-lang#scala-library;2.11.1 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.2->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.2->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->org.scalatest#scalatest_2.11;2.2.6 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->org.scala-lang#scala-reflect;2.11.7 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->org.scala-lang#scala-reflect;2.11.7 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->org.scala-lang#scala-reflect;2.11.7 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->org.scala-lang#scala-reflect;2.11.7 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->org.scala-lang.modules#scala-xml_2.11;1.0.4 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->org.scala-lang.modules#scala-xml_2.11;1.0.4 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->org.scala-lang.modules#scala-xml_2.11;1.0.4 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->org.scala-lang.modules#scala-xml_2.11;1.0.4 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->com.typesafe.akka#akka-actor_2.11;2.3.6 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->com.typesafe.akka#akka-actor_2.11;2.3.6 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->com.typesafe.akka#akka-actor_2.11;2.3.6 [compile->compile][0m
@@ -251,13 +216,11 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-reflect;2.11.7->org.scala-lang#scala-library;2.11.7 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-reflect;2.11.7->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.6->org.scala-lang.modules#scala-xml_2.11;1.0.2 [compile->master(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.6->org.scala-lang.modules#scala-xml_2.11;1.0.4 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.6->org.scala-lang.modules#scala-xml_2.11;1.0.2 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.6->org.scala-lang.modules#scala-xml_2.11;1.0.4 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.4->org.scala-lang#scala-library;2.11.4 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.4->org.scala-lang#scala-library;2.11.7 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.4->org.scala-lang#scala-library;2.11.4 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.4->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.2->org.scala-lang#scala-library;2.11.1 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.2->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.2->org.scala-lang#scala-library;2.11.1 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.2->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.6->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.6->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.6->org.scala-lang#scala-reflect;2.11.7 [runtime->runtime(*)][0m
@@ -265,20 +228,11 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-reflect;2.11.7->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-reflect;2.11.7->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.6->org.scala-lang.modules#scala-xml_2.11;1.0.2 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.6->org.scala-lang.modules#scala-xml_2.11;1.0.4 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.6->org.scala-lang.modules#scala-xml_2.11;1.0.4 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.4->org.scala-lang#scala-library;2.11.4 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.4->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.4->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.6->org.scala-lang.modules#scala-xml_2.11;1.0.2 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.2->org.scala-lang#scala-library;2.11.1 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.2->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.2->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->org.scalatest#scalatest_2.11;2.2.6 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->org.scala-lang#scala-reflect;2.11.7 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->org.scala-lang#scala-reflect;2.11.7 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->org.scala-lang#scala-reflect;2.11.7 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->org.scala-lang#scala-reflect;2.11.7 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->org.scala-lang.modules#scala-xml_2.11;1.0.4 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->org.scala-lang.modules#scala-xml_2.11;1.0.4 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->org.scala-lang.modules#scala-xml_2.11;1.0.4 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->org.scala-lang.modules#scala-xml_2.11;1.0.4 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->com.typesafe.akka#akka-actor_2.11;2.3.6 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->com.typesafe.akka#akka-actor_2.11;2.3.6 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->com.typesafe.akka#akka-actor_2.11;2.3.6 [compile->compile][0m
@@ -314,13 +268,11 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-reflect;2.11.7->org.scala-lang#scala-library;2.11.7 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-reflect;2.11.7->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.6->org.scala-lang.modules#scala-xml_2.11;1.0.2 [compile->master(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.6->org.scala-lang.modules#scala-xml_2.11;1.0.4 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.6->org.scala-lang.modules#scala-xml_2.11;1.0.2 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.6->org.scala-lang.modules#scala-xml_2.11;1.0.4 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.4->org.scala-lang#scala-library;2.11.4 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.4->org.scala-lang#scala-library;2.11.7 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.4->org.scala-lang#scala-library;2.11.4 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.4->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.2->org.scala-lang#scala-library;2.11.1 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.2->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.2->org.scala-lang#scala-library;2.11.1 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.2->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.6->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.6->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.6->org.scala-lang#scala-reflect;2.11.7 [runtime->runtime(*)][0m
@@ -328,20 +280,11 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-reflect;2.11.7->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-reflect;2.11.7->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.6->org.scala-lang.modules#scala-xml_2.11;1.0.2 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.6->org.scala-lang.modules#scala-xml_2.11;1.0.4 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.6->org.scala-lang.modules#scala-xml_2.11;1.0.4 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.4->org.scala-lang#scala-library;2.11.4 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.4->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.4->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.6->org.scala-lang.modules#scala-xml_2.11;1.0.2 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.2->org.scala-lang#scala-library;2.11.1 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.2->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.2->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->org.scalatest#scalatest_2.11;2.2.6 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->org.scala-lang#scala-reflect;2.11.7 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->org.scala-lang#scala-reflect;2.11.7 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->org.scala-lang#scala-reflect;2.11.7 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->org.scala-lang#scala-reflect;2.11.7 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->org.scala-lang.modules#scala-xml_2.11;1.0.4 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->org.scala-lang.modules#scala-xml_2.11;1.0.4 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->org.scala-lang.modules#scala-xml_2.11;1.0.4 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->org.scala-lang.modules#scala-xml_2.11;1.0.4 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->com.typesafe.akka#akka-actor_2.11;2.3.6 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->com.typesafe.akka#akka-actor_2.11;2.3.6 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->com.typesafe.akka#akka-actor_2.11;2.3.6 [compile->compile][0m
@@ -377,13 +320,11 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-reflect;2.11.7->org.scala-lang#scala-library;2.11.7 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-reflect;2.11.7->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.6->org.scala-lang.modules#scala-xml_2.11;1.0.2 [compile->master(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.6->org.scala-lang.modules#scala-xml_2.11;1.0.4 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.6->org.scala-lang.modules#scala-xml_2.11;1.0.2 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.6->org.scala-lang.modules#scala-xml_2.11;1.0.4 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.4->org.scala-lang#scala-library;2.11.4 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.4->org.scala-lang#scala-library;2.11.7 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.4->org.scala-lang#scala-library;2.11.4 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.4->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.2->org.scala-lang#scala-library;2.11.1 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.2->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.2->org.scala-lang#scala-library;2.11.1 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.2->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.6->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.6->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.6->org.scala-lang#scala-reflect;2.11.7 [runtime->runtime(*)][0m
@@ -391,20 +332,11 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-reflect;2.11.7->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-reflect;2.11.7->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.6->org.scala-lang.modules#scala-xml_2.11;1.0.2 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.6->org.scala-lang.modules#scala-xml_2.11;1.0.4 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.6->org.scala-lang.modules#scala-xml_2.11;1.0.4 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.4->org.scala-lang#scala-library;2.11.4 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.4->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.4->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.6->org.scala-lang.modules#scala-xml_2.11;1.0.2 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.2->org.scala-lang#scala-library;2.11.1 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.2->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.2->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->org.scalatest#scalatest_2.11;2.2.6 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->org.scala-lang#scala-reflect;2.11.7 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->org.scala-lang#scala-reflect;2.11.7 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->org.scala-lang#scala-reflect;2.11.7 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->org.scala-lang#scala-reflect;2.11.7 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->org.scala-lang.modules#scala-xml_2.11;1.0.4 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->org.scala-lang.modules#scala-xml_2.11;1.0.4 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->org.scala-lang.modules#scala-xml_2.11;1.0.4 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->org.scala-lang.modules#scala-xml_2.11;1.0.4 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->com.typesafe.akka#akka-actor_2.11;2.3.6 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->com.typesafe.akka#akka-actor_2.11;2.3.6 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->com.typesafe.akka#akka-actor_2.11;2.3.6 [compile->compile][0m
@@ -462,20 +394,11 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-reflect;2.11.4->org.scala-lang#scala-library;2.11.4 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-reflect;2.11.4->org.scala-lang#scala-library;2.11.4 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.11.4->org.scala-lang.modules#scala-xml_2.11;1.0.2 [compile->master(compile)][0m
-[0m[[0minfo[0m] [0mResolving org.scala-lang.modules#scala-xml_2.11;1.0.2 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-lang.modules#scala-xml_2.11;1.0.2 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang.modules#scala-xml_2.11;1.0.2[0m
-[0m[[0mdebug[0m] [0m	found org.scala-lang.modules#scala-xml_2.11;1.0.2 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.11.4->org.scala-lang.modules#scala-xml_2.11;1.0.2 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.2->org.scala-lang#scala-library;2.11.1 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.2->org.scala-lang#scala-library;2.11.4 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.2->org.scala-lang#scala-library;2.11.1 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.2->org.scala-lang#scala-library;2.11.4 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.11.4->org.scala-lang.modules#scala-xml_2.11;1.0.2 [compile->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.11.4->org.scala-lang.modules#scala-xml_2.11;1.0.2 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.2->org.scala-lang#scala-library;2.11.1 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.2->org.scala-lang#scala-library;2.11.4 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.2->org.scala-lang#scala-library;2.11.4 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.11.4->org.scala-lang.modules#scala-parser-combinators_2.11;1.0.2 [compile->master(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang.modules#scala-parser-combinators_2.11;1.0.2 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-lang.modules#scala-parser-combinators_2.11;1.0.2 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
@@ -497,6 +420,9 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.11.4->org.scala-lang#scala-reflect;2.11.4 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.11.4->org.scala-lang.modules#scala-xml_2.11;1.0.2 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.11.4->org.scala-lang.modules#scala-xml_2.11;1.0.2 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.2->org.scala-lang#scala-library;2.11.1 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.2->org.scala-lang#scala-library;2.11.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.2->org.scala-lang#scala-library;2.11.4 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.11.4->org.scala-lang.modules#scala-parser-combinators_2.11;1.0.2 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.11.4->org.scala-lang.modules#scala-parser-combinators_2.11;1.0.2 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies default#testproject_2.11;0.1-SNAPSHOT->org.scala-lang#scala-compiler;2.11.4 [scala-tool->master][0m
@@ -516,17 +442,16 @@
 [0m[[0mdebug[0m] [0m:: downloading artifacts ::[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-library;2.11.4!scala-library.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scalatest#scalatest_2.11;2.2.6!scalatest_2.11.jar(bundle)[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-reflect;2.11.7!scala-reflect.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.11;1.0.4!scala-xml_2.11.jar(bundle)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.akka#akka-actor_2.11;2.3.6!akka-actor_2.11.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-library;2.11.7!scala-library.jar[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-reflect;2.11.7!scala-reflect.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.11;1.0.2!scala-xml_2.11.jar(bundle)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe#config;1.2.1!config.jar(bundle)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-compiler;2.11.4!scala-compiler.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-reflect;2.11.4!scala-reflect.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang.modules#scala-parser-combinators_2.11;1.0.2!scala-parser-combinators_2.11.jar(bundle)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] jline#jline;2.12!jline.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 83ms :: artifacts dl 6ms[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 99ms :: artifacts dl 5ms[0m
 [0m[[0mdebug[0m] [0m	report for default#testproject_2.11;0.1-SNAPSHOT compile produced in C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\resolution-cache\reports\default-testproject_2.11-compile.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#testproject_2.11;0.1-SNAPSHOT runtime produced in C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\resolution-cache\reports\default-testproject_2.11-runtime.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#testproject_2.11;0.1-SNAPSHOT test produced in C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\resolution-cache\reports\default-testproject_2.11-test.xml[0m
@@ -540,10 +465,10 @@
 [0m[[0mdebug[0m] [0m	report for default#testproject_2.11;0.1-SNAPSHOT docs produced in C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\resolution-cache\reports\default-testproject_2.11-docs.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#testproject_2.11;0.1-SNAPSHOT pom produced in C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\resolution-cache\reports\default-testproject_2.11-pom.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#testproject_2.11;0.1-SNAPSHOT scala-tool produced in C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\resolution-cache\reports\default-testproject_2.11-scala-tool.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (83ms resolve - 6ms download)[0m
+[0m[[0mdebug[0m] [0m	resolve done (99ms resolve - 5ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m
 [0m[[33mwarn[0m] [0mScala version was updated by one of library dependencies:[0m
-[0m[[33mwarn[0m] [0m	* org.scala-lang:scala-library:(2.11.4, 2.11.2) -> 2.11.7[0m
+[0m[[33mwarn[0m] [0m	* org.scala-lang:scala-library:(2.11.4, 2.11.2, 2.11.1) -> 2.11.7[0m
 [0m[[33mwarn[0m] [0mTo force scalaVersion, add the following:[0m
 [0m[[33mwarn[0m] [0m	ivyScala := ivyScala.value map { _.copy(overrideScalaVersion = true) }[0m
 [0m[[33mwarn[0m] [0mRun 'evicted' to see detailed eviction warnings[0m

@@ -33,9 +33,7 @@ var div = 0
     val bos = new ByteArrayOutputStream()
     try {
 	
-     val options = new BitmapFactory.Options();
-   //  val   bitmap = BitmapFactory.decodeByteArray(bImage, 0, bImage.length, options);
-  //    val bitmap = bImage.ToArray
+
 	  val bytes =  getByteArray(bImage)
 	  
 	 
@@ -50,15 +48,18 @@ var div = 0
     imageString
   }
 
-  def stringToImage(imageString: String): BufferedImage = {
-    var bImage: BufferedImage = null
+  def stringToImage(imageString: String): Bitmap = {
+    var bImage: Bitmap = null
 	
     try {
-			 val decodeValue = Base64.decode(imageString, Base64.DEFAULT)
-             val bais = new ByteArrayInputStream(decodeValue)
-            bImage = ImageIO.read(bais)
+			 
+	  val Bitmap =  getBitmap(imageString.getBytes)
+	       
+      bImage = Bitmap
+	
+      
     } catch {
-      case ex: IOException =>
+      case ex: IOException =>Log.d("MyTAG","not working")
     }
     bImage
   }

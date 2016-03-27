@@ -114,12 +114,11 @@ class ListViewerDecode extends Activity with helpers {
 		  var key = row.getString("keycode")
 		 
 					
-	//	val code = new keyCode(key)
-		//  val keyMap = upickle.default.read[keyCode](key)
+	
 		  val rw = new read_write()
-		  val map = rw.StringToMap(key, x)
-		  Log.d("MyTAG", "the lst map" + map.toString)
-		  
+		  val map = rw.StringToMap(key)
+		
+	 	Log.d("MyTAG",map.toString)
 		  
 		  
 	

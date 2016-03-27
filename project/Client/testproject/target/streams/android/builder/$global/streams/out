@@ -22,8 +22,6 @@
 [0m[[0mdebug[0m] [0mC:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\src\main\resources\testImage.png => testImage.png[0m
 [0m[[0mdebug[0m] [0mC:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\lib_managed\jars\com.typesafe.akka\akka-actor_2.11\akka-actor_2.11-2.3.6.jar:[0m
 [0m[[0mdebug[0m] [0mC:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\lib_managed\bundles\com.typesafe\config\config-1.2.1.jar:[0m
-[0m[[0mdebug[0m] [0mC:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\lib_managed\bundles\org.scala-lang.modules\scala-xml_2.11\scala-xml_2.11-1.0.4.jar:[0m
-[0m[[0mdebug[0m] [0m=> scala-xml.properties[0m
 [0m[[0mdebug[0m] [0mC:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\lib_managed\bundles\org.scalatest\scalatest_2.11\scalatest_2.11-2.2.6.jar:[0m
 [0m[[0mdebug[0m] [0m=> images/bluedot.gif[0m
 [0m[[0mdebug[0m] [0m=> images/bluedots.psd[0m
@@ -61,4 +59,6 @@
 [0m[[0mdebug[0m] [0m=> org/scalatest/ScalaTestBundle.properties[0m
 [0m[[0mdebug[0m] [0m=> org/scalatest/d3.v2.min.js[0m
 [0m[[0mdebug[0m] [0m=> org/scalatest/sorttable.js[0m
+[0m[[0mdebug[0m] [0mC:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\lib_managed\bundles\org.scala-lang.modules\scala-xml_2.11\scala-xml_2.11-1.0.2.jar:[0m
+[0m[[0mdebug[0m] [0m=> scala-xml.properties[0m
 [0m[[0mdebug[0m] [0mNative folder: C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\jni[0m
