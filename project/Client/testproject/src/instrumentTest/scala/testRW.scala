@@ -23,7 +23,7 @@ class testRW extends FlatSpec with helpers {
 	
 	  val bitList = list._1.asInstanceOf[List[rw.Bit]]
 	  val pretty = rw.prettyPrint(bitList)
-	  println(pretty)
+	 
 	  assert(pretty !== "")
     }
 	

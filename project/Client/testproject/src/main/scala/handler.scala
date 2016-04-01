@@ -1,5 +1,8 @@
 package my.android.project
 import my.android.project.builder
+import scala.collection._
+import scala.annotation.tailrec
+
 /**
  * @author Chris Howell
  *
@@ -14,8 +17,8 @@ class handler extends builder{
    */
   def extractCode(t:HTree,acc:List[Bit],newList:List[(Char,List[Bit])]):List[(Char,List[Bit])] = t match{
 
-    case t:Leaf =>(t.char,acc)::newList
-    case t:Branch =>  extractCode(t.left,new Zero::acc,newList):::extractCode(t.right,new One::acc,newList)
+    case t:Leaf =>(t.char,acc.reverse)::newList
+    case t:Branch =>  extractCode(t.left,new Zero::acc,newList):::extractCode(t.right,new One::acc.reverse,newList)
     case nil => List()
 
 
@@ -28,7 +31,7 @@ class handler extends builder{
   def bitList(s:String, acc:List[Bit],list:List[(Char,List[Bit])],list2:List[(Char,List[Bit])]):List[Bit]={
     
 	
-	if (s.isEmpty || list.isEmpty) acc
+	if (s.isEmpty || list.isEmpty) acc.reverse
 	
 
     else if(list.head._1.equals(s.toCharArray.head)){
@@ -77,18 +80,24 @@ class handler extends builder{
    * @returns Option String
    */
 
-  def lookup(list:List[Bit],list2:List[(Char,List[Bit])]): Option[String]={
+def lookup(list:List[Bit],list2:List[(Char,List[Bit])]): Option[String]={
+	
+	
+	val mutableListBuffer = scala.collection.mutable.ArrayBuffer(list2: _*)
+	var option:Option[String]= None
+   
+   for(i <- 0 until mutableListBuffer.length){
+   
+  if(mutableListBuffer(i)._2 == list){
+ 
+ option =  Some(mutableListBuffer(i)._1.toString)
+  
+  }
+ 
+   }
 
-    if(list2.isEmpty)  None
-
-    else if(list.reverse == list2.head._2)
-	{
+	option
 	
-	Some(list2.head._1.toString)
-	
-	}
-	
-    else lookup(list,list2.drop(1))
 
   }
 
@@ -97,7 +106,7 @@ class handler extends builder{
    *@returns String
    */
 
-  def decode(acc:Int,s:String,list:(List[Bit],List[(Char,List[Bit])])):String ={
+ def decode(acc:Int,s:String,list:(List[Bit],List[(Char,List[Bit])])):String ={
 
     if(list._2.isEmpty) s
 
@@ -118,5 +127,43 @@ class handler extends builder{
 
 
   }
+  
+  def decode2(acc:Int,s:String,list:(List[Bit],List[(Char,List[Bit])])):String ={
+  
+  var s = ""
+  var accum = 1
+  val listp1 = scala.collection.mutable.ArrayBuffer(list._1: _*)
+  val listp2 = scala.collection.mutable.ArrayBuffer(list._2: _*)
+  var tupList = (listp1,listp2)
+  
+	println(tupList)
+   while(!tupList._1.isEmpty){
+  
+   if(lookup(tupList._1.take(accum).toList,tupList._2.toList).isDefined){
+   println(accum)
+   s = s ++ lookup(tupList._1.take(accum).toList,tupList._2.toList).getOrElse("a")
+  println(s)
+
+  tupList._1.remove(0,accum)
+ 
+   accum = accum - accum + 1
+   }
+   else{
+    accum =  accum + 1
+   }
+   
+   
+   
+   }
+
+  s
+
+
+  }
+  
+
+  
+  
+  
 
 }

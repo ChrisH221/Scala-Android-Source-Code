@@ -25,6 +25,12 @@ package my.android.project
    * @returns List[Pair(Char,Int)]
    */
 
+  // def freq2(y:String):List[(Char,Int)]={
+   
+//   y.toCharArray.foreach{ x => }
+   
+//   }
+   
   def freq(y:String, list:List[(Char,Int)]): List[(Char,Int)] = {
 
     if(y == null || y.isEmpty) list.sortBy(_._2).reverse
@@ -32,7 +38,7 @@ package my.android.project
       val char = y.head
       val countFreq = count(char,y)
       val t = new Tuple2(char,countFreq)
-      freq(y.filter{ x => x != char }, t::list)
+      freq(y.filter{ x => x != char },list:+t)
     }
 
     //TODO case instead of if/else
@@ -66,12 +72,13 @@ package my.android.project
     //val list = Tree::HTree
 
     //list.sortBy(x => x.freq)
-
-    if(HTree.isEmpty) newList:::Tree::HTree
+	
+	
+	 if(HTree.isEmpty) newList:::Tree::HTree
 
     else{
 
-      if(freqNode(Tree) >= freqNode (HTree.head)){
+      if(freqNode(Tree) <= freqNode (HTree.head)){
 
 	  insert(Tree, HTree.drop(1), newList:::HTree.take(1))
 
@@ -87,6 +94,7 @@ package my.android.project
    * Make a new link between two HTree nodes 
    * @returns HTree
    */
+
 
   def makeLink(t1: HTree, t2:HTree): HTree = {
 

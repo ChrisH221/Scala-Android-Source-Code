@@ -19,15 +19,19 @@ import android.Keys._
     "-dontoptimize", 
     "-dontwarn scala.collection.mutable.**"
     )
-	
+	cancelable in Global := true
 	sourceDirectory in Test := baseDirectory.value / "src" / "test"
 	
-	javaOptions += "-Xmx6144M -d64"
+	javaOptions in run ++= Seq(
+    "-Xms256M", "-Xmx2G", "-XX:MaxPermSize=1024M", "-XX:+UseConcMarkSweepGC")
+	fork in run := true
 	
 	resolvers += "Typesafe Repository" at "http://repo.typesafe.com/typesafe/releases/"
     libraryDependencies ++= Seq(
                         "org.scalatest" %% "scalatest" % "2.2.6" ,
-                        "com.typesafe.akka" %% "akka-actor" % "2.3.6"												
+                        "com.typesafe.akka" %% "akka-actor" % "2.3.6",
+						"org.scala-lang" % "scala-reflect" % "2.11.7",
+						"org.scala-lang.modules" %% "scala-xml" % "1.0.4"					
 						)
 
 

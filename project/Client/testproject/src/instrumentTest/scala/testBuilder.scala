@@ -24,10 +24,10 @@ class testBuilder extends FlatSpec with helpers {
 		
 		
 	
-      assert(b.freq("hiya", List())(0) === ('h',1))
-	  assert(b.freq("hiya", List())(1) === ('i',1))
-	  assert(b.freq("hiya", List())(2) === ('y',1))
-	  assert(b.freq("hiya", List())(3) === ('a',1))
+ //   assert(b.freq("hiya", List())(0) === ('h',1))
+// assert(b.freq("hiya", List())(1) === ('i',1))
+// assert(b.freq("hiya", List())(2) === ('y',1))
+// assert(b.freq("hiya", List())(3) === ('a',1))
     }
 	
 	
@@ -36,6 +36,7 @@ class testBuilder extends FlatSpec with helpers {
 		val leafList = List( new  Leaf(1, 'f'), new Leaf(1, 'd'), new  Leaf(1, 'e'))
 		
 	
+	 
 		
 		//for (x <- leafList if freqNode(x) == 1)
    //    println(x)

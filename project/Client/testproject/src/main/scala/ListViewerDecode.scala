@@ -112,13 +112,24 @@ class ListViewerDecode extends Activity with helpers {
 	  
 		  val row = j.getJSONObject(position)
 		  var key = row.getString("keycode")
-		 
+		  val fn =  row.getString("fileName")
 					
 	
 		  val rw = new read_write()
 		  val map = rw.StringToMap(key)
+		  val noExtension = fn.substring(0, fn.lastIndexOf("."))
+		  val path =  rw.readFile("/sdcard/encoded/" + noExtension+ ".txt")
+		  var str = ""
+		  path.foreach{x => str += x}
+		 
+		   
 		
-	 	Log.d("MyTAG",map.toString)
+		  val pretty = rw.fromPretty(str)
+		  val i = new imageChanger
+		 val decoded = i.processDecode((pretty.asInstanceOf[List[i.h.Bit]],map.asInstanceOf[List[(Char, List[i.h.Bit])]]))
+		Log.d("MyTAG","dee" + decoded)
+		val img = rw.writeDecodedImage(decoded,noExtension)
+	 //  Log.d("MyTAG","dee" + decoded)
 		  
 		  
 	

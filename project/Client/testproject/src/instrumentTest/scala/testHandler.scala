@@ -17,9 +17,26 @@ class testHandler extends FlatSpec with helpers {
 
  it should "check complete encode and decode cycle" in {
        
-	  val testString = "iVBORw0KGgoAAAANSUhEUgAAAYMAAAFjCAIAAABQQvDHAAALz0lEQVR42u3c205b6R3GYY4r9aBXkKS5ht5Qr6A9qao5HfUy5gbmHkaa8wHMzuxjDMYQtoox"
-	  assert(h.decode(1,"",h.encode(testString)) === testString)
+	val testString = "hello"
+	val encode = h.encode(testString)
+		
+	
+	
+	
+	assert(h.decode2(1,"",h.encode(testString)) === testString)
     }
+	
+	
+	it should "check lookup is functioning correctly" in {
+       
+	 
+	
+val look = List(('t',List(One(), Zero()).asInstanceOf[List[h.Bit]]))
+val bits = List(One(),Zero()).asInstanceOf[List[h.Bit]]
+	
+assert(h.lookup(bits,look) === Some("t"))
+    }
+	
 	
 	}
  

@@ -25,13 +25,13 @@ class testStringToMap extends FlatSpec {
   
   var secString = ""
    
-  println("1" + section)
+
  
 	val key = lString.take(1)
 	lString = lString.drop(1)
 	
 	section = lString.take(3)
-	//	Log.d("MyTAG","1" + lString)
+	
 		
    if (section == "/=/"){
     lString = lString.drop(3)   
@@ -42,22 +42,22 @@ class testStringToMap extends FlatSpec {
     section = lString.take(1)
    
     secString  =  secString ++ section
-   // Log.d("MyTAG","sec string"+secString)
+   
    
    lString = lString.drop(1)
    
     section = lString.take(3)
    
-  //  Log.d("MyTAG",section)
+ 
    
    }
    
- //  Log.d("MyTAG","break" + (key,secString))
+
    lString.drop(3)
   var tup =(key.toCharArray.head,secString)
- println("the tup " + tup)
+
    list += tup
- println("the current list " + list)
+
    section = lString.take(3)  
    }
    
@@ -65,7 +65,7 @@ class testStringToMap extends FlatSpec {
    
    }
    
-   println("the list " + list.toList)
+ 
     }
 	
 	}

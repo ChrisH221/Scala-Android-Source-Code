@@ -4,16 +4,18 @@ import scala.io.Source
 import java.io._
 import java.io.FileOutputStream
 import android.util.Log
-
 import java.io._
 import java.util.logging._
-import javax.imageio.ImageIO
 import javax.swing._
-//remove if not needed
 import scala.collection._
-import java.awt.image.BufferedImage
+import android.graphics.BitmapFactory
+import android.graphics.Bitmap
+import android.graphics.Bitmap.CompressFormat
 
-/**INCOMPLETE
+
+
+
+/*
  * @author Chris Howell
  *
  * The reader class handles all IO related to txt files, this includes reading and writing files.
@@ -27,14 +29,15 @@ class read_write() extends handler with helpers {
    *Reads a file from the filePath
    *@returns Iterator[String]
    */
-  def readFile(filePath:String):Iterator[String] ={
-
+   
+    def readFile(filePath:String):Iterator[String] ={
     val lines = Source.fromFile(filePath).getLines()
     lines
   }
-
-	
-  /*
+  
+  
+   
+   /*
    *Writes the encoded bytes to a text file
    *@returns Unit
    */
@@ -83,26 +86,27 @@ class read_write() extends handler with helpers {
   }
   
   
-   def writeDecodedImage(decode:String)={
+   def writeDecodedImage(decode:String, fn:String)={
    
   
 	
 	 val i = new imageChanger
 	 
-	// val de = i.processDecode(decode)
-	 	
-	// val l = List()
-	// encode.foreach { x => l:+ x._1 }
+	 val de = i.stringToImage(decode)
+	
+
 	 
 	 val folder = new File("/sdcard/decoded")
 		
 		if (!folder.exists()){folder.mkdir()}
-		
-		val Card = new File("/sdcard/decoded/")
+		val noExtension = fn.substring(0, fn.lastIndexOf("."))
+		val Card = new File("/sdcard/decoded/" + fn + ".png")
 		
 		Card.createNewFile()
 		
 		val fos = new FileOutputStream(Card)
+		de.compress(Bitmap.CompressFormat.PNG, 90, fos)
+		fos.flush()
 	  //  fos.write(prettyPrint(encode(0)._1.asInstanceOf[List[this.Bit]]).getBytes())
 		fos.close()
 		
@@ -238,9 +242,11 @@ class read_write() extends handler with helpers {
   
   def fromPretty(p:String):List[Bit]={
   
+  var listBit = mutable.MutableList[Bit]()
   
-  val bitList = List(new One())
-  bitList
+  p.foreach{x => listBit += bMatch(x.toString)}
+  
+  listBit.toList
   }
   
 
