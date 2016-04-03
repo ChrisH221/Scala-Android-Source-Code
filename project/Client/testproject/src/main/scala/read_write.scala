@@ -59,13 +59,13 @@ class read_write() extends handler with helpers {
 	  
   }
   
-  def writeImage(fn:String,path:String, writePath:String)={
+  def writeImage(fn:String,path:String, writePath:String, encode:(List[Bit],List[(Char,List[Bit])]))={
    
   
 	
 	 val i = new imageChanger
 	 
-	 val encode = i.processEncode(path)
+	
 	 	
 	// val l = List()
 	// encode.foreach { x => l:+ x._1 }
@@ -79,7 +79,7 @@ class read_write() extends handler with helpers {
 		Card.createNewFile()
 		
 		val fos = new FileOutputStream(Card)
-	   fos.write(prettyPrint(encode(0)._1.asInstanceOf[List[this.Bit]]).getBytes())
+	   fos.write(prettyPrint(encode._1.asInstanceOf[List[this.Bit]]).getBytes())
 		fos.close()
 		
   
@@ -87,28 +87,24 @@ class read_write() extends handler with helpers {
   
   
    def writeDecodedImage(decode:String, fn:String)={
-   
   
-	
-	 val i = new imageChanger
-	 
-	 val de = i.stringToImage(decode)
-	
-
+  
 	 
 	 val folder = new File("/sdcard/decoded")
 		
 		if (!folder.exists()){folder.mkdir()}
-		val noExtension = fn.substring(0, fn.lastIndexOf("."))
-		val Card = new File("/sdcard/decoded/" + fn + ".png")
+	    val noExtension = fn.substring(0, fn.lastIndexOf("."))
+		val Card = new File("/sdcard/decoded/", noExtension + ".png")
 		
 		Card.createNewFile()
 		
-		val fos = new FileOutputStream(Card)
-		de.compress(Bitmap.CompressFormat.PNG, 90, fos)
-		fos.flush()
-	  //  fos.write(prettyPrint(encode(0)._1.asInstanceOf[List[this.Bit]]).getBytes())
-		fos.close()
+	  Log.d("MyTAG", "THIS FAR")
+		val fOut = new FileOutputStream(Card);
+		
+		//image.compress(Bitmap.CompressFormat.PNG, 100, fOut);
+		fOut.flush();
+		fOut.close();
+	
 		
   
   }
@@ -145,7 +141,7 @@ class read_write() extends handler with helpers {
  result = result + key(a)._1.toString + "/=/" + prettyPrint(key(a)._2) + "/n/"
   
   }
-  result + "EOF"
+  result + "BREAK"
   }
   
 

@@ -127,8 +127,8 @@ class ListViewerDecode extends Activity with helpers {
 		  val pretty = rw.fromPretty(str)
 		  val i = new imageChanger
 		 val decoded = i.processDecode((pretty.asInstanceOf[List[i.h.Bit]],map.asInstanceOf[List[(Char, List[i.h.Bit])]]))
-		Log.d("MyTAG","dee" + decoded)
-		val img = rw.writeDecodedImage(decoded,noExtension)
+		Log.d("MyTAG","2" + decoded.reverse)
+		val img = rw.writeDecodedImage(decoded.reverse,noExtension)
 	 //  Log.d("MyTAG","dee" + decoded)
 		  
 		  

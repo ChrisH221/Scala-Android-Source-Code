@@ -136,22 +136,20 @@ class ListViewer extends Activity with helpers {
 		httpConn.setDoOutput(true)
 		val os = httpConn.getOutputStream
 		val rw = new read_write()
-		
-		rw.writeImage(z.getName,z.getAbsolutePath,"/sdcard/encoded")
+		val i = new imageChanger
+		val key = i.processEncode(z.getAbsolutePath)	
+
+       
+       		
+		//rw.writeImage(z.getName,z.getAbsolutePath,"/sdcard/encoded",key.asInstanceOf[(List[rw.Bit], List[(Char, List[rw.Bit])])])
 				
-			val i = new imageChanger
-			
-			val key = i.processEncode(z.getAbsolutePath)
-				
-			
-			
-		 
+					 
 
 			//val list = List()
-			
-		//	key.foreach(x => list:+x._2)
-
-		val POST_PARAMS = "username="+username.toString +"&key="+ rw.MaptoString(key(0)._2.asInstanceOf[List[(Char, List[rw.Bit])]]) +"&fileName=" +z.getName.toString 
+		var k = ""	
+		key.foreach(x => k + rw.MaptoString(x._1.asInstanceOf[List[(List[Bit],List[(Char,List[Bit])])]]) )
+		k = "BREAK" + "EOF"
+		val POST_PARAMS = "username="+username.toString +"&key="+ k +"&fileName=" +z.getName.toString 
 		
 		os.write(POST_PARAMS.getBytes)
 		val responseCode = httpConn.getResponseCode
@@ -177,11 +175,7 @@ class ListViewer extends Activity with helpers {
     }	 
 	 } 
 	f onSuccess {  case result => runOnUiThread{updateList("/sdcard", "")}}
-		
-	//	val rw = new read_write(x)
-		//val h = new handler()
-		//val text = h.encode(rw.readFile(x).mkString.toString)
-		//rw.writeBytes(x ,text)
+	
 		}
 		else if (x.equals(".")) updateList("/sdcard", "")
 		else if(x.equals("..")) updateList(dir, "")

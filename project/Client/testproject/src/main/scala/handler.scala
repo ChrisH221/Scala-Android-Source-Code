@@ -2,7 +2,7 @@ package my.android.project
 import my.android.project.builder
 import scala.collection._
 import scala.annotation.tailrec
-
+import android.util.Log
 /**
  * @author Chris Howell
  *
