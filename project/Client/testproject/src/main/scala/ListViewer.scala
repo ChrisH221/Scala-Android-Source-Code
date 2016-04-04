@@ -63,7 +63,6 @@ class ListViewer extends Activity with helpers {
    setContentView(R.layout.a_main)
 	val path = "/sdcard"
 	val arr = getListOfFiles(path)
-	//val arr = x.map (_.toString).toArray
 	val dirarr = getListOfSubDirectories(path)
 	val currentDirectory =  dirarr ++ arr
 	
@@ -135,21 +134,12 @@ class ListViewer extends Activity with helpers {
 	
 		httpConn.setDoOutput(true)
 		val os = httpConn.getOutputStream
-		val rw = new read_write()
-		val i = new imageChanger
-		val key = i.processEncode(z.getAbsolutePath)	
-
-       
-       		
-		//rw.writeImage(z.getName,z.getAbsolutePath,"/sdcard/encoded",key.asInstanceOf[(List[rw.Bit], List[(Char, List[rw.Bit])])])
-				
-					 
-
-			//val list = List()
-		var k = ""	
-		key.foreach(x => k + rw.MaptoString(x._1.asInstanceOf[List[(List[Bit],List[(Char,List[Bit])])]]) )
-		k = "BREAK" + "EOF"
-		val POST_PARAMS = "username="+username.toString +"&key="+ k +"&fileName=" +z.getName.toString 
+		
+		
+		val key = imageChanger.processEncode(z.getAbsolutePath)	
+      
+      	
+		val POST_PARAMS = "username="+username.toString +"&key="+ "" +"&fileName=" +z.getName.toString + "&imageEncode=" + key
 		
 		os.write(POST_PARAMS.getBytes)
 		val responseCode = httpConn.getResponseCode

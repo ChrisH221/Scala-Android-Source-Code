@@ -32,6 +32,13 @@ import scala.concurrent.ExecutionContext.Implicits.global
 import scala.language.implicitConversions
 import scala.collection.mutable.ArrayBuffer
 import android.util.Log
+import scala.collection._
+import android.graphics.BitmapFactory
+import android.graphics.Bitmap
+import android.graphics.Bitmap.CompressFormat
+import java.io._
+import java.io.FileOutputStream
+import android.util.Base64
 
 class ListViewerDecode extends Activity with helpers {
 
@@ -111,28 +118,14 @@ class ListViewerDecode extends Activity with helpers {
       override def onItemClick(parent: AdapterView[_], view: View, position: Int, id: Long) {
 	  
 		  val row = j.getJSONObject(position)
-		  var key = row.getString("keycode")
 		  val fn =  row.getString("fileName")
-					
-	
-		  val rw = new read_write()
-		  val map = rw.StringToMap(key)
+		  val eImage =  row.getString("imageEncode")
 		  val noExtension = fn.substring(0, fn.lastIndexOf("."))
-		  val path =  rw.readFile("/sdcard/encoded/" + noExtension+ ".txt")
-		  var str = ""
-		  path.foreach{x => str += x}
 		 
-		   
+		   val newImageBytes = Base64.decode(eImage, Base64.URL_SAFE);
+	 	   val bitmap = BitmapFactory.decodeByteArray(newImageBytes, 0, newImageBytes.length);
+			imageChanger.writeDecodedImage(bitmap,noExtension)
 		
-		  val pretty = rw.fromPretty(str)
-		  val i = new imageChanger
-		 val decoded = i.processDecode((pretty.asInstanceOf[List[i.h.Bit]],map.asInstanceOf[List[(Char, List[i.h.Bit])]]))
-		Log.d("MyTAG","2" + decoded.reverse)
-		val img = rw.writeDecodedImage(decoded.reverse,noExtension)
-	 //  Log.d("MyTAG","dee" + decoded)
-		  
-		  
-	
       }
     })
   
