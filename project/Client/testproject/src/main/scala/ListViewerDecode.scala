@@ -39,12 +39,10 @@ import android.graphics.Bitmap.CompressFormat
 import java.io._
 import java.io.FileOutputStream
 import android.util.Base64
+import scala.util.Try
 
 class ListViewerDecode extends Activity with helpers {
 
-	
-	case class keyCode(list: List[(Char,List[Bit])])
-		
   protected override def onCreate(savedInstanceState: Bundle) {
     super.onCreate(savedInstanceState)
 	
@@ -56,6 +54,7 @@ class ListViewerDecode extends Activity with helpers {
     future { 
 	 
 	        val site = "http://monad.uk/getfiles_scala.php"
+			
 		try {
 			val inte = getIntent
 			val username = inte.getExtras.getString("user")
@@ -79,8 +78,7 @@ class ListViewerDecode extends Activity with helpers {
 	  
 	 p success j 
     	
-	} catch {
-			case e: Exception => {
+	} catch {case e: Exception => {
 			println("Error: " + e)
 			e.printStackTrace()
 			null
@@ -124,7 +122,7 @@ class ListViewerDecode extends Activity with helpers {
 		 
 		   val newImageBytes = Base64.decode(eImage, Base64.URL_SAFE);
 	 	   val bitmap = BitmapFactory.decodeByteArray(newImageBytes, 0, newImageBytes.length);
-			imageChanger.writeDecodedImage(bitmap,noExtension)
+		   imageChanger.writeDecodedImage(bitmap,noExtension)
 		
       }
     })

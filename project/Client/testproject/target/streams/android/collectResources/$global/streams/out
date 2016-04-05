@@ -1,3 +1,6 @@
 [0m[[0mdebug[0m] [0mLocal/library-project resources: List(C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\src\main\res)[0m
 [0m[[0mdebug[0m] [0mapklib/aar resources: List()[0m
 [0m[[0mdebug[0m] [0mAdding resource path: C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\src\main\res[0m
+[0m[[0minfo[0m] [0mCollecting resources[0m
+[0m[[0mdebug[0m] [0mCould not load merge blob (no full merge yet?)[0m
+[0m[[0minfo[0m] [0mPerforming full resource merge[0m

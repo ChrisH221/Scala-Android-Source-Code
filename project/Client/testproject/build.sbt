@@ -4,7 +4,7 @@ import android.Keys._
 
       name := "testProject"
 
-      scalaVersion := "2.11.4"
+      scalaVersion := "2.11.7"
 
       scalacOptions in Compile += "-feature"
 
@@ -13,23 +13,21 @@ import android.Keys._
       proguardCache in Android ++= Seq(
 
       )
-	apkbuildExcludes in Android += "reference.conf"
+	  
+	  apkbuildExcludes in Android += "reference.conf"
+
     proguardOptions in Android ++= Seq(
     "-dontobfuscate", 
     "-dontoptimize", 
     "-dontwarn scala.collection.mutable.**"
     )
-	cancelable in Global := true
+	
 	sourceDirectory in Test := baseDirectory.value / "src" / "test"
 	
-	javaOptions in run ++= Seq(
-    "-Xms256M", "-Xmx2G", "-XX:MaxPermSize=1024M", "-XX:+UseConcMarkSweepGC")
-	fork in run := true
-	
+		
 	resolvers += "Typesafe Repository" at "http://repo.typesafe.com/typesafe/releases/"
     libraryDependencies ++= Seq(
                         "org.scalatest" %% "scalatest" % "2.2.6" ,
-                        "com.typesafe.akka" %% "akka-actor" % "2.3.6",
 						"org.scala-lang" % "scala-reflect" % "2.11.7",
 						"org.scala-lang.modules" %% "scala-xml" % "1.0.4"					
 						)
@@ -51,7 +49,7 @@ import android.Keys._
 	 "-keep class * extends android.os.AsyncTask {*;}"
       )
 
-   // ProGuard rules for Akka
+    // ProGuard rules for Akka
    proguardOptions in Android ++= Seq(
    "-keep class akka.actor.Actor$class { *; }",
    "-keep class akka.actor.LightArrayRevolverScheduler { *; }",
@@ -64,16 +62,13 @@ import android.Keys._
     "-keep class akka.dispatch.DequeBasedMessageQueueSemantics { *; }",
     "-keep class akka.dispatch.MultipleConsumerSemantics { *; }",
     "-keep class akka.actor.LocalActorRefProvider$Guardian { *; }",
-	"-keep class akka.actor.RemoteActorRefProvider$Guardian { *; }",
     "-keep class akka.actor.LocalActorRefProvider$SystemGuardian { *; }",
-	    "-keep class akka.actor.RemoteActorRefProvider$SystemGuardian { *; }",
     "-keep class akka.dispatch.UnboundedMailbox { *; }",
     "-keep class akka.actor.DefaultSupervisorStrategy { *; }",
     "-keep class macroid.akka.AkkaAndroidLogger { *; }",
    "-keep class akka.event.Logging$LogExt { *; }"
-   
-
    )        
+   
    
    
    

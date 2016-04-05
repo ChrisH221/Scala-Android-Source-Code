@@ -4,7 +4,6 @@ import _root_.android.app.Activity
 import _root_.android.os.Bundle
 import scala.language.implicitConversions
 import android.view.View
-import akka.actor.{ActorSystem, ActorLogging, Actor, Props}
 import com.typesafe.config.ConfigFactory
 import java.io.File
 import android.util.Log
@@ -36,6 +35,7 @@ import scala.concurrent.Future
 import scala.concurrent.ExecutionContext._
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.language.implicitConversions
+import scala.util.Try
 
 
 class login extends Activity with TypedActivity with helpers{
@@ -78,6 +78,8 @@ class login extends Activity with TypedActivity with helpers{
   	def changeScreen(){
 	
 	var intent= new Intent (this,classOf[main])
+	val username = findView(TR.username).getText
+	intent.putExtra("user", username)
 	startActivity(intent)
 	
 	}
@@ -156,6 +158,7 @@ def loginUI(){
   	 	}
 		
 		
+				
 def createAccount(){
 
 	setContentView(R.layout.check)

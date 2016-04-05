@@ -83,13 +83,7 @@ class ListViewer extends Activity with helpers {
   
   }
   
-  def getListOfSubDirectories(directoryName: String): Array[String] = {
-	return (new File(directoryName)).listFiles.filter(_.isDirectory).map(_.getName)
-}
 
- def getListOfFiles(directoryName: String): Array[String] = {
-	return (new File(directoryName)).listFiles.filter(_.isFile).map(_.getAbsolutePath)
-} 
  
  def updateList(dir:String, curDir:String){
  

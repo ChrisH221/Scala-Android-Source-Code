@@ -2,40 +2,22 @@ package my.android.project
 
 import scala.language.implicitConversions
 import android.view.View
+import _root_.android.view.View.OnClickListener
+import java.io._
 
 
 trait helpers {
 
 
-
- val x = List()//Saved me creating multiple empty lists
- 
-  abstract class HTree
-  case class Empty() extends HTree
-  case class Branch(value: Int, left: HTree, right: HTree) extends HTree
-  case class Leaf(freq: Int, char: Char) extends HTree
-
-  /* 
-   * Define an implicit definition for OnClickListener
-   * 
-   */ 
-  
-  /* 
-   * Define a single bit as a sealed trait that can be either One, Zero or EmptyBit
-   * 
-   */
-  sealed trait Bit
-  case class EmptyBit() extends Bit
-  case class Zero() extends Bit
-  case class One() extends Bit
-
-
-  sealed trait HMap
-  case class HCodeMap(list:List[(Char,List[Bit])]) extends HMap //TODO implement HCodeMap as input/output
- 
   implicit def toRunnable[A](f: => A): Runnable =  new Runnable() { def run() = f } 
 
+  def getListOfSubDirectories(directoryName: String): Array[String] = {
+	return (new File(directoryName)).listFiles.filter(_.isDirectory).map(_.getName)
+	}
 
+ def getListOfFiles(directoryName: String): Array[String] = {
+	return (new File(directoryName)).listFiles.filter(_.isFile).map(_.getAbsolutePath)
+	} 
 
 
 }

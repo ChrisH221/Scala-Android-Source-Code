@@ -16,21 +16,19 @@ import android.widget.ListView;
 
 
 
-abstract class Message 
-case class send(text:String) extends Message
-case class received(text:String) extends Message
+
 
 class main extends Activity with TypedActivity with helpers{
 
 
-	implicit def onClickListener(f: (View => Unit)): View.OnClickListener = {
+	
+  implicit def onClickListener(f: (View => Unit)): View.OnClickListener = {
 		new View.OnClickListener() {
 				override def onClick(v: View) {
 			f(v)
 			}
 		}
-		}
-
+	}
 
   override def onCreate(bundle: Bundle) {
   
@@ -42,20 +40,6 @@ class main extends Activity with TypedActivity with helpers{
   
   
  
-  
-def login(){
-
- setContentView(R.layout.check)
- 
-	val button = findView(TR.submit)
-	button.setOnClickListener((v : View) => {
-	
-	  choose()
-	
-    })
-
-}
-
 def choose(){
 
  setContentView(R.layout.user)
@@ -66,7 +50,7 @@ def choose(){
 	  	 var intent= new Intent (this,classOf[ListViewer])
 		 val inte = getIntent
 		 val username = inte.getExtras.getString("user")
-		 Log.d("MyTAG","2" + username)
+		 
 		 intent.putExtra("user", username)
 	
 	 startActivity(intent)
