@@ -4,8 +4,6 @@ import _root_.android.app.Activity
 import _root_.android.os.Bundle
 import scala.language.implicitConversions
 import android.view.View
-import akka.actor.{ActorSystem, ActorLogging, Actor, Props}
-import com.typesafe.config.ConfigFactory
 import java.io.File
 import android.util.Log
 import android.content.Intent

@@ -25,11 +25,13 @@ import android.Keys._
 	sourceDirectory in Test := baseDirectory.value / "src" / "test"
 	
 		
-	resolvers += "Typesafe Repository" at "http://repo.typesafe.com/typesafe/releases/"
+	resolvers += "spray repo" at "http://repo.spray.io"
+	
     libraryDependencies ++= Seq(
                         "org.scalatest" %% "scalatest" % "2.2.6" ,
-						"org.scala-lang" % "scala-reflect" % "2.11.7",
-						"org.scala-lang.modules" %% "scala-xml" % "1.0.4"					
+						"org.scala-lang" % "scala-reflect" % "2.11.6",
+						"org.scala-lang.modules" %% "scala-xml" % "1.0.4",
+						"io.spray" %%  "spray-json" % "1.3.2"						
 						)
 
 

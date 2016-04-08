@@ -51,13 +51,15 @@ class ListViewer extends Activity with helpers {
 
   protected override def onCreate(savedInstanceState: Bundle) {
     super.onCreate(savedInstanceState)
-	encode()
+	
+	encode2()
+	
 	}
   
   
   
   
-  def encode(){
+  def encode2(){
   
   
    setContentView(R.layout.a_main)
@@ -119,22 +121,27 @@ class ListViewer extends Activity with helpers {
 		val site = "http://monad.uk/addKey_scala.php"
 		try {
 		
-	
+		System.setProperty("http.keepAlive", "false")
 		val inte = getIntent
 		val username = inte.getExtras.getString("user")
 		val url = new URL(site)
 		val urlConn = url.openConnection()
 		val httpConn = urlConn.asInstanceOf[HttpURLConnection]
-	
 		httpConn.setDoOutput(true)
 		val os = httpConn.getOutputStream
 		
-		
-		val key = imageChanger.processEncode(z.getAbsolutePath)	
+		val i = new imageChanger
+		Log.d("MyTAG", z.getAbsolutePath)
+		val key = i.processEncode(z.getAbsolutePath)	
       
-      	
-		val POST_PARAMS = "username="+username.toString +"&key="+ "" +"&fileName=" +z.getName.toString + "&imageEncode=" + key
+	  var encodestring = ""
+	Log.d("MyTAG", "here")
+	
+		key._1.foreach{x => encodestring = encodestring + x.toString}
 		
+		val POST_PARAMS = "username="+username.toString +"&key="+ i.keyToJson(key) +"&fileName=" +z.getName.toString + "&imageEncode=" + encodestring
+	//	i.keyToJson(z.getName.toString,key)
+		Log.d("MyTAG", "finally")
 		os.write(POST_PARAMS.getBytes)
 		val responseCode = httpConn.getResponseCode
 		httpConn.connect()

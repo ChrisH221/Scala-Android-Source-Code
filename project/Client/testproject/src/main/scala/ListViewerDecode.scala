@@ -40,6 +40,7 @@ import java.io._
 import java.io.FileOutputStream
 import android.util.Base64
 import scala.util.Try
+import scala.collection.mutable.ListBuffer
 
 class ListViewerDecode extends Activity with helpers {
 
@@ -117,12 +118,28 @@ class ListViewerDecode extends Activity with helpers {
 	  
 		  val row = j.getJSONObject(position)
 		  val fn =  row.getString("fileName")
+		  val key =  row.getString("keycode")
 		  val eImage =  row.getString("imageEncode")
 		  val noExtension = fn.substring(0, fn.lastIndexOf("."))
-		 
-		   val newImageBytes = Base64.decode(eImage, Base64.URL_SAFE);
-	 	   val bitmap = BitmapFactory.decodeByteArray(newImageBytes, 0, newImageBytes.length);
-		   imageChanger.writeDecodedImage(bitmap,noExtension)
+		  val i = new imageChanger
+		   Log.d("MyTAG", key)
+		// val newImageBytes = Base64.decode(eImage, Base64.URL_SAFE);
+	 	// val bitmap = BitmapFactory.decodeByteArray(newImageBytes, 0, newImageBytes.length);
+			
+		  val hc = i.JsonToKey(key)
+		   
+			var Bits = new ListBuffer[Int]()
+			eImage.foreach{x => if(x == '1') Bits += 1 else Bits +=0 }
+			val hcode = (Bits.toList,hc)
+			val h = new handler
+			val de =h.decode2(1,"",hcode)
+		     val newImageBytes = Base64.decode(de, Base64.URL_SAFE);
+	 	    val bitmap = BitmapFactory.decodeByteArray(newImageBytes, 0, newImageBytes.length);
+			
+			val bmpimg = i.getResizedBitmap(bitmap, 540, 960)
+
+
+			i.writeDecodedImage(bmpimg,noExtension)
 		
       }
     })
