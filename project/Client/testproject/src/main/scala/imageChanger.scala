@@ -37,7 +37,19 @@ class imageChanger extends helpers {
 
  
 
-
+def ShrinkBitmap(file: String, width: Int, height: Int): Bitmap = {
+    val bmpFactoryOptions = new BitmapFactory.Options()
+    bmpFactoryOptions.inJustDecodeBounds = true
+    var bitmap = BitmapFactory.decodeFile(file, bmpFactoryOptions)
+    val heightRatio = Math.ceil(bmpFactoryOptions.outHeight / height.toFloat).toInt
+    val widthRatio = Math.ceil(bmpFactoryOptions.outWidth / width.toFloat).toInt
+    if (heightRatio > 1 || widthRatio > 1) {
+      bmpFactoryOptions.inSampleSize = if (heightRatio > widthRatio) heightRatio else widthRatio
+    }
+    bmpFactoryOptions.inJustDecodeBounds = false
+    bitmap = BitmapFactory.decodeFile(file, bmpFactoryOptions)
+    bitmap
+  }
 
 
   sealed trait Bit
@@ -46,18 +58,18 @@ class imageChanger extends helpers {
   case class One() extends Bit
 	val b = new builder
 	val h = new handler
-/**
- * Takes an image path and returns the Base64 Bitmap string
- * @returns Base64 String
- */
+
   def processEncode(path:String):(List[Int],List[(Char,List[Int])])={
     val file = new File(path)
+	val imageOpts = new BitmapFactory.Options();
+	 imageOpts.inJustDecodeBounds = true
+	 
 	var bitmap = BitmapFactory.decodeFile(file.getAbsolutePath)
 	
-	val imageOpts = new BitmapFactory.Options();
+
 	
 	
-	val thumb = getResizedBitmap(bitmap,5,5)
+	val thumb = ShrinkBitmap(path,5,5)
 	
 	
 	var output = new ByteArrayOutputStream(thumb.getByteCount());

@@ -132,7 +132,7 @@ class ListViewerDecode extends Activity with helpers {
 			eImage.foreach{x => if(x == '1') Bits += 1 else Bits +=0 }
 			val hcode = (Bits.toList,hc)
 			val h = new handler
-			val de =h.decode2(1,"",hcode)
+			val de =h.decode(1,"",hcode).reverse
 		     val newImageBytes = Base64.decode(de, Base64.URL_SAFE);
 	 	    val bitmap = BitmapFactory.decodeByteArray(newImageBytes, 0, newImageBytes.length);
 			

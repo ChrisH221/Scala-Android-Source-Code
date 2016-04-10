@@ -1,4 +1,5 @@
 package my.android.project
+import scala.collection._
 
 /**
  * @author Chris Howell
@@ -8,40 +9,31 @@ package my.android.project
   class builder extends helpers{
 
   
-  /*
-  *  A function to count the number of times a character appears in a string
-  *  @returns Int
-  */
-  def count(c:Char, y:String): Int = {
-
-   y.filter{ t => t== c }.length()
-
-  }
-
+ 
   /*
    * Uses pattern matching to create a list containing each frequency for each char in a string
    * that matches the input char
    * @returns List[Pair(Char,Int)]
    */
 
-  // def freq2(y:String):List[(Char,Int)]={
-   
-//   y.toCharArray.foreach{ x => }
-   
-//   }
-   
   def freq(y:String, list:List[(Char,Int)]): List[(Char,Int)] = {
 
-    if(y == null || y.isEmpty) list.sortBy(_._2).reverse
-    else{
-      val char = y.head
-      val countFreq = count(char,y)
-      val t = new Tuple2(char,countFreq)
-      freq(y.filter{ x => x != char },list:+t)
-    }
+		val list2 = scala.collection.mutable.ArrayBuffer(list: _*)
+		var string = y
+		
+		while(!string.isEmpty){
+		
+		string.count(_ == string.head)
+		var tup = (string.head,string.count(_ == string.head))
+		list2+=tup
+		string = string.filter(x => x != string.head)
+		
+		
+		}
 
-    //TODO case instead of if/else
-    // case "" => List(('h',1))
+		list2.toList
+
+    // case "" => List()
     // case y  =>  freq(c, y.filter( x => x == c),((c,count(c,y)) :: list))
     // case y::ys => (y,count  _ y)::freq  (y.filter (_ != y) y, list)
 
@@ -65,27 +57,31 @@ package my.android.project
     *@returns List[HTree]
    */
 
-  def insert(Tree:HTree, HTree:List[HTree], newList:List[HTree]): List[HTree] ={
+  def insert(Tree:HTree, HTree:List[HTree]): List[HTree] ={
 
-    //TODO Idiomatic approach
-    //val list = Tree::HTree
-
-    //list.sortBy(x => x.freq)
+	val list = scala.collection.mutable.ArrayBuffer(HTree: _*)
+	val list2 = scala.collection.mutable.ArrayBuffer(HTree: _*)
+    var incre = 0
+	var finish = false
+	while(!finish){
 	
+	if(freqNode(Tree) <= freqNode (HTree(incre))){}
+	else {
 	
-	 if(HTree.isEmpty) newList:::Tree::HTree
+	list2 ++ list.take(incre+1)
+	list2 += Tree
+	list2 ++ list.drop(incre+1)
+	finish = true
 
-    else{
-
-      if(freqNode(Tree) <= freqNode (HTree.head)){
-
-	  insert(Tree, HTree.drop(1), newList:::HTree.take(1))
-
-	  }
-      else  newList:::Tree::HTree
+	}
+	incre = incre + 1
+	
+	}
+	list2.toList.sortBy(x => freqNode(x))
 
 
-    }
+
+
 
   }
 
@@ -112,22 +108,29 @@ package my.android.project
    * of HTree nodes 
    * @returns  List[HTree]
    */
-  def shrinkList(t1:HTree, t2:List[HTree]): List[HTree]={
-
-    insert(t1,t2,x)
-
-  }
 
   /*
    * Merges a list of Leaf nodes into a single HTree by creating connecting Branch nodes to hold the Leaf nodes
    * @returns HTree
    */
   def merge(t:List[HTree]): HTree ={
-
-
-    if(t.length == 1 ) t.head
-    else merge(shrinkList(makeLink(t.take(1).head, t.slice(1,2).head), t.drop(2)))
-
+	var incre = 0
+	val list = scala.collection.mutable.ArrayBuffer(t: _*)
+	val list2 = scala.collection.mutable.ArrayBuffer(t: _*)
+	val list3 = scala.collection.mutable.ArrayBuffer()
+	
+	while(list.length > 1){
+	println(list.length)
+	val link = makeLink(list(0), list(1))
+	val in = insert(link,list2.toList)
+	
+	list.drop(2)	
+	println(list.length)
+	}
+	
+	list2.toList.head
+	
+   
 
   }
 
@@ -156,6 +159,8 @@ package my.android.project
     else Empty()
 
   }
+  
+
 
 
 
