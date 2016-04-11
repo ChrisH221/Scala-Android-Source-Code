@@ -2,18 +2,7 @@
 [0m[[0minfo[0m] [0m[32m- should check freq function is running correctly[0m[0m
 [0m[[0minfo[0m] [0m[32m- should check node frequency[0m[0m
 [0m[[0minfo[0m] [0m[32m- should insert a new node into a tree[0m[0m
-[0m[[0minfo[0m] [0m[31m- should merge a list of HTree nodes into a single HTree *** FAILED ***[0m[0m
-[0m[[0minfo[0m] [0m[31m  java.lang.IndexOutOfBoundsException: 0[0m[0m
-[0m[[0minfo[0m] [0m[31m  at scala.collection.LinearSeqOptimized$class.apply(LinearSeqOptimized.scala:65)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at scala.collection.immutable.List.apply(List.scala:84)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at my.android.project.builder.insert(builder.scala:68)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at my.android.project.builder.merge(builder.scala:125)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at my.android.project.testBuilder$$anonfun$4.apply$mcV$sp(testBuilder.scala:55)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at my.android.project.testBuilder$$anonfun$4.apply(testBuilder.scala:53)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at my.android.project.testBuilder$$anonfun$4.apply(testBuilder.scala:53)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at org.scalatest.Transformer$$anonfun$apply$1.apply$mcV$sp(Transformer.scala:22)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at org.scalatest.OutcomeOf$class.outcomeOf(OutcomeOf.scala:85)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)[0m[0m
-[0m[[0minfo[0m] [0m[31m  ...[0m[0m
+[0m[[0minfo[0m] [0m[32m- should merge a list of HTree nodes into a single HTree[0m[0m
 [0m[[0minfo[0m] [0m[32m- should make a link between two nodes[0m[0m
+[0m[[0minfo[0m] [0m[32m- should make a link between a branch and a leaf[0m[0m
 [0m[[0minfo[0m] [0m[32m- should take a string and make a tree[0m[0m

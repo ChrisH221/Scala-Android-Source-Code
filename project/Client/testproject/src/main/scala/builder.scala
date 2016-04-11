@@ -1,6 +1,6 @@
 package my.android.project
 import scala.collection._
-
+import scala.collection.mutable.ArrayBuffer
 /**
  * @author Chris Howell
  *
@@ -63,6 +63,8 @@ import scala.collection._
 	val list2 = scala.collection.mutable.ArrayBuffer(HTree: _*)
     var incre = 0
 	var finish = false
+	if(list.length > 1){
+	
 	while(!finish){
 	
 	if(freqNode(Tree) <= freqNode (HTree(incre))){}
@@ -77,6 +79,8 @@ import scala.collection._
 	incre = incre + 1
 	
 	}
+	}
+	else list2 += Tree
 	list2.toList.sortBy(x => freqNode(x))
 
 
@@ -92,7 +96,7 @@ import scala.collection._
 
 
   def makeLink(t1: HTree, t2:HTree): HTree = {
-
+	
     if(freqNode(t1) < freqNode(t2)) {
 
 	Branch(freqNode (t1) + freqNode (t2),t1,t2)
@@ -103,32 +107,49 @@ import scala.collection._
 
   }
 
-  /*
-   * Calls the insert method to place a new HTree node into a list
-   * of HTree nodes 
-   * @returns  List[HTree]
-   */
+ 
 
   /*
    * Merges a list of Leaf nodes into a single HTree by creating connecting Branch nodes to hold the Leaf nodes
    * @returns HTree
    */
-  def merge(t:List[HTree]): HTree ={
+  def merge(t:List[HTree],t2:List[HTree]): HTree ={
 	var incre = 0
-	val list = scala.collection.mutable.ArrayBuffer(t: _*)
-	val list2 = scala.collection.mutable.ArrayBuffer(t: _*)
-	val list3 = scala.collection.mutable.ArrayBuffer()
+	var list = scala.collection.mutable.ArrayBuffer(t: _*)
+
+	var in = List().asInstanceOf[List[HTree]]
+	var chunk = List().asInstanceOf[List[HTree]]
+	var link = makeLink(list(0), list(1))
 	
-	while(list.length > 1){
-	println(list.length)
-	val link = makeLink(list(0), list(1))
-	val in = insert(link,list2.toList)
+	while (list.length != 1 ){
+	println(list.toString)
 	
-	list.drop(2)	
-	println(list.length)
+	
+	
+	if (list.size == 2) {
+	chunk = list.toList.take(2)
+	
+	in = insert(link,chunk)
+	list = list.drop(2) 
+
+	}
+	else {
+	list = list.drop(2) 
+	
+	chunk = list.toList.take(2)
+
+	in = insert(link,chunk)
+	
+	
 	}
 	
-	list2.toList.head
+	in.foreach{x => if(!list.contains(x)) list += x }
+	
+	
+	if(list.length != 1) link = makeLink(list(0), list(1))
+	}
+	
+	list.toList.head
 	
    
 
@@ -154,7 +175,7 @@ import scala.collection._
 
   def makeTree(s:String): HTree ={
 
-    if(s != null) merge(makeNode(freq(s,x),x))
+    if(s != null) merge(makeNode(freq(s,x),x),x)
 
     else Empty()
 

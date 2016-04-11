@@ -20,8 +20,9 @@ it should "check extracting code is functioning" in {
 it should "check bitlist builder is functioning" in {
 	val test = "fdskufhjfkdguhfkdjghfkjghfkdughfdkghfdkjghfdkjghfdjkghfdjkghfdkjghsidghdufghfdklughfdkughdfkljghfdjkgfhdkjghfdughfdukghfdughfdgjfhdkgjhfdlkughfdklughfdkughfdukghfdkughfdkughfdkughfdkjghfdughfdughfdlughfdkughfdklbuhfdlughfdlughfdlkughfdukghfdlkughfdlughfdukgfhdglujkhfdgufhdkguhukishdf;uhsdfluhdsgukfhdgukhfgukhgdfklughfdklhugfdg"
 
-//	val res = h.encode(test)
-	
+	val res = h.encode(test)
+//	println(res)
+//	println(res)
 //	val tree = h.makeTree("hello")
   //  val bit = h.bitList("Hello",tree,x,x)
 //	println(bit)

@@ -1,5 +1,3 @@
-clean
-update
 compile
 clean
 update
@@ -497,4 +495,6 @@ update
 compile
 test
 compile
+test
+ttest
 test
