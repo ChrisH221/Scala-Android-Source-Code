@@ -8,15 +8,15 @@
                                                  
                                                </testcase><testcase classname="my.android.project.testBuilder" name="should check node frequency" time="0.0">
                                                  
-                                               </testcase><testcase classname="my.android.project.testBuilder" name="should insert a new node into a tree" time="0.001">
+                                               </testcase><testcase classname="my.android.project.testBuilder" name="should insert a new node into a tree" time="0.002">
                                                  
-                                               </testcase><testcase classname="my.android.project.testBuilder" name="should merge a list of HTree nodes into a single HTree" time="0.013">
+                                               </testcase><testcase classname="my.android.project.testBuilder" name="should merge a list of HTree nodes into a single HTree" time="0.032">
                                                  
                                                </testcase><testcase classname="my.android.project.testBuilder" name="should make a link between two nodes" time="0.0">
                                                  
-                                               </testcase><testcase classname="my.android.project.testBuilder" name="should make a link between a branch and a leaf" time="0.001">
+                                               </testcase><testcase classname="my.android.project.testBuilder" name="should make a link between a branch and a leaf" time="0.0">
                                                  
-                                               </testcase><testcase classname="my.android.project.testBuilder" name="should take a string and make a tree" time="0.027">
+                                               </testcase><testcase classname="my.android.project.testBuilder" name="should take a string and make a tree" time="0.008">
                                                  
                                                </testcase>
                      <system-out></system-out>

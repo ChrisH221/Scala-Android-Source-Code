@@ -161,10 +161,9 @@ import scala.collection.mutable.ArrayBuffer
 
   def makeNode(list:List[(Char,Int)],nodeList:List[HTree]):List[HTree] ={
 
-    if(list.isEmpty){
-	nodeList
-	}
-    else makeNode(list.drop(1),Leaf (list.head._1,list.head._2)::nodeList)
+	val list2 = scala.collection.mutable.ArrayBuffer(nodeList: _*)	
+	list.foreach{x => list2 += new Leaf(x._1,x._2)}
+    list2.toList
 
   }
 
