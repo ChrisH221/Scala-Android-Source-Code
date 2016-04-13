@@ -18,7 +18,9 @@ import java.io.FileReader
 import java.io.IOException
 import scala.collection.mutable.ListBuffer
 import  android.graphics.Matrix
-
+import java.io.ByteArrayOutputStream
+import java.util.zip.GZIPOutputStream
+import java.util.zip._
 
 
 
@@ -59,7 +61,7 @@ def ShrinkBitmap(file: String, width: Int, height: Int): Bitmap = {
 	val b = new builder
 	val h = new handler
 
-  def processEncode(path:String):(List[Int],List[(Char,List[Int])])={
+  def processEncode(path:String):(List[Int],List[(String,List[Int])])={
     val file = new File(path)
 	val imageOpts = new BitmapFactory.Options();
 	 imageOpts.inJustDecodeBounds = true
@@ -67,32 +69,35 @@ def ShrinkBitmap(file: String, width: Int, height: Int): Bitmap = {
 	var bitmap = BitmapFactory.decodeFile(file.getAbsolutePath)
 	
 
+//	val thumb = ShrinkBitmap(path,5,5)
+		
 	
-	
-	val thumb = ShrinkBitmap(path,5,5)
-	
-	
-	var output = new ByteArrayOutputStream(thumb.getByteCount());
-	thumb.compress(Bitmap.CompressFormat.PNG, 100, output);
+	var output = new ByteArrayOutputStream(bitmap.getByteCount());
+	bitmap.compress(Bitmap.CompressFormat.PNG, 100, output);
 	var imageBytes = output.toByteArray();
 
-	 var encodedString = Base64.encodeToString(imageBytes, Base64.URL_SAFE);
+	 var encodedString = Base64.encodeToString(imageBytes, Base64.URL_SAFE)	
+	 var i = 10 
+	
+	// Log.d("MyTAG","smallest" + (findSmallestBreakPoint(encodedString, (encodedString / 100))).toString)
 	
 	 val encodedString2 = encodedString
 	 val divide = 5
-	
-	 val chunks = encodedString.size / divide
+	// Log.d("MyTAG", encodedString.length.toString)
+	 
+	 Log.d("MyTAG", "here")
+	 
 	
 	 var x =  (h.encode(encodedString))
-	
-	x.asInstanceOf[(List[Int], List[(Char, List[Int])])]
+	 Log.d("MyTAG",x.toString)
+	x.asInstanceOf[(List[Int], List[(String, List[Int])])]
 	
   }
   
   
-  def keyToJson(list:(List[Int],List[(Char,List[Int])])):String={
+  def keyToJson(list:(List[Int],List[(String,List[Int])])):String={
   
-   case class HCodeMap(list:List[(Char,List[Int])])
+   case class HCodeMap(list:List[(String,List[Int])])
 
   implicit val testFormat: JsonFormat[HCodeMap] = jsonFormat(HCodeMap.apply _, "list")
   
@@ -108,9 +113,9 @@ def ShrinkBitmap(file: String, width: Int, height: Int): Bitmap = {
  * @returns HCodeMap
  */
   
-   def JsonToKey(json:String):List[(Char,List[Int])]={
+   def JsonToKey(json:String):List[(String,List[Int])]={
   
-   case class HCodeMap(list:List[(Char,List[Int])])
+   case class HCodeMap(list:List[(String,List[Int])])
 
    implicit val testFormat: JsonFormat[HCodeMap] = jsonFormat(HCodeMap.apply _, "list")
   

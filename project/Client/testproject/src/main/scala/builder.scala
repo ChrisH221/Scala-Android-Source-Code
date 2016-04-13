@@ -1,6 +1,5 @@
 package my.android.project
-import scala.collection._
-import scala.collection.mutable.ArrayBuffer
+
 /**
  * @author Chris Howell
  *
@@ -8,32 +7,49 @@ import scala.collection.mutable.ArrayBuffer
  */
   class builder extends helpers{
 
-  
- 
+  var bp = 0
+  /*
+  *  A function to count the number of times a character appears in a string
+  *  @returns Int
+  */
+  def count(c:String, y:String): Int = {
+   
+	c.r.findAllMatchIn(y).length
+  }
+ def stripChars(s:String, ch:String)= {
+ val regex = ch.r
+ val input = s
+
+val result = regex.replaceAllIn(input, "")
+ result
+ }
   /*
    * Uses pattern matching to create a list containing each frequency for each char in a string
    * that matches the input char
    * @returns List[Pair(Char,Int)]
    */
 
-  def freq(y:String, list:List[(Char,Int)]): List[(Char,Int)] = {
+  // def freq2(y:String):List[(Char,Int)]={
+   
+//   y.toCharArray.foreach{ x => }
+   
+//   }
+   
+  def freq(y:String, list:List[(String,Int)]): List[(String,Int)] = {
 
-		val list2 = scala.collection.mutable.ArrayBuffer(list: _*)
-		var string = y
-		
-		while(!string.isEmpty){
-		
-		string.count(_ == string.head)
-		var tup = (string.head,string.count(_ == string.head))
-		list2+=tup
-		string = string.filter(x => x != string.head)
-		
-		
-		}
+    if(y == null || y.isEmpty) list.sortBy(_._2).reverse
+    else{
+	 
+      val c = y.take(bp).toString
+	
+      val countFreq = count(c,y)
+      val t = new Tuple2(c,countFreq)
+	
+	  freq(stripChars(y,c),list:+t)
+    }
 
-		list2.toList
-
-    // case "" => List()
+    //TODO case instead of if/else
+    // case "" => List(('h',1))
     // case y  =>  freq(c, y.filter( x => x == c),((c,count(c,y)) :: list))
     // case y::ys => (y,count  _ y)::freq  (y.filter (_ != y) y, list)
 
@@ -57,35 +73,27 @@ import scala.collection.mutable.ArrayBuffer
     *@returns List[HTree]
    */
 
-  def insert(Tree:HTree, HTree:List[HTree]): List[HTree] ={
+  def insert(Tree:HTree, HTree:List[HTree], newList:List[HTree]): List[HTree] ={
 
-	val list = scala.collection.mutable.ArrayBuffer(HTree: _*)
-	val list2 = scala.collection.mutable.ArrayBuffer(HTree: _*)
-    var incre = 0
-	var finish = false
-	if(list.length > 1){
+    //TODO Idiomatic approach
+    //val list = Tree::HTree
+
+    //list.sortBy(x => x.freq)
 	
-	while(!finish){
 	
-	if(freqNode(Tree) <= freqNode (HTree(incre))){}
-	else {
-	
-	list2 ++ list.take(incre+1)
-	list2 += Tree
-	list2 ++ list.drop(incre+1)
-	finish = true
+	 if(HTree.isEmpty) newList:::Tree::HTree
 
-	}
-	incre = incre + 1
-	
-	}
-	}
-	else list2 += Tree
-	list2.toList.sortBy(x => freqNode(x))
+    else{
+
+      if(freqNode(Tree) <= freqNode (HTree.head)){
+
+	  insert(Tree, HTree.drop(1), newList:::HTree.take(1))
+
+	  }
+      else  newList:::Tree::HTree
 
 
-
-
+    }
 
   }
 
@@ -96,7 +104,7 @@ import scala.collection.mutable.ArrayBuffer
 
 
   def makeLink(t1: HTree, t2:HTree): HTree = {
-	
+
     if(freqNode(t1) < freqNode(t2)) {
 
 	Branch(freqNode (t1) + freqNode (t2),t1,t2)
@@ -107,51 +115,27 @@ import scala.collection.mutable.ArrayBuffer
 
   }
 
- 
+  /*
+   * Calls the insert method to place a new HTree node into a list
+   * of HTree nodes 
+   * @returns  List[HTree]
+   */
+  def shrinkList(t1:HTree, t2:List[HTree]): List[HTree]={
+
+    insert(t1,t2,x)
+
+  }
 
   /*
    * Merges a list of Leaf nodes into a single HTree by creating connecting Branch nodes to hold the Leaf nodes
    * @returns HTree
    */
-  def merge(t:List[HTree],t2:List[HTree]): HTree ={
-	var incre = 0
-	var list = scala.collection.mutable.ArrayBuffer(t: _*)
+  def merge(t:List[HTree]): HTree ={
 
-	var in = List().asInstanceOf[List[HTree]]
-	var chunk = List().asInstanceOf[List[HTree]]
-	var link = makeLink(list(0), list(1))
-	
-	while (list.length != 1 ){
-	println(list.toString)
-	
-	
-	
-	if (list.size == 2) {
-	chunk = list.toList.take(2)
-	
-	in = insert(link,chunk)
-	list = list.drop(2) 
 
-	}
-	else {
-	list = list.drop(2) 
-	
-	chunk = list.toList.take(2)
+    if(t.length == 1 ) t.head
+    else merge(shrinkList(makeLink(t.take(1).head, t.slice(1,2).head), t.drop(2)))
 
-	in = insert(link,chunk)
-	
-	
-	}
-	
-	in.foreach{x => if(!list.contains(x)) list += x }
-	
-	
-	if(list.length != 1) link = makeLink(list(0), list(1))
-	}
-	
-	list.toList.head
-	
-   
 
   }
 
@@ -159,11 +143,12 @@ import scala.collection.mutable.ArrayBuffer
    * Takes a list if nodes and returns a
    */
 
-  def makeNode(list:List[(Char,Int)],nodeList:List[HTree]):List[HTree] ={
+  def makeNode(list:List[(String,Int)],nodeList:List[HTree]):List[HTree] ={
 
-	val list2 = scala.collection.mutable.ArrayBuffer(nodeList: _*)	
-	list.foreach{x => list2 += new Leaf(x._1,x._2)}
-    list2.toList
+    if(list.isEmpty){
+	nodeList
+	}
+    else makeNode(list.drop(1),Leaf (list.head._1,list.head._2)::nodeList)
 
   }
 
@@ -174,13 +159,11 @@ import scala.collection.mutable.ArrayBuffer
 
   def makeTree(s:String): HTree ={
 
-    if(s != null) merge(makeNode(freq(s,x),x),x)
+    if(s != null) merge(makeNode(freq(s,x).reverse,x))
 
     else Empty()
 
   }
-  
-
 
 
 

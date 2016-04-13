@@ -1,3 +1,61 @@
 [0m[[0mdebug[0m] [0mCustom package for R class: 'my.android.project'[0m
 [0m[[0mdebug[0m] [0mcommand: C:\Users\Chris\AppData\Local\Android\sdk\build-tools\23.0.1\aapt.exe package -f --no-crunch -I C:\Users\Chris\AppData\Local\Android\sdk\platforms\android-16\android.jar -M C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\AndroidManifest.xml -S C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\resources\res -A C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\assets -m -J C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-gen -G C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\proguard.txt --debug-mode --custom-package my.android.project[0m
+[0m[[0mdebug[0m] [0mCustom package for R class: 'my.android.project'[0m
+[0m[[0mdebug[0m] [0mcommand: C:\Users\Chris\AppData\Local\Android\sdk\build-tools\23.0.1\aapt.exe package -f --no-crunch -I C:\Users\Chris\AppData\Local\Android\sdk\platforms\android-16\android.jar -M C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\AndroidManifest.xml -S C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\resources\res -A C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\assets -m -J C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-gen -F C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\resources-debug.ap_ -G C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\proguard.txt --debug-mode --custom-package my.android.project[0m
 [0m[[33mwarn[0m] [0mWarning: AndroidManifest.xml already defines debuggable (in http://schemas.android.com/apk/res/android); using existing value in manifest.[0m
+[0m[[33mwarn[0m] [0mWarning: AndroidManifest.xml already defines debuggable (in http://schemas.android.com/apk/res/android); using existing value in manifest.[0m
+[0m[[0mdebug[0m] [0mDex inputs: [C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes.proguard.jar][0m
+[0m[[0mdebug[0m] [0mcommand: C:\Users\Chris\AppData\Local\Android\sdk\build-tools\23.0.1\dx.bat -JXmx1024m --dex --incremental --no-strict --output C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes.dex C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes.proguard.jar[0m
+[0m[[0mdebug[0m] [0mPackaging testProject-debug-unaligned.apk[0m
+[0m[[0mdebug[0m] [0mC:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\resources-debug.ap_:[0m
+[0m[[0mdebug[0m] [0m=> AndroidManifest.xml[0m
+[0m[[0mdebug[0m] [0m=> res/layout/a_main.xml[0m
+[0m[[0mdebug[0m] [0m=> res/layout/a_main2.xml[0m
+[0m[[0mdebug[0m] [0m=> res/layout/check.xml[0m
+[0m[[0mdebug[0m] [0m=> res/layout/login.xml[0m
+[0m[[0mdebug[0m] [0m=> res/layout/main.xml[0m
+[0m[[0mdebug[0m] [0m=> res/layout/user.xml[0m
+[0m[[0mdebug[0m] [0m=> resources.arsc[0m
+[0m[[0mdebug[0m] [0mC:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes.dex => classes.dex[0m
+[0m[[0mdebug[0m] [0mC:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\src\main\resources\testImage.png => testImage.png[0m
+[0m[[0mdebug[0m] [0mC:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\lib_managed\bundles\io.spray\spray-json_2.11\spray-json_2.11-1.3.2.jar:[0m
+[0m[[0mdebug[0m] [0mC:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\lib_managed\bundles\org.scala-lang.modules\scala-xml_2.11\scala-xml_2.11-1.0.4.jar:[0m
+[0m[[0mdebug[0m] [0m=> scala-xml.properties[0m
+[0m[[0mdebug[0m] [0mC:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\lib_managed\bundles\org.scalatest\scalatest_2.11\scalatest_2.11-2.2.6.jar:[0m
+[0m[[0mdebug[0m] [0m=> images/bluedot.gif[0m
+[0m[[0mdebug[0m] [0m=> images/bluedots.psd[0m
+[0m[[0mdebug[0m] [0m=> images/bluedotsel.gif[0m
+[0m[[0mdebug[0m] [0m=> images/cyandot.gif[0m
+[0m[[0mdebug[0m] [0m=> images/cyandots.psd[0m
+[0m[[0mdebug[0m] [0m=> images/cyandotsel.gif[0m
+[0m[[0mdebug[0m] [0m=> images/dots.psd[0m
+[0m[[0mdebug[0m] [0m=> images/graybullet.gif[0m
+[0m[[0mdebug[0m] [0m=> images/graybullet.psd[0m
+[0m[[0mdebug[0m] [0m=> images/graydot.gif[0m
+[0m[[0mdebug[0m] [0m=> images/graydots.psd[0m
+[0m[[0mdebug[0m] [0m=> images/graydotsel.gif[0m
+[0m[[0mdebug[0m] [0m=> images/greenbullet.gif[0m
+[0m[[0mdebug[0m] [0m=> images/greenbullet.psd[0m
+[0m[[0mdebug[0m] [0m=> images/greendot.gif[0m
+[0m[[0mdebug[0m] [0m=> images/greendots.psd[0m
+[0m[[0mdebug[0m] [0m=> images/greendotsel.gif[0m
+[0m[[0mdebug[0m] [0m=> images/inProgress.gif[0m
+[0m[[0mdebug[0m] [0m=> images/purpledot.gif[0m
+[0m[[0mdebug[0m] [0m=> images/purpledots.psd[0m
+[0m[[0mdebug[0m] [0m=> images/purpledotsel.gif[0m
+[0m[[0mdebug[0m] [0m=> images/redbullet.gif[0m
+[0m[[0mdebug[0m] [0m=> images/redbullet.psd[0m
+[0m[[0mdebug[0m] [0m=> images/reddot.gif[0m
+[0m[[0mdebug[0m] [0m=> images/reddots.psd[0m
+[0m[[0mdebug[0m] [0m=> images/reddotsel.gif[0m
+[0m[[0mdebug[0m] [0m=> images/yellowbullet.gif[0m
+[0m[[0mdebug[0m] [0m=> images/yellowbullet.psd[0m
+[0m[[0mdebug[0m] [0m=> images/yellowdot.gif[0m
+[0m[[0mdebug[0m] [0m=> images/yellowdots.psd[0m
+[0m[[0mdebug[0m] [0m=> images/yellowdotsel.gif[0m
+[0m[[0mdebug[0m] [0m=> org/scalactic/ScalacticBundle.properties[0m
+[0m[[0mdebug[0m] [0m=> org/scalatest/HtmlReporter.css[0m
+[0m[[0mdebug[0m] [0m=> org/scalatest/ScalaTestBundle.properties[0m
+[0m[[0mdebug[0m] [0m=> org/scalatest/d3.v2.min.js[0m
+[0m[[0mdebug[0m] [0m=> org/scalatest/sorttable.js[0m
+[0m[[0mdebug[0m] [0mNative folder: C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\jni[0m

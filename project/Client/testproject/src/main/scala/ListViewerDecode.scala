@@ -134,12 +134,12 @@ class ListViewerDecode extends Activity with helpers {
 			val h = new handler
 			val de =h.decode(1,"",hcode).reverse
 		     val newImageBytes = Base64.decode(de, Base64.URL_SAFE);
-	 	    val bitmap = BitmapFactory.decodeByteArray(newImageBytes, 0, newImageBytes.length);
+	 	   val bitmap = BitmapFactory.decodeByteArray(newImageBytes, 0, newImageBytes.length);
 			
-			val bmpimg = i.getResizedBitmap(bitmap, 540, 960)
+			
 
 
-			i.writeDecodedImage(bmpimg,noExtension)
+			i.writeDecodedImage(bitmap,noExtension)
 		
       }
     })

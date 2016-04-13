@@ -6,6 +6,7 @@ import java.io._
 import scala.collection._
 import spray.json._
 import DefaultJsonProtocol._
+import android.util.Log
 
 trait helpers {
 
@@ -16,7 +17,7 @@ trait helpers {
   abstract class HTree
   case class Empty() extends HTree
   case class Branch(value: Int, left: HTree, right: HTree) extends HTree
-  case class Leaf( char: Char, freq: Int) extends HTree
+  case class Leaf( char: String, freq: Int) extends HTree
 
   /* 
    * Define an implicit definition for OnClickListener
@@ -28,7 +29,23 @@ trait helpers {
    * 
    */
  
-
+def findSmallestBreakPoint(str:String, start:Int):Int = {
+  
+	var found = false
+	var divider = 2
+	while(!found){
+		divider = divider+1
+		
+		 		
+		if (str.size % divider == 0) found = true
+		
+	}
+  
+ 
+  divider
+  
+  
+  }
  
   implicit def toRunnable[A](f: => A): Runnable =  new Runnable() { def run() = f } 
 

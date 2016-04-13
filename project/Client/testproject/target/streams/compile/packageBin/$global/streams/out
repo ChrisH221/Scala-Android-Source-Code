@@ -20,8 +20,6 @@
 [0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\TypedResource.class[0m
 [0m[[0mdebug[0m] [0m	my\android\project\login$$anonfun$createAccount$1$$anonfun$apply$4$$anonfun$3.class[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\login$$anonfun$createAccount$1$$anonfun$apply$4$$anonfun$3.class[0m
-[0m[[0mdebug[0m] [0m	my\android\project\builder$$anonfun$1.class[0m
-[0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\builder$$anonfun$1.class[0m
 [0m[[0mdebug[0m] [0m	my\android\project\TypedViewHolder$class.class[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\TypedViewHolder$class.class[0m
 [0m[[0mdebug[0m] [0m	my\android\project\TypedResource$.class[0m
@@ -102,8 +100,6 @@
 [0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\imageChanger$Bit.class[0m
 [0m[[0mdebug[0m] [0m	my\android\project\imageChanger$HCodeMap$8$.class[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\imageChanger$HCodeMap$8$.class[0m
-[0m[[0mdebug[0m] [0m	my\android\project\builder$$anonfun$merge$1.class[0m
-[0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\builder$$anonfun$merge$1.class[0m
 [0m[[0mdebug[0m] [0m	my\android\project\helpers$Branch$.class[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\helpers$Branch$.class[0m
 [0m[[0mdebug[0m] [0m	my\android\project\imageChanger$HCodeMap$7.class[0m
@@ -124,6 +120,8 @@
 [0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\main$$anonfun$choose$1.class[0m
 [0m[[0mdebug[0m] [0m	my\android\project\login$$anonfun$loginUI$1$$anonfun$apply$3.class[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\login$$anonfun$loginUI$1$$anonfun$apply$3.class[0m
+[0m[[0mdebug[0m] [0m	my\android\project\testHandler$$anonfun$3.class[0m
+[0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\testHandler$$anonfun$3.class[0m
 [0m[[0mdebug[0m] [0m	my\android\project\helpers$Empty$.class[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\helpers$Empty$.class[0m
 [0m[[0mdebug[0m] [0m	my\android\project\login$$anonfun$loginUI$1.class[0m
@@ -160,10 +158,10 @@
 [0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\BuildConfig.class[0m
 [0m[[0mdebug[0m] [0m	my\android\project\ListViewerDecode$$anon$1.class[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\ListViewerDecode$$anon$1.class[0m
+[0m[[0mdebug[0m] [0m	my\android\project\handler$$anonfun$bitList$1.class[0m
+[0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\handler$$anonfun$bitList$1.class[0m
 [0m[[0mdebug[0m] [0m	my\android\project\helpers$$anon$1.class[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\helpers$$anon$1.class[0m
-[0m[[0mdebug[0m] [0m	my\android\project\builder$$anonfun$freq$2.class[0m
-[0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\builder$$anonfun$freq$2.class[0m
 [0m[[0mdebug[0m] [0m	my\android\project\login$$anon$1.class[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\login$$anon$1.class[0m
 [0m[[0mdebug[0m] [0m	my\android\project\ListViewerDecode$$anonfun$onCreate$1.class[0m
@@ -174,8 +172,6 @@
 [0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\handler.class[0m
 [0m[[0mdebug[0m] [0m	my\android\project\login$$anonfun$loginUI$1$$anonfun$apply$3$$anonfun$2.class[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\login$$anonfun$loginUI$1$$anonfun$apply$3$$anonfun$2.class[0m
-[0m[[0mdebug[0m] [0m	my\android\project\builder$$anonfun$makeNode$1.class[0m
-[0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\builder$$anonfun$makeNode$1.class[0m
 [0m[[0mdebug[0m] [0m	my\android\project\handler$$anonfun$decode2$1.class[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\handler$$anonfun$decode2$1.class[0m
 [0m[[0mdebug[0m] [0m	my\android\project\ListViewerDecode$$anonfun$onCreate$2$$anonfun$1.class[0m
@@ -186,8 +182,6 @@
 [0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\imageChanger$HCodeMap$5.class[0m
 [0m[[0mdebug[0m] [0m	my\android\project\login$$anonfun$createAccount$1$$anonfun$apply$4$$anonfun$4.class[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\login$$anonfun$createAccount$1$$anonfun$apply$4$$anonfun$4.class[0m
-[0m[[0mdebug[0m] [0m	my\android\project\builder$$anonfun$insert$1.class[0m
-[0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\builder$$anonfun$insert$1.class[0m
 [0m[[0mdebug[0m] [0m	my\android\project\helpers$Branch.class[0m
 [0m[[0mdebug[0m] [0m	  C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes\my\android\project\helpers$Branch.class[0m
 [0m[[0mdebug[0m] [0m	my\android\project\TypedLayoutInflater.class[0m
