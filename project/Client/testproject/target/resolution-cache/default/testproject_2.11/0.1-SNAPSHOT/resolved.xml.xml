@@ -4,7 +4,7 @@
 		module="testproject_2.11"
 		revision="0.1-SNAPSHOT"
 		status="integration"
-		publication="20160413150230"
+		publication="20160416142615"
 	>
 		<description>
 		testProject
@@ -36,5 +36,6 @@
 		<dependency org="org.scala-lang" name="scala-reflect" rev="2.11.6" conf="compile->default(compile)"/>
 		<dependency org="org.scala-lang.modules" name="scala-xml_2.11" rev="1.0.4" conf="compile->default(compile)"/>
 		<dependency org="io.spray" name="spray-json_2.11" rev="1.3.2" conf="compile->default(compile)"/>
+		<dependency org="com.geteit" name="robotest_2.11" rev="0.12" conf="compile->default(compile)"/>
 	</dependencies>
 </ivy-module>

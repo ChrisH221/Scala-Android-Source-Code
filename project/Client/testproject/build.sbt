@@ -8,7 +8,7 @@ import android.Keys._
 
       scalacOptions in Compile += "-feature"
 
-      platformTarget in Android := "android-16"
+      platformTarget in Android := "android-23"
 
       proguardCache in Android ++= Seq(
 		ProguardCache("com.robotium.solo") % "com.jayway.android.robotium" % "robotium-solo"
@@ -31,10 +31,11 @@ import android.Keys._
                         "org.scalatest" %% "scalatest" % "2.2.6" ,
 						"org.scala-lang" % "scala-reflect" % "2.11.6",
 						"org.scala-lang.modules" %% "scala-xml" % "1.0.4",
-						"io.spray" %%  "spray-json" % "1.3.2"			
-						
+						"io.spray" %%  "spray-json" % "1.3.2",						
+						 "com.geteit" %% "robotest" % "0.12" 
+												
 						)
-
+fork in Test := true
 					
      proguardScala in Android := true
 
@@ -52,28 +53,7 @@ import android.Keys._
 	 "-keep class * extends android.os.AsyncTask {*;}"
       )
 
-    // ProGuard rules for Akka
-   proguardOptions in Android ++= Seq(
-   "-keep class akka.actor.Actor$class { *; }",
-   "-keep class akka.actor.LightArrayRevolverScheduler { *; }",
-   "-keep class akka.actor.LocalActorRefProvider { *; }",
-   "-keep class akka.actor.CreatorFunctionConsumer { *; }",
-   "-keep class akka.actor.TypedCreatorFunctionConsumer { *; }",
-   "-keep class      akka.dispatch.BoundedDequeBasedMessageQueueSemantics      {      *; }",
-   "-keep class akka.dispatch.UnboundedMessageQueueSemantics { *; }",
-    "-keep class akka.dispatch.UnboundedDequeBasedMessageQueueSemantics     { *; }",
-    "-keep class akka.dispatch.DequeBasedMessageQueueSemantics { *; }",
-    "-keep class akka.dispatch.MultipleConsumerSemantics { *; }",
-    "-keep class akka.actor.LocalActorRefProvider$Guardian { *; }",
-    "-keep class akka.actor.LocalActorRefProvider$SystemGuardian { *; }",
-    "-keep class akka.dispatch.UnboundedMailbox { *; }",
-    "-keep class akka.actor.DefaultSupervisorStrategy { *; }",
-    "-keep class macroid.akka.AkkaAndroidLogger { *; }",
-   "-keep class akka.event.Logging$LogExt { *; }"
-   )        
-   
-   
-   
+     
    
 
    scalacOptions in Compile += "-feature"
