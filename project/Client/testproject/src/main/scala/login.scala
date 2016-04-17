@@ -74,12 +74,20 @@ class login extends Activity with TypedActivity with helpers{
 	
   }
   
-  	def changeScreen(){
+  	def changeScreen(result:String){
+	Log.d("MyTAG","3 " + result)
+	if(result.trim == "0"){
+	    var intent= new Intent (this,classOf[main])
+	    val username = findView(TR.username).getText
+	    intent.putExtra("user", username)
+	    startActivity(intent)
+	}
+	else {
+		
+	val inform = findView(TR.inform)
+	inform.setText("Username already taken                                                                         ")
 	
-	var intent= new Intent (this,classOf[main])
-	val username = findView(TR.username).getText
-	intent.putExtra("user", username)
-	startActivity(intent)
+	}
 	
 	}
  
@@ -97,8 +105,10 @@ class login extends Activity with TypedActivity with helpers{
 	}
 	else {
 	
-	println("error")
-	
+	val inform = findView(TR.inform)
+	inform.setText("Incorrect username or password                                                                          ")
+	val username = findView(TR.username).setText("")
+	 val password = findView(TR.password).setText("")
 	} 
   
   }
@@ -193,7 +203,7 @@ def createAccount(){
       var line: String = null
 	  val str = Stream.continually(reader.readLine()).takeWhile(_ != null).mkString("\n")
 	 
-	  
+	  Log.d("MyTAG","2" + result)
 	  
 	 p success str
     	
@@ -205,7 +215,7 @@ def createAccount(){
       }
     }	 
 	 } 
-	f onSuccess {  case result =>  runOnUiThread{changeScreen()}}
+	f onSuccess {  case result =>  runOnUiThread{changeScreen(result)}}
 		
 	
     })

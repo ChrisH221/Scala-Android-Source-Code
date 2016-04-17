@@ -30,6 +30,7 @@
     android:layout_height="100dp"
     android:layout_marginLeft="2dp"
     android:layout_marginRight="2dp"
+	android:inputType="textPassword"
     android:hint="PASSWORD" >
     </EditText>
 

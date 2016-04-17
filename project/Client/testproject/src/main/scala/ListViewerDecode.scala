@@ -41,6 +41,7 @@ import java.io.FileOutputStream
 import android.util.Base64
 import scala.util.Try
 import scala.collection.mutable.ListBuffer
+import android.content.Intent
 
 class ListViewerDecode extends Activity with helpers {
 
@@ -122,9 +123,7 @@ class ListViewerDecode extends Activity with helpers {
 		  val eImage =  row.getString("imageEncode")
 		  val noExtension = fn.substring(0, fn.lastIndexOf("."))
 		  val i = new imageChanger
-		   Log.d("MyTAG", key)
-		// val newImageBytes = Base64.decode(eImage, Base64.URL_SAFE);
-	 	// val bitmap = BitmapFactory.decodeByteArray(newImageBytes, 0, newImageBytes.length);
+		
 			
 		  val hc = i.JsonToKey(key)
 		   
@@ -140,10 +139,66 @@ class ListViewerDecode extends Activity with helpers {
 
 
 			i.writeDecodedImage(bitmap,noExtension)
+			removeFile(fn)
 		
       }
     })
   
+  }
+  
+  def removeFile(fn:String){
+  
+
+   val p = promise[String] 
+	 val f = p. future 
+	 
+    future { 
+	 
+	        val site = "http://monad.uk/removeFile.php"
+			
+		try {
+			val inte = getIntent
+			val username = inte.getExtras.getString("user")
+			val url = new URL(site)
+			val urlConn = url.openConnection()
+			val httpConn = urlConn.asInstanceOf[HttpURLConnection]
+			httpConn.setDoOutput(true)
+			val os = httpConn.getOutputStream
+			Log.d("MyTAG", username + " " + fn)
+			val POST_PARAMS = "username="+username+"&fileName=" + fn
+			os.write(POST_PARAMS.getBytes)
+			val responseCode = httpConn.getResponseCode
+			httpConn.connect()
+	
+			val input = httpConn.getInputStream
+			val reader = new BufferedReader(new InputStreamReader(input))
+			val result = new StringBuilder()
+			var line: String = null
+			val str = Stream.continually(reader.readLine()).takeWhile(_ != null).mkString("\n")
+			 
+	  
+	  
+	 p success str 
+    	
+	} catch {case e: Exception => {
+			println("Error: " + e)
+			e.printStackTrace()
+			null
+      }
+    }	 
+	 } 
+	f onSuccess {  case result =>  runOnUiThread{
+		 val inte = getIntent
+		val username = inte.getExtras.getString("user")
+	  	 var intent2= new Intent (this,classOf[main])
+			 
+		 
+		 intent2.putExtra("user", username)
+	
+	 startActivity(intent2)
+	
+	}}
+	
   }
  
 }

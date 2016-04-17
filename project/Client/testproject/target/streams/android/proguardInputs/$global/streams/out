@@ -1,0 +1,3 @@
+[0m[[0mdebug[0m] [0mProguard cache rules: List(ProguardCache(ArrayBuffer(scala/),Some(org.scala-lang),None,None,None), ProguardCache(ArrayBuffer(com/robotium/solo/),Some(com.jayway.android.robotium),Some(robotium-solo),None,None))[0m
+[0m[[0minfo[0m] [0mFinding dependency references for: io.spray:spray-json_2.11:1.3.2[0m
+[0m[[0minfo[0m] [0mFinding dependency references for: classes.jar[0m

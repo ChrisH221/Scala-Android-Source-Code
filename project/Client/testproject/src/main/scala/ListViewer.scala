@@ -32,9 +32,7 @@ import scala.concurrent.ExecutionContext._
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.language.implicitConversions
 import scala.collection.mutable.ArrayBuffer
-import java.awt.image.BufferedImage
-import javax.imageio.ImageIO
-
+import scala.util.Try
 
 
 
@@ -52,14 +50,14 @@ class ListViewer extends Activity with helpers {
   protected override def onCreate(savedInstanceState: Bundle) {
     super.onCreate(savedInstanceState)
 	
-	encode2()
+	encode()
 	
 	}
   
   
   
   
-  def encode2(){
+  def encode(){
   
   
    setContentView(R.layout.a_main)
@@ -140,12 +138,12 @@ class ListViewer extends Activity with helpers {
 		key._1.foreach{x => encodestring = encodestring + x.toString}
 		
 		val POST_PARAMS = "username="+username.toString +"&key="+ i.keyToJson(key) +"&fileName=" +z.getName.toString + "&imageEncode=" + encodestring
-	//	i.keyToJson(z.getName.toString,key)
+	
 		Log.d("MyTAG", "finally")
 		os.write(POST_PARAMS.getBytes)
 		val responseCode = httpConn.getResponseCode
 		httpConn.connect()
-	
+		Try(z.delete)
       val input = httpConn.getInputStream
       val reader = new BufferedReader(new InputStreamReader(input))
       val result = new StringBuilder()

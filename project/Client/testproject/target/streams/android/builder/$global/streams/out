@@ -1,3 +1,22 @@
 [0m[[0mdebug[0m] [0mCustom package for R class: 'my.android.project'[0m
 [0m[[0mdebug[0m] [0mcommand: C:\Users\Chris\AppData\Local\Android\sdk\build-tools\23.0.1\aapt.exe package -f --no-crunch -I C:\Users\Chris\AppData\Local\Android\sdk\platforms\android-23\android.jar -M C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\AndroidManifest.xml -S C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\resources\res -A C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\assets -m -J C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-gen -G C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\proguard.txt --debug-mode --custom-package my.android.project[0m
+[0m[[0mdebug[0m] [0mCustom package for R class: 'my.android.project'[0m
+[0m[[0mdebug[0m] [0mcommand: C:\Users\Chris\AppData\Local\Android\sdk\build-tools\23.0.1\aapt.exe package -f --no-crunch -I C:\Users\Chris\AppData\Local\Android\sdk\platforms\android-23\android.jar -M C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\AndroidManifest.xml -S C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\resources\res -A C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\assets -m -J C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-gen -F C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\resources-debug.ap_ -G C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\proguard.txt --debug-mode --custom-package my.android.project[0m
 [0m[[33mwarn[0m] [0mWarning: AndroidManifest.xml already defines debuggable (in http://schemas.android.com/apk/res/android); using existing value in manifest.[0m
+[0m[[33mwarn[0m] [0mWarning: AndroidManifest.xml already defines debuggable (in http://schemas.android.com/apk/res/android); using existing value in manifest.[0m
+[0m[[0mdebug[0m] [0mDex inputs: [C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes.proguard.jar][0m
+[0m[[0mdebug[0m] [0mcommand: C:\Users\Chris\AppData\Local\Android\sdk\build-tools\23.0.1\dx.bat -JXmx1024m --dex --incremental --no-strict --output C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes.dex C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes.proguard.jar[0m
+[0m[[0mdebug[0m] [0mPackaging testProject-debug-unaligned.apk[0m
+[0m[[0mdebug[0m] [0mC:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\resources-debug.ap_:[0m
+[0m[[0mdebug[0m] [0m=> AndroidManifest.xml[0m
+[0m[[0mdebug[0m] [0m=> res/layout/a_main.xml[0m
+[0m[[0mdebug[0m] [0m=> res/layout/a_main2.xml[0m
+[0m[[0mdebug[0m] [0m=> res/layout/check.xml[0m
+[0m[[0mdebug[0m] [0m=> res/layout/login.xml[0m
+[0m[[0mdebug[0m] [0m=> res/layout/main.xml[0m
+[0m[[0mdebug[0m] [0m=> res/layout/user.xml[0m
+[0m[[0mdebug[0m] [0m=> resources.arsc[0m
+[0m[[0mdebug[0m] [0mC:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes.dex => classes.dex[0m
+[0m[[0mdebug[0m] [0mC:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\src\main\resources\testImage.png => testImage.png[0m
+[0m[[0mdebug[0m] [0mC:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\lib_managed\bundles\io.spray\spray-json_2.11\spray-json_2.11-1.3.2.jar:[0m
+[0m[[0mdebug[0m] [0mNative folder: C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\jni[0m
