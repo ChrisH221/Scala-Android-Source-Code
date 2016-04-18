@@ -3,7 +3,7 @@
 	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 	<uses-permission android:name="android.permission.INTERNET"/>
-    <application android:label="@string/app_name" android:icon="@drawable/android:star_big_on" android:debuggable="true">
+    <application android:largeHeap="true" android:label="@string/app_name" android:icon="@drawable/android:star_big_on" android:debuggable="true">
 		
 		 <activity android:name="my.android.project.login" android:label="@string/app_name">
             <intent-filter>

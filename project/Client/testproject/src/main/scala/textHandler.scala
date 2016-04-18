@@ -32,32 +32,66 @@ import java.io.ByteArrayOutputStream
  * needing to create different instances.
  */
 
-class imageChanger extends helpers {
+class textHandler extends helpers {
 
 
-  def processEncode(path:String):String={
-   Log.d("MyTAG","hey" + path)
-    val file = new File(path)
-	val imageOpts = new BitmapFactory.Options();
-	 imageOpts.inJustDecodeBounds = true
-	 
-	var bitmap = BitmapFactory.decodeFile(file.getAbsolutePath)
+  def processEncode(path:String):(List[Int],List[(Char,List[Int])])={
 	
-
-
-		
+   
 	
-	var output = new ByteArrayOutputStream(bitmap.getByteCount());
-	bitmap.compress(Bitmap.CompressFormat.PNG, 100, output);
-	var imageBytes = output.toByteArray();
-
-	 var encodedString = Base64.encodeToString(imageBytes, Base64.URL_SAFE)	
+     val bufferedReader = new BufferedReader(new FileReader(path))
+    val stringBuffer = new StringBuffer()
+    var line: String = null
+	while( {line = bufferedReader.readLine();  line!= null} ) 
+    {
+      stringBuffer.append(line).append("\n")
+    }
+  
+	val h = new handler
 	 
-	encodedString
+	var x =  (h.encode(stringBuffer.toString))
+
+	var d = h.decode2(1,"",x)
+	// var d = (h.decode(1,"",x))
+	
+	x.asInstanceOf[(List[Int], List[(Char, List[Int])])]
+	
   }
   
   
-   
+  def keyToJson(list:(List[Int],List[(Char,List[Int])])):String={
+  
+   case class HCodeMap(list:List[(Char,List[Int])])
+
+  implicit val testFormat: JsonFormat[HCodeMap] = jsonFormat(HCodeMap.apply _, "list")
+  
+  val pair = new HCodeMap(list._2).toJson
+ 
+		//Log.d("MyTAG", "2" + pair.toString)
+		pair.toString
+  
+  }
+  
+  /**
+ * Converts a JSON string to a HCodeMap
+ * @returns HCodeMap
+ */
+  
+   def JsonToKey(json:String):List[(Char,List[Int])]={
+  
+   case class HCodeMap(list:List[(Char,List[Int])])
+
+   implicit val testFormat: JsonFormat[HCodeMap] = jsonFormat(HCodeMap.apply _, "list")
+  
+    	
+	val map2 = json.parseJson
+	val map3 = map2.convertTo[HCodeMap]
+	Log.d("MyTAG", "1" + map3.list.toString)
+    map3.list
+  }
+  
+ 
+  
  /**
  * Takes a Bitmap and a file name then writes the png image to the sd card.
  * @returns Unit

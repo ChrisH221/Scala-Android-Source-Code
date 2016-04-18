@@ -143,4 +143,4 @@
 [0m[[0mdebug[0m] [0mC:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\mappings.txt[0m
 [0m[[0mdebug[0m] [0m-injars C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\lib_managed\jars\org.scala-lang\scala-library\scala-library-2.11.7.jar(!META-INF/**,!rootdoc.txt);C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\lib_managed\bundles\io.spray\spray-json_2.11\spray-json_2.11-1.3.2.jar(!META-INF/**,!rootdoc.txt);C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes.jar(!META-INF/**,!rootdoc.txt)[0m
 [0m[[0mdebug[0m] [0m-outjars C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\target\android-bin\classes.proguard.jar[0m
-[0m[[0minfo[0m] [0mCreating proguard cache: proguard-cache-2913451fea882d1ebc1770a5f952330c7d36a1e0.jar[0m
+[0m[[0minfo[0m] [0mCreating proguard cache: proguard-cache-c2e4e8b34883e5307c2676097f57b8358a496c7a.jar[0m

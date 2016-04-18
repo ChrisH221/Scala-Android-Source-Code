@@ -15,7 +15,7 @@ class handler extends builder{
    * @returns HCodeMap
    *  
    */
-  def extractCode(t:HTree,acc:List[Int],newList:List[(String,List[Int])]):List[(String,List[Int])] = t match{
+  def extractCode(t:HTree,acc:List[Int],newList:List[(Char,List[Int])]):List[(Char,List[Int])] = t match{
 
     case t:Leaf =>(t.char,acc.reverse)::newList
     case t:Branch =>  extractCode(t.left,0::acc,newList):::extractCode(t.right,1::acc.reverse,newList)
@@ -28,7 +28,7 @@ class handler extends builder{
    * A function for taking a string and generates a list of bits   
    * @returns List[Bit}
    */
-  def bitList(s:String,count:Int, acc:List[Int],list:List[(String,List[Int])],list2:List[(String,List[Int])]):List[Int]={
+  def bitList(s:String,count:Int, acc:List[Int],list:List[(Char,List[Int])],list2:List[(Char,List[Int])]):List[Int]={
  
    val mutableListBuffer = scala.collection.mutable.ArrayBuffer(list: _*)
     val ListBuffer = scala.collection.mutable.ArrayBuffer(acc: _*)	
@@ -39,10 +39,10 @@ class handler extends builder{
     
 	
    
-   if(mutableListBuffer(incre)._1.equals(string.take(bp))){
+   if(mutableListBuffer(incre)._1 == string.head){
 	
    mutableListBuffer(incre)._2.foreach{x => ListBuffer += x}
-   string = string.drop(bp)
+   string = string.drop(1)
  
    incre = 0
    }
@@ -50,27 +50,10 @@ class handler extends builder{
 	if(incre >= mutableListBuffer.length)  string = ""
    }
    
-
+    Log.d("MyTAG", "de" + ListBuffer.toString)
 	ListBuffer.toList.reverse
  }
 
-  // var c = count
-//	println(list(c)._1)
-	//println(list.head._1)
-	//if (s.isEmpty) acc.reverse
-	
-	
-    //else if(list(c)._1.equals(s.take(2))){
-	//c = 0
-	//println(acc)
-	//val string = s.drop(2)
-	//bitList(string, c , acc:::list.head._2, list:::list2,x)
-	
-//	}
-	
-   // else  bitList(s, c+1 ,acc,list, list.head::list2)
-	
-  
   
   
   
@@ -81,20 +64,19 @@ class handler extends builder{
    * 
    */
 
-  def encode(s:String):(List[Int],List[(String,List[Int])])={
+  def encode(s:String):(List[Int],List[(Char,List[Int])])={
 
 
 
     if(s.isEmpty) return (x,x)
 
     if (s.length > 1 ) {
-	 Log.d("MyTAG","the size before" + s.length.toString)
-	 bp = math.ceil(s.length / 50).toInt
-	  Log.d("MyTAG","the size after" + bp.toString)
+
+	
 	(bitList(s,0,x,extractCode(makeTree(s),x,x),x).reverse,extractCode(makeTree(s),x,x).reverse)
 	
 	}
-    else (List(0),List((s,List( 0))))
+    else (List(0),List((s.head,List( 0))))
 
   }
   
@@ -111,7 +93,7 @@ class handler extends builder{
    * @returns Option String
    */
 
-def lookup(list:List[Int],list2:List[(String,List[Int])]): Option[String]={
+def lookup(list:List[Int],list2:List[(Char,List[Int])]): Option[String]={
 	
 	
 	val mutableListBuffer = scala.collection.mutable.ArrayBuffer(list2: _*)
@@ -137,7 +119,7 @@ def lookup(list:List[Int],list2:List[(String,List[Int])]): Option[String]={
    *@returns String
    */
 
- def decode(acc:Int,s:String,list:(List[Int],List[(String,List[Int])])):String ={
+ def decode(acc:Int,s:String,list:(List[Int],List[(Char,List[Int])])):String ={
 
     if(list._2.isEmpty) s
 
@@ -159,7 +141,7 @@ def lookup(list:List[Int],list2:List[(String,List[Int])]): Option[String]={
 
   }
   
-  def decode2(acc:Int,s:String,list:(List[Int],List[(String,List[Int])])):String ={
+  def decode2(acc:Int,s:String,list:(List[Int],List[(Char,List[Int])])):String ={
   
   var s = ""
   var accum = 1
@@ -167,13 +149,14 @@ def lookup(list:List[Int],list2:List[(String,List[Int])]): Option[String]={
   val listp2 = scala.collection.mutable.ArrayBuffer(list._2: _*)
   var tupList = (listp1,listp2)
   
-	println(tupList)
+	Log.d("MyTAG", "de" + tupList.toString)
    while(!tupList._1.isEmpty){
   
    if(lookup(tupList._1.take(accum).toList,tupList._2.toList).isDefined){
    println(accum)
+   
    s = s ++ lookup(tupList._1.take(accum).toList,tupList._2.toList).getOrElse("a")
-  println(s)
+  Log.d("MyTAG", "de" + s)
 
   tupList._1.remove(0,accum)
  

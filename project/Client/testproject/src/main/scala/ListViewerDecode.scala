@@ -94,110 +94,108 @@ class ListViewerDecode extends Activity with helpers {
 
   def decode(j:JSONArray){
     
-	
-	
-	setContentView(R.layout.a_main2)
-		var ar = ArrayBuffer[String]()
-	   
+    
+    
+    setContentView(R.layout.a_main2)
+    var ar = ArrayBuffer[String]()
+    
     for (i <- 0 until j.length) {
-      val row = j.getJSONObject(i)
-      var key = row.getString("fileName")
-	
-	 ar += key
-	 
-    }	
-	
-
+        val row = j.getJSONObject(i)
+        var key = row.getString("fileName")
+        
+        ar += key
+        
+    }
+    
+    
     val theAdapter = new ArrayAdapter[String](this, android.R.layout.simple_list_item_1, ar)
     val theListView = findViewById(R.id.theListView).asInstanceOf[ListView]
     
-	theListView.setAdapter(theAdapter)
-	
-	theListView.setOnItemClickListener(new OnItemClickListener() {
-
-      override def onItemClick(parent: AdapterView[_], view: View, position: Int, id: Long) {
-	  
-		  val row = j.getJSONObject(position)
-		  val fn =  row.getString("fileName")
-		  val key =  row.getString("keycode")
-		  val eImage =  row.getString("imageEncode")
-		  val noExtension = fn.substring(0, fn.lastIndexOf("."))
-		  val i = new imageChanger
-		
+    theListView.setAdapter(theAdapter)
+    
+    theListView.setOnItemClickListener(new OnItemClickListener() {
+        
+        override def onItemClick(parent: AdapterView[_], view: View, position: Int, id: Long) {
+            
+            val row = j.getJSONObject(position)
+            val fn =  row.getString("fileName")
+            val key =  row.getString("keycode")
+            val eImage =  row.getString("imageEncode")
+            val noExtension = fn.substring(0, fn.lastIndexOf("."))
+            val i = new imageChanger
+            
+            
+            val extension = fn.substring(fn.lastIndexOf('.'),fn.length())
+            if(extension == ".png"){
+                
+                val newImageBytes = Base64.decode(eImage, Base64.URL_SAFE);
+                val bitmap = BitmapFactory.decodeByteArray(newImageBytes, 0, newImageBytes.length);
+                i.writeDecodedImage(bitmap,noExtension)
+            }
+			else{
 			
-		  val hc = i.JsonToKey(key)
-		   
-			var Bits = new ListBuffer[Int]()
-			eImage.foreach{x => if(x == '1') Bits += 1 else Bits +=0 }
-			val hcode = (Bits.toList,hc)
-			val h = new handler
-			val de =h.decode(1,"",hcode).reverse
-		     val newImageBytes = Base64.decode(de, Base64.URL_SAFE);
-	 	   val bitmap = BitmapFactory.decodeByteArray(newImageBytes, 0, newImageBytes.length);
 			
 			
-
-
-			i.writeDecodedImage(bitmap,noExtension)
-			removeFile(fn)
-		
-      }
+			}
+            removeFile(fn)
+            
+        }
     })
+    
+}
   
-  }
-  
-  def removeFile(fn:String){
-  
-
-   val p = promise[String] 
-	 val f = p. future 
-	 
-    future { 
-	 
-	        val site = "http://monad.uk/removeFile.php"
-			
-		try {
-			val inte = getIntent
-			val username = inte.getExtras.getString("user")
-			val url = new URL(site)
-			val urlConn = url.openConnection()
-			val httpConn = urlConn.asInstanceOf[HttpURLConnection]
-			httpConn.setDoOutput(true)
-			val os = httpConn.getOutputStream
-			Log.d("MyTAG", username + " " + fn)
-			val POST_PARAMS = "username="+username+"&fileName=" + fn
-			os.write(POST_PARAMS.getBytes)
-			val responseCode = httpConn.getResponseCode
-			httpConn.connect()
-	
-			val input = httpConn.getInputStream
-			val reader = new BufferedReader(new InputStreamReader(input))
-			val result = new StringBuilder()
-			var line: String = null
-			val str = Stream.continually(reader.readLine()).takeWhile(_ != null).mkString("\n")
-			 
-	  
-	  
-	 p success str 
-    	
-	} catch {case e: Exception => {
-			println("Error: " + e)
-			e.printStackTrace()
-			null
-      }
-    }	 
-	 } 
-	f onSuccess {  case result =>  runOnUiThread{
-		 val inte = getIntent
-		val username = inte.getExtras.getString("user")
-	  	 var intent2= new Intent (this,classOf[main])
-			 
-		 
-		 intent2.putExtra("user", username)
-	
-	 startActivity(intent2)
-	
-	}}
+def removeFile(fn:String){
+    
+    
+    val p = promise[String]
+    val f = p. future
+    
+    future {
+        
+        val site = "http://monad.uk/removeFile.php"
+        
+        try {
+            val inte = getIntent
+            val username = inte.getExtras.getString("user")
+            val url = new URL(site)
+            val urlConn = url.openConnection()
+            val httpConn = urlConn.asInstanceOf[HttpURLConnection]
+            httpConn.setDoOutput(true)
+            val os = httpConn.getOutputStream
+            Log.d("MyTAG", username + " " + fn)
+            val POST_PARAMS = "username="+username+"&fileName=" + fn
+            os.write(POST_PARAMS.getBytes)
+            val responseCode = httpConn.getResponseCode
+            httpConn.connect()
+            
+            val input = httpConn.getInputStream
+            val reader = new BufferedReader(new InputStreamReader(input))
+            val result = new StringBuilder()
+            var line: String = null
+            val str = Stream.continually(reader.readLine()).takeWhile(_ != null).mkString("n")
+            
+            
+            
+            p success str
+            
+        } catch {case e: Exception => {
+                println("Error: " + e)
+                e.printStackTrace()
+                null
+            }
+        }
+    }
+    f onSuccess {  case result =>  runOnUiThread{
+            val inte = getIntent
+            val username = inte.getExtras.getString("user")
+            var intent2= new Intent (this,classOf[main])
+            
+            
+            intent2.putExtra("user", username)
+            
+            startActivity(intent2)
+            
+    }}
 	
   }
  

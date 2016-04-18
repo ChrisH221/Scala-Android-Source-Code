@@ -129,21 +129,35 @@ class ListViewer extends Activity with helpers {
 		val os = httpConn.getOutputStream
 		
 		val i = new imageChanger
-		Log.d("MyTAG", z.getAbsolutePath)
-		val key = i.processEncode(z.getAbsolutePath)	
+		val t = new textHandler
+		val path = z.getAbsolutePath
+		val extension = path.substring(path.lastIndexOf('.'),path.length())
+		 Log.d("MyTAG","hey" + extension)
+		if(extension == ".txt"){
+		
+		val key = t.processEncode(z.getAbsolutePath)	
       
-	  var encodestring = ""
-	Log.d("MyTAG", "here")
+	    var encodestring = ""
+	    
 	
 		key._1.foreach{x => encodestring = encodestring + x.toString}
 		
-		val POST_PARAMS = "username="+username.toString +"&key="+ i.keyToJson(key) +"&fileName=" +z.getName.toString + "&imageEncode=" + encodestring
-	
-		Log.d("MyTAG", "finally")
+		val POST_PARAMS = "username="+username.toString +"&key="+ t.keyToJson(key) +"&fileName=" +z.getName.toString + "&imageEncode=" + encodestring
 		os.write(POST_PARAMS.getBytes)
+		}
+		else{
+		
+		val encodestring = i.processEncode(z.getAbsolutePath)
+		
+		val POST_PARAMS = "username="+username.toString +"&key="+ "" +"&fileName=" +z.getName.toString + "&imageEncode=" + encodestring
+
+		 os.write(POST_PARAMS.getBytes)
+		}
+		
+		
 		val responseCode = httpConn.getResponseCode
 		httpConn.connect()
-		Try(z.delete)
+		//Try(z.delete)
       val input = httpConn.getInputStream
       val reader = new BufferedReader(new InputStreamReader(input))
       val result = new StringBuilder()
