@@ -40,10 +40,16 @@ class imageChanger extends helpers {
     val file = new File(path)
 	val imageOpts = new BitmapFactory.Options();
 	 imageOpts.inJustDecodeBounds = true
-	 
+	 val fn = file.getAbsolutePath
+	val extension = fn.substring(fn.lastIndexOf('.'),fn.length())
+
+	
+
+	
 	var bitmap = BitmapFactory.decodeFile(file.getAbsolutePath)
-	var output = new ByteArrayOutputStream(bitmap.getByteCount());
-	bitmap.compress(Bitmap.CompressFormat.PNG, 100, output);
+	var output = new ByteArrayOutputStream(bitmap.getByteCount())
+	if(extension ==".png")bitmap.compress(Bitmap.CompressFormat.PNG, 100, output)
+	if(extension ==".jpeg")bitmap.compress(Bitmap.CompressFormat.JPEG, 100, output)
 	var imageBytes = output.toByteArray();
 
 	var encodedString = Base64.encodeToString(imageBytes, Base64.URL_SAFE)	

@@ -126,16 +126,8 @@ class ListViewerDecode extends Activity with helpers {
             val t = new textHandler
             
             val extension = fn.substring(fn.lastIndexOf('.'),fn.length())
-            if(extension == ".png"){
-                
-                val newImageBytes = Base64.decode(eImage, Base64.URL_SAFE);
-                val bitmap = BitmapFactory.decodeByteArray(newImageBytes, 0, newImageBytes.length);
-                i.writeDecodedImage(bitmap,noExtension)
-            }
-			else{
-			
-			
-			val hc = t.JsonToKey(key)
+            if(extension == ".txt"){
+                	val hc = t.JsonToKey(key)
 		   Log.d("MyTAG", "1" + hc.toString)
 			var Bits = new ListBuffer[Int]()
 			eImage.foreach{x => if(x == '1') Bits += 1 else Bits +=0 }
@@ -143,6 +135,16 @@ class ListViewerDecode extends Activity with helpers {
 			val hcode = (Bits.toList,hc)
 			t.writeDecodedText(hcode,noExtension)
 			
+                val newImageBytes = Base64.decode(eImage, Base64.URL_SAFE);
+                val bitmap = BitmapFactory.decodeByteArray(newImageBytes, 0, newImageBytes.length);
+                i.writeDecodedImage(bitmap,noExtension)
+            }
+			else{
+			
+			
+                val newImageBytes = Base64.decode(eImage, Base64.URL_SAFE);
+                val bitmap = BitmapFactory.decodeByteArray(newImageBytes, 0, newImageBytes.length);
+                i.writeDecodedImage(bitmap,noExtension)
 			
 			
 			}

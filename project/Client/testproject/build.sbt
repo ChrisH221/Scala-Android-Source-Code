@@ -22,15 +22,12 @@ import android.Keys._
     "-dontwarn scala.collection.mutable.**"
     )
 	
-	sourceDirectory in Test := baseDirectory.value / "src" / "test"
-	
+		
 		
 	resolvers += "spray repo" at "http://repo.spray.io"
 	
     libraryDependencies ++= Seq(
-						"io.spray" %%  "spray-json" % "1.3.2",
-						"org.scalatest" %% "scalatest" % "2.2.6"
-												
+						"io.spray" %%  "spray-json" % "1.3.2"												
 						)
 fork in Test := true
 					
@@ -66,4 +63,4 @@ fork in Test := true
 
    retrieveManaged := true
    
-   	sourceDirectory in Test := baseDirectory.value / "src" / "test"
+   	sourceDirectory in Test := baseDirectory.value / "tests" / "src"

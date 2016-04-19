@@ -109,8 +109,10 @@ class textHandler extends helpers {
 		Log.d("MyTAG", "1" + result)
 		
       
-            val newTextFile = new File("/sdcard/decoded/", noExtension + ".txt")
-
+            val newTextFile = new File("decoded/", noExtension + ".txt")
+			if (!newTextFile.exists()) {
+            newTextFile.mkdirs();
+			}
             val fw = new FileWriter(newTextFile)
             fw.write(result)
             fw.close()

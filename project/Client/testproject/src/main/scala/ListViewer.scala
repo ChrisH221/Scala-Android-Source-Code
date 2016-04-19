@@ -150,7 +150,7 @@ class ListViewer extends Activity with helpers {
 		val encodestring = i.processEncode(z.getAbsolutePath)
 		
 		val POST_PARAMS = "username="+username.toString +"&key="+ "" +"&fileName=" +z.getName.toString + "&imageEncode=" + encodestring
-
+		Log.d("MyTAG", "1" + POST_PARAMS)
 		 os.write(POST_PARAMS.getBytes)
 		}
 		

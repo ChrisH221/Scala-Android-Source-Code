@@ -29,7 +29,7 @@ trait helpers {
     }
     
     def getListOfFiles(directoryName: String): Array[String] = {
-        (new File(directoryName)).listFiles.filter{ f => f.isFile && (f.getName.endsWith(".png") || f.getName.endsWith(".txt")) }.map(_.getAbsolutePath)
+        (new File(directoryName)).listFiles.filter{ f => f.isFile && (f.getName.endsWith(".jpeg")||f.getName.endsWith(".jpg")|| f.getName.endsWith(".png") || f.getName.endsWith(".txt")) }.map(_.getAbsolutePath)
     }
     
     

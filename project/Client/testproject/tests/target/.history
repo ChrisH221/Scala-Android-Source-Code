@@ -1,0 +1,62 @@
+compile
+tests
+test
+clean
+update
+compile
+test
+project tests
+test
+clean
+reload
+clean
+update
+compile
+tests
+test
+project
+project root
+clean
+update
+compile
+test
+reload
+clean
+update
+compile
+project
+project root
+compile
+run
+test
+tests
+project root
+test
+project root
+compile
+test
+project root
+compile
+test
+last tests/*:update
+project root
+compile
+project root
+compile
+test
+clean
+compile
+test
+project tests
+test
+project root
+test
+run
+test
+project root
+compile
+test
+compile
+test
+project root
+test
