@@ -18,17 +18,20 @@ class handler extends builder{
   def extractCode(t:HTree,acc:List[Int],newList:List[(Char,List[Int])]):List[(Char,List[Int])] = t match{
 
     case t:Leaf =>(t.char,acc.reverse)::newList
-    case t:Branch =>  extractCode(t.left,0::acc,newList):::extractCode(t.right,1::acc.reverse,newList)
+    case t:Branch =>  extractCode(t.left,0::acc,newList):::extractCode(t.right,1::acc,newList)
     case nil => List()
 
 
   }
-  
+ 
   /*
    * A function for taking a string and generates a list of bits   
    * @returns List[Bit}
    */
   def bitList(s:String,count:Int, acc:List[Int],list:List[(Char,List[Int])],list2:List[(Char,List[Int])]):List[Int]={
+ 
+  
+ def lookupBit(c: Char, list: List[(Char, List[Int])]): Option[List[Int]] =  list.find(_._1 == c).map(_._2)
  
    val mutableListBuffer = scala.collection.mutable.ArrayBuffer(list: _*)
     val ListBuffer = scala.collection.mutable.ArrayBuffer(acc: _*)	
@@ -50,7 +53,7 @@ class handler extends builder{
 	if(incre >= mutableListBuffer.length)  string = ""
    }
    
-    Log.d("MyTAG", "de" + ListBuffer.toString)
+  
 	ListBuffer.toList.reverse
  }
 
@@ -93,89 +96,34 @@ class handler extends builder{
    * @returns Option String
    */
 
-def lookup(list:List[Int],list2:List[(Char,List[Int])]): Option[String]={
-	
-	
-	val mutableListBuffer = scala.collection.mutable.ArrayBuffer(list2: _*)
-	var option:Option[String]= None
-   
-   for(i <- 0 until mutableListBuffer.length){
-   
-  if(mutableListBuffer(i)._2 == list){
- 
- option =  Some(mutableListBuffer(i)._1.toString)
-  
-  }
- 
-   }
+def lookup(list: List[Int], list2: List[(Char, List[Int])]): Option[String] = 
+ list2.find(_._2 == list).map(_._1.toString)
 
-	option
-	
+/*
+*Decode function for matching groups of bits in a list to characters    in     the HCodeMap
+*@returns String
+*/
 
-  }
-
-  /*
-   *Decode function for matching groups of bits in a list to characters in the HCodeMap
-   *@returns String
-   */
-
- def decode(acc:Int,s:String,list:(List[Int],List[(Char,List[Int])])):String ={
-
-    if(list._2.isEmpty) s
-
-    if(list._1.isEmpty) s.reverse
-
-    else if(lookup(list._1.take(acc),list._2).isDefined){
-
-      val x = s ++ lookup(list._1.take(acc),list._2).getOrElse("a")
-
-      if(list._2.length == 1)  x
-	  
-      else decode(1,x, (list._1.drop(acc),list._2))
-
-    }
-
-    else decode(acc+1,s, list)
+ def decode(s: StringBuffer, list: (List[Int], List[(Char, List[Int])])): String = {
 
 
-
-  }
-  
-  def decode2(acc:Int,s:String,list:(List[Int],List[(Char,List[Int])])):String ={
-  
-  var s = ""
   var accum = 1
-  val listp1 = scala.collection.mutable.ArrayBuffer(list._1: _*)
-  val listp2 = scala.collection.mutable.ArrayBuffer(list._2: _*)
-  var tupList = (listp1,listp2)
-  
-	Log.d("MyTAG", "de" + tupList.toString)
-   while(!tupList._1.isEmpty){
-  
-   if(lookup(tupList._1.take(accum).toList,tupList._2.toList).isDefined){
-   println(accum)
-   
-   s = s ++ lookup(tupList._1.take(accum).toList,tupList._2.toList).getOrElse("a")
-  Log.d("MyTAG", "de" + s)
+  var listp1 = list._1
+  val listp2 = list._2
 
-  tupList._1.remove(0,accum)
- 
-   accum = accum - accum + 1
-   }
-   else{
-    accum =  accum + 1
-   }
-   
-   
-   
-   }
+  while (!listp1.isEmpty) {
 
-  s
-
-
+    lookup(listp1.take(accum), listp2) match {
+      case Some(m) =>
+        s.append(m)
+        listp1 = listp1.drop(accum)
+        accum = 1
+      case None =>
+        accum = accum + 1
+    }
   }
-  
-
+  s.toString
+}
   
   
   

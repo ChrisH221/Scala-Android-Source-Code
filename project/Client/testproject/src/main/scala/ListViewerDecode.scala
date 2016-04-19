@@ -123,7 +123,7 @@ class ListViewerDecode extends Activity with helpers {
             val eImage =  row.getString("imageEncode")
             val noExtension = fn.substring(0, fn.lastIndexOf("."))
             val i = new imageChanger
-            
+            val t = new textHandler
             
             val extension = fn.substring(fn.lastIndexOf('.'),fn.length())
             if(extension == ".png"){
@@ -133,6 +133,15 @@ class ListViewerDecode extends Activity with helpers {
                 i.writeDecodedImage(bitmap,noExtension)
             }
 			else{
+			
+			
+			val hc = t.JsonToKey(key)
+		   Log.d("MyTAG", "1" + hc.toString)
+			var Bits = new ListBuffer[Int]()
+			eImage.foreach{x => if(x == '1') Bits += 1 else Bits +=0 }
+			Log.d("MyTAG", "1" + Bits.toString)
+			val hcode = (Bits.toList,hc)
+			t.writeDecodedText(hcode,noExtension)
 			
 			
 			

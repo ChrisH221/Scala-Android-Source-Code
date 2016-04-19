@@ -19,6 +19,9 @@ import java.io.IOException
 import scala.collection.mutable.ListBuffer
 import  android.graphics.Matrix
 import java.io.ByteArrayOutputStream
+import java.io.UnsupportedEncodingException
+import java.net.URLEncoder
+import java.net.URLDecoder
 
 
 
@@ -26,108 +29,99 @@ import java.io.ByteArrayOutputStream
 
 
 /**
- * @author Chris Howell
- * This object handles converting bitmaps to base64 strings and back again.
- * Object instead of class to allow access to the methods contained inside the object without
- * needing to create different instances.
- */
+* @author Chris Howell
+* This object handles converting bitmaps to base64 strings and back again.
+* Object instead of class to allow access to the methods contained inside the object without
+* needing to create different instances.
+*/
 
 class textHandler extends helpers {
-
-
-  def processEncode(path:String):(List[Int],List[(Char,List[Int])])={
-	
-   
-	
-     val bufferedReader = new BufferedReader(new FileReader(path))
-    val stringBuffer = new StringBuffer()
-    var line: String = null
-	while( {line = bufferedReader.readLine();  line!= null} ) 
-    {
-      stringBuffer.append(line).append("\n")
-    }
-  
-	val h = new handler
-	 
-	var x =  (h.encode(stringBuffer.toString))
-
-	var d = h.decode2(1,"",x)
-	// var d = (h.decode(1,"",x))
-	
-	x.asInstanceOf[(List[Int], List[(Char, List[Int])])]
-	
-  }
-  
-  
-  def keyToJson(list:(List[Int],List[(Char,List[Int])])):String={
-  
-   case class HCodeMap(list:List[(Char,List[Int])])
-
-  implicit val testFormat: JsonFormat[HCodeMap] = jsonFormat(HCodeMap.apply _, "list")
-  
-  val pair = new HCodeMap(list._2).toJson
- 
-		//Log.d("MyTAG", "2" + pair.toString)
-		pair.toString
-  
-  }
-  
-  /**
- * Converts a JSON string to a HCodeMap
- * @returns HCodeMap
- */
-  
-   def JsonToKey(json:String):List[(Char,List[Int])]={
-  
-   case class HCodeMap(list:List[(Char,List[Int])])
-
-   implicit val testFormat: JsonFormat[HCodeMap] = jsonFormat(HCodeMap.apply _, "list")
-  
-    	
-	val map2 = json.parseJson
-	val map3 = map2.convertTo[HCodeMap]
-	Log.d("MyTAG", "1" + map3.list.toString)
-    map3.list
-  }
-  
- 
-  
- /**
- * Takes a Bitmap and a file name then writes the png image to the sd card.
- * @returns Unit
- */
-     def writeDecodedImage(image:Bitmap,noExtension:String )={
-   
-  	 
-	 val folder = new File("/sdcard/decoded")
-		
-		if (!folder.exists()){folder.mkdir()}
-	
-		val Card = new File("/sdcard/decoded/", noExtension + ".png")
-		
-		Card.createNewFile()
-		
-	  Log.d("MyTAG", "THIS FAR")
-		val fOut = new FileOutputStream(Card);
-		
-		image.compress(Bitmap.CompressFormat.PNG, 100, fOut);
-		fOut.flush();
-		fOut.close();
-	
-		
-  
-  }
-  
-  
-
     
+    
+    def processEncode(path:String):(List[Int],List[(Char,List[Int])])={
+        val myFileStream = new FileInputStream(path)
+        val bufferedReader = new BufferedReader(new InputStreamReader(myFileStream))
+        val stringBuffer = new StringBuffer()
+        var line: String = null
+        while( {line = bufferedReader.readLine();  line!= null} )
+        {
+            stringBuffer.append(line).append(System.getProperty("line.separator"))
+        }
+        		Log.d("MyTAG", "1" + stringBuffer.toString)
+		val result = URLEncoder.encode(stringBuffer.toString, "UTF-16")
+        val h = new handler
+        
+        var x =  (h.encode(result))
+       
+        
+        x.asInstanceOf[(List[Int], List[(Char, List[Int])])]
+        
+    }
+    
+    /**
+    * Converts a codemap to a JSON String
+    * @returns String
+    */
+    def keyToJson(list:(List[Int],List[(Char,List[Int])])):String={
+        
+        case class HCodeMap(list:List[(Char,List[Int])])
+        
+        implicit val testFormat: JsonFormat[HCodeMap] = jsonFormat(HCodeMap.apply _, "list")
+        
+        val pair = new HCodeMap(list._2).toJson
+        
+        
+        pair.toString
+        
+    }
+    
+    /**
+    * Converts a JSON string to a HCodeMap
+    * @returns HCodeMap
+    */
+    
+    def JsonToKey(json:String):List[(Char,List[Int])]={
+        
+        case class HCodeMap(list:List[(Char,List[Int])])
+        
+        implicit val testFormat: JsonFormat[HCodeMap] = jsonFormat(HCodeMap.apply _, "list")
+        
+        
+        val map2 = json.parseJson
+        val map3 = map2.convertTo[HCodeMap]
+       
+        map3.list
+    }
+    
+    
+    
+    /**
+    * Takes a Bitmap and a file name then writes the png image to the sd card.
+    * @returns Unit
+    */
+    def writeDecodedText(key:(List[Int],List[(Char,List[Int])]),noExtension:String){
+        
+        
+		val h = new handler
+		
+		val decoded = h.decode(new StringBuffer(),key)
+		val result = URLDecoder.decode(decoded, "UTF-16")
+		Log.d("MyTAG", "1" + result)
+		
+      
+            val newTextFile = new File("/sdcard/decoded/", noExtension + ".txt")
 
- 
- }	
-
-  
-  
-
-
-
-            
+            val fw = new FileWriter(newTextFile)
+            fw.write(result)
+            fw.close()
+        
+        
+        
+    }
+    
+    
+    
+    
+    
+    
+}

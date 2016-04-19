@@ -28,7 +28,8 @@ import android.Keys._
 	resolvers += "spray repo" at "http://repo.spray.io"
 	
     libraryDependencies ++= Seq(
-						"io.spray" %%  "spray-json" % "1.3.2"
+						"io.spray" %%  "spray-json" % "1.3.2",
+						"org.scalatest" %% "scalatest" % "2.2.6"
 												
 						)
 fork in Test := true

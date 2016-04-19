@@ -2,3 +2,5 @@ clean
 update
 compile
 test
+compile
+test

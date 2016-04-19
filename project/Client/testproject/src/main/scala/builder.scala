@@ -1,4 +1,3 @@
-
 package my.android.project
 
 /**
@@ -59,11 +58,11 @@ class builder extends helpers{
     def insert(Tree:HTree, HTree:List[HTree], newList:List[HTree]): List[HTree] ={
         
         
-        val list = Tree::HTree
+      val list = Tree::HTree
         
-        list.sortBy(x => freqNode(x))
+      list.sortBy(x => freqNode(x))
         
-        
+      
     }
     
     /*
@@ -73,7 +72,7 @@ class builder extends helpers{
     
     def makeLink(t1: HTree, t2:HTree): HTree = {
         
-        if(freqNode(t1) < freqNode(t2)) {
+        if(freqNode(t1) > freqNode(t2)) {
             
             Branch(freqNode (t1) + freqNode (t2),t1,t2)
             

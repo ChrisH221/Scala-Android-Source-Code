@@ -42,16 +42,11 @@ class imageChanger extends helpers {
 	 imageOpts.inJustDecodeBounds = true
 	 
 	var bitmap = BitmapFactory.decodeFile(file.getAbsolutePath)
-	
-
-
-		
-	
 	var output = new ByteArrayOutputStream(bitmap.getByteCount());
 	bitmap.compress(Bitmap.CompressFormat.PNG, 100, output);
 	var imageBytes = output.toByteArray();
 
-	 var encodedString = Base64.encodeToString(imageBytes, Base64.URL_SAFE)	
+	var encodedString = Base64.encodeToString(imageBytes, Base64.URL_SAFE)	
 	 
 	encodedString
   }

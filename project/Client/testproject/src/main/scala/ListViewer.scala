@@ -141,7 +141,7 @@ class ListViewer extends Activity with helpers {
 	    
 	
 		key._1.foreach{x => encodestring = encodestring + x.toString}
-		
+		//Log.d("MyTAG", "1" + t.keyToJson(key).toString)
 		val POST_PARAMS = "username="+username.toString +"&key="+ t.keyToJson(key) +"&fileName=" +z.getName.toString + "&imageEncode=" + encodestring
 		os.write(POST_PARAMS.getBytes)
 		}
