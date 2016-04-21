@@ -117,3 +117,20 @@ compile
 test
 project root
 test
+test ApplicationTest
+testOnly ApplicationTest
+tests testOnly ApplicationTest
+testOnly ApplicationTest
+testOnly testBuilder
+tests
+test
+compile
+test
+clean
+update
+project root
+compile
+tests
+test
+project roottest
+test

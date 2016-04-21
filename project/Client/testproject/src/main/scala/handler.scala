@@ -23,41 +23,32 @@ class handler extends builder{
 
 
   }
+  
  
+   def lookupBit(c: Char, list: List[(Char, List[Int])]): Option[List[Int]] =  list.find(_._1 == c).map(_._2)
+ 
+
   /*
    * A function for taking a string and generates a list of bits   
    * @returns List[Bit}
    */
-  def bitList(s:String,count:Int, acc:List[Int],list:List[(Char,List[Int])],list2:List[(Char,List[Int])]):List[Int]={
+  def bitList(s:String,list:List[(Char,List[Int])]):List[Int]={
  
+	val t = s.map(x => lookupBit(x,list) )
   
- def lookupBit(c: Char, list: List[(Char, List[Int])]): Option[List[Int]] =  list.find(_._1 == c).map(_._2)
- 
-   val mutableListBuffer = scala.collection.mutable.ArrayBuffer(list: _*)
-    val ListBuffer = scala.collection.mutable.ArrayBuffer(acc: _*)	
-   var string = s
-
-   var incre = 0
-   while(!string.isEmpty){
-    
-	
+    val list2 = scala.collection.mutable.MutableList[List[Int]]()
+    t.toList foreach{
+    _ match {
    
-   if(mutableListBuffer(incre)._1 == string.head){
-	
-   mutableListBuffer(incre)._2.foreach{x => ListBuffer += x}
-   string = string.drop(1)
- 
-   incre = 0
-   }
-   else incre = incre + 1
-	if(incre >= mutableListBuffer.length)  string = ""
-   }
+    case Some(m) => list2 += m
+		
+    case None => println("Something wrong")
+    }
+    }     
    
-  
-	ListBuffer.toList.reverse
- }
-
-  
+   list2.toList.flatten
+   
+   }
   
   
   /*
@@ -76,7 +67,7 @@ class handler extends builder{
     if (s.length > 1 ) {
 
 	
-	(bitList(s,0,x,extractCode(makeTree(s),x,x),x).reverse,extractCode(makeTree(s),x,x).reverse)
+	(bitList(s,extractCode(makeTree(s),x,x)). reverse,extractCode(makeTree(s),x,x).reverse)
 	
 	}
     else (List(0),List((s.head,List( 0))))
@@ -96,11 +87,10 @@ class handler extends builder{
    * @returns Option String
    */
 
-def lookup(list: List[Int], list2: List[(Char, List[Int])]): Option[String] = 
- list2.find(_._2 == list).map(_._1.toString)
+def lookup(list: List[Int], list2: List[(Char, List[Int])]): Option[String] =  list2.find(_._2 == list).map(_._1.toString)
 
 /*
-*Decode function for matching groups of bits in a list to characters    in     the HCodeMap
+*Decode function for matching groups of bits in a list to characters in the HCodeMap
 *@returns String
 */
 

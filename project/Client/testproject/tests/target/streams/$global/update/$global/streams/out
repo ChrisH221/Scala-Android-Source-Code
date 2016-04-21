@@ -7,7 +7,7 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies for tests#tests_2.11;0.1-SNAPSHOT [compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies tests#tests_2.11;0.1-SNAPSHOT->org.scala-lang#scala-library;2.11.7 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang#scala-library;2.11.7 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@7a7afb86[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@78e5481e[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#scala-library;2.11.7[0m
 [0m[[0mdebug[0m] [0m	found org.scala-lang#scala-library;2.11.7 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m	[2.11.7] org.scala-lang#scala-library;2.11.7[0m
@@ -1291,7 +1291,7 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.11;1.0.4!scala-xml_2.11.jar(bundle)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang.modules#scala-parser-combinators_2.11;1.0.4!scala-parser-combinators_2.11.jar(bundle)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] jline#jline;2.12.1!jline.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 304ms :: artifacts dl 14ms[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 603ms :: artifacts dl 24ms[0m
 [0m[[0mdebug[0m] [0m	report for tests#tests_2.11;0.1-SNAPSHOT compile produced in C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\tests\target\resolution-cache\reports\tests-tests_2.11-compile.xml[0m
 [0m[[0mdebug[0m] [0m	report for tests#tests_2.11;0.1-SNAPSHOT runtime produced in C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\tests\target\resolution-cache\reports\tests-tests_2.11-runtime.xml[0m
 [0m[[0mdebug[0m] [0m	report for tests#tests_2.11;0.1-SNAPSHOT test produced in C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\tests\target\resolution-cache\reports\tests-tests_2.11-test.xml[0m
@@ -1305,5 +1305,5 @@
 [0m[[0mdebug[0m] [0m	report for tests#tests_2.11;0.1-SNAPSHOT docs produced in C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\tests\target\resolution-cache\reports\tests-tests_2.11-docs.xml[0m
 [0m[[0mdebug[0m] [0m	report for tests#tests_2.11;0.1-SNAPSHOT pom produced in C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\tests\target\resolution-cache\reports\tests-tests_2.11-pom.xml[0m
 [0m[[0mdebug[0m] [0m	report for tests#tests_2.11;0.1-SNAPSHOT scala-tool produced in C:\Users\Chris\Documents\GitHub\Scala-Android-Source-Code\project\Client\testproject\tests\target\resolution-cache\reports\tests-tests_2.11-scala-tool.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (304ms resolve - 14ms download)[0m
+[0m[[0mdebug[0m] [0m	resolve done (603ms resolve - 24ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m

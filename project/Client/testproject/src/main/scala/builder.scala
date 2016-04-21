@@ -26,7 +26,7 @@ class builder extends helpers{
     
     def freq(y:String, list:List[(Char,Int)]): List[(Char,Int)] = {
         
-        if(y == null || y.isEmpty) list.sortBy(_._2)
+        if(y == null || y.isEmpty) list.reverse
         else{
             val char = y.head
             val countFreq = count(char,y)
@@ -55,7 +55,7 @@ class builder extends helpers{
     *@returns List[HTree]
     */
     
-    def insert(Tree:HTree, HTree:List[HTree], newList:List[HTree]): List[HTree] ={
+    def insert(Tree:HTree, HTree:List[HTree]): List[HTree] ={
         
         
       val list = Tree::HTree
@@ -72,7 +72,7 @@ class builder extends helpers{
     
     def makeLink(t1: HTree, t2:HTree): HTree = {
         
-        if(freqNode(t1) > freqNode(t2)) {
+        if(freqNode(t1) < freqNode(t2)) {
             
             Branch(freqNode (t1) + freqNode (t2),t1,t2)
             
@@ -87,7 +87,7 @@ class builder extends helpers{
     * of HTree nodes
     * @returns  List[HTree]
     */
-    def shrinkList(t1:HTree, t2:List[HTree]): List[HTree]={insert(t1,t2,x)}
+    def shrinkList(t1:HTree, t2:List[HTree]): List[HTree]={insert(t1,t2)}
     
     /*
     * Merges a list of Leaf nodes into a single HTree by creating connecting Branch nodes to hold the Leaf nodes
@@ -95,10 +95,9 @@ class builder extends helpers{
     */
     def merge(t:List[HTree]): HTree ={
         
-        if(t.length == 1 ) t.head
+		if(t.length == 1 ) t.head
         
-        else merge(shrinkList(makeLink(t.take(1).head, t.slice(1,2).head), t.drop(2)))
-        
+        else merge(shrinkList(makeLink(t(0), t(1)), t.drop(2)))
         
     }
     
@@ -108,10 +107,9 @@ class builder extends helpers{
     
     def makeNode(list:List[(Char,Int)],nodeList:List[HTree]):List[HTree] ={
         
-        if(list.isEmpty){
-            nodeList
-        }
-        else makeNode(list.drop(1),Leaf (list.head._1,list.head._2)::nodeList)
+		val leafList = scala.collection.mutable.MutableList[Leaf]()
+		list.foreach{x =>leafList += (new Leaf(x._1,x._2)) }
+		leafList.toList.sortBy(x => freqNode(x))
         
     }
     

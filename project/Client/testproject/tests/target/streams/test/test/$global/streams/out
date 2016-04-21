@@ -1,181 +1,29 @@
-[0m[[0mdebug[0m] [0mRunning TaskDef(my.android.project.ApplicationTest, org.scalatest.tools.Framework$$anon$1@7822183f, false, [SuiteSelector])[0m
-[0m[[0mdebug[0m] [0mRunning TaskDef(my.android.project.testBuilder, org.scalatest.tools.Framework$$anon$1@7822183f, false, [SuiteSelector])[0m
-[0m[[0mdebug[0m] [0mRunning TaskDef(my.android.project.testHandler, org.scalatest.tools.Framework$$anon$1@7822183f, false, [SuiteSelector])[0m
-java.lang.ExceptionInInitializerError
-	at org.robolectric.Shadows.reset(Shadows.java:1605)
-	at org.robolectric.Robolectric.reset(Robolectric.java:22)
-	at org.robolectric.internal.RoboTestUniverse.resetStaticState(RoboTestUniverse.scala:27)
-	at org.scalatest.RoboSuiteRunner.run(RobolectricSuite.scala:193)
-	at org.scalatest.RobolectricSuite$class.run(RobolectricSuite.scala:41)
-	at my.android.project.ApplicationTest.run(ApplicationTest.scala:19)
-	at org.scalatest.tools.Framework.org$scalatest$tools$Framework$$runSuite(Framework.scala:357)
-	at org.scalatest.tools.Framework$ScalaTestTask.execute(Framework.scala:502)
-	at sbt.TestRunner.runTest$1(TestFramework.scala:76)
-	at sbt.TestRunner.run(TestFramework.scala:85)
-	at sbt.TestFramework$$anon$2$$anonfun$$init$$1$$anonfun$apply$8.apply(TestFramework.scala:202)
-	at sbt.TestFramework$$anon$2$$anonfun$$init$$1$$anonfun$apply$8.apply(TestFramework.scala:202)
-	at sbt.TestFramework$.sbt$TestFramework$$withContextLoader(TestFramework.scala:185)
-	at sbt.TestFramework$$anon$2$$anonfun$$init$$1.apply(TestFramework.scala:202)
-	at sbt.TestFramework$$anon$2$$anonfun$$init$$1.apply(TestFramework.scala:202)
-	at sbt.TestFunction.apply(TestFramework.scala:207)
-	at sbt.Tests$$anonfun$9.apply(Tests.scala:216)
-	at sbt.Tests$$anonfun$9.apply(Tests.scala:216)
-	at sbt.std.Transform$$anon$3$$anonfun$apply$2.apply(System.scala:44)
-	at sbt.std.Transform$$anon$3$$anonfun$apply$2.apply(System.scala:44)
-	at sbt.std.Transform$$anon$4.work(System.scala:63)
-	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:226)
-	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:226)
-	at sbt.ErrorHandling$.wideConvert(ErrorHandling.scala:17)
-	at sbt.Execute.work(Execute.scala:235)
-	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:226)
-	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:226)
-	at sbt.ConcurrentRestrictions$$anon$4$$anonfun$1.apply(ConcurrentRestrictions.scala:159)
-	at sbt.CompletionService$$anon$2.call(CompletionService.scala:28)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:745)
-Caused by: java.lang.RuntimeException: com.almworks.sqlite4java.SQLiteException: [-91] cannot load library: java.lang.UnsatisfiedLinkError: Native Library C:\Users\Chris\AppData\Local\Temp\robolectric-libs\sqlite4java.dll already loaded in another classloader
-	at org.robolectric.shadows.util.SQLiteLibraryLoader.loadFromDirectory(SQLiteLibraryLoader.java:147)
-	at org.robolectric.shadows.util.SQLiteLibraryLoader.doLoad(SQLiteLibraryLoader.java:64)
-	at org.robolectric.shadows.util.SQLiteLibraryLoader.load(SQLiteLibraryLoader.java:54)
-	at org.robolectric.shadows.ShadowSQLiteConnection.<clinit>(ShadowSQLiteConnection.java:44)
-	at org.robolectric.Shadows.reset(Shadows.java:1605)
-	at org.robolectric.Robolectric.reset(Robolectric.java:22)
-	at org.robolectric.internal.RoboTestUniverse.resetStaticState(RoboTestUniverse.scala:27)
-	at org.scalatest.RoboSuiteRunner.run(RobolectricSuite.scala:193)
-	at org.scalatest.RobolectricSuite$class.run(RobolectricSuite.scala:41)
-	at my.android.project.ApplicationTest.run(ApplicationTest.scala:19)
-	at org.scalatest.tools.Framework.org$scalatest$tools$Framework$$runSuite(Framework.scala:357)
-	at org.scalatest.tools.Framework$ScalaTestTask.execute(Framework.scala:502)
-	at sbt.TestRunner.runTest$1(TestFramework.scala:76)
-	at sbt.TestRunner.run(TestFramework.scala:85)
-	at sbt.TestFramework$$anon$2$$anonfun$$init$$1$$anonfun$apply$8.apply(TestFramework.scala:202)
-	at sbt.TestFramework$$anon$2$$anonfun$$init$$1$$anonfun$apply$8.apply(TestFramework.scala:202)
-	at sbt.TestFramework$.sbt$TestFramework$$withContextLoader(TestFramework.scala:185)
-	at sbt.TestFramework$$anon$2$$anonfun$$init$$1.apply(TestFramework.scala:202)
-	at sbt.TestFramework$$anon$2$$anonfun$$init$$1.apply(TestFramework.scala:202)
-	at sbt.TestFunction.apply(TestFramework.scala:207)
-	at sbt.Tests$$anonfun$9.apply(Tests.scala:216)
-	at sbt.Tests$$anonfun$9.apply(Tests.scala:216)
-	at sbt.std.Transform$$anon$3$$anonfun$apply$2.apply(System.scala:44)
-	at sbt.std.Transform$$anon$3$$anonfun$apply$2.apply(System.scala:44)
-	at sbt.std.Transform$$anon$4.work(System.scala:63)
-	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:226)
-	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:226)
-	at sbt.ErrorHandling$.wideConvert(ErrorHandling.scala:17)
-	at sbt.Execute.work(Execute.scala:235)
-	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:226)
-	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:226)
-	at sbt.ConcurrentRestrictions$$anon$4$$anonfun$1.apply(ConcurrentRestrictions.scala:159)
-	at sbt.CompletionService$$anon$2.call(CompletionService.scala:28)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:745)
-Caused by: com.almworks.sqlite4java.SQLiteException: [-91] cannot load library: java.lang.UnsatisfiedLinkError: Native Library C:\Users\Chris\AppData\Local\Temp\robolectric-libs\sqlite4java.dll already loaded in another classloader
-	at com.almworks.sqlite4java.SQLite.loadLibrary(SQLite.java:97)
-	at com.almworks.sqlite4java.SQLite.getSQLiteVersion(SQLite.java:114)
-	at org.robolectric.shadows.util.SQLiteLibraryLoader.loadFromDirectory(SQLiteLibraryLoader.java:145)
-	at org.robolectric.shadows.util.SQLiteLibraryLoader.doLoad(SQLiteLibraryLoader.java:64)
-	at org.robolectric.shadows.util.SQLiteLibraryLoader.load(SQLiteLibraryLoader.java:54)
-	at org.robolectric.shadows.ShadowSQLiteConnection.<clinit>(ShadowSQLiteConnection.java:44)
-	at org.robolectric.Shadows.reset(Shadows.java:1605)
-	at org.robolectric.Robolectric.reset(Robolectric.java:22)
-	at org.robolectric.internal.RoboTestUniverse.resetStaticState(RoboTestUniverse.scala:27)
-	at org.scalatest.RoboSuiteRunner.run(RobolectricSuite.scala:193)
-	at org.scalatest.RobolectricSuite$class.run(RobolectricSuite.scala:41)
-	at my.android.project.ApplicationTest.run(ApplicationTest.scala:19)
-	at org.scalatest.tools.Framework.org$scalatest$tools$Framework$$runSuite(Framework.scala:357)
-	at org.scalatest.tools.Framework$ScalaTestTask.execute(Framework.scala:502)
-	at sbt.TestRunner.runTest$1(TestFramework.scala:76)
-	at sbt.TestRunner.run(TestFramework.scala:85)
-	at sbt.TestFramework$$anon$2$$anonfun$$init$$1$$anonfun$apply$8.apply(TestFramework.scala:202)
-	at sbt.TestFramework$$anon$2$$anonfun$$init$$1$$anonfun$apply$8.apply(TestFramework.scala:202)
-	at sbt.TestFramework$.sbt$TestFramework$$withContextLoader(TestFramework.scala:185)
-	at sbt.TestFramework$$anon$2$$anonfun$$init$$1.apply(TestFramework.scala:202)
-	at sbt.TestFramework$$anon$2$$anonfun$$init$$1.apply(TestFramework.scala:202)
-	at sbt.TestFunction.apply(TestFramework.scala:207)
-	at sbt.Tests$$anonfun$9.apply(Tests.scala:216)
-	at sbt.Tests$$anonfun$9.apply(Tests.scala:216)
-	at sbt.std.Transform$$anon$3$$anonfun$apply$2.apply(System.scala:44)
-	at sbt.std.Transform$$anon$3$$anonfun$apply$2.apply(System.scala:44)
-	at sbt.std.Transform$$anon$4.work(System.scala:63)
-	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:226)
-	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:226)
-	at sbt.ErrorHandling$.wideConvert(ErrorHandling.scala:17)
-	at sbt.Execute.work(Execute.scala:235)
-	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:226)
-	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:226)
-	at sbt.ConcurrentRestrictions$$anon$4$$anonfun$1.apply(ConcurrentRestrictions.scala:159)
-	at sbt.CompletionService$$anon$2.call(CompletionService.scala:28)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:745)
-Caused by: java.lang.UnsatisfiedLinkError: Native Library C:\Users\Chris\AppData\Local\Temp\robolectric-libs\sqlite4java.dll already loaded in another classloader
-	at java.lang.ClassLoader.loadLibrary0(ClassLoader.java:1904)
-	at java.lang.ClassLoader.loadLibrary(ClassLoader.java:1821)
-	at java.lang.Runtime.load0(Runtime.java:809)
-	at java.lang.System.load(System.java:1086)
-	at com.almworks.sqlite4java.Internal.tryLoadFromPath(Internal.java:337)
-	at com.almworks.sqlite4java.Internal.loadLibraryX(Internal.java:110)
-	at com.almworks.sqlite4java.SQLite.loadLibrary(SQLite.java:95)
-	at com.almworks.sqlite4java.SQLite.getSQLiteVersion(SQLite.java:114)
-	at org.robolectric.shadows.util.SQLiteLibraryLoader.loadFromDirectory(SQLiteLibraryLoader.java:145)
-	at org.robolectric.shadows.util.SQLiteLibraryLoader.doLoad(SQLiteLibraryLoader.java:64)
-	at org.robolectric.shadows.util.SQLiteLibraryLoader.load(SQLiteLibraryLoader.java:54)
-	at org.robolectric.shadows.ShadowSQLiteConnection.<clinit>(ShadowSQLiteConnection.java:44)
-	at org.robolectric.Shadows.reset(Shadows.java:1605)
-	at org.robolectric.Robolectric.reset(Robolectric.java:22)
-	at org.robolectric.internal.RoboTestUniverse.resetStaticState(RoboTestUniverse.scala:27)
-	at org.scalatest.RoboSuiteRunner.run(RobolectricSuite.scala:193)
-	at org.scalatest.RobolectricSuite$class.run(RobolectricSuite.scala:41)
-	at my.android.project.ApplicationTest.run(ApplicationTest.scala:19)
-	at org.scalatest.tools.Framework.org$scalatest$tools$Framework$$runSuite(Framework.scala:357)
-	at org.scalatest.tools.Framework$ScalaTestTask.execute(Framework.scala:502)
-	at sbt.TestRunner.runTest$1(TestFramework.scala:76)
-	at sbt.TestRunner.run(TestFramework.scala:85)
-	at sbt.TestFramework$$anon$2$$anonfun$$init$$1$$anonfun$apply$8.apply(TestFramework.scala:202)
-	at sbt.TestFramework$$anon$2$$anonfun$$init$$1$$anonfun$apply$8.apply(TestFramework.scala:202)
-	at sbt.TestFramework$.sbt$TestFramework$$withContextLoader(TestFramework.scala:185)
-	at sbt.TestFramework$$anon$2$$anonfun$$init$$1.apply(TestFramework.scala:202)
-	at sbt.TestFramework$$anon$2$$anonfun$$init$$1.apply(TestFramework.scala:202)
-	at sbt.TestFunction.apply(TestFramework.scala:207)
-	at sbt.Tests$$anonfun$9.apply(Tests.scala:216)
-	at sbt.Tests$$anonfun$9.apply(Tests.scala:216)
-	at sbt.std.Transform$$anon$3$$anonfun$apply$2.apply(System.scala:44)
-	at sbt.std.Transform$$anon$3$$anonfun$apply$2.apply(System.scala:44)
-	at sbt.std.Transform$$anon$4.work(System.scala:63)
-	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:226)
-	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:226)
-	at sbt.ErrorHandling$.wideConvert(ErrorHandling.scala:17)
-	at sbt.Execute.work(Execute.scala:235)
-	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:226)
-	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:226)
-	at sbt.ConcurrentRestrictions$$anon$4$$anonfun$1.apply(ConcurrentRestrictions.scala:159)
-	at sbt.CompletionService$$anon$2.call(CompletionService.scala:28)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:745)
-[0m[[31merror[0m] [0mCould not run test my.android.project.ApplicationTest: java.lang.ExceptionInInitializerError[0m
-[0m[[0minfo[0m] [0m[36mRun completed in 717 milliseconds.[0m[0m
-[0m[[0minfo[0m] [0m[36mTotal number of tests run: 11[0m[0m
-[0m[[0minfo[0m] [0m[36mSuites: completed 2, aborted 1[0m[0m
-[0m[[0minfo[0m] [0m[36mTests: succeeded 11, failed 0, canceled 0, ignored 0, pending 0[0m[0m
-[0m[[0minfo[0m] [0m[31m*** 1 SUITE ABORTED ***[0m[0m
+[0m[[0mdebug[0m] [0mForking tests - parallelism = false[0m
+[0m[[0mdebug[0m] [0mCreate a single-thread test executor[0m
+[0m[[0mdebug[0m] [0mRunner for org.scalatest.tools.Framework produced 2 initial tasks for 2 tests.[0m
+[0m[[0mdebug[0m] [0m  Running TaskDef(my.android.project.testBuilder, sbt.ForkMain$SubclassFingerscan@5d6f5c78, false, [SuiteSelector])[0m
+[0m[[0minfo[0m] [0m[32mtestBuilder:[0m[0m
+[0m[[0minfo[0m] [0m[32m- should check freq function is running correctly[0m[0m
+[0m[[0minfo[0m] [0m[32m- should check node frequency[0m[0m
+[0m[[0minfo[0m] [0m[32m- should insert a new node into a tree[0m[0m
+[0m[[0minfo[0m] [0m[32m- should merge a list of HTree nodes into a single HTree[0m[0m
+[0m[[0minfo[0m] [0m[32m- should make a link between two nodes[0m[0m
+[0m[[0minfo[0m] [0m[32m- should make a link between a branch and a leaf[0m[0m
+[0m[[0minfo[0m] [0m[32m- should test for single HTree after merge[0m[0m
+[0m[[0minfo[0m] [0m[32m- should take a string and make a tree[0m[0m
+[0m[[0mdebug[0m] [0m    Produced 0 nested tasks and 8 events.[0m
+[0m[[0mdebug[0m] [0m  Running TaskDef(my.android.project.testHandler, sbt.ForkMain$SubclassFingerscan@568b0861, false, [SuiteSelector])[0m
+[0m[[0minfo[0m] [0m[32mtestHandler:[0m[0m
+[0m[[0minfo[0m] [0m[32m- should check extracting code is functioning[0m[0m
+[0m[[0minfo[0m] [0m[32m- should check bit list is functioning[0m[0m
+[0m[[0minfo[0m] [0m[32m- should check bitlist builder is functioning[0m[0m
+[0m[[0minfo[0m] [0m[32m- should check encode and decode[0m[0m
+[0m[[0mdebug[0m] [0m    Produced 0 nested tasks and 4 events.[0m
+[0m[[0minfo[0m] [0m[36mRun completed in 547 milliseconds.[0m[0m
+[0m[[0minfo[0m] [0m[36mTotal number of tests run: 12[0m[0m
+[0m[[0minfo[0m] [0m[36mSuites: completed 2, aborted 0[0m[0m
+[0m[[0minfo[0m] [0m[36mTests: succeeded 12, failed 0, canceled 0, ignored 0, pending 0[0m[0m
+[0m[[0minfo[0m] [0m[32mAll tests passed.[0m[0m
 [0m[[0mdebug[0m] [0mPassed tests:[0m
 [0m[[0mdebug[0m] [0m	my.android.project.testBuilder[0m
 [0m[[0mdebug[0m] [0m	my.android.project.testHandler[0m
-[0m[[31merror[0m] [0mError during tests:[0m
-[0m[[31merror[0m] [0m	my.android.project.ApplicationTest[0m
-[0m[[31merror[0m] [0m(tests/test:[31mtest[0m) sbt.TestsFailedException: Tests unsuccessful[0m

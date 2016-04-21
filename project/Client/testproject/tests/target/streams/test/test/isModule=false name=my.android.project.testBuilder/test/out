@@ -1,8 +1,0 @@
-[0m[[0minfo[0m] [0m[32mtestBuilder:[0m[0m
-[0m[[0minfo[0m] [0m[32m- should check freq function is running correctly[0m[0m
-[0m[[0minfo[0m] [0m[32m- should check node frequency[0m[0m
-[0m[[0minfo[0m] [0m[32m- should insert a new node into a tree[0m[0m
-[0m[[0minfo[0m] [0m[32m- should make a link between two nodes[0m[0m
-[0m[[0minfo[0m] [0m[32m- should make a link between a branch and a leaf[0m[0m
-[0m[[0minfo[0m] [0m[32m- should test for single HTree after merge[0m[0m
-[0m[[0minfo[0m] [0m[32m- should take a string and make a tree[0m[0m

@@ -12,7 +12,7 @@ object MyBuild extends Build {
       scalacOptions in Compile += "-feature",
  fork in Test := true ,
      
-          libraryDependencies += "org.scalatest" %% "scalatest" % "3.0-rc2"% "test",
+          libraryDependencies += "org.scalatest" %% "scalatest" % "2.2.6"% "test",
 		  libraryDependencies += "com.geteit" %% "robotest" % "0.12"% "test"
 		  ).dependsOn("root")
 
