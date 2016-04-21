@@ -1,62 +1,3 @@
-run
-reload
-compile
-run
-clean
-compile
-run
-clean
-update
-compile
-run
-compile
-clean
-update
-compile
-run
-compile
-run
-reload
-update
-compile
-run
-compile
-run
-compile
-run
-clean
-update
-compile
-run
-clean
-update
-compile
-run
-compile
-run
-compile
-clean
-update
-compile
-clean
-compile
-run
-compile
-run
-compile
-run
-compile
-run
-compile
-run
-compile
-run
-compile
-run
-compile
-run
-compile
-run
 compile
 run
 compile
@@ -490,6 +431,65 @@ compile
 project tests
 reload
 compile
+clean
+update
+compile
+project tests
+clean
+update
+compile
+project tests
+clean
+updat
+reload
+clean
+update
+compile
+project tests
+project root
+reload
+clean
+update
+compile
+project tests
+compile
+run
+project tests
+test
+tests
+test
+compile
+project tests
+test
+compile
+reload
+clean
+update
+compile
+compile tests
+tests
+project tests
+projects
+project root
+test
+compile
+run
+project tests
+reload
+compile
+project tests
+clean
+update
+compile
+project tests
+clean
+update
+compile
+project tests
+clean
+update
+compile
+project tests
 clean
 update
 compile

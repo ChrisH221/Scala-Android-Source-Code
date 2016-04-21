@@ -1,0 +1,50 @@
+[0m[[0minfo[0m] [0m[32mApplicationTest:[0m[0m
+[0m[[0minfo[0m] [0m[31mException encountered when attempting to run a suite with class name: my.android.project.ApplicationTest *** ABORTED ***[0m[0m
+[0m[[0minfo[0m] [0m[31m  java.lang.ExceptionInInitializerError:[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.robolectric.Shadows.reset(Shadows.java:1605)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.robolectric.Robolectric.reset(Robolectric.java:22)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.robolectric.internal.RoboTestUniverse.resetStaticState(RoboTestUniverse.scala:27)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.scalatest.RoboSuiteRunner.run(RobolectricSuite.scala:193)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.scalatest.RobolectricSuite$class.run(RobolectricSuite.scala:41)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at my.android.project.ApplicationTest.run(ApplicationTest.scala:19)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.scalatest.tools.Framework.org$scalatest$tools$Framework$$runSuite(Framework.scala:357)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.scalatest.tools.Framework$ScalaTestTask.execute(Framework.scala:502)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at sbt.TestRunner.runTest$1(TestFramework.scala:76)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at sbt.TestRunner.run(TestFramework.scala:85)[0m[0m
+[0m[[0minfo[0m] [0m[31m  ...[0m[0m
+[0m[[0minfo[0m] [0m[31m  Cause: java.lang.RuntimeException: com.almworks.sqlite4java.SQLiteException: [-91] cannot load library: java.lang.UnsatisfiedLinkError: Native Library C:\Users\Chris\AppData\Local\Temp\robolectric-libs\sqlite4java.dll already loaded in another classloader[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.robolectric.shadows.util.SQLiteLibraryLoader.loadFromDirectory(SQLiteLibraryLoader.java:147)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.robolectric.shadows.util.SQLiteLibraryLoader.doLoad(SQLiteLibraryLoader.java:64)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.robolectric.shadows.util.SQLiteLibraryLoader.load(SQLiteLibraryLoader.java:54)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.robolectric.shadows.ShadowSQLiteConnection.<clinit>(ShadowSQLiteConnection.java:44)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.robolectric.Shadows.reset(Shadows.java:1605)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.robolectric.Robolectric.reset(Robolectric.java:22)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.robolectric.internal.RoboTestUniverse.resetStaticState(RoboTestUniverse.scala:27)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.scalatest.RoboSuiteRunner.run(RobolectricSuite.scala:193)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.scalatest.RobolectricSuite$class.run(RobolectricSuite.scala:41)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at my.android.project.ApplicationTest.run(ApplicationTest.scala:19)[0m[0m
+[0m[[0minfo[0m] [0m[31m  ...[0m[0m
+[0m[[0minfo[0m] [0m[31m  Cause: com.almworks.sqlite4java.SQLiteException: [-91] cannot load library: java.lang.UnsatisfiedLinkError: Native Library C:\Users\Chris\AppData\Local\Temp\robolectric-libs\sqlite4java.dll already loaded in another classloader[0m[0m
+[0m[[0minfo[0m] [0m[31m  at com.almworks.sqlite4java.SQLite.loadLibrary(SQLite.java:97)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at com.almworks.sqlite4java.SQLite.getSQLiteVersion(SQLite.java:114)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.robolectric.shadows.util.SQLiteLibraryLoader.loadFromDirectory(SQLiteLibraryLoader.java:145)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.robolectric.shadows.util.SQLiteLibraryLoader.doLoad(SQLiteLibraryLoader.java:64)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.robolectric.shadows.util.SQLiteLibraryLoader.load(SQLiteLibraryLoader.java:54)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.robolectric.shadows.ShadowSQLiteConnection.<clinit>(ShadowSQLiteConnection.java:44)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.robolectric.Shadows.reset(Shadows.java:1605)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.robolectric.Robolectric.reset(Robolectric.java:22)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.robolectric.internal.RoboTestUniverse.resetStaticState(RoboTestUniverse.scala:27)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.scalatest.RoboSuiteRunner.run(RobolectricSuite.scala:193)[0m[0m
+[0m[[0minfo[0m] [0m[31m  ...[0m[0m
+[0m[[0minfo[0m] [0m[31m  Cause: java.lang.UnsatisfiedLinkError: Native Library C:\Users\Chris\AppData\Local\Temp\robolectric-libs\sqlite4java.dll already loaded in another classloader[0m[0m
+[0m[[0minfo[0m] [0m[31m  at java.lang.ClassLoader.loadLibrary0(ClassLoader.java:1904)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at java.lang.ClassLoader.loadLibrary(ClassLoader.java:1821)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at java.lang.Runtime.load0(Runtime.java:809)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at java.lang.System.load(System.java:1086)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at com.almworks.sqlite4java.Internal.tryLoadFromPath(Internal.java:337)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at com.almworks.sqlite4java.Internal.loadLibraryX(Internal.java:110)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at com.almworks.sqlite4java.SQLite.loadLibrary(SQLite.java:95)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at com.almworks.sqlite4java.SQLite.getSQLiteVersion(SQLite.java:114)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.robolectric.shadows.util.SQLiteLibraryLoader.loadFromDirectory(SQLiteLibraryLoader.java:145)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.robolectric.shadows.util.SQLiteLibraryLoader.doLoad(SQLiteLibraryLoader.java:64)[0m[0m
+[0m[[0minfo[0m] [0m[31m  ...[0m[0m

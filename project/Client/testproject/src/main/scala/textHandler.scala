@@ -1,11 +1,6 @@
 package my.android.project
 
-
 import android.util.Log
-import android.util.Base64
-import android.graphics.BitmapFactory
-import android.graphics.Bitmap
-import android.graphics.Bitmap.CompressFormat
 import java.io._
 import java.io.FileOutputStream
 import scala.util.Try
@@ -17,7 +12,6 @@ import java.io.BufferedReader
 import java.io.FileReader
 import java.io.IOException
 import scala.collection.mutable.ListBuffer
-import  android.graphics.Matrix
 import java.io.ByteArrayOutputStream
 import java.io.UnsupportedEncodingException
 import java.net.URLEncoder
@@ -96,7 +90,7 @@ class textHandler extends helpers {
     
     
     /**
-    * Takes a Bitmap and a file name then writes the png image to the sd card.
+    * Takes a code map for decoding and then writes to a file
     * @returns Unit
     */
     def writeDecodedText(key:(List[Int],List[(Char,List[Int])]),noExtension:String){
