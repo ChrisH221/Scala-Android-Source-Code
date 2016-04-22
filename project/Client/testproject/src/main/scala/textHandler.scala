@@ -24,14 +24,16 @@ import java.net.URLDecoder
 
 /**
 * @author Chris Howell
-* This object handles converting bitmaps to base64 strings and back again.
-* Object instead of class to allow access to the methods contained inside the object without
-* needing to create different instances.
+* This class handles encoding and decoding text files using huffman.
+* It also uses spray libraries to convert a case class to JSON and from JSON to a case class.
 */
 
 class textHandler extends helpers {
     
-    
+	/**
+    * Takes a text file path and encodeds it using Huffman
+    * @returns (List[Int],List[(Char,List[Int])])
+    */    
     def processEncode(path:String):(List[Int],List[(Char,List[Int])])={
         val myFileStream = new FileInputStream(path)
         val bufferedReader = new BufferedReader(new InputStreamReader(myFileStream))
@@ -41,7 +43,6 @@ class textHandler extends helpers {
         {
             stringBuffer.append(line).append(System.getProperty("line.separator"))
         }
-        		Log.d("MyTAG", "1" + stringBuffer.toString)
 		val result = URLEncoder.encode(stringBuffer.toString, "UTF-16")
         val h = new handler
         
@@ -71,7 +72,7 @@ class textHandler extends helpers {
     
     /**
     * Converts a JSON string to a HCodeMap
-    * @returns HCodeMap
+    * @returns List[(Char,List[Int])]
     */
     
     def JsonToKey(json:String):List[(Char,List[Int])]={
@@ -100,16 +101,19 @@ class textHandler extends helpers {
 		
 		val decoded = h.decode(new StringBuffer(),key)
 		val result = URLDecoder.decode(decoded, "UTF-16")
-		Log.d("MyTAG", "1" + result)
+		val folder = new File("/sdcard/decoded")
 		
+		if (!folder.exists()){folder.mkdir()}
+	
+		val Card = new File("/sdcard/decoded/", noExtension + ".png")
+		
+		Card.createNewFile()
       
-            val newTextFile = new File("decoded/", noExtension + ".txt")
-			if (!newTextFile.exists()) {
-            newTextFile.mkdirs();
-			}
-            val fw = new FileWriter(newTextFile)
-            fw.write(result)
-            fw.close()
+		val fw = new FileWriter(Card)
+       
+	   fw.write(result)
+       
+	   fw.close()
         
         
         

@@ -134,3 +134,19 @@ tests
 test
 project roottest
 test
+test#
+test
+compile
+test
+project root
+tests
+test
+clean
+compile
+project root
+test
+clean
+update
+test
+testtest
+test

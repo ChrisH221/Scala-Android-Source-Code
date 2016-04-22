@@ -9,9 +9,7 @@ import DefaultJsonProtocol._
 import android.util.Log
 
 trait helpers {
-    
-    
-    
+  
     val x = List()//Saved me creating multiple empty lists
     
     abstract class HTree
@@ -20,7 +18,7 @@ trait helpers {
     case class Leaf( char: Char, freq: Int) extends HTree
        
     
-    implicit def toRunnable[A](f: => A): Runnable =  new Runnable() { def run() = f }
+    implicit def Runnable[A](f: => A): Runnable =  new Runnable() { def run() = f }
     
     
     

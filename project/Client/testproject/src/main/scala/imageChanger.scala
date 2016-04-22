@@ -66,15 +66,14 @@ class imageChanger extends helpers {
      def writeDecodedImage(image:Bitmap,noExtension:String )={
    
   	 
-	 val folder = new File("/sdcard/decoded")
+	   val folder = new File("/sdcard/decoded")
 		
 		if (!folder.exists()){folder.mkdir()}
 	
 		val Card = new File("/sdcard/decoded/", noExtension + ".png")
 		
 		Card.createNewFile()
-		
-	  Log.d("MyTAG", "THIS FAR")
+			 
 		val fOut = new FileOutputStream(Card);
 		
 		image.compress(Bitmap.CompressFormat.PNG, 100, fOut);

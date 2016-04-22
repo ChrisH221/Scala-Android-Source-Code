@@ -1,32 +1,3 @@
-run
-compile
-run
-compile
-run
-clean
-update
-compile
-run
-compile
-run
-clean
-compile
-run
-clean
-update
-compile
-run
-compile
-run
-compile
-run
-compile
-clean
-compile
-run
-clean
-compile
-run
 clean
 update
 compile
@@ -495,6 +466,35 @@ test
 project tests
 tests
 reload plugins
+update
+compile
+project tests
+update
+compile
+test
+run
+reload
+compile
+run
+clean
+update
+compile
+clean
+update
+compile
+run
+clean
+update
+compile
+run
+clean
+update
+compile
+run
+test
+project tests
+compile
+clean
 update
 compile
 project tests

@@ -72,12 +72,9 @@ class builder extends helpers{
     
     def makeLink(t1: HTree, t2:HTree): HTree = {
         
-        if(freqNode(t1) < freqNode(t2)) {
-            
-            Branch(freqNode (t1) + freqNode (t2),t1,t2)
-            
-        }
-        
+        if (freqNode(t1) < freqNode(t2)) Branch(freqNode (t1) + freqNode (t2),t1,t2)
+         
+          
         else  Branch(freqNode (t1) + freqNode (t2),t2,t1)
         
     }
@@ -109,7 +106,7 @@ class builder extends helpers{
         
 		val leafList = scala.collection.mutable.MutableList[Leaf]()
 		list.foreach{x =>leafList += (new Leaf(x._1,x._2)) }
-		leafList.toList.sortBy(x => freqNode(x))
+	    leafList.toList.sortBy(x => freqNode(x))
         
     }
     

@@ -15,12 +15,25 @@ class handler extends builder{
    * @returns HCodeMap
    *  
    */
-  def extractCode(t:HTree,acc:List[Int],newList:List[(Char,List[Int])]):List[(Char,List[Int])] = t match{
+  def extractCode(t:HTree,acc:List[Int],newList:List[(Char,List[Int])]):List[(Char,List[Int])] ={
+  
+  t match{
 
     case t:Leaf =>(t.char,acc.reverse)::newList
     case t:Branch =>  extractCode(t.left,0::acc,newList):::extractCode(t.right,1::acc,newList)
     case nil => List()
+}
 
+  }
+  
+  def countLeaves(t:HTree,acc:List[Int]):List[Int] ={
+  
+  t match{
+
+    case t:Leaf =>1::acc
+    case t:Branch =>  countLeaves(t.left,acc):::countLeaves(t.right,acc)
+    case nil => List(0)
+}
 
   }
   
@@ -46,7 +59,7 @@ class handler extends builder{
     }
     }     
    
-   list2.toList.flatten
+   list2.toList.flatten.reverse
    
    }
   
@@ -54,7 +67,7 @@ class handler extends builder{
   /*
    * Encode function takes a string then calls bitList() and extractCode() to generate a pair containing the list of
    * bits and another pair containing char/bit combinations 
-   * @returns Pair(List[Bit} , HCodeMap)
+   * @returns Pair(List[Bit} , codemap)
    * 
    */
 
