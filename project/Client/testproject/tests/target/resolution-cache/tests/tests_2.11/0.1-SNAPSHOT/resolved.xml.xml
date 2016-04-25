@@ -4,7 +4,7 @@
 		module="tests_2.11"
 		revision="0.1-SNAPSHOT"
 		status="integration"
-		publication="20160422162640"
+		publication="20160425164448"
 	>
 		<description>
 		tests
@@ -37,5 +37,6 @@
 		<dependency org="testproject" name="testproject_2.11" rev="0.1-SNAPSHOT" conf="compile->default(compile)"/>
 		<dependency org="org.scalatest" name="scalatest_2.11" rev="2.2.6" conf="test->default(compile)"/>
 		<dependency org="com.geteit" name="robotest_2.11" rev="0.12" conf="test->default(compile)"/>
+		<dependency org="org.scalacheck" name="scalacheck_2.11" rev="1.10.0" conf="compile->default(compile)"/>
 	</dependencies>
 </ivy-module>

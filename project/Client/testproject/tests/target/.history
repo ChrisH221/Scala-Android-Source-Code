@@ -150,3 +150,43 @@ update
 test
 testtest
 test
+def add(x:Int,y:Int): Int = x + y
+def add(x:Int,y:Int):Int = x + y
+project root
+test
+clean
+update
+compile
+project root
+test
+clean
+compile
+test
+test root
+project root
+compile
+test
+compile
+clean
+update
+compile
+project root
+compile
+test
+clean
+update
+compile
+project roots
+project root
+compile
+test
+clean
+update
+compile
+project root
+test
+project root
+test:compile
+test
+compile
+test

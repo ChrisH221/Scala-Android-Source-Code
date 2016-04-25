@@ -26,74 +26,68 @@ import java.io.ByteArrayOutputStream
 
 
 /**
- * @author Chris Howell
- * This object handles converting bitmaps to base64 strings and back again.
- * Object instead of class to allow access to the methods contained inside the object without
- * needing to create different instances.
- */
+* @author Chris Howell
+* This class handles converting bitmaps to base64 strings and back again.
+* It also writes bitmaps to the device storage.
+*/
 
 class imageChanger extends helpers {
-
-
-  def processEncode(path:String):String={
-   Log.d("MyTAG","hey" + path)
-    val file = new File(path)
-	val imageOpts = new BitmapFactory.Options();
-	 imageOpts.inJustDecodeBounds = true
-	 val fn = file.getAbsolutePath
-	val extension = fn.substring(fn.lastIndexOf('.'),fn.length())
-
-	
-
-	
-	var bitmap = BitmapFactory.decodeFile(file.getAbsolutePath)
-	var output = new ByteArrayOutputStream(bitmap.getByteCount())
-	if(extension ==".png")bitmap.compress(Bitmap.CompressFormat.PNG, 100, output)
-	if(extension ==".jpeg")bitmap.compress(Bitmap.CompressFormat.JPEG, 100, output)
-	var imageBytes = output.toByteArray();
-
-	var encodedString = Base64.encodeToString(imageBytes, Base64.URL_SAFE)	
-	 
-	encodedString
-  }
-  
-  
-   
- /**
- * Takes a Bitmap and a file name then writes the png image to the sd card.
- * @returns Unit
- */
-     def writeDecodedImage(image:Bitmap,noExtension:String )={
-   
-  	 
-	   val folder = new File("/sdcard/decoded")
-		
-		if (!folder.exists()){folder.mkdir()}
-	
-		val Card = new File("/sdcard/decoded/", noExtension + ".png")
-		
-		Card.createNewFile()
-			 
-		val fOut = new FileOutputStream(Card);
-		
-		image.compress(Bitmap.CompressFormat.PNG, 100, fOut);
-		fOut.flush();
-		fOut.close();
-	
-		
-  
-  }
-  
-  
-
     
+    
+   /**
+    * Takes a Bitmap and a file name then writes the png image to the sd card.
+    * @returns Unit
+    */
+	
+    def processEncode(path:String):String={
+        
+        val file = new File(path)
+        val fn = file.getAbsolutePath
+        val extension = fn.substring(fn.lastIndexOf('.'),fn.length())
+        
+        
+        var bitmap = BitmapFactory.decodeFile(file.getAbsolutePath)
+        var output = new ByteArrayOutputStream(bitmap.getByteCount())
+		
+        if(extension ==".png")bitmap.compress(Bitmap.CompressFormat.PNG, 100, output)
+        if(extension ==".jpeg")bitmap.compress(Bitmap.CompressFormat.JPEG, 100, output)
+		
+        var imageBytes = output.toByteArray();
+        
+        var encodedString = Base64.encodeToString(imageBytes, Base64.URL_SAFE)
+        
+        encodedString
+    }
+    
+    
+    
+    /**
+    * Takes a Bitmap and a file name, then writes the png image to the sd card.
+    * @returns Unit
+    */
+    def writeDecodedImage(image:Bitmap,noExtension:String )={
+        
+        
+        val folder = new File("/sdcard/decoded")
+        
+        if (!folder.exists()){folder.mkdir()}
+        
+        val Card = new File("/sdcard/decoded/", noExtension + ".png")
+        
+        Card.createNewFile()
+        
+        val fOut = new FileOutputStream(Card);
+        
+        image.compress(Bitmap.CompressFormat.PNG, 100, fOut);
+        fOut.flush();
+        fOut.close();
+        
+        
+        
+    }
+      
+    
+}
 
- 
- }	
-
-  
-  
 
 
-
-            

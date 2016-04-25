@@ -7,10 +7,21 @@ import scala.collection._
 import spray.json._
 import DefaultJsonProtocol._
 import android.util.Log
+import android.view.View
 
 trait helpers {
   
-    val x = List()//Saved me creating multiple empty lists
+    val x = List()
+	
+     
+	implicit  def onClickListener(f: (View => Unit)): View.OnClickListener = {
+		new View.OnClickListener() {
+				override def onClick(v: View) {
+			f(v)
+			}
+		}
+
+		}
     
     abstract class HTree
     case class Empty() extends HTree
@@ -20,7 +31,7 @@ trait helpers {
     
     implicit def Runnable[A](f: => A): Runnable =  new Runnable() { def run() = f }
     
-    
+   
     
     def getListOfSubDirectories(directoryName: String): Array[String] = {
         return (new File(directoryName)).listFiles.filter(_.isDirectory).map(_.getName)

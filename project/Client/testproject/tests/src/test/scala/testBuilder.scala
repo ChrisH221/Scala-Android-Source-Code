@@ -2,27 +2,31 @@ package my.android.project
 
 import org.scalatest.FlatSpec
 import scala.collection.mutable.Stack
-
+import scala.util.Random 
 
 class testBuilder extends FlatSpec with helpers {
 
   val b = new builder()
+  val n = scala.util.Random
+  val company = Random.alphanumeric.take(n.nextInt(100)).mkString
  
-
     
-	
+	/*
+	* A test for checking if frequency table generate is correct
+	*/
  it should "check freq function is running correctly" in {
 	
 	
 	
-	assert(b.freq("hiya", List())(0) === ('h',1))
 	assert(b.freq("hiya", List())(1) === ('i',1))
 	assert(b.freq("hiya", List())(2) === ('y',1))
 	assert(b.freq("hiya", List())(3) === ('a',1))
  
     }
 	
-	
+	/*
+	* A test for checking if frequency table generate is correct
+	*/
 	it should "check node frequency" in {
 		
 			
@@ -33,7 +37,9 @@ class testBuilder extends FlatSpec with helpers {
 		assert(b.freqNode(leafList(2)) === 1)
 		     
     }
-		 
+	/*
+	* Test for inserting a new node into a tree
+	*/	 
   it should "insert a new node into a tree" in {
   
 		val leafList = List (new b.Leaf('a',1), new b.Leaf('c',3) ) 
@@ -43,6 +49,8 @@ class testBuilder extends FlatSpec with helpers {
  
   }
 
+  
+  
  it should "merge a list of HTree nodes into a single HTree" in {
 	
 	val list = List (new b.Leaf('h',1),new b.Leaf('e',1),new b.Leaf('l',2),new b.Leaf('o',1))
@@ -68,7 +76,9 @@ class testBuilder extends FlatSpec with helpers {
   assert(branch.toString == "Branch(9,Branch(4,Leaf(e,1),Leaf(f,3)),Leaf(d,5))")
   
   }
-  
+    /*
+	* Test single tree as input for merge function
+	*/	
   it should "test for single HTree after merge" in{
   
   val leaf1 = new b.Leaf('d', 5 )

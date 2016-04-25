@@ -84,7 +84,7 @@ class textHandler extends helpers {
         
         val map2 = json.parseJson
         val map3 = map2.convertTo[HCodeMap]
-       
+        val t = "hello"
         map3.list
     }
     
@@ -99,7 +99,7 @@ class textHandler extends helpers {
         
 		val h = new handler
 		
-		val decoded = h.decode(new StringBuffer(),key)
+		val decoded = h.decode(new StringBuffer,key)
 		val result = URLDecoder.decode(decoded, "UTF-16")
 		val folder = new File("/sdcard/decoded")
 		

@@ -181,7 +181,7 @@ def removeFile(fn:String){
             val reader = new BufferedReader(new InputStreamReader(input))
             val result = new StringBuilder()
             var line: String = null
-            val str = Stream.continually(reader.readLine()).takeWhile(_ != null).mkString("n")
+            val str = Stream.continually(reader.readLine()).takeWhile(_ != null).mkString("\n")
             
             
             

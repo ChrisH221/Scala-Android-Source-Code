@@ -1,56 +1,6 @@
 clean
 update
 compile
-run
-clean
-update
-compile
-run
-compile
-run
-compile
-run
-update
-compile
-run
-compile
-run
-compile
-run
-compile
-run
-compile
-run
-compile
-clean
-compile
-run
-compile
-run
-clean
-update
-compile
-run
-clean
-update
-compile
-run
-compile
-run
-compile
-run
-compile
-run
-clean
-update
-compile
-run
-clean
-update
-compile
-clean
-update
-compile
 clean
 update
 compile
@@ -495,6 +445,56 @@ test
 project tests
 compile
 clean
+update
+compile
+project tests
+clean
+update
+compile
+clean
+update
+compile
+run
+clean
+update
+compile
+run
+compile
+run
+compile
+clean
+compile
+test
+test#
+test
+project tests
+clean
+update
+compile
+test
+project tests
+clean
+update
+compile
+project tests
+clean
+update
+compile
+cd tests
+project tests
+clean
+update
+compile
+project test
+project tests
+clean
+update
+compile
+project tests
+clean
+update
+compile
+reload plugins
 update
 compile
 project tests

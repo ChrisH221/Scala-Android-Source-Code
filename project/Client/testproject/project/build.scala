@@ -7,13 +7,13 @@ object MyBuild extends Build {
 
  lazy val tests = project
       .settings(
-	    scalaVersion := "2.11.7",
+	      scalaVersion := "2.11.7",
 
-      scalacOptions in Compile += "-feature",
- fork in Test := true ,
-     
+          scalacOptions in Compile += "-feature",
+		  fork in Test := true ,
           libraryDependencies += "org.scalatest" %% "scalatest" % "2.2.6"% "test",
-		  libraryDependencies += "com.geteit" %% "robotest" % "0.12"% "test"
+		  libraryDependencies += "com.geteit" %% "robotest" % "0.12"% "test",
+		  libraryDependencies += "org.scalacheck" %% "scalacheck" % "1.10.0" 
 		  ).dependsOn("root")
 
 }
