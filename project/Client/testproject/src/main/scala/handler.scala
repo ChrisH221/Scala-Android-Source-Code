@@ -43,7 +43,6 @@ class handler extends builder{
   
    /*
    * A function removing the leaf nodes from a HTree and placing them inside a list of HTree nodes.
-   * This list can then be checked for 
    * @returns List[Int]
    */
   
@@ -58,6 +57,7 @@ class handler extends builder{
 
   }
   
+
  
    def lookupBit(c: Char, list: List[(Char, List[Int])]): Option[List[Int]] =  list.find(_._1 == c).map(_._2)
  
@@ -145,12 +145,9 @@ def decode(s: StringBuffer, list: (List[Int], List[(Char, List[Int])])): String 
 def decode2(list: (List[Int], List[(Char, List[Int])])):String ={ 
   
   var bitList = list._1.reverse.mkString
-  println(bitList)
   val codeMap = list._2.sortBy(x => x._2.length).reverse
-  println(codeMap)
   codeMap.foreach{x =>bitList = 
   bitList.replaceAll(x._2.reverse.mkString,x._1.toString)
-
   //println(bitList)
   }
   

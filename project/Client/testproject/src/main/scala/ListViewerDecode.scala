@@ -42,14 +42,19 @@ import android.util.Base64
 import scala.util.Try
 import scala.collection.mutable.ListBuffer
 import android.content.Intent
+import android.widget.ProgressBar
 
-class ListViewerDecode extends Activity with helpers {
+class ListViewerDecode extends Activity with TypedActivity with helpers {
+
+	val i = new imageChanger
+    val t = new textHandler
 
   protected override def onCreate(savedInstanceState: Bundle) {
     super.onCreate(savedInstanceState)
 	
+	
 	setContentView(R.layout.a_main2)
-	 
+	
 	 val p = promise[JSONArray] 
 	 val f = p. future 
 	 
@@ -112,46 +117,56 @@ class ListViewerDecode extends Activity with helpers {
     val theListView = findViewById(R.id.theListView).asInstanceOf[ListView]
     
     theListView.setAdapter(theAdapter)
-    
+
+			
+
     theListView.setOnItemClickListener(new OnItemClickListener() {
         
         override def onItemClick(parent: AdapterView[_], view: View, position: Int, id: Long) {
             
-            val row = j.getJSONObject(position)
-            val fn =  row.getString("fileName")
-            val key =  row.getString("keycode")
-            val eImage =  row.getString("imageEncode")
-            val noExtension = fn.substring(0, fn.lastIndexOf("."))
+			case class JSONResult(fn:String,key:String,eString:String)
+			
+			 val row = j.getJSONObject(position)
+                    
+						
+			val Json = new JSONResult(row.getString("fileName"),row.getString("keycode"),row.getString("imageEncode"))
+			
+           
             val i = new imageChanger
             val t = new textHandler
             
-            val extension = fn.substring(fn.lastIndexOf('.'),fn.length())
+            val extension = Json.fn.substring(Json.fn.lastIndexOf('.'),Json.fn.length())
 			Log.d("MyTAG", "1" + extension)
-            if(extension == ".txt"){
-                	val hc = t.JsonToKey(key)
+            if(Json.fn.substring(Json.fn.lastIndexOf('.'),Json.fn.length()) == ".txt"){
+                	val hc = t.JsonToKey(Json.key)
 		   
 			var Bits = new ListBuffer[Int]()
-			eImage.foreach{x => if(x == '1') Bits += 1 else Bits +=0 }
+			Json.eString.foreach{x => if(x == '1') Bits += 1 else Bits +=0 }
 			
 			val hcode = (Bits.toList,hc)
-			t.writeDecodedText(hcode,noExtension)
+			t.writeDecodedText(hcode,Json.fn.substring(0, Json.fn.lastIndexOf(".")))
 			               
             }
 			else{
 			
 			
-                val newImageBytes = Base64.decode(eImage, Base64.URL_SAFE);
+                val newImageBytes = Base64.decode(Json.eString, Base64.URL_SAFE);
                 val bitmap = BitmapFactory.decodeByteArray(newImageBytes, 0, newImageBytes.length);
-                i.writeDecodedImage(bitmap,noExtension)
+                i.writeDecodedImage(bitmap,Json.fn.substring(0, Json.fn.lastIndexOf(".")))
 			
 			
 			}
-            removeFile(fn)
+			
+            removeFile(Json.fn)
             
         }
     })
+	
+	
     
 }
+
+
   
 def removeFile(fn:String){
     
@@ -195,6 +210,7 @@ def removeFile(fn:String){
         }
     }
     f onSuccess {  case result =>  runOnUiThread{
+			
             val inte = getIntent
             val username = inte.getExtras.getString("user")
             var intent2= new Intent (this,classOf[main])

@@ -30,11 +30,12 @@ import java.net.URLDecoder
 
 class textHandler extends helpers {
     
-	/**
+    /**
     * Takes a text file path and encodeds it using Huffman
     * @returns (List[Int],List[(Char,List[Int])])
-    */    
+    */
     def processEncode(path:String):(List[Int],List[(Char,List[Int])])={
+	
         val myFileStream = new FileInputStream(path)
         val bufferedReader = new BufferedReader(new InputStreamReader(myFileStream))
         val stringBuffer = new StringBuffer()
@@ -43,11 +44,11 @@ class textHandler extends helpers {
         {
             stringBuffer.append(line).append(System.getProperty("line.separator"))
         }
-		val result = URLEncoder.encode(stringBuffer.toString, "UTF-16")
+        val result = URLEncoder.encode(stringBuffer.toString, "UTF-16")
         val h = new handler
         
         var x =  (h.encode(result))
-       
+        
         
         x.asInstanceOf[(List[Int], List[(Char, List[Int])])]
         
@@ -97,23 +98,23 @@ class textHandler extends helpers {
     def writeDecodedText(key:(List[Int],List[(Char,List[Int])]),noExtension:String){
         
         
-		val h = new handler
-		
-		val decoded = h.decode(new StringBuffer,key)
-		val result = URLDecoder.decode(decoded, "UTF-16")
-		val folder = new File("/sdcard/decoded")
-		
-		if (!folder.exists()){folder.mkdir()}
-	
-		val Card = new File("/sdcard/decoded/", noExtension + ".png")
-		
-		Card.createNewFile()
-      
-		val fw = new FileWriter(Card)
-       
-	   fw.write(result)
-       
-	   fw.close()
+        val h = new handler
+        
+        val decoded = h.decode(new StringBuffer,key)
+        val result = URLDecoder.decode(decoded, "UTF-16")
+        val folder = new File("/sdcard/decoded")
+        
+        if (!folder.exists()){folder.mkdir()}
+        
+        val Card = new File("/sdcard/decoded/", noExtension + ".png")
+        
+        Card.createNewFile()
+        
+        val fw = new FileWriter(Card)
+        
+        fw.write(result)
+        
+        fw.close()
         
         
         

@@ -13,6 +13,7 @@ trait helpers {
   
     val x = List()
 	
+            
      
 	implicit  def onClickListener(f: (View => Unit)): View.OnClickListener = {
 		new View.OnClickListener() {
@@ -22,6 +23,8 @@ trait helpers {
 		}
 
 		}
+		
+		
     
     abstract class HTree
     case class Empty() extends HTree

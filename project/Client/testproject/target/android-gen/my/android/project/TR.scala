@@ -12,10 +12,12 @@ object TR {
   val username = TypedResource[android.widget.EditText](R.id.username)
   val create = TypedResource[android.widget.Button](R.id.create)
   val submit = TypedResource[android.widget.Button](R.id.submit)
+  val progressbar = TypedResource[android.widget.ProgressBar](R.id.progressbar)
   val decode = TypedResource[android.widget.Button](R.id.decode)
   val inform = TypedResource[android.widget.TextView](R.id.inform)
   val textview2 = TypedResource[android.widget.TextView](R.id.textview2)
   val textview = TypedResource[android.widget.TextView](R.id.textview)
+  val progressBar1 = TypedResource[android.widget.ProgressBar](R.id.progressBar1)
   val editTextResult = TypedResource[android.widget.EditText](R.id.editTextResult)
   val login = TypedResource[android.widget.Button](R.id.login)
   val theListView = TypedResource[android.widget.ListView](R.id.theListView)
@@ -24,7 +26,7 @@ object TR {
 
   object layout {
     val main = TypedLayout[android.widget.LinearLayout](R.layout.main)
-    val a_main2 = TypedLayout[android.widget.LinearLayout](R.layout.a_main2)
+    val a_main2 = TypedLayout[android.widget.RelativeLayout](R.layout.a_main2)
     val check = TypedLayout[android.widget.LinearLayout](R.layout.check)
     val login = TypedLayout[android.widget.LinearLayout](R.layout.login)
     val a_main = TypedLayout[android.widget.LinearLayout](R.layout.a_main)
