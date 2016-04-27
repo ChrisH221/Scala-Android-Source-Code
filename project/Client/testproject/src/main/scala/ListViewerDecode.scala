@@ -131,17 +131,19 @@ class ListViewerDecode extends Activity with TypedActivity with helpers {
 						
 			val Json = new JSONResult(row.getString("fileName"),row.getString("keycode"),row.getString("imageEncode"))
 			
-           
-            val i = new imageChanger
-            val t = new textHandler
+            Log.d("MyTAG",Json.toString)
             
             val extension = Json.fn.substring(Json.fn.lastIndexOf('.'),Json.fn.length())
-			Log.d("MyTAG", "1" + extension)
+			
             if(Json.fn.substring(Json.fn.lastIndexOf('.'),Json.fn.length()) == ".txt"){
                 	val hc = t.JsonToKey(Json.key)
-		   
+		  
 			var Bits = new ListBuffer[Int]()
-			Json.eString.foreach{x => if(x == '1') Bits += 1 else Bits +=0 }
+			Json.eString.foreach{x => 
+			if(x == '0') Bits += 0 
+			if(x == '1') Bits += 1
+			if(x == '2') Bits += 2 
+			}
 			
 			val hcode = (Bits.toList,hc)
 			t.writeDecodedText(hcode,Json.fn.substring(0, Json.fn.lastIndexOf(".")))

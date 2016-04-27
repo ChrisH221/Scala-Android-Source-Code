@@ -95,10 +95,12 @@ class testHandler extends FlatSpec with testHelpers{
         
         
         val encoded = h.encode(testString)
-        val decode = h.decode(new StringBuffer,encoded)
+        val decode = h.decode(encoded)
         assert(decode ===testString)
         
     }
+	
+	
     
     /**
     * Test the encode and decode function on a list of randomly generated strings
@@ -108,7 +110,7 @@ class testHandler extends FlatSpec with testHelpers{
         listString.foreach{x =>
             
             val encoded = h.encode(x)
-            val decode = h.decode(new StringBuffer,encoded)
+            val decode = h.decode(encoded)
             assert(decode ===x)
             
         }
@@ -123,7 +125,7 @@ class testHandler extends FlatSpec with testHelpers{
         
         val testString = "12456486453435248456435454354?"
         val encoded = h.encode(testString)
-        val decode = h.decode(new StringBuffer,encoded)
+        val decode = h.decode(encoded)
         assert(decode ===testString)
         
     }

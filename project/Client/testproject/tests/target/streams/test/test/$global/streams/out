@@ -2,18 +2,7 @@
 [0m[[0mdebug[0m] [0mCreate a single-thread test executor[0m
 [0m[[0mdebug[0m] [0mRunner for sbt.FrameworkWrapper produced 0 initial tasks for 0 tests.[0m
 [0m[[0mdebug[0m] [0mRunner for org.scalatest.tools.Framework produced 2 initial tasks for 2 tests.[0m
-[0m[[0mdebug[0m] [0m  Running TaskDef(my.android.project.testHandler, sbt.ForkMain$SubclassFingerscan@4235f537, false, [SuiteSelector])[0m
-[0m[[0minfo[0m] [0m[32mtestHandler:[0m[0m
-[0m[[0minfo[0m] [0m[32m- should check extracting code is functioning[0m[0m
-[0m[[0minfo[0m] [0m[32m- should look up a find a bit combination to make the char[0m[0m
-[0m[[0minfo[0m] [0m[32m- should check bit list is functioning[0m[0m
-[0m[[0minfo[0m] [0m[32m- should count the number of leaf nodes to check consistant with freqency table[0m[0m
-[0m[[0minfo[0m] [0m[32m- should collect the leaf nodes from a tree[0m[0m
-[0m[[0minfo[0m] [0m[32m- should check encode and decode[0m[0m
-[0m[[0minfo[0m] [0m[32m- should check multiple encode/decode with random strings[0m[0m
-[0m[[0minfo[0m] [0m[32m- should check encode and decode numbers[0m[0m
-[0m[[0mdebug[0m] [0m    Produced 0 nested tasks and 8 events.[0m
-[0m[[0mdebug[0m] [0m  Running TaskDef(my.android.project.testBuilder, sbt.ForkMain$SubclassFingerscan@402a74f1, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0m  Running TaskDef(my.android.project.testBuilder, sbt.ForkMain$SubclassFingerscan@4235f537, false, [SuiteSelector])[0m
 [0m[[0minfo[0m] [0m[32mtestBuilder:[0m[0m
 [0m[[0minfo[0m] [0m[32m- should check freq function is running correctly[0m[0m
 [0m[[0minfo[0m] [0m[32m- should check node frequency[0m[0m
@@ -25,14 +14,28 @@
 [0m[[0minfo[0m] [0m[32m- should test for single HTree after merge[0m[0m
 [0m[[0minfo[0m] [0m[32m- should take a string and make a tree[0m[0m
 [0m[[0mdebug[0m] [0m    Produced 0 nested tasks and 9 events.[0m
+[0m[[0mdebug[0m] [0m  Running TaskDef(my.android.project.testHandler, sbt.ForkMain$SubclassFingerscan@1b13a4e4, false, [SuiteSelector])[0m
+[0m[[0minfo[0m] [0m[32mtestHandler:[0m[0m
+[0m[[0minfo[0m] [0m[32m- should check extracting code is functioning[0m[0m
+[0m[[0minfo[0m] [0m[32m- should look up a find a bit combination to make the char[0m[0m
+[0m[[0minfo[0m] [0m[31m- should check bit list is functioning *** FAILED ***[0m[0m
+[0m[[0minfo[0m] [0m[31m  "List([2, 1, 1, 1, 2, 1, 1, 0, 2, 0, 2, 0, 2], 1, 0)" did not equal "List([1, 1, 1, 1, 1, 0, 0, 0], 1, 0)" (testHandler.scala:55)[0m[0m
+[0m[[0minfo[0m] [0m[32m- should count the number of leaf nodes to check consistant with freqency table[0m[0m
+[0m[[0minfo[0m] [0m[32m- should collect the leaf nodes from a tree[0m[0m
+[0m[[0minfo[0m] [0m[32m- should check encode and decode[0m[0m
+[0m[[0minfo[0m] [0m[32m- should check multiple encode/decode with random strings[0m[0m
+[0m[[0minfo[0m] [0m[32m- should check encode and decode numbers[0m[0m
+[0m[[0mdebug[0m] [0m    Produced 0 nested tasks and 8 events.[0m
 [0m[[0mdebug[0m] [0mSummary for ScalaCheck not available.[0m
 [0m[[0minfo[0m] [0mScalaTest[0m
-[0m[[0minfo[0m] [0m[36mRun completed in 633 milliseconds.[0m[0m
+[0m[[0minfo[0m] [0m[36mRun completed in 845 milliseconds.[0m[0m
 [0m[[0minfo[0m] [0m[36mTotal number of tests run: 17[0m[0m
 [0m[[0minfo[0m] [0m[36mSuites: completed 2, aborted 0[0m[0m
-[0m[[0minfo[0m] [0m[36mTests: succeeded 17, failed 0, canceled 0, ignored 0, pending 0[0m[0m
-[0m[[0minfo[0m] [0m[32mAll tests passed.[0m[0m
-[0m[[0minfo[0m] [0mPassed: Total 17, Failed 0, Errors 0, Passed 17[0m
+[0m[[0minfo[0m] [0m[36mTests: succeeded 16, failed 1, canceled 0, ignored 0, pending 0[0m[0m
+[0m[[0minfo[0m] [0m[31m*** 1 TEST FAILED ***[0m[0m
+[0m[[31merror[0m] [0mFailed: Total 17, Failed 1, Errors 0, Passed 16[0m
 [0m[[0mdebug[0m] [0mPassed tests:[0m
 [0m[[0mdebug[0m] [0m	my.android.project.testBuilder[0m
-[0m[[0mdebug[0m] [0m	my.android.project.testHandler[0m
+[0m[[31merror[0m] [0mFailed tests:[0m
+[0m[[31merror[0m] [0m	my.android.project.testHandler[0m
+[0m[[31merror[0m] [0m(tests/test:[31mtest[0m) sbt.TestsFailedException: Tests unsuccessful[0m

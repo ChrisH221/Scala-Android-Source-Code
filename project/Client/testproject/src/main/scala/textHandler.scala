@@ -35,7 +35,7 @@ class textHandler extends helpers {
     * @returns (List[Int],List[(Char,List[Int])])
     */
     def processEncode(path:String):(List[Int],List[(Char,List[Int])])={
-	
+
         val myFileStream = new FileInputStream(path)
         val bufferedReader = new BufferedReader(new InputStreamReader(myFileStream))
         val stringBuffer = new StringBuffer()
@@ -100,13 +100,13 @@ class textHandler extends helpers {
         
         val h = new handler
         
-        val decoded = h.decode(new StringBuffer,key)
+        val decoded = h.decode(key)
         val result = URLDecoder.decode(decoded, "UTF-16")
         val folder = new File("/sdcard/decoded")
         
         if (!folder.exists()){folder.mkdir()}
         
-        val Card = new File("/sdcard/decoded/", noExtension + ".png")
+        val Card = new File("/sdcard/decoded/", noExtension + ".txt")
         
         Card.createNewFile()
         
