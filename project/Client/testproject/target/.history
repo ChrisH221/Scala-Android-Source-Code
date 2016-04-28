@@ -2,8 +2,6 @@ compile
 run
 compile
 run
-compile
-run
 clean
 update
 comple
@@ -497,4 +495,6 @@ run
 compile
 run
 test
+project tests
+ttest
 project tests

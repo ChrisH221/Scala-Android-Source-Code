@@ -47,7 +47,7 @@ class handler extends builder{
     */
     
     def collectLeaves(t:HTree,acc:List[HTree]):List[HTree] ={
-        
+    
         t match{
             
             case t:Leaf =>new Leaf(t.char,t.freq)::acc
@@ -69,7 +69,6 @@ class handler extends builder{
 def bitList(s:String,list:List[(Char,List[Int])]):List[Int]={
     
     val t = s.map(x => lookupBit(x,list) )
-    
     val list2 = scala.collection.mutable.MutableList[List[Int]]()
     t.toList foreach{
         _ match {
@@ -113,7 +112,7 @@ def encode(s:String):(List[Int],List[(Char,List[Int])])={
 def decode(list: (List[Int], List[(Char, List[Int])])):String ={
     
     var bitList = list._1.mkString
-       
+    if(bitList.length == 1) bitList = "2"++bitList   
     list._2.foreach{x =>bitList = bitList.replaceAll(("2"  + x._2.mkString),x._1.toString)}
     
     bitList

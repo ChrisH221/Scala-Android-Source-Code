@@ -2,9 +2,6 @@ package my.android.project
 
 import org.scalatest.FlatSpec
 import org.scalatest.junit.JUnitSuite
-import org.scalatest.prop.Checkers
-import org.scalatest.prop.TableDrivenPropertyChecks._
-import org.scalacheck._
 import scala.util.Random
 
 
@@ -52,7 +49,7 @@ class testHandler extends FlatSpec with testHelpers{
         val code = h.extractCode(h.makeTree("hello"),x,x)
         val res = h.bitList("hello",code).reverse
         
-        assert(res.toString ==="List(1, 1, 1, 1, 1, 0, 0, 0, 1, 0)")
+        assert(res.toString ==="List(2, 1, 1, 1, 2, 1, 1, 0, 2, 0, 2, 0, 2, 1, 0)")
         
     }
     
@@ -95,12 +92,34 @@ class testHandler extends FlatSpec with testHelpers{
         
         
         val encoded = h.encode(testString)
-        val decode = h.decode(encoded)
+	    val decode = h.decode(encoded)
         assert(decode ===testString)
         
     }
 	
+	 /**
+    * Test the encode and decode function on one randomly generated string
+    */
+    it should "check encode and decode when passed empty string " in {
+        
+        
+        val encoded = h.encode("")
+        val decode = h.decode(encoded)
+        assert(decode ==="")
+        
+    }
 	
+	 /**
+    * Test the encode and decode function on one randomly generated string
+    */
+    it should "check encode and decode when passed a single character string " in {
+        
+        
+        val encoded = h.encode("h")
+	    val decode = h.decode(encoded)
+		assert(decode ==="h")
+        
+    }
     
     /**
     * Test the encode and decode function on a list of randomly generated strings
@@ -117,11 +136,12 @@ class testHandler extends FlatSpec with testHelpers{
         
         
     }
-    
+	
+	    
     /**
     * Check encoding and decoding numbers work
     */
-    it should "check encode and decode numbers " in {
+    it should "check encode and decode numbers" in {
         
         val testString = "12456486453435248456435454354?"
         val encoded = h.encode(testString)

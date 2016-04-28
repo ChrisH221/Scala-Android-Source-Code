@@ -91,7 +91,7 @@ class builder extends helpers{
     * @returns HTree
     */
     def merge(t:List[HTree]): HTree ={
-        
+	
 		if(t.length == 1 ) t.head
         
         else merge(shrinkList(makeLink(t(0), t(1)), t.drop(2)))
@@ -99,7 +99,7 @@ class builder extends helpers{
     }
     
     /*
-    * Takes a list if nodes and returns a
+    * Takes a list frequency table and generate a list of HTree nodes
     */
     
     def makeNode(list:List[(Char,Int)],nodeList:List[HTree]):List[HTree] ={
