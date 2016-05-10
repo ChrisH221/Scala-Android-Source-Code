@@ -2,7 +2,7 @@
 [0m[[0mdebug[0m] [0mCreate a single-thread test executor[0m
 [0m[[0mdebug[0m] [0mRunner for sbt.FrameworkWrapper produced 0 initial tasks for 0 tests.[0m
 [0m[[0mdebug[0m] [0mRunner for org.scalatest.tools.Framework produced 2 initial tasks for 2 tests.[0m
-[0m[[0mdebug[0m] [0m  Running TaskDef(my.android.project.testBuilder, sbt.ForkMain$SubclassFingerscan@15084e92, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0m  Running TaskDef(my.android.project.testBuilder, sbt.ForkMain$SubclassFingerscan@7e77557d, false, [SuiteSelector])[0m
 [0m[[0minfo[0m] [0m[32mtestBuilder:[0m[0m
 [0m[[0minfo[0m] [0m[32m- should check freq function is running correctly[0m[0m
 [0m[[0minfo[0m] [0m[32m- should check node frequency[0m[0m
@@ -14,27 +14,32 @@
 [0m[[0minfo[0m] [0m[32m- should test for single HTree after merge[0m[0m
 [0m[[0minfo[0m] [0m[32m- should take a string and make a tree[0m[0m
 [0m[[0mdebug[0m] [0m    Produced 0 nested tasks and 9 events.[0m
-[0m[[0mdebug[0m] [0m  Running TaskDef(my.android.project.testHandler, sbt.ForkMain$SubclassFingerscan@1bc01daa, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0m  Running TaskDef(my.android.project.testHandler, sbt.ForkMain$SubclassFingerscan@3ab92c28, false, [SuiteSelector])[0m
 [0m[[0minfo[0m] [0m[32mtestHandler:[0m[0m
 [0m[[0minfo[0m] [0m[32m- should check extracting code is functioning[0m[0m
 [0m[[0minfo[0m] [0m[32m- should look up a find a bit combination to make the char[0m[0m
 [0m[[0minfo[0m] [0m[32m- should check bit list is functioning[0m[0m
 [0m[[0minfo[0m] [0m[32m- should count the number of leaf nodes to check consistant with freqency table[0m[0m
 [0m[[0minfo[0m] [0m[32m- should collect the leaf nodes from a tree[0m[0m
-[0m[[0minfo[0m] [0m[32m- should check encode and decode[0m[0m
+[0m[[0minfo[0m] [0m[32m- should check encode and decode cycle[0m[0m
 [0m[[0minfo[0m] [0m[32m- should check encode and decode when passed empty string[0m[0m
 [0m[[0minfo[0m] [0m[32m- should check encode and decode when passed a single character string[0m[0m
+[0m[[0minfo[0m] [0m[32m- should check encode and decode when passed a two character string[0m[0m
+[0m[[0minfo[0m] [0m[32m- should check encode and decode when passed a large string[0m[0m
+[0m[[0minfo[0m] [0m[32m- should check encode and decode when passed an even larger string[0m[0m
 [0m[[0minfo[0m] [0m[32m- should check multiple encode/decode with random strings[0m[0m
-[0m[[0minfo[0m] [0m[32m- should check encode and decode numbers[0m[0m
-[0m[[0mdebug[0m] [0m    Produced 0 nested tasks and 10 events.[0m
+[0m[[0minfo[0m] [0m[32m- should check encode and decode integer string[0m[0m
+[0m[[0minfo[0m] [0m[32m- should check encode and decode chinese string[0m[0m
+[0m[[0minfo[0m] [0m[32m- should cover all encode branch statements[0m[0m
+[0m[[0mdebug[0m] [0m    Produced 0 nested tasks and 15 events.[0m
 [0m[[0mdebug[0m] [0mSummary for ScalaCheck not available.[0m
 [0m[[0minfo[0m] [0mScalaTest[0m
-[0m[[0minfo[0m] [0m[36mRun completed in 2 seconds, 674 milliseconds.[0m[0m
-[0m[[0minfo[0m] [0m[36mTotal number of tests run: 19[0m[0m
+[0m[[0minfo[0m] [0m[36mRun completed in 2 seconds, 606 milliseconds.[0m[0m
+[0m[[0minfo[0m] [0m[36mTotal number of tests run: 24[0m[0m
 [0m[[0minfo[0m] [0m[36mSuites: completed 2, aborted 0[0m[0m
-[0m[[0minfo[0m] [0m[36mTests: succeeded 19, failed 0, canceled 0, ignored 0, pending 0[0m[0m
+[0m[[0minfo[0m] [0m[36mTests: succeeded 24, failed 0, canceled 0, ignored 0, pending 0[0m[0m
 [0m[[0minfo[0m] [0m[32mAll tests passed.[0m[0m
-[0m[[0minfo[0m] [0mPassed: Total 19, Failed 0, Errors 0, Passed 19[0m
+[0m[[0minfo[0m] [0mPassed: Total 24, Failed 0, Errors 0, Passed 24[0m
 [0m[[0mdebug[0m] [0mPassed tests:[0m
 [0m[[0mdebug[0m] [0m	my.android.project.testBuilder[0m
 [0m[[0mdebug[0m] [0m	my.android.project.testHandler[0m

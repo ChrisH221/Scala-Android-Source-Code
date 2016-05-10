@@ -1,7 +1,7 @@
 <?php
 $servername = "127.0.0.1";
 $username = "root";
-$password = "";
+$password = "Mischief111";
 $dbname = "scala_android";
 
 
@@ -12,9 +12,12 @@ $connection = new mysqli($servername, $username, $password, $dbname);
 $username = $_POST["username"];
 $key= $_POST["key"];
 $fileName= $_POST["fileName"];
+$imageEncode= $_POST["imageEncode"];
+
+$k=mysql_real_escape_string($key);
 
 
-$sql = "INSERT INTO key_code (`username`, `keycode`, `fileName`)VALUES ('$username','$key','$fileName')";
+$sql = "INSERT INTO key_code (`username`, `keycode`, `fileName`,`imageEncode` )VALUES ('$username','$k','$fileName','$imageEncode')";
 
 $result = mysqli_query($connection, $sql) or die("Error in Selecting " . mysqli_error($connection));
 

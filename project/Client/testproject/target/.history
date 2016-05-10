@@ -1,53 +1,3 @@
-compile
-run
-compile
-run
-clean
-update
-comple
-compile
-test
-compile
-reload plugins
-update
-compile
-test
-compile
-test
-compile
-test
-compile
-run
-compile
-run
-compile
-run
-clean
-compile
-run
-compile
-run
-clean
-update
-compile
-run
-compile
-run
-clean
-update
-compile
-run
-compile
-clean
-compile
-run
-clean
-update
-compile
-run
-clean
-update
-compile
 run
 clean
 update
@@ -497,4 +447,54 @@ run
 test
 project tests
 ttest
+project tests
+compile
+run
+compile
+run
+compile
+run
+clean
+update
+compile
+run
+compile
+run
+update
+compile
+run
+reload
+compile
+run
+reload
+compile
+publish
+publish information
+publish info
+inspect publish
+publish testProject
+publish alias
+packageRelease
+sbt packageRelease
+Release
+packageRelease
+clean
+update
+compile
+run
+clean
+update
+compile
+run
+release
+publish
+last root/*:publishConfiguration
+clean
+update
+compile
+run
+clean
+update
+compile
+run
 project tests

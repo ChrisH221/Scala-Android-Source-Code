@@ -77,7 +77,8 @@ class testBuilder extends FlatSpec  with testHelpers {
                 
                 
                 if(i != y.length - 1) assert(h.freqNode(y(i)) <= h.freqNode(y(i+1)))
-                if(i == y.length-1)  assert(h.freqNode(y(i)) >=  h.freqNode(y(i-1))) // to ensure the last node is checked against the previous node
+				// to ensure the last node is checked against the previous node
+                if(i == y.length-1)  assert(h.freqNode(y(i)) >=  h.freqNode(y(i-1))) 
             }
             
             
@@ -126,7 +127,7 @@ class testBuilder extends FlatSpec  with testHelpers {
         
     }
     /*
-    * Test single tree as input for merge function
+    * Test merge for branch statement coverage test merge on single input and multiple input
     */
     it should "test for single HTree after merge" in{
         
@@ -135,7 +136,16 @@ class testBuilder extends FlatSpec  with testHelpers {
         val list = List(leaf1,Branch)
         val link = b.merge(list)
         val linkList = List(link)
+		
         assert(linkList.length === 1)
+		
+		
+		val singleLeaf = List(leaf1)
+		val tree = b.merge(singleLeaf)
+		
+		assert(List(tree).length === 1)
+			
+
     }
     
     
