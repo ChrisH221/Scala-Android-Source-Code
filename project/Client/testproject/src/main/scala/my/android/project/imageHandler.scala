@@ -71,7 +71,7 @@ class imageHandler extends helpers {
         
         if (!folder.exists()){folder.mkdir()}
         
-        val file = new File("/sdcard/decoded/", noExtension + ".png")
+        val file = new File("/decoded/", noExtension + ".png")
         
         file.createNewFile()
         

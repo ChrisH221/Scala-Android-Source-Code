@@ -91,7 +91,6 @@ class builder extends helpers{
     def merge(t:List[HTree]): HTree ={
         
 
-		if(t.length < 1) new Empty()
 		
         if(t.length == 1 ) t.head
         

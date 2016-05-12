@@ -1,4 +1,7 @@
 #Successful Tests
-#Tue May 10 19:42:53 BST 2016
-my.android.project.testBuilder=1462905771770
-my.android.project.testHandler=1462905773302
+#Thu May 12 13:55:32 BST 2016
+my.android.project.blackBoxTests=1463057732246
+my.android.project.propertyTests=1463057731392
+my.android.project.testBuilder=1463056840216
+my.android.project.whiteBoxTests=1463057729233
+my.android.project.testHandler=1463056842506

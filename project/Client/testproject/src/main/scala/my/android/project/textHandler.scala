@@ -85,7 +85,6 @@ class textHandler extends helpers {
         
         val map2 = json.parseJson
         val map3 = map2.convertTo[HCodeMap]
-        val t = "hello"
         map3.list
     }
     
@@ -106,7 +105,7 @@ class textHandler extends helpers {
         
         if (!folder.exists()){folder.mkdir()}
         
-        val file = new File("/decoded/", noExtension + ".txt")
+        val file = new File("/sdcard/decoded/", noExtension + ".txt")
         
         file.createNewFile()
         
